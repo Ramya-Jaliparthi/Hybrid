@@ -1,0 +1,32 @@
+<ion-content>
+    <ion-grid class="background-blue">
+        <ion-row no-padding>
+            <ion-col text-right>
+                <ion-icon name="close" class="close-icon" (click)="close($event)"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+                <img class="visit-icon" [src]="config.assets_url+'/images/icons-ios/Asset84@2x.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-20 arial-bold">{{data.displayName}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-17">{{data.memberRelation}}</ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item no-padding>
+            <div text-center class="arial-bold word-wrap">Visit History with {{data.visit.PrvName}}</div>
+            <div text-center padding-bottom>{{data.visit.PrvSpec}}</div>
+        </ion-item>
+        <ion-item no-padding text-center *ngFor="let history of data.visitHistory">{{history.DOS}}</ion-item>
+    </ion-list>
+    <ion-footer>
+        <button full ion-button class="btnCls" (tap)="close($event)">Close</button>
+    </ion-footer>
+
+
+</ion-content>

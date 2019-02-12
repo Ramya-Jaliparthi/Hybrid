@@ -1,0 +1,772 @@
+<header [title]="'Doctor Profile'"></header>
+<ion-content>
+  <alert-message-card *ngIf="alertMessageCard" [showAlert]="alertMessageCard.showAlert" [title]="alertMessageCard.title" [message]="alertMessageCard.message"
+    [type]="alertMessageCard.type" [alert]="alertMessageCard" [hideCloseButton]="alertMessageCard.hideCloseButton"></alert-message-card>
+  <div class="profile-container" *ngIf="fadProfessionalResposeData">
+    <!--Start 10.0.1 Doctor Profile: Rate Last Visit CTA  -->
+    <ion-row no-padding no-margin class="profile-rating-latest-visit-container" hidden>
+      <ion-col no-padding col-11>
+        <ion-item no-lines class="profile-rating-latest-visit">Rate your latest visit</ion-item>
+      </ion-col>
+      <ion-col no-margin no-padding col-1 class="profile-accordian-toggle-icon">
+        <ion-item no-lines class="profile-rating-latest-visit" no-padding>
+          <ion-icon col-1 name="ios-arrow-forward"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!--End 10.0.1 Doctor Profile: Rate Last Visit CTA  -->
+    <!--Start 10.0.0 Doctor Profile: PCP -->
+    <ion-item no-margin no-lines class="profile-name">{{fadProfessionalResposeData?.doctorName}}</ion-item>
+    <ion-label padding-left no-lines class="profile-speciality">{{fadProfessionalResposeData?.specialty}}</ion-label>
+    <ion-item no-lines class="profile-accept-patients" *ngIf="selectedLocationDetails?.acceptingNewPatients">
+      <i class="fas fa-check"></i>&nbsp;{{selectedLocationDetails?.acceptingNewPatients}}
+    </ion-item>
+    <!--End 10.0.0 Doctor Profile: PCP -->
+    <!--Start 10.0.10 PCP ID Available: Display at top -->
+    <ion-row no-padding no-margin *ngIf="selectedLocationDetails?.pcpId">
+      <ion-col col-12 no-padding no-margin>
+        <ion-label margin-left no-margin class="profile-card-info">
+          <span class="profile-card-info-content">Primary Care Provider/Provider of Choice</span>
+        </ion-label>
+      </ion-col>
+      <!-- <ion-col col-3 no-padding no-margin (click)="copyToClipboard(selectedLocationDetails?.pcpId)">
+        <ion-label no-margin class="profile-card-info-copy" text-end>
+          <span>Copy ID</span>
+        </ion-label>
+      </ion-col> -->
+    </ion-row>
+    <!--End 10.0.10 PCP ID Available: Display at top -->
+    <ion-label no-padding no-margin no-lines>
+      <p class="profile-item-divider"></p>
+    </ion-label>
+    <ion-label padding-left no-padding no-lines class="profile-location-title">{{selectedLocationDetails?.name}}</ion-label>
+    <ion-label padding-left no-padding no-margin no-lines class="profile-location-subtitle">{{selectedLocationDetails?.address}}</ion-label>
+    <ion-row padding-left no-padding no-margin>
+      <ion-col no-padding no-margin>
+        <ion-label no-margin no-lines float-left class="profile-location-contact-number" (click)="makeCall(selectedLocationDetails?.phone)">
+          <i class="fa fa-phone"></i>&nbsp;
+          <span>{{selectedLocationDetails?.phone | phone}}</span>&nbsp;&nbsp;&nbsp;
+        </ion-label>
+        <ion-label no-margin no-lines class="profile-location-contact-direction">
+          <i class="fas fa-map-marker-alt"></i>&nbsp;
+          <span>Get Directions</span>
+        </ion-label>
+      </ion-col>
+      <!-- Start 10.0.5 && 10.0.7 Doctor profile: Cost Estimate -->
+      <ion-item no-lines no-padding hidden>
+        <ion-label>
+          <p text-wrap class="profile-cost-estimate-title">Knee Replacement</p>
+          <p text-wrap class="profile-cost-estimate-description">Estimate cost at this location.
+            <span>See cost breakdown</span>
+          </p>
+          <ion-grid class="no-padding-left">
+            <ion-row class="profile-cost-estimate-detail-container">
+              <ion-col col-3 class="profile-cost-estimate-detail-sub-container">
+                <p class="profile-cost-estimate-detail-price">$700
+                  <sup>00</sup>
+                </p>
+                my cost
+              </ion-col>
+              <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                +
+              </ion-col>
+              <ion-col col-3 text-wrap class="profile-cost-estimate-detail-sub-container">
+                <p class="profile-cost-estimate-detail-price">$700
+                  <sup>0</sup>
+                </p>
+                insurance cost
+              </ion-col>
+              <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                =
+              </ion-col>
+              <ion-col col-4 class="profile-cost-estimate-detail-sub-container">
+                <p class="profile-cost-estimate-detail-price">$1400
+                  <sup>00</sup>
+                </p>
+                total cost
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+      <!-- End 10.0.5 && 10.0.7 Doctor profile: Cost Estimate -->
+    </ion-row>
+    <ion-grid no-padding no-margin class="profile-accordian-container">
+      <!-- Medical Group -->
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <ion-row no-padding no-margin class="width-100" (tap)="toggleAccordianList('All')">
+          <ion-col no-padding col-11 class="profile-accordian-title">
+            <ion-item no-lines>See all location and affliations</ion-item>
+          </ion-col>
+          <ion-col no-padding col-1 class="profile-accordian-toggle-icon">
+            <ion-item no-lines no-padding>
+              <ion-icon class="icon" [name]="accordianToggleStatus['All'] == true ? 'ios-arrow-up': 'ios-arrow-down'"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding no-margin class="profile-accordian-content" *ngIf="accordianToggleStatus['All'] == undefined ? false : accordianToggleStatus['All']">
+          <!-- Other locations -->
+          <ion-col col-12 no-padding no-margin *ngIf="fadProfessionalResposeData?.locations?.length>1">
+            <ion-item no-padding no-lines class="profile-accordian-content-title">Other Location</ion-item>
+          </ion-col>
+          <div class="width-100" *ngFor="let locationItem of fadProfessionalResposeData?.locations; index as locationIndex">
+            <ion-row no-padding no-margin class="profile-location-container" [hidden]="locationIndex == selectedLocationIndex">
+              <ion-row no-padding no-margin>
+                <ion-col col-12 no-padding no-margin (tap)="loadDetailsBasedOnLocation(locationIndex)">
+                  <ion-label padding-left no-margin no-padding no-lines class="profile-location-title underline">{{locationItem?.name}}</ion-label>
+                </ion-col>
+                <ion-col no-margin no-padding col-11>
+                  <ion-row no-padding no-margin>
+                    <ion-col col-12 no-padding no-margin>
+                      <ion-label padding-left no-padding no-margin no-lines class="profile-location-subtitle">{{locationItem?.address}}</ion-label>
+                    </ion-col>
+                    <ion-col col-12 no-padding no-margin>
+                      <ion-row padding-left no-padding no-margin>
+                        <ion-col no-padding no-margin>
+                          <ion-label no-margin no-lines float-left class="profile-location-contact-number" (click)="makeCall(fadProfessionalResposeData?.locations[locationIndex].phone)">
+                            <i class="fa fa-phone"></i>&nbsp;
+                            <span>{{locationItem?.phone | phone}}</span>&nbsp;&nbsp;&nbsp;
+                          </ion-label>
+                          <ion-label no-margin no-lines class="profile-location-contact-direction">
+                            <i class="fas fa-map-marker-alt"></i>&nbsp;
+                            <span>Get Directions</span>
+                          </ion-label>
+                        </ion-col>
+                        <!-- Start 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                        <ion-col col-11 no-padding no-margin hidden>
+                          <ion-item no-padding no-lines>
+                            <ion-label>
+                              <p text-wrap class="profile-cost-estimate-title">Knee Replacement</p>
+                              <p text-wrap class="profile-cost-estimate-description">Estimate cost at this location.
+                                <span>See cost breakdown</span>
+                              </p>
+                              <ion-grid class="no-padding-left">
+                                <ion-row class="profile-cost-estimate-detail-container">
+                                  <ion-col col-3 class="profile-cost-estimate-detail-sub-container">
+                                    <p class="profile-cost-estimate-detail-price">$700
+                                      <sup>00</sup>
+                                    </p>
+                                    my cost
+                                  </ion-col>
+                                  <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                                    +
+                                  </ion-col>
+                                  <ion-col col-3 text-wrap class="profile-cost-estimate-detail-sub-container">
+                                    <p class="profile-cost-estimate-detail-price">$700
+                                      <sup>00</sup>
+                                    </p>
+                                    insurance cost
+                                  </ion-col>
+                                  <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                                    =
+                                  </ion-col>
+                                  <ion-col col-4 class="profile-cost-estimate-detail-sub-container">
+                                    <p class="profile-cost-estimate-detail-price">$1400
+                                      <sup>00</sup>
+                                    </p>
+                                    total cost
+                                  </ion-col>
+                                </ion-row>
+                              </ion-grid>
+                            </ion-label>
+                          </ion-item>
+                        </ion-col>
+                        <!-- End 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                        <!--Start 10.0.9 Doctor profile: One location is of newtwork -->
+                        <ion-col col-12 no-padding no-margin hidden>
+                          <button ion-button small round no-padding no-margin class="profile-out-of-network-button">
+                            <span class="profile-out-of-network-icon-close">
+                              <ion-icon name="ios-close-outline"></ion-icon>
+                            </span>
+                            <span class="profile-out-of-network-text">
+                              &nbsp;Out-of-Network &nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span class="profile-out-of-network-icon-info">
+                              <ion-icon name="ios-information-circle-outline"></ion-icon>
+                            </span>
+                          </button>
+                        </ion-col>
+                        <!--End 10.0.9 Doctor profile: One location is of newtwork -->
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+                <ion-col no-margin no-padding col-1 class="profile-accordian-toggle-icon">
+                  <ion-item no-lines no-padding>
+                    <ion-icon col-1 name="ios-arrow-forward"></ion-icon>
+                  </ion-item>
+                </ion-col>
+                <ion-col col-12 no-padding no-margin>
+                  <ion-label padding-left no-padding no-lines>
+                    <p class="profile-item-divider"></p>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-row>
+          </div>
+          <!-- Hospital Afflications -->
+          <div class="width-100">
+            <ion-col col-12 no-padding class="profile-accordian-content-title" *ngIf="selectedLocationDetails?.hospitalAffiliations?.length>0">
+              <ion-label no-padding no-lines class="no-border">Hospital Affliations</ion-label>
+              <ion-label margin-left no-margin no-padding no-lines class="profile-accordian-content-sub-title margin-right-8">
+                Where this doctor has admitting priviledges.
+              </ion-label>
+            </ion-col>
+            <div *ngFor="let hospitalAffiliationsItem of selectedLocationDetails?.hospitalAffiliations;" class="width-100">
+              <ion-row no-padding no-margin class="profile-accordian-content margin-right-8 margin-botton-0">
+                <ion-col no-padding col-11 class="profile-accordian-content-list">
+                  <!-- Start 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                  <ion-item no-lines>
+                    <ion-label>
+                      {{hospitalAffiliationsItem.name}}
+                      <div hidden>
+                        <p text-wrap class="profile-cost-estimate-title">Knee Replacement</p>
+                        <p text-wrap class="profile-cost-estimate-description">Estimate cost at this location.
+                          <span>See cost breakdown</span>
+                        </p>
+                        <ion-grid class="no-padding-left">
+                          <ion-row class="profile-cost-estimate-detail-container">
+                            <ion-col col-3 class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$700
+                                <sup>00</sup>
+                              </p>
+                              my cost
+                            </ion-col>
+                            <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                              +
+                            </ion-col>
+                            <ion-col col-3 text-wrap class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$700
+                                <sup>00</sup>
+                              </p>
+                              insurance cost
+                            </ion-col>
+                            <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                              =
+                            </ion-col>
+                            <ion-col col-4 class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$1400
+                                <sup>00</sup>
+                              </p>
+                              total cost
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </div>
+                    </ion-label>
+                  </ion-item>
+                  <!-- End 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                </ion-col>
+                <ion-col no-margin no-padding col-1 class="profile-accordian-toggle-icon">
+                  <ion-item no-lines no-padding>
+                    <ion-icon col-1 name="ios-arrow-forward"></ion-icon>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-col col-12 no-padding no-margin>
+                <ion-label padding-left no-margin no-padding no-lines>
+                  <p class="profile-item-divider margin-right-8"></p>
+                </ion-label>
+              </ion-col>
+            </div>
+          </div>
+          <!-- groupAffiliations Afflications -->
+          <div class="width-100 margin-top-10">
+            <ion-col col-12 no-padding class="profile-accordian-content-title" *ngIf="selectedLocationDetails?.groupAffiliations?.length>0">
+              <ion-label no-padding no-lines class="no-border">Group Affiliations</ion-label>
+              <ion-label margin-left no-margin no-padding no-lines class="profile-accordian-content-sub-title margin-right-8">
+                Where this doctor has admitting priviledges.
+              </ion-label>
+            </ion-col>
+            <div *ngFor="let groupAffiliationsItem of selectedLocationDetails?.groupAffiliations;" class="width-100">
+              <ion-row no-padding no-margin class="profile-accordian-content margin-right-8 margin-botton-0">
+                <ion-col no-padding col-11 class="profile-accordian-content-list">
+                  <!-- Start 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                  <ion-item no-lines>
+                    <ion-label>
+                      {{groupAffiliationsItem.name}}
+                      <div hidden>
+                        <p text-wrap class="profile-cost-estimate-title">Knee Replacement</p>
+                        <p text-wrap class="profile-cost-estimate-description">Estimate cost at this location.
+                          <span>See cost breakdown</span>
+                        </p>
+                        <ion-grid class="no-padding-left">
+                          <ion-row class="profile-cost-estimate-detail-container">
+                            <ion-col col-3 class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$700
+                                <sup>00</sup>
+                              </p>
+                              my cost
+                            </ion-col>
+                            <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                              +
+                            </ion-col>
+                            <ion-col col-3 text-wrap class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$700
+                                <sup>00</sup>
+                              </p>
+                              insurance cost
+                            </ion-col>
+                            <ion-col col-1 text-center class="profile-cost-estimate-detail-operator">
+                              =
+                            </ion-col>
+                            <ion-col col-4 class="profile-cost-estimate-detail-sub-container">
+                              <p class="profile-cost-estimate-detail-price">$1400
+                                <sup>00</sup>
+                              </p>
+                              total cost
+                            </ion-col>
+                          </ion-row>
+                        </ion-grid>
+                      </div>
+                    </ion-label>
+                  </ion-item>
+                  <!-- End 10.0.5 & 10.0.7 Doctor profile: Cost Estimate -->
+                </ion-col>
+                <ion-col no-margin no-padding col-1 class="profile-accordian-toggle-icon">
+                  <ion-item no-lines no-padding>
+                    <ion-icon col-1 name="ios-arrow-forward"></ion-icon>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-col col-12 no-padding no-margin>
+                <ion-label padding-left no-margin no-padding no-lines>
+                  <p class="profile-item-divider margin-right-8"></p>
+                </ion-label>
+              </ion-col>
+            </div>
+          </div>
+        </ion-row>
+      </ion-row>
+      <!-- ratings -->
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <!-- Dont delted this line (tap)="toggleAccordianList('rating')"-->
+        <!-- <ion-row no-padding no-margin class="width-100" (tap)="toggleAccordianList('rating')"> -->
+        <ion-row no-padding no-margin class="width-100">
+          <ion-col no-padding col-11 class="profile-accordian-list-rating-title">
+            <ion-item no-lines>
+              <ion-label no-margin>
+                <!-- margin-top-0 -->
+                <div class="rating-star-container" [ngClass]="{'rating-star-title-container' : accordianToggleStatus['rating'] == true}">
+                  <span *ngIf="fadProfessionalResposeData?.reviews">
+                    <app-star-rating-component [componentInput]="getRating(fadProfessionalResposeData?.reviews)"></app-star-rating-component>
+                  </span>
+                  &nbsp;
+                  <!-- <span class="rating-count"> 
+                      (89)
+                    </span> -->
+                </div>
+                <p *ngIf="accordianToggleStatus['rating'] == true" class="profile-rating-caption profile-rating-caption-title">
+                  Overall Experience</p>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col no-padding col-1 class="profile-accordian-toggle-icon">
+            <ion-item no-lines no-padding>
+              <ion-icon class="icon" [name]="accordianToggleStatus['rating'] == true ? 'ios-arrow-up': 'ios-arrow-down'"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row class="profile-accordian-content" *ngIf="accordianToggleStatus['rating'] == undefined ? false : accordianToggleStatus['rating']">
+          <ion-row no-padding no-margin class="rating-container">
+            <ion-col col-7 no-padding no-margin>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Communication</p>
+                </ion-label>
+              </ion-item>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Availability</p>
+                </ion-label>
+              </ion-item>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Environment</p>
+                </ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 no-padding no-margin>
+              <div text-left class="profile-feedback-container">
+                <ion-label class="profile-rating-feedback-percentage">100%</ion-label>
+                <p class="profile-rating-feedback-remarks">
+                  would recommend this provider to a friend.
+                </p>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row no-padding no-margin class="rating-container">
+            <ion-col col-12 no-padding no-margin>
+              <ion-item no-padding no-lines class="profile-accordian-content-title">All Reviews</ion-item>
+            </ion-col>
+            <ion-col col-12 no-padding no-margin>
+              <ion-label padding-left no-margin no-lines class="profile-accordian-content-title no-border">
+                Screenname
+                <span>on MM/DD/YYYY</span>
+              </ion-label>
+            </ion-col>
+            <ion-col col-7 no-padding no-margin>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Overall Experience</p>
+                </ion-label>
+              </ion-item>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Communication</p>
+                </ion-label>
+              </ion-item>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Availability</p>
+                </ion-label>
+              </ion-item>
+              <ion-item no-lines>
+                <ion-label no-margin>
+                  <div class="rating-star-container">
+                    <span>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-fill"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                      <i class="fas fa-star rating-star-default"></i>
+                    </span>
+                    &nbsp;
+                    <span class="rating-count">
+                      (89)
+                    </span>
+                  </div>
+                  <p class="profile-rating-caption">Environment</p>
+                </ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 no-padding no-margin>
+              <div text-left class="profile-feedback-container">
+                <ion-label class="profile-rating-feedback-percentage">Yes</ion-label>
+                <p class="profile-rating-feedback-remarks">
+                  would recommend this provider to a friend.
+                </p>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row no-padding no-margin>
+            <ion-col col-12 no-padding no-margin>
+              <ion-label padding-left class="profile-rating-feedback-comments-title" text-wrap>Title lorem ipsum dolor sit amet</ion-label>
+            </ion-col>
+            <ion-col col-12 no-padding no-margin>
+              <ion-label no-margin padding-left class="profile-rating-feedback-comments" text-wrap>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-col col-12 no-padding no-margin>
+            <ion-label padding-left no-padding no-lines>
+              <p class="profile-item-divider"></p>
+            </ion-label>
+          </ion-col>
+          <ion-row no-padding no-margin class="profile-rating-latest-visit-container">
+            <ion-col no-padding col-11>
+              <ion-item no-lines class="profile-rating-latest-visit">Rate your latest visit</ion-item>
+            </ion-col>
+            <ion-col no-margin no-padding col-1 class="profile-accordian-toggle-icon">
+              <ion-item no-lines class="profile-rating-latest-visit" no-padding>
+                <ion-icon col-1 name="ios-arrow-forward"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-row>
+      </ion-row>
+      <!-- network -->
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <!-- Dont delete this line  (tap)="toggleAccordianList('network')" -->
+        <!-- <ion-row no-padding no-margin class="width-100" (tap)="toggleAccordianList('network')"> -->
+        <ion-row no-padding no-margin class="width-100">
+          <ion-col no-padding col-11 class="profile-accordian-list-network-title">
+            <ion-item no-lines>
+              <i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;In-Network</ion-item>
+          </ion-col>
+          <!--Start  10.0.2 Doctor Profile: No Network Selected-->
+          <ion-col no-padding col-11 class="profile-accordian-list-provider-title" hidden>
+            <ion-item no-lines>Networks Accepted</ion-item>
+          </ion-col>
+          <!--End  10.0.2 Doctor Profile: No Network Selected-->
+          <!--Start 10.0.9 Doctor profile: One location is of newtwork -->
+          <ion-col no-padding padding-left col-11 class="profile-accordian-list-provider-title" hidden>
+            <button ion-button small round no-padding no-margin class="profile-out-of-network-button">
+              <span class="profile-out-of-network-icon-close">
+                <ion-icon name="ios-close-outline"></ion-icon>
+              </span>
+              <span class="profile-out-of-network-text">
+                &nbsp;Out-of-Network &nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="profile-out-of-network-icon-info">
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+              </span>
+            </button>
+          </ion-col>
+          <!--End 10.0.9 Doctor profile: One location is of newtwork -->
+          <ion-col no-padding col-1 class="profile-accordian-toggle-icon">
+            <ion-item no-lines no-padding>
+              <ion-icon class="icon" [name]="accordianToggleStatus['network'] == true ? 'ios-arrow-up': 'ios-arrow-down'"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row class="profile-accordian-content" *ngIf="accordianToggleStatus['network'] == undefined ? false : accordianToggleStatus['network']">
+          <ion-row no-margin no-padding class="width-100">
+            <ion-col col-12 no-padding no-margin>
+              <ion-label no-margin padding-left class="profile-network-content-title">All networks accepted</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding>
+            <ion-col col-12 no-padding no-margin>
+              <!-- Start 10.0.3 Doctor Profile: No Network Selected - Expanded (Registered only) -->
+              <ion-label padding-left class="profile-network-info-container" hidden>
+                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>&nbsp;
+                <span class="profile-network-info-link">Authenticate</span>
+                <span class="profile-network-info-content">to see if in-Network</span>
+              </ion-label>
+              <!-- End 10.0.3 Doctor Profile: No Network Selected - Expanded (Registered only) -->
+              <!--Start 10.0.4 Doctor Profile: No Network Selected - Expanded (Anonymous) -->
+              <ion-label padding-left class="profile-network-info-container">
+                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>&nbsp;
+                <span class="profile-network-info-link">Login</span>
+                <span class="profile-network-info-content">to see if in-Network</span>
+              </ion-label>
+              <!--End 10.0.4 Doctor Profile: No Network Selected - Expanded (Anonymous) -->
+            </ion-col>
+          </ion-row>
+          <ion-col col-12 no-padding no-margin profile-network-content-list>
+            <ion-row>
+              <ion-col padding-left col-2 text-center class="profile-network-content-list">
+                •
+              </ion-col>
+              <ion-col col-10 class="profile-network-content-list">
+                BCBS Blue New England
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col padding-left col-2 text-center class="profile-network-content-list">
+                •
+              </ion-col>
+              <ion-col col-10 class="profile-network-content-list">
+                HMO Blue Network with Hospital Choice Cost Sharing feature
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col padding-left col-2 text-center class="profile-network-content-list">
+                •
+              </ion-col>
+              <ion-col col-10 class="profile-network-content-list">
+                HMO Blue Options v.5
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+      <!-- provider details -->
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <ion-row no-padding no-margin class="width-100" (tap)="toggleAccordianList('provider')">
+          <ion-col no-padding col-11 class="profile-accordian-list-provider-title">
+            <ion-item no-lines>Provider Details</ion-item>
+          </ion-col>
+          <ion-col no-padding col-1 class="profile-accordian-toggle-icon">
+            <ion-item no-lines no-padding>
+              <ion-icon class="icon" [name]="accordianToggleStatus['provider'] == true ? 'ios-arrow-up': 'ios-arrow-down'"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row class="profile-accordian-content" *ngIf="accordianToggleStatus['provider'] == undefined ? false : accordianToggleStatus['provider']">
+          <!-- Identifiers -->
+          <ion-col col-12 no-padding no-margin *ngIf="selectedLocationDetails?.identifiers?.length>0">
+            <ion-label padding-left no-margin class="profile-provider-content-title">Indentifiers</ion-label>
+          </ion-col>
+          <ion-row class="profile-accordian-content" *ngFor="let identifiersItem of selectedLocationDetails?.identifiers;index as identifiersIndex">
+            <ion-col col-10 no-padding no-margin>
+              <ion-label padding-left no-margin class="profile-provider-content">{{identifiersItem.value}} </ion-label>
+            </ion-col>
+            <ion-col col-2 no-padding no-margin (click)="copyToClipboard(selectedLocationDetails?.identifiers[identifiersIndex].Value)">
+              <ion-label padding-left no-margin class="profile-provider-content">
+                <span>copy</span>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <!-- Languages -->
+          <ion-col col-12 no-padding no-margin *ngIf="fadProfessionalResposeData?.languages">
+            <ion-label padding-left no-margin class="profile-provider-content-title">
+              Languages
+            </ion-label>
+          </ion-col>
+          <ion-row class="profile-accordian-content">
+            <ion-col col-12 no-padding no-margin>
+              <ion-label padding-left no-margin class="profile-provider-content">
+                {{fadProfessionalResposeData?.languages}}
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <!-- Board Certification -->
+          <ion-col col-12 no-padding no-margin>
+            <ion-label padding-left no-margin class="profile-provider-content-title">
+              Board Certification
+            </ion-label>
+          </ion-col>
+          <ion-row class="profile-accordian-content">
+            <ion-col col-12 no-padding no-margin>
+              <ion-label padding-left no-margin class="profile-provider-content">
+                None reported
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <!-- Education -->
+          <ion-col col-12 no-padding no-margin *ngIf="fadProfessionalResposeData?.education?.length>0">
+            <ion-label padding-left no-margin class="profile-provider-content-title">
+              Education
+            </ion-label>
+          </ion-col>
+          <ion-row class="profile-accordian-content" *ngFor="let educationItem of fadProfessionalResposeData?.education;">
+            <ion-col col-12 no-padding no-margin>
+              <ion-label padding-left no-margin class="profile-provider-content">
+                {{educationItem.type}}
+              </ion-label>
+            </ion-col>
+            <ion-col col-12 no-padding no-margin>
+              <ion-row>
+                <ion-col padding-left col-2 text-center class="profile-award-content-list">
+                  •
+                </ion-col>
+                <ion-col col-10 class="profile-award-content-list">
+                  {{educationItem.name}}
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <!-- Awards -->
+          <ion-col col-12 no-padding no-margin *ngIf="selectedLocationDetails?.awards?.length>0">
+            <ion-label padding-left no-margin class="profile-provider-content-title">
+              Awards
+            </ion-label>
+          </ion-col>
+          <ion-row padding-left class="profile-accordian-content profile-provider-awards-container" *ngFor="let awardsItem of selectedLocationDetails?.awards;">
+            <ion-col col-2 padding-left no-margin class="profile-provider-awards-image">
+              <!-- image -->
+            </ion-col>
+            <ion-col col-10 no-padding no-margin class="profile-provider-awards-image-description">
+              <ion-label no-margin text-wrap>{{awardsItem.name}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-row>
+      </ion-row>
+      <!-- location details -->
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <ion-row no-padding no-margin class="width-100" (tap)="toggleAccordianList('location')">
+          <ion-col no-padding col-11 class="profile-accordian-list-location-title">
+            <ion-item no-lines>Locations Details</ion-item>
+          </ion-col>
+          <ion-col no-padding col-1 class="profile-accordian-toggle-icon">
+            <ion-item no-lines no-padding>
+              <ion-icon class="icon" [name]="accordianToggleStatus['location'] == true ? 'ios-arrow-up': 'ios-arrow-down'"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row class="profile-accordian-content" *ngIf="accordianToggleStatus['location'] == undefined ? false : accordianToggleStatus['location']">
+          <ion-col col-12 no-padding no-margin *ngFor="let amenitiesItem of selectedLocationDetails?.amenities">
+            <ion-label padding-left no-margin class="profile-provider-content">
+              {{amenitiesItem.type}}
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-row>
+      <ion-row no-padding no-margin class="profile-accordian-row">
+        <ion-item no-lines class="profile-affiliated-doctors">
+          <span>
+            <i class="fas fa-search"></i>
+          </span>Search for affiliated doctors
+        </ion-item>
+        <ion-item no-lines text-wrap class="profile-description">
+          Our networks include a comprehensive range of doctors, hospitals, and other health care providers. When recruiting providers
+          to participate in our network, we consider the distance our members will have to travel to get to the provider.
+          We select providers for participation in our networks based on their proven ability to meet our credentialing criteria.
+          We do not measure cost, quality, or member experience when selecting providers to participate in our networks.
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+    <img class="shadow-img" />
+  </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

@@ -1,0 +1,27 @@
+.cardArticleDescription {
+    font-size: $card-content-title-size;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 50px;
+    max-height: 3.45em;
+}
+
+.newsCardThumbnailCls {
+    padding: 0px 10px 0px 0px;
+}
+
+.cardArticleTitle {
+    font-family: arial-bold;
+    color: $card-content-font-color-normal;
+    font-size: $card-content-title-size;
+}
+
+.cardReadArticleLinkCls {
+    padding-top: $padding-30;
+    font-family: arial-bold;
+    color: $card-content-font-color-highlighted;
+    font-size: 1 em;
+}

@@ -1,0 +1,63 @@
+ my-financials-card {
+     .content-cls {
+         padding: $padding-30 $padding-page-30;
+         font-family: $font-family-lable;
+         border-bottom: 1px solid $card-content-section-border-color;
+     }
+     .countFont {
+         font-size: $card-content-number-highlight-font-size;
+         color: $card-content-font-color-highlighted;
+         padding-right: 5px;
+     }
+     .graphTitleCls {
+         font-family: $font-family-lable;
+         font-size: $card-content-body-size;
+         text-align: center;
+         padding-left: $padding-page-30;
+         padding-right: $padding-page-30;
+         padding-top: 10px;
+     }
+     .graphSubTitleCls {
+         font-size: $card-content-body-size;
+         text-align: center;
+         padding-bottom: $padding-10;
+         color: $card-title-color;
+     }
+     .card-content {
+         height: auto !important;
+     }
+     .messageCls {
+         text-align: center;
+         padding-bottom: $padding-page-30;
+         font-size: $card-content-body-small-font-size;
+         color: $card-title-color;
+     }
+     .swiper-slide {
+         font-size: inherit;
+     }
+     .graphLableTextCls {
+         text-align: center;
+         color: $card-title-color;
+         font-size: $card-content-body-size;
+     }
+     .graphLableAmountCls {
+         text-align: center;
+         font-family: $font-family-lable;
+         font-size: $card-content-body-size;
+     }
+     .paddingTopCls {
+         padding-top: 10px !important;
+     }
+     .swiper-pagination {
+         bottom: 0px !important;
+     }
+     .barGreenCls {
+         background-color: #3DA148;
+     }
+     .barGreyCls {
+         background-color: #B2B2B2;
+     }
+     .barPurpleCls {
+         background-color: #92278F;
+     }
+ }

@@ -1,0 +1,26 @@
+<ion-list no-margin>
+    <ion-item id="addDocToContact" no-padding (tap)="userSelection(1)">
+        <ion-row align-items-center>
+            <ion-col col-2 padding-left>
+                <img [src]="config.assets_url+'/images/icons-ios/add_contacts.png'" class="option-icon" />
+            </ion-col>
+            <ion-col col-10>Add doctor to contacts</ion-col>
+        </ion-row>
+    </ion-item>
+    <ion-item id="docVisitHistory" no-padding (tap)="userSelection(2)">
+        <ion-row align-items-center>
+            <ion-col col-2 padding-left>
+                <img [src]="config.assets_url+'/images/icons-ios/view_history.png'" class="option-icon" />
+            </ion-col>
+            <ion-col col-10>View visit history</ion-col>
+        </ion-row>
+    </ion-item>
+    <ion-item id="docViewClaim" no-padding (tap)="userSelection(3)">
+        <ion-row align-items-center>
+            <ion-col col-2 padding-left>
+                <img [src]="config.assets_url+'/images/icons-ios/view_claim.png'" class="option-icon" />
+            </ion-col>
+            <ion-col col-10>View claim</ion-col>
+        </ion-row>
+    </ion-item>
+</ion-list>

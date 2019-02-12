@@ -1,0 +1,58 @@
+@import "../common/financials.scss";
+@import "../make-payment/make-payment.scss";
+
+page-add-provider {
+  form {
+    background-color: $background-color-normal;
+  }
+
+  .item-ios,
+  .item-md {
+    padding-left: 0px !important;
+  }
+
+  .select-ios {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  .disclaimer-text,
+  .upload-photo-section {
+    padding-left: 16px;
+  }
+
+  .buttonFull {
+    width: 100%;
+    margin-left: -4px;
+  }
+
+  .ionBtncls {
+    font-size: 1.2em;
+    background-color: #1866a3;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+  }
+
+  .ionbtnclear {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 35px;
+  }
+
+  .bottom-border {
+    border-bottom: 0.55px solid #c8c7cc;
+  }
+  
+  .bottom-border .item-inner {
+    border-bottom: none !important;
+  }
+    
+}

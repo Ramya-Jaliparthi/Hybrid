@@ -1,0 +1,33 @@
+{
+  "membersList": [
+    {
+      "firstName": "CHARLIE",
+      "lastName": "DAIGLE"
+    },
+    {
+      "firstName": "STEVE",
+      "lastName": "DAIGLE"
+    }
+  ],
+  "serviceTypeCodes": [
+    {
+      "code": "Dental"
+    },
+    {
+      "code": "Vision"
+    },
+    {
+      "code": "Medical"
+    }
+  ],
+  "reimbursementMethodList": [
+    {
+      "method": "Check"
+    },
+    {
+      "method": "Direct Deposit"
+    }
+  ],
+  "disclosure": "I certify that these expenses have been incurred by me, my spouse or my eligible dependent and are health care, dependent care or transportation expenses as allowed under my plan.&nbsp; I also certify that these expenses have not been previously reimbursed and I will not seek reimbursement elsewhere.&nbsp; I understand that payments must be for qualified expenses, and I have full responsibility to maintain documentation that substantiates that each reimbursement request is for a qualified expense.&nbsp; For example, requests for reimbursements from my Dependent Care Flexible Spending Account must be for expenses incurred for work-related dependent care so permitted under the Dependent Care Flexible Spending Account, on the date(s) indicated.&nbsp; I understand that I cannot claim any reimbursed expenses on my income tax return, and that I may be liable for payment of all related taxes and any associated penalties on the amounts paid for any expense improperly claimed under the provisions of this plan.",
+  "reimburseAgreement": "Thank you for submitting your claim online. <br /> <br />Should you have any questions or concerns please feel free to contact our&nbsp;Member Service Department at<br /><span style=\"font-family: Calibri;\"><span class=\"baec5a81-e4d6-4674-97f3-e9220f0136c1\" style=\"white-space: nowrap;\">855-279-4176<a href=\"#\" title=\"Call: 855-279-4176\" style=\"margin: 0px; border: currentColor; left: 0px; top: 0px; width: 16px; height: 16px; right: 0px; bottom: 0px; overflow: hidden; vertical-align: middle; float: none; display: inline; white-space: nowrap; position: static !important; border-image: none;\"><img alt=\"\" title=\"Call: 855-279-4176\" style=\"margin: 0px; border: currentColor; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; display: inline; white-space: nowrap; position: static !important; border-image: none;\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcklEQVR4XpXTPUvDUBTH4aR2c2hBQXGpTiIORhBcBOvgYKf0Awi+4Ggr1MVPIIrYdnEpShddHIyLi6AVXVxsRRDRwbi4KNgu4lCIv8i/i6QRDzycy+09555LqOl5nhEUptPoJe1iDHU8oYlrlDw79m4QEbSLPexzsIc8hDRm8YBjLpj4q8EgxQdab+MNd4ghhQ2adIc1+ORAFEnWWfTDRp7GDfImlsIavKALLuqoqMGUCs4wHtagiQ5uc8kDyCOBKlP1k78QNTOZnMXCQRxWsbjl6iuskV41SQG2Gj9rikvcR1WcgKFDBa1LOEUK56hqv8BUFV3SGWkVS9JQ6Dsv4wQ1DKMPORUvkm78BhdQMI1CTa5I0yrcwSFqFD+SZ7DQesIkCG5S/JpkHYERQRmuNsrZ7Grc+Ef8/Bcoslkfae8Wc7CUHZ++TuAEBj86pHntjaDKXllPy6PW/gkKFaThwp/K87N8hDcQTTKKFTioSxqB8Q2BNX5JtAljwgAAAABJRU5ErkJggg==\" width=\"16\" height=\"16\" /></a></span></span>"
+}

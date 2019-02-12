@@ -1,0 +1,38 @@
+<div *ngIf="memberInfo.visitSvcDt else nodataerror">
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col class="lastVisitCls padding-left-right">
+        <span class="subLableCls">Last Visit: </span>
+        <b>{{memberInfo.visitSvcDt}}</b>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="informationCls  padding-left-right">
+      <ion-col col-8 (tap)="openPage()" align-self-center>
+        <div class="doctorNameCls"> {{memberInfo.visitPrvName|lowercase}}</div>
+        <div class="descriptionCls">{{memberInfo.visitSpec |lowercase}}</div>
+      </ion-col>
+      <ion-col col-2>
+        <div *ngIf="address && address.length > 0" class="iconContainerCls">
+          <img [src]="config.assets_url+'/images/icons-ios/Asset32@2x.png'" class="imageCls" (tap)="showMap(memberInfo.visitStreet+' '+memberInfo.visitCity+' '+memberInfo.visitState+' '+memberInfo.visitZip)"
+          />
+          <br/>
+          <span class="iconLableCls color-map">Map</span>
+        </div>
+      </ion-col>
+      <ion-col col-2>
+        <div *ngIf="memberInfo.visitPhone && memberInfo.visitPhone != 'null' && memberInfo.visitPhone.length > 0" class="iconContainerCls">
+          <img [src]="config.assets_url+'/images/icons-ios/Asset31@2x.png'" class="imageCls" (tap)="makeCall(memberInfo.visitPhone)"
+          />
+          <br/>
+          <span class="iconLableCls">Call</span>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</div>
+<ng-template #nodataerror>
+  <div style="margin-top:15px; border-top:1px solid #DDDDDD" padding>You have no doctor visits to display.</div>
+  <br/>
+</ng-template>

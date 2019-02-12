@@ -1,0 +1,649 @@
+{
+    "_meta": {
+        "counts": {
+            "total": 6862
+        },
+        "pages": {
+            "total": 687,
+            "current": 1,
+            "next": 2,
+            "previous": null
+        },
+        "matches": {
+            "professionals": [
+                1000920772,
+                1000729903,
+                1000942390,
+                1000687047,
+                1002134953,
+                1000615419,
+                1001281833,
+                1001282170,
+                1002128165,
+                1000375656
+            ],
+            "locations": [
+                101736286,
+                101259927,
+                101259913,
+                101259901,
+                101780114,
+                101780104,
+                101780103,
+                101780081,
+                101780071,
+                101017356,
+                101017367,
+                101017348,
+                101017349,
+                101017374,
+                102861340,
+                100975263,
+                100975267,
+                102625063,
+                102625086,
+                103131150,
+                103131152,
+                103131149,
+                103131151,
+                100294915,
+                100294917
+            ],
+            "professional_specializations": [
+                100791133,
+                100574380,
+                100811432,
+                101339875,
+                100464008,
+                101302584,
+                100444910,
+                101194766,
+                101194782,
+                101279924,
+                100134519
+            ],
+            "field_specialties": [
+                10009,
+                10044,
+                10334,
+                10121,
+                10093,
+                10096,
+                10208,
+                10189
+            ]
+        },
+        "others": {
+            "professionals": [],
+            "locations": [],
+            "professional_specializations": [],
+            "field_specialties": []
+        }
+    },
+    "professionals": [
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000920772,
+            "provider_id": "p1000920772",
+            "name": "Smith S Ho",
+            "first_name": "Smith",
+            "middle_name": "S",
+            "last_name": "Ho",
+            "type": "P",
+            "gender": "M",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "5349843"
+                }
+            ],
+            "languages": [
+                {
+                    "type_code": null,
+                    "name": "Thai"
+                },
+                {
+                    "type_code": null,
+                    "name": "Chinese"
+                }
+            ],
+            "href": "/api/professionals/1000920772/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101736286,
+                    "name": "Medical Faculty Associates Inc",
+                    "address": {
+                        "addr_line1": "7610 Carroll Ave Ste 280",
+                        "addr_line2": "",
+                        "city": "Takoma Park",
+                        "state_code": "MD",
+                        "sub_national": null,
+                        "county": "Montgomery",
+                        "country_code": null,
+                        "postal_code": "20912",
+                        "latitude": 38.983871,
+                        "longitude": -76.999889
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "3018916100",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": 60.50,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1497165"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "25680924|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106390096,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Medical Faculty Associates Inc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000212927,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "George Wash Univ",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000193874,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Washington Adventist Hosp",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000201057,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "080|DCB1|25680924||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12918927,
+                                    "professional_location_contract_id": 106390096,
+                                    "professional_location_id": 101736286,
+                                    "professional_id": 1000920772,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101736286,
+                    "name": "Medical Faculty Associates Inc",
+                    "address": {
+                        "addr_line1": "7610 Carroll Ave Ste 280",
+                        "addr_line2": "",
+                        "city": "Takoma Park",
+                        "state_code": "MD",
+                        "sub_national": null,
+                        "county": "Montgomery",
+                        "country_code": null,
+                        "postal_code": "20912",
+                        "latitude": 38.983871,
+                        "longitude": -76.999889
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "3018916100",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": 60.50,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1497165"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "25680924|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106390096,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Medical Faculty Associates Inc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000212927,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "George Wash Univ",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000193874,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Washington Adventist Hosp",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000201057,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "080|DCB1|25680924||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12918927,
+                                    "professional_location_contract_id": 106390096,
+                                    "professional_location_id": 101736286,
+                                    "professional_id": 1000920772,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101736286,
+                    "name": "Medical Faculty Associates Inc",
+                    "address": {
+                        "addr_line1": "7610 Carroll Ave Ste 280",
+                        "addr_line2": "",
+                        "city": "Takoma Park",
+                        "state_code": "MD",
+                        "sub_national": null,
+                        "county": "Montgomery",
+                        "country_code": null,
+                        "postal_code": "20912",
+                        "latitude": 38.983871,
+                        "longitude": -76.999889
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "3018916100",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": 60.50,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1497165"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "25680924|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106390096,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Medical Faculty Associates Inc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000212927,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "George Wash Univ",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000193874,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Washington Adventist Hosp",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000201057,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "080|DCB1|25680924||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12918927,
+                                    "professional_location_contract_id": 106390096,
+                                    "professional_location_id": 101736286,
+                                    "professional_id": 1000920772,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100791133,
+                    "professional_id": 1000920772,
+                    "is_certified": "N",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10009,
+                        "name": "Internal Medicine",
+                        "title": null,
+                        "partner_code": "BCA11",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/reviews?reviews_canonical_id=080%7CDCSA%7C25680924%7C%7C01",
+                "ratings": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/ratings",
+                "summary": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        }
+    ],
+    "disclaimers": [],
+    "cash_reward_reference_number": null
+}

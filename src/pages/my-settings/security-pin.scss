@@ -1,0 +1,124 @@
+page-security-pin {
+    .headerTitle {
+        background-color: white !important;
+        font-weight: normal;
+        text-transform: capitalize !important;
+    }
+
+    .border-right{
+        border-right: 1px solid #dddddd;
+    }
+
+    .border-bottom {        
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .list-md .item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0px solid #c8c7cc;
+    }
+    
+    .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0px solid #c8c7cc;
+    }
+    
+    .item-ios.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0px solid #c8c7cc;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        display:none;
+    }
+    .login_slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .login_slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .login_sliderlabel {
+        float:left;
+        padding-left:10px;  
+        
+        line-height:2.6em;
+    }
+    
+    input:checked + .login_slider {
+        background-color: #25bd27;
+    }
+
+    input:focus + .login_slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .login_slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .login_slider.round {
+        border-radius: 34px;
+    }
+    .login_slider.round:before {
+        border-radius: 50%;
+    }
+
+    .settingsCls{
+        padding:40px $padding-page-30;
+    }
+
+    .input{
+        padding-left:$padding-page-30;
+    }
+    .pwdShowBtnCls{
+        width: 60px !important;
+        padding: 0 2rem;
+        height: 18px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .errorMsg{
+        font-family:$font-family-base;
+        font-size:0.9em;
+    }
+
+    input[type="text"], [type="email"], input[type="password"]{
+            width: 100%;
+            padding-left:$padding-page-30;
+            border: 0px;
+            font-family: roboto-light;
+
+    }
+    
+    .cancelBtnCls{
+        width:100%;
+        text-align: center;
+        text-decoration: none;
+        padding: 0px 0px $padding-page-15 0px; 
+        color: #115890;        
+        font-size:  13px;
+    }   
+
+}

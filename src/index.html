@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Blue</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+  <link href="build/main.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'arial-bold';
+      src: url('assets/fonts/Arial-Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'roboto-bold';
+      src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'roboto-light';
+      src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+    }
+  </style>
+   <script defer src="assets/fonts/fontawesome-all.min.js"></script>
+
+  <script>
+    function cueme_ready() {
+      console.log("cueme ready....");
+      if (window.sendCUEMEevent)
+        sendCUEMEevent("click", "cuemeReadyId");
+    }
+
+    function injectScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = src;
+        script.addEventListener('load', resolve);
+        script.addEventListener('error', () => reject('Error loading script.'));
+        script.addEventListener('abort', () => reject('Script loading aborted.'));
+        document.body.appendChild(script);
+      });
+    }
+
+    function loadIonic() {
+
+      var scriptSource = ["assets/config/appConfig.js",
+        "assets/js/upload-logs.js",
+        "assets/js/back-handler.js",
+        "assets/js/analytics-handler.js",
+        "assets/js/utility-handler.js",
+        "assets/js/swrve-handler.js",
+        "assets/js/touch-handler.js",
+        "assets/js/eva-securestorage.min.js",
+        "build/polyfills.js",
+        "build/vendor.js",
+        "build/main.js",
+        "assets/fonts/fontawesome-all.min.js",
+        "assets/chart.js/Chart.min.js"
+      ];
+
+      injectScript("assets/config/appConfig.js")
+        .then(function (script) {
+          return injectScript("assets/js/upload-logs.js");
+        }).then(function (script) {
+          return injectScript("assets/js/back-handler.js");
+        }).then(function (script) {
+          return injectScript("assets/js/analytics-handler.js");
+        }).then(function (script) {
+          return injectScript("assets/js/utility-handler.js");
+        }).then(function (script) {
+          return injectScript("assets/js/swrve-handler.js");
+        }).then(function (script) {
+          return injectScript("assets/js/eva-securestorage.min.js");
+        }).then(function (script) {
+          return injectScript("assets/js/touch-handler.js");
+        }).then(function (script) {
+          return injectScript("build/polyfills.js");
+        }).then(function (script) {
+          return injectScript("build/vendor.js");
+        }).then(function (script) {
+          return injectScript("build/main.js");
+        }).then(function (script) {
+          return injectScript("assets/chart.js/Chart.min.js");
+        }).then(function (script) {
+          return injectScript("assets/fonts/fontawesome-all.min.js");
+        }).then(function (script) {
+          return injectScript("assets/js/openstream-common.dateutil.min.js");
+        })
+
+      /*
+        for (var index in scriptSource) {
+          var scriptElem = document.createElement('script');
+          scriptElem.src = scriptSource[index];
+           document.body.appendChild(scriptElem);
+        }
+      */
+
+    }
+  </script>
+
+</head>
+
+<body onload="loadIonic()">
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+
+
+</body>
+
+</html>

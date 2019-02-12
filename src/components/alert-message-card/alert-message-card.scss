@@ -1,0 +1,41 @@
+.alert-message-card{
+    padding: $padding-page-30 0px $padding-page-30 $padding-page-30;
+    font-size: 0.9em;
+
+    
+    .messageHeaderTitle{
+        font-size: $card-content-title-size;
+        font-family:$font-family-lable;
+        padding-bottom: $padding-page-15;
+        
+    }
+    .messageContent{
+
+    }
+    
+}
+.info{
+        border-left: $padding-page-15 solid #3da148;
+    }
+.error{
+    border-left:$padding-page-15 solid #C1272D; 
+
+}
+.promo{
+    border-left:$padding-page-15 solid #c6dcee;
+
+}
+.notification {
+    border-left: $padding-page-15 solid #2f75ab;
+}
+.errorImgContainer .errorIcon {
+    padding: 0px 10px;
+    font-size: 1.8em;
+}
+.errorIcon:before {
+    color: #C1272D;
+    font-weight: bold;
+}
+.checkMarkIcon:before {
+    color: #3da148;
+}

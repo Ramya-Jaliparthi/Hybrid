@@ -1,0 +1,25 @@
+page-about {
+    .background{
+        background: #ddd;
+    }
+    label{
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    .label{
+        width: 100%;
+    }
+
+    .bold{
+        font-family: arial-bold;
+    }
+    ion-col img{
+        max-width: 60%;
+    }
+    .detailArrowCls{
+        float: right;
+        color: #b2b2b2;
+        font-size: 1.6em;
+        text-align: right;
+    }
+}

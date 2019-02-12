@@ -1,0 +1,50 @@
+page-authPromo {
+    div{
+        padding: 0px 15px;
+    }
+    
+    .scroll-content{
+        margin: 0px !important;
+    }
+    .close-icon-blue{
+        color: #1866a3;
+        font-size: 3em;
+        width: 100%;
+        font-weight: bold;
+        background: white;
+        margin-bottom: -1px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        }
+
+        li {
+            padding-left: 1em; 
+            padding-top: 5px;
+            text-indent: -.7em;
+        }
+
+        li::before {
+        content: "■";
+        font-family: "Arial Black";
+        color: #1866a3; /* or whatever color you prefer */
+        padding-right: 10px;
+        padding-bottom: 2pxx;
+        }
+    .headerCls{
+        padding: ($padding-page-30 *2) 0px;
+        font-family: arial-bold;
+        color: #1866a3;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .btnContainerCls{
+        padding-top: 150px;
+    }
+    .textBtnCls, .textBtnCls.activated{
+        background: white;
+        color: $card-content-font-color-normal;
+        text-decoration: underline;
+    }
+}

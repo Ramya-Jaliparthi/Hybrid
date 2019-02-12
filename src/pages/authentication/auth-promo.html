@@ -1,0 +1,18 @@
+<ion-content no-scroll>
+  <ion-icon name="close" (click)="cancel($event)" [ngClass]="'close-icon-blue'" padding-right text-right></ion-icon>
+  <div class="headerCls">Authenticate your account now</div>
+  <div>Unlock all your member benefits and get access to:</div>
+  <ul>
+    <li>Member Plan Details</li>
+    <li>Full access to Claims Details</li>
+    <li>Manage Financial Accounts</li>
+    <li>Get Reimbursements</li>
+    <li>Secure Messaging</li>
+  </ul>
+  <div class="btnContainerCls">
+    <input ion-button full type="button" (tap)="authenticateNow()" value="Authenticate Now" style="border: 0px !important;" />
+    <input ion-button full outline type="button" text-underline class="textBtnCls" (tap)="cancel()" value="Continue with Limited Access"
+      style="border: 0px !important;" />
+  </div>
+
+</ion-content>

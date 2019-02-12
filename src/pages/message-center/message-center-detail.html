@@ -1,0 +1,24 @@
+<header [title]="'Message Center'" [activeTab]="'messageCenter'"></header>
+<ion-content>
+    <div class="detailsContent">
+        <div (tap)="getLinkdetails($event)">
+            <ion-row class="middleContainerCls">
+                <ion-col no-padding>
+                    <div class="boldContentCls">{{messageCenterDetails.AlertShortTxt}}</div>
+                    <div class="mediumContentcls" [innerHTML]="messageCenterDetails.AlertLongTxt | safeHtml"></div>
+                </ion-col>
+
+            </ion-row>
+        </div>
+    </div>
+
+    <div [ngClass]="(showTabberMenu)?'msgCentermdfooter':'msgCenteriosfooter'">
+        <ion-row>
+            <ion-col>
+                <ion-icon md="ios-trash" *ngIf="showTabberMenu" (tap)="deletememAlert(messageCenterDetails)"> Delete</ion-icon>
+                <ion-icon ios="ios-trash" *ngIf="!showTabberMenu" (tap)="deletememAlert(messageCenterDetails)"> Delete</ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+<footer [activeTab]="'Message Center'"></footer>

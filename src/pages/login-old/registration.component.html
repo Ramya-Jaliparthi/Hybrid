@@ -1,0 +1,84 @@
+<header [title]="'Register'" [hideMenu]="'true'" [activeTab]="''">
+</header>
+<ion-content>
+    <div style="height:10px;" *ngIf="showInfoAlerSection">&nbsp;</div>
+    <div *ngFor="let alert of alerts">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+    </div>
+
+    <div style="margin-bottom:15px;background-color:white;padding-top:15px;">
+        <div>
+            <div class="signUpContainerCls">
+                <span class="signUpcls">Sign up!</span>
+                <br> All fields are required.</div>
+
+            <ion-segment [(ngModel)]="registerType">
+                <ion-segment-button value="emailAddress" (ionSelect)="enableEmailRegistration()" text-capitalize value="EMAIL">
+                    Email Address
+                </ion-segment-button>
+
+                <ion-segment-button value="mobileNumber" (ionSelect)="enableMobileRegistration()" text-capitalize value="MOBILE">
+                    Mobile Number
+                </ion-segment-button>
+
+            </ion-segment>
+
+            <form [formGroup]="registerForm" (ngSubmit)="registerUser($event, registerForm)" class="personalInfoFromCls">
+                <div class="labelCls" *ngIf="registerType == 'EMAIL'">Email Address</div>
+                <ion-item *ngIf="registerType == 'EMAIL'">
+                    <ion-input id="email" formControlName="emailAddress" type="email" placeholder="yourname@domain.com" (blur)="setEmailBlur()"
+                        (focus)="onEmailBlur = false"></ion-input>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.emailAddress" *ngIf="registerType == 'EMAIL' && onEmailBlur"></control-messages>
+                <div class="labelCls" *ngIf="registerType == 'MOBILE'">Mobile Number</div>
+                <ion-item *ngIf="registerType == 'MOBILE'">
+                    <input formControlName="mobileNumber" class="mobileInputcls fullwidth_in" #mobileNumber type="tel" [textMask]="{mask: mobileMask}"
+                        placeholder="123-456-7890" (blur)="onMobileBlur = true" />
+                </ion-item>
+                <control-messages [control]="registerForm.controls.mobileNumber" *ngIf="registerType == 'MOBILE' && onMobileBlur"></control-messages>
+                <div class="labelCls">Password</div>
+                <ion-item class="inputPwdCls">
+                    <input #pwdInput type="password" formControlName="password" placeholder="Password" (blur)="setPasswordBlur()" (focus)="onPasswordBlur = false"
+                    />
+                    <button class="pwdShowBtnCls" type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInput)" round text-capitalize>{{buttonCaption}}</button>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.password" *ngIf="onPasswordBlur"></control-messages>
+                <p>
+                    <span class="regSubTitleCls">Password must include:</span>{{passwordFormat}} </p>
+                <div class="settingsCls">
+                    <label class="switch" style="float:left;">
+                        <input type="checkbox" formControlName="enableInfoAlert" id="enableInfo" />
+                        <span class="login_slider round"></span>
+                    </label>
+                    <div class="toggleContentCls">{{wishToReceiveHealthInfo}}
+                        <span (tap)="learnMore()" class="learnMore" text-end text-capitalize>learn more.</span>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="settingsCls">
+                    <label class="switch" style="float:left;">
+                        <input type="checkbox" formControlName="termsAndConditions" id="termsAndConditions" />
+                        <span class="login_slider round"></span>
+                    </label>
+                    <div class="toggleContentCls" style="padding-bottom: 0px !important;">
+                        <div class="regSubTitleCls">Terms & Conditions</div>
+                        {{iHaveReadAndAgree}}
+                        <span class="learnMore" (tap)="goToTermsOfService()">Terms of Use</span> and
+                        <span class="learnMore" (tap)="showPrivacyStatement()">Confidentiality.</span>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+                <div style="clear: both;height:0px !important;"></div>
+                <control-messages [control]="registerForm.controls.termsAndConditions"></control-messages>
+                <div class="submitBtnCls" text-center>
+                    <button #continue ion-button type="submit" full [disabled]="disableSubmitButton">Continue</button>
+                    <div>Already have an account?
+                        <span (tap)="goToSignInPage()" class="outlyingLinkCls">Sign In</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <img class="shadow-img" />
+    </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

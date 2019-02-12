@@ -1,0 +1,154 @@
+@import './_colors.scss';
+//Roboto google font is already imported by materialiecss npm.
+//if there is need for more font, please import form google fonts.
+//H1 Header - Roboto Light
+@mixin Roboto ($weight) {
+    font-family: Roboto !important;
+    @if $weight==bold {
+        font-weight: 700 !important;
+    }
+    @if $weight==medium {
+        font-weight: 500 !important;
+    }
+    @if $weight==regular {
+        font-weight: 400 !important;
+    }
+    @if $weight==normal {
+        font-weight: 400 !important;
+    }
+    @if $weight==light {
+        font-weight: 300 !important;
+    }
+    @if $weight==thin {
+        font-weight: 100 !important;
+    }
+}
+
+@mixin Arial-bold ($weight) {
+    font-family: $font-family-lable !important;
+    @if $weight==bold {
+        font-weight: 700 !important;
+    }
+    @if $weight==medium {
+        font-weight: 500 !important;
+    }
+    @if $weight==regular {
+        font-weight: 400 !important;
+    }
+    @if $weight==normal {
+        font-weight: 400 !important;
+    }
+    @if $weight==light {
+        font-weight: 300 !important;
+    }
+    @if $weight==thin {
+        font-weight: 100 !important;
+    }
+}
+
+@mixin FontAwesome5Free ($weight) {
+    @if $weight==light {
+        font-family: FontAwesome5FreeLight !important;
+    }
+    @if $weight==regular {
+        font-family: FontAwesome5FreeRegular !important;
+    }
+    @if $weight==solid {
+        font-family: FontAwesome5FreeSolid !important;
+    }
+}
+
+@mixin FontAwesome5Pro ($weight) {
+    @if $weight==light {
+        font-family: FontAwesome5ProLight !important;
+    }
+    @if $weight==regular {
+        font-family: FontAwesome5ProRegular !important;
+    }
+    @if $weight==solid {
+        font-family: FontAwesome5ProSolid !important;
+    }
+}
+
+h1,
+.header-h1 {
+    @include Roboto(light);
+    font-size: 24px !important;
+    color: $headings-dark-color !important;
+    line-height: 32px;
+    margin-bottom: 10px;
+    /*margin-top: 0px;*/
+}
+
+//H2 Header - Roboto Medium
+h2,
+.header-h2 {
+    @include Roboto(medium);
+    font-size: 22px !important;
+    color: $headings-dark-color !important;
+    line-height: 25px;
+}
+
+//H3 Header - Roboto Regular
+h3,
+.header-h3 {
+    @include Roboto(regular);
+    font-size: 20px !important;
+}
+
+//H4 Header - Roboto Medium
+h4,
+.header-h4 {
+    @include Roboto(medium);
+    font-size: 18px !important;
+}
+
+//H5 Header - Roboto Light
+h5,
+.header-h5 {
+    @include Roboto(light);
+    font-size: 18px !important;
+}
+
+//H6 Header - Roboto Bold
+h6,
+.header-h6 {
+    @include Roboto(bold);
+    font-size: 16px !important;
+}
+
+//Body text - Roboto regular
+.normal-text {
+    @include Roboto(regular);
+    font-size: 16px !important;
+}
+
+//Footer text - Roboto regular
+.footer-text {
+    @include Roboto(regular);
+    font-size: 14px !important;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    @include Roboto(light);
+    font-size: 14px;
+    color: #818181;
+    text-align: left;
+}
+
+$icon-color : #1866A3;
+$disabled_text_color: #818181;
+$doc-list-item-border-color: #e0e0e0;
+$link-primary-color: #1065A5;
+$headings-dark-color: #043167;
+$required-indicator-color:#666666;
+$text-primary-color: #1866A3;
+$success-alerts-color: #3da148;
+$alert_red: #C1272D;
+$tooltip-shadowcolor: #d3d3d3;
+$selected-background-color: #6591B3;
+$dropdown-background-color:rgba(49, 124, 179, 0.50);
+$content-background-color-alt: #DCE4EB;
+$content-background-color: #F2F2F2;
+$link-secondary-color: #043167;
+$text-white-color: #FFFFFF;

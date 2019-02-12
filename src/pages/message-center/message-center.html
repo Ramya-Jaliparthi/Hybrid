@@ -1,0 +1,116 @@
+<header [title]="'Message Center'" [activeTab]="'messageCenter'"></header>
+<ion-content>
+    <div class="mainwrapperContent" no-margin>
+        <ion-segment [(ngModel)]="messageCenter" (ionChange)="showMessages($event)">
+            <ion-segment-button class="headerTitle" value="Notifications">
+                Notifications & Alerts
+            </ion-segment-button>
+            <ion-segment-button class="headerTitle" value="Cards">
+                Messages
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="messageCenter" (swipe)="swiped($event)" style="border-top:1px solid #EEE">
+
+        <div *ngSwitchCase="'Notifications'" ngSelected="selected">
+            <div *ngFor="let alert of errorAlerts" [style.margin-top]="isAlertShowing() ? '0px' : '0px'">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+                    [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+
+            <div *ngIf="((noMessageAlerts && noMessageAlerts.length>0) || emptyMessageAlertsPanel)" class="emptyalerts">
+                <ion-row class="middleContainerCls barColorOrange ">
+                    <ion-col no-padding>
+                        <div class="boldContentCls" [innerHTML]="noMessageAlerts"></div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+
+            <ion-list *ngIf="!emptyMessageAlertsPanel && !showCheckBox">
+                <div *ngFor="let msgalert of messageAlerts" class="wrapperContent">
+                    <ion-item-sliding class="msgitemDiv" *ngIf="!msgalert.isDeleted">
+                        <ion-item (tap)="showMessageCenterDetails(msgalert)" no-lines style="padding-left:15px !important; padding-right:12px">
+                            <ion-row class="middleContainerCls" style="padding-left:0px !important;padding-right:0px !important;">
+                                <ion-col col-11 no-padding class="">
+                                    <div [ngClass]="(msgalert.messageRead)?'mediumContentcls':'boldContentCls'">{{trimShortTxt(msgalert.AlertShortTxt)}}</div>
+                                    <div [ngClass]="(msgalert.messageRead)?'mediumContentcls':'boldContentCls'">{{trimLongTxt(msgalert.headerLongText)}}</div>
+                                </ion-col>
+                                <ion-col col-1 align-self-center style="text-align: center;padding:0px !important;">
+                                    <ion-icon style="margin-left:0px !important;" class="detailArrowCls" name="arrow-forward"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                        </ion-item>
+                        <ion-item-options>
+                            <button ion-button (tap)="deletememAlert(msgalert)" class="delIconclr">Delete</button>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                    <img class="shadow-img" />
+                </div>
+            </ion-list>
+
+
+            <div *ngIf="!emptyMessageAlertsPanel && showCheckBox">
+                <ion-list>
+                    <div *ngFor="let msgalert of messageAlerts" class="wrapperContent">
+                        <div class="msgitemDiv" *ngIf="!msgalert.isDeleted">
+                            <ion-item no-lines class="msgItemChk">
+                                <ion-label>
+                                    <div (tap)="showMessageCenterDetails(msgalert)" class="msgalertsItem">
+                                        <div [ngClass]="(msgalert.messageRead)?'mediumContentcls':'boldContentCls'">{{trimShortTxt(msgalert.AlertShortTxt)}}</div>
+                                        <div [ngClass]="(msgalert.messageRead)?'mediumContentcls':'boldContentCls'">{{trimLongTxt(msgalert.AlertLongTxt)}}</div>
+                                    </div>
+                                    <ion-icon class="detailArrowCls" name="arrow-forward"></ion-icon>
+                                </ion-label>
+                                <ion-checkbox [(ngModel)]="msgalert.checked"></ion-checkbox>
+                            </ion-item>
+                        </div>
+                        <img class="shadow-img" />
+                    </div>
+                </ion-list>
+            </div>
+        </div>
+        <div *ngSwitchCase="'Cards'">
+
+            <div *ngFor="let alert of errorAlerts" [style.margin-top]="isAlertShowing() ? '0px' : '0px'">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+                    [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+
+            <div class="grid" no-padding>
+                <ng-container *ngFor="let card of cards" class="msgitemDiv">
+                    <message-center-card class="dashboard-grid-item" *ngIf="card.enabled && (card.id != 'ContactUsCard')" [card]="card"></message-center-card>
+                </ng-container>
+            </div>
+
+            <div *ngFor="let tempObj of actions" class="wrapperContent">
+                <ion-item class="inAppAlert" no-lines style="padding-left:15px !important;">
+                    <ion-row class="middleContainerCls" style="padding-left:0px !important;padding-right:8px !important;">
+                        <ion-col col-11 no-padding (tap)="showInAppMessage(tempObj)">
+                            <div [ngClass]="(tempObj.messageRead)?'mediumContentcls':'boldContentCls'">{{trimShortTxt(tempObj.title)}}</div>
+                            <div [ngClass]="(tempObj.messageRead)?'mediumContentcls':'boldContentCls'">{{trimLongTxt(tempObj.action)}}</div>
+                        </ion-col>
+                        <ion-col col-1 align-self-center style="text-align: center;padding:0px !important;">
+                            <ion-icon style="margin-left:0px !important;" name="arrow-forward" class="detailArrowCls"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>
+<div *ngIf="(showCheckBox && !emptyMessageAlertsPanel)" class="fixed-outside">
+    <div [ngClass]="(showDeleteMenu)?'msgCentermdfooter':'msgCenteriosfooter'">
+        <ion-row>
+            <ion-col>
+                <ion-icon md="ios-trash" *ngIf="showDeleteMenu" (tap)="deleteallAlert(messageAlerts)"> Delete</ion-icon>
+                <ion-icon ios="ios-trash" *ngIf="!showDeleteMenu" (tap)="deleteallAlert(messageAlerts)"> Delete</ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+</div>
+<footer [activeTab]="'Message Center'"></footer>

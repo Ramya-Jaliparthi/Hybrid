@@ -1,0 +1,164 @@
+[
+  {
+    "accountDisplayHeader": "Flexible Spending Account - 004062479",
+    "accountType": "FSA",
+    "planYear": 1,
+    "planStartDate": "2018-06-01",
+    "planEndDate": "2019-05-31",
+    "balance": 2600,
+    "availBalance": 2600,
+    "availableRollover": 0,
+    "payments": 0,
+    "annualElection": 2600,
+    "contributionsYTD": 0,
+    "remainingContributions": 2600,
+    "submitClaimsLastDate": "2019-08-31",
+    "spendingLastDate": "2019-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  },
+  {
+    "accountDisplayHeader": "Flexible Spending Account - 004062479",
+    "accountType": "FSA",
+    "planYear": 2,
+    "planStartDate": "2017-06-01",
+    "planEndDate": "2018-05-31",
+    "balance": 2600,
+    "availBalance": 2600,
+    "availableRollover": 0,
+    "payments": 0,
+    "annualElection": 2600,
+    "contributionsYTD": 0,
+    "remainingContributions": 2600,
+    "submitClaimsLastDate": "2018-08-30",
+    "spendingLastDate": "2018-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  },
+  {
+    "accountDisplayHeader": "Health Reimbursement - 004062479",
+    "accountType": "HRA",
+    "planYear": 3,
+    "planStartDate": "2018-06-01",
+    "planEndDate": "2019-05-31",
+    "balance": 3000,
+    "availBalance": 3000,
+    "availableRollover": 0,
+    "payments": 0,
+    "annualElection": 2000,
+    "contributionsYTD": 1000,
+    "remainingContributions": 2000,
+    "submitClaimsLastDate": "2019-07-31",
+    "spendingLastDate": "2019-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  },
+  {
+    "accountDisplayHeader": "Deductible Tracking Account - 004062479",
+    "accountType": "DTR",
+    "planYear": 1,
+    "planStartDate": "2018-06-01",
+    "planEndDate": "2019-05-31",
+    "balance": 500,
+    "availBalance": 500,
+    "availableRollover": 0,
+    "payments": 0,
+    "annualElection": 500,
+    "contributionsYTD": 0,
+    "remainingContributions": 500,
+    "submitClaimsLastDate": "2019-07-31",
+    "spendingLastDate": "2019-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  },
+  {
+    "accountDisplayHeader": "Health Reimbursement - 004062479",
+    "accountType": "HRA",
+    "planYear": 2,
+    "planStartDate": "2017-06-01",
+    "planEndDate": "2018-05-31",
+    "balance": 922.51,
+    "availBalance": 922.51,
+    "availableRollover": 0,
+    "payments": 1077.49,
+    "annualElection": 0,
+    "contributionsYTD": 2000,
+    "remainingContributions": 0,
+    "submitClaimsLastDate": "2018-07-31",
+    "spendingLastDate": "2018-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  },
+  {
+    "accountDisplayHeader": "HRA Deductible",
+    "accountType": "DTR",
+    "planYear": 2,
+    "planStartDate": "2017-06-01",
+    "planEndDate": "2018-05-31",
+    "balance": 366.33,
+    "availBalance": 366.33,
+    "availableRollover": 0,
+    "payments": 633.67,
+    "annualElection": 1000,
+    "contributionsYTD": 0,
+    "remainingContributions": 1000,
+    "submitClaimsLastDate": "2018-07-31",
+    "spendingLastDate": "2018-05-31",
+    "deductibleInfo": {
+      "deductible": 0,
+      "appliedDeductible": 0,
+      "remainingDeductible": 0
+    },
+    "familyDetailInfo": {
+      "firstName": "DAKOTA",
+      "lastName": "GARRITY",
+      "middleInitial": "",
+      "depStatus": 1
+    }
+  }
+]

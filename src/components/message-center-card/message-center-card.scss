@@ -1,0 +1,21 @@
+message-center-card {
+    .messageCenterCardTitle {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        font-size: 17px;
+        color: #818181;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-family: Arial-bold;
+        margin-top: 2px;
+    }
+    .card-content {
+        min-height: 50px;
+        background-color: white;
+    }
+    .card-header {
+        background-color: white;
+    }
+}

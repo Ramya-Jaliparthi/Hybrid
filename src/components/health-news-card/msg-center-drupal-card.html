@@ -1,0 +1,15 @@
+<div *ngIf="articleInfo" class="drupalContent">
+  <div *ngFor="let item of articleInfo |slice:0:1">
+    <ion-item (tap)="readArticle()" no-lines>
+      <ion-row class="drupalContainerCls" style="padding-left:0px !important;padding-right:8px !important;">
+        <ion-col col-11 no-padding class="boldContentCls">
+          <div>{{trimShortTxt(item.Title)}}</div>
+          <div [innerHTML]="trimLongTxt(item.Body)"></div>
+        </ion-col>
+        <ion-col col-1 align-self-center style="text-align: center;padding:0px !important;">
+          <ion-icon style="margin-left:0px !important;" class="detailArrowCls" name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </div>
+</div>

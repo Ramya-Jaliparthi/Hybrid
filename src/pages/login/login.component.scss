@@ -1,0 +1,451 @@
+
+//background colors
+
+//font colors
+$font-color-normal:black;
+$font-color-on-highlighed-background:white;
+
+.login-page-css{
+    //color constants
+    
+    .content{
+        padding: 0px 0px 0px 0px !important;
+        background: rgb(221, 221, 221) !important;
+        // border-top: 5px solid #1d75bc;
+    }
+}
+.touchIdAlertCls.alert-ios{
+    .alert-sub-title{
+        font-weight: bold !important;
+    }
+}
+login{
+
+    .registerSection{
+        width:100%;
+        //height:69px;
+        background-color: $background-color-sign-register-promo;
+        color: $font-color-on-highlighed-background;
+        margin-top: 1px;	// added as per Vlad
+        border-top: 1px solid white;
+        padding:0px 10px 0px 10px;
+    }
+
+    .registerLeftSection{
+        width: 60%;	/* 70%; */
+	    height:100%;
+	    float:left;
+        padding-left: 10px;	/* $padding-page-30; */
+        border-right: 1px solid white;
+        
+    }
+    .registerMiddleSection{
+        width:1px;
+        height:100%;
+        float:left;
+        background-color:$background-color-normal;
+    }
+    .registerRightSection{
+        width:38%;	/* 28%; */
+        height:100%;
+        float:right;
+        text-align:center;
+       
+    }
+
+    .registerLeftSection .headerLable{
+        
+        line-height:2em;
+        
+        font-family:$font-family-lable;
+    }
+    .registerLeftSection .textContent{
+        
+        color:$card-content-font-color-highlighted-background;
+        display:block;
+        font-size: $card-content-body-size;
+    }
+    .registerRightSection .headerLable{
+        padding-right:$padding-page-10;
+        line-height:2em;
+           
+        font-family:$font-family-lable;
+    }
+    .signin-section {
+        width:38%;	/* 28%; */
+        float:right; 
+        padding: 20px 10px 15px 0px;
+        //font-weight: bold;
+        background-image: url($assets-url+'/images/icons-ios/Asset77@2x.png');
+        background-position: 105px 22px;
+        background-size: 24px;
+        background-repeat: no-repeat;vertical-align: text-bottom;font-family: arial-bold;
+        
+    }
+
+
+    .headerLable{
+        line-height:2em;       
+        font-family:$font-family-lable;
+    }
+
+    .display-in-center{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .register-login-section ion-grid{
+    	padding:0px;
+    }
+    .register-login-section .sectionA{
+        width:61%;
+        float:left;
+        border-right:1px solid white;
+        padding:0px 5px 5px 0px;
+    }
+
+    .register-login-section .sectionA ion-grid {
+    	padding:0px;
+    }
+   
+    .register-login-section .sectionA ion-grid ion-col {
+    	padding:0px;
+    }
+    .register-login-section .sectionB{
+        width:38%;float:right;padding:10px 0px 10px 5px;
+    } 
+   
+    .register-login-section .sectionB ion-grid {
+    	padding:0px;
+    }
+    
+    .register-login-section .sectionB ion-grid ion-col {
+    	padding:0px;
+    }
+
+    .register-login-section .sectionB .txt-section{
+    	//word-wrap: break-word;
+    	line-height:24px;
+    	//white-space:nowrap;
+    	font-family:$font-family-lable;
+    }
+    .register-login-section .sectionB .img-section{
+		background-image:url($assets-url+'/images/icons-ios/Asset77@2x.png');
+		background-position: 50% 50%;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin:0;
+        height:100%;
+        line-height:24px;
+    }
+    
+
+    .loginCardSection {
+        width:100%;
+        height:auto;
+       
+        color:$card-content-font-color-normal;
+        font-size: $card-content-title-size;
+        font-family:$font-family-lable;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        //width: 60px;
+        //width:50px;
+        //height: 29px;
+        width: 60px;
+        height: 34px;
+        float: left;
+    }
+    .switch input {
+        display:none;
+    }
+    .login_slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .1s;
+        transition: .1s;
+    }
+    .login_slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+
+        background-color: white;
+        -webkit-transition: .1s;
+        transition: .1s;
+    }
+    .login_sliderlabel {
+        float:left;
+        padding-left:10px;
+       
+        
+        line-height:2.6em;
+    }
+    
+    input:checked + .login_slider {
+        background-color: #25bd27;
+    }
+
+    input:focus + .login_slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .login_slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .login_slider.round {
+        border-radius: 34px;
+    }
+    .login_slider.round:before {
+        border-radius: 50%;
+    }
+
+    .signInButton {
+        width:90%;
+        line-height:2.25em;
+        margin: 0px !important;
+        border: 0;
+    }
+    .forgotPasswordSection {
+        //width: 100%;
+        display: inline-block;
+        //border-top:1px solid lightgray;
+    }
+
+    .forgotPasswordLabel {
+        padding-left:$padding-page-30;
+        color: #1866a3;        
+        line-height:2.5em;
+    }
+    .settingsCls{
+        padding:20px $padding-page-30;
+    }
+    .signInBtnContainerCls{
+        width:100%;
+        clear:both;
+        padding:20px 0px;
+    }
+    #touchSectionContainer {
+        width:100%;
+        clear:both;
+        padding:10px 20px;
+        text-align: center;
+        display:none;
+    }
+    .alertSectionCls{
+        padding:$padding-page-30 0 $padding-page-30 $padding-page-30;
+        border-left:$padding-page-15 solid #f26300;
+        background-color: #fff;
+    }
+    
+    .alertHeaderCls{
+        float:left;
+        
+        font-size: $card-content-title-size;
+        font-family:$font-family-lable;
+        
+    }
+    .alertTitleSectionCls{
+        padding-bottom: $padding-page-15;
+    }
+    .closeContainerCls{
+        float: right;
+    }
+    .alertContentCls{
+        padding-right:$padding-page-30;
+    }
+
+    .labelClss{
+        padding:($padding-page-30 * 2) $padding-page-20 0px $padding-page-30;
+        
+        font-family: arial-bold;
+        border-bottom: 0.55px solid #c8c7cc;
+    }
+    ion-item{
+        padding:0px !important;
+    }
+    .input{
+        padding-left:$padding-page-30;
+    }
+    .pwdShowBtnCls{
+        width: 60px !important;
+        padding: 0 2rem;
+        height: 20px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .errorMsg{
+        font-family:$font-family-base;
+        font-size:0.9em;
+    }
+
+    input[type="text"], [type="email"], input[type="password"]{
+            width: 100%;
+            padding-left:$padding-page-30;
+            border: 0px;
+            font-family: roboto-light;
+
+        }
+        
+    .disabledsection {
+    	pointer-events: none;
+    	opacity: 0.4;
+	}
+
+    .signInInputs{
+        font-weight: normal;
+        border:0px;
+        padding-left:15px;
+        font-size: 0.9em !important;
+    }
+	.middleContainerCls.barColorOrange{
+        border-left:7px solid #f26300;
+        padding: 15px;
+        border-bottom: 1px solid #EEE;
+    }
+	
+    .middleContainerCls .boldContentCls{ 
+        font-family: arial-bold;
+        font-size: 0.9em;
+        padding-bottom: 5px;
+    }
+
+    .textoverline {
+        text-align: center;
+        padding:15px 0px;
+    }
+
+    .textoverline {
+        label {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        label:before,
+        label:after {
+            background-color: #000;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        label:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        label:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+    // .fingerPrintIcon{
+    //     position: relative;
+    //     right: 5px;
+    // }
+    .ion-ios-finger-print:before {
+        font-size: 2.2em;
+        color: #1866a3;
+    }
+    .showUserNameInfoSection{
+        margin-bottom:15px;
+        background-color:#f2f2f2;
+    }
+    .loginContainer{
+        margin-bottom:15px;
+        background-color:white;
+    }
+    .loginPassword{
+        border:0px;
+    }
+    .rememberMeTouchId{
+        padding:20px 10px;
+    }
+    .touchIdTxt{
+        padding-top: inherit;
+        padding-left: 67px;
+    }
+    #touchiconid{
+        width: 2em;
+    }
+    .signInusingTouchId{
+        color:#1866a3;
+        vertical-align: top;
+        line-height: 2em;
+        margin-left: 1em; 
+    }
+    .clearBoth{
+        clear:both;
+    }
+    .goToRegistrationLink{
+        text-align: center;
+        padding:15px 0px;
+    }
+    .rememberMe{
+        padding-left: 10px;
+        display: inline;
+        position: relative;
+        top: 6px;
+    }
+    .modeOfLoginTxt{
+        display: inline;
+        position: relative;
+        bottom: 15px;
+        padding-left: 10px;
+    }
+    .modeOfLoginImg{
+        padding-left: 10px;
+    }
+    .rememberMeSection{
+        padding-bottom: 5px;
+    }
+    .istouchNowEnabled{
+        position: absolute;
+    }
+    .notRegistered {
+        margin:0;
+    }
+    .createMyBlueAccount{
+        font-size: 0.9em;
+        color:#fff;
+    }
+    .registerNowHeader{
+        font-size:1.4rem;
+    }
+    .registerNowImgHolder{
+        margin-left:0px;
+    }
+    .registerNowImg{
+        width:22px;
+        height:22px;
+        background-color:#0068A8;
+    }
+    .showInfoAlerSection{
+        height:10px;
+    }
+    .registerNowLinkHolder{
+        font-weight:bold;
+    }
+    .faceIdImg{
+        background-color: #fff;
+        height: 40px;
+        width: 33px;
+        margin-left: 5px;
+    }
+}

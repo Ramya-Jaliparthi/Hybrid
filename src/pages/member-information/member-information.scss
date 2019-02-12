@@ -1,0 +1,140 @@
+page-member-information {
+    .progress-container{
+        border-bottom: 1px solid #b2b2b2;
+        width: 100%;
+        text-align: center;
+        /*
+        height: 45px;
+        padding-top: 12px;
+        */
+        height: 47px;
+        padding: 10px;
+        background-color:white;
+    }
+    .progress{
+        height: 30px;
+        width: 30px;
+        border: 1px solid #92278f;
+        display: inline-block;
+        border-radius: 15px;
+        color: #92278f;
+        padding-top: 6px;
+        margin-left: 7px;
+    }
+    .active{
+        background: #92278f;
+        color: white;
+    }
+    .titleCls{
+        border-bottom: 0.55px solid #c8c7cc;
+        font-family:arial-bold;
+        font-size: $card-content-title-size;
+    }
+    .infoCls{
+        font-size: $card-content-body-size;
+        padding-top: $padding-page-15;
+    }
+    .subTitleCls{
+        font-family:arial-bold;
+        font-size: $card-content-body-size;
+        padding-bottom: $padding-page-15;
+        border-bottom: 0.55px solid #c8c7cc;
+    }
+    
+    .blue-md{
+        background: #115890
+    }
+    .round{
+        border-radius: 12px;
+    }
+    .link{
+        color: black;
+        text-decoration: underline;
+        font-family:arial-bold;
+    }
+    .cancelBtn{
+        text-decoration: none;
+        color: #1866A3;
+        font-family:arial-bold;
+        font-weight: bold
+    }
+    
+    .modalContent{
+        background-color: #1866a3;
+        height: 100%;
+        color:#fff;
+        
+    }
+    .memberIdClass.input-has-value .text-input{
+        text-transform: uppercase;
+    }
+
+    .memberIdClassError.input-has-value .text-input{
+        text-transform: uppercase;
+        border: 1px solid red !important;
+        padding: 5px;
+        width: 121px !important;
+    }
+
+
+    .modalCloseCls{
+        height: 40px;
+        width: 40px;
+        padding-right: 10px;
+        float: right;
+        background:none;
+    }
+    .alertIcon{
+        padding-top: 5px;
+        font-size: 20px;
+        text-align: right;
+    }
+    .warningIcon{
+        padding-top: 7px;
+    }
+    .errorsubTitleCls{
+        font-family:arial-bold;
+        font-size: $card-content-body-size;
+        padding-bottom: $padding-page-15;
+        border-bottom: 0.55px solid #c8c7cc;
+        color: #C1272D;
+    }
+    .subTitleCls {
+        border-bottom: none;
+    }
+    .memberIdTxt{
+        color: #848484;
+        padding-top: 10px;
+    }
+    .alertMessageContainer{
+        margin-top : '0px';
+    }
+    .memberInfoContainer{
+        margin-bottom:15px;
+        background-color:#FFF;
+    }
+    .memberIdInputField{
+        padding-left: 15px;
+    }
+    .memberIdError{
+        padding-top: 10px;
+        padding-left:10px;
+        color: #C1272D
+    }
+    .memberInfoContinueBtn{
+        font-family:arial-bold
+    }
+    .enterYourMemberId{
+        font-size: 17px;
+        font-family: arial-bold;
+    }
+    .fieldRequired{
+        padding: 15px 0 15px 0;
+    }
+    .disablesubTitleCls{
+        opacity: .5;
+    }
+    /*.ng-invalid .errorlabel{
+        color:#C1272D;
+    }*/
+}

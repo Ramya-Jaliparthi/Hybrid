@@ -1,0 +1,110 @@
+<header [title]="'My Plan'"></header>
+
+
+<ion-content>
+    <div *ngIf="HasActivePlan != 'false'">
+    <div class="card-container" *ngFor="let planInfo of objectToArray(planInformationList)">   
+     <div class="padding-page-30 background-white">
+        <ion-grid no-padding>
+            <ion-row>
+                <ion-col class="plandesc" col-11>
+                    {{planInfo.ProdDesc ? planInfo.ProdDesc : ""}}
+                </ion-col>
+                <ion-col col-1 text-right (tap)="goToPlanInfoPage()">
+                    <img class="img-info" [src]="config.assets_url+'/images/icons-ios/Asset61@2x.png'" />
+                </ion-col>
+            </ion-row>
+            <ion-row class="padding-top-5">
+                <ion-col col-5>
+                    Subscriber ID:
+                </ion-col>
+                <ion-col class="bold" *ngIf="planInfo.subscriberNum">
+                    {{removeLeadingJunkChar(planInfo.subscriberNum) }} suffix {{removeLeadingJunkChar(planInfo.MemSuffix)}}
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <!-- <img class="shadow-img" /> -->
+    <!-- margin-top -->
+    <div>
+        <ion-grid padding-left padding-right class="item-grid">
+            <ion-row class="item-row item-border" (tap)="toggleWhoIsCovered(planInfo.RowNum)">
+                <ion-col col-11 class="blue">Who's Covered</ion-col>
+                <ion-col col-1 text-right>
+                    <ion-icon class="icon" [name]="whoIsCoveredIcon[planInfo.RowNum] == undefined ? 'arrow-down': whoIsCoveredIcon[planInfo.RowNum] "></ion-icon>
+                </ion-col>
+            </ion-row>
+            <ion-row id="whoIsCovered" [hidden]="whoIsCoveredHidden[planInfo.RowNum] == undefined ? true : whoIsCoveredHidden[planInfo.RowNum]">
+                <ion-col>
+                    <ion-grid>
+                        <ion-row (tap)="goToCard(planInfo.MemSuffix, name, planInfo.ProdDesc)" style="padding-bottom: 10px;">
+                            <ion-col col-11>{{name}}
+                                <span>({{relationship}})</span>
+                            </ion-col>
+                            <ion-col col-1 text-right>
+                                <ion-icon class="icon" name="arrow-forward"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <div *ngFor="let dep of depList;">
+                            <ion-row (tap)="goToCard(removeLeadingJunkChar(dep.MemSuff), dep.MemName, planInfo.ProdDesc)" style="padding-bottom: 10px;">
+                                <ion-col col-11>{{dep.MemName}}
+                                    <span>({{dep.depRelationsip}})</span>
+                                </ion-col>
+                                <ion-col col-1 text-right>
+                                    <ion-icon class="icon" name="arrow-forward"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="item-row item-border" (tap)="toggleCoPays(planInfo.RowNum)">
+                <ion-col col-11 class="blue">Copays</ion-col>
+                <ion-col col-1 text-right>
+                    <ion-icon class="icon" [name]="coPayIcon[planInfo.RowNum] == undefined ? 'arrow-down': coPayIcon[planInfo.RowNum]"></ion-icon>
+                </ion-col>
+            </ion-row>
+            <ion-row id="coPays" [hidden]="coPaysHidden[planInfo.RowNum] == undefined ? true : coPaysHidden[planInfo.RowNum]">
+                <ion-col>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-11>Office Visit
+                                <span>${{planInfo.OvCopay }}</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-11>Behavioral Health
+                                <span>${{planInfo.BHCopay }}</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-11>Emergency Room
+                                <span>${{planInfo.ERCopay }}</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-11>Preventive
+                                <span>${{planInfo.preventCopay }}</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-11 class="coPaysMsg">{{planInfo.CopayInfo}}</ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <img class="shadow-img" />
+</div>
+</div>
+<ng-container *ngIf="HasActivePlan == 'false'">
+        <div *ngFor="let alert of alerts" class="alertMessageCard">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+                    [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+        </ng-container>
+</ion-content>
+
+<footer></footer>

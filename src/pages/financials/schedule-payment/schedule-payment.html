@@ -1,0 +1,176 @@
+<header [title]='"Schedule Payment"'></header>
+
+<ion-content>
+    <br>
+    <form [formGroup]="schedulePayForm" (ngSubmit)="submitPayment()">
+
+        <div class ="labelCls" stacked>
+            <p class="section-header">Member *</p>
+        </div>
+        
+        <ion-item class="bottom-border">
+            <ion-label>Member List</ion-label>
+            <ion-select class="full-width " formControlName="selectProvider" interface="action-sheet"  okText="Select" cancelText="Dismiss"
+                placeholder="Please select" [selectOptions]="memberSelectedOptions">
+                <ion-option *ngFor='let member of members' [value]='member.memberName'>
+                    {{member.memberName}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.selectProvider"></control-messages>
+
+        <div class="labelCls" stacked>
+            <p class="section-header">Service Type *</p>
+        </div>
+        <ion-item class="bottom-border">
+                
+            <ion-select class="full-width" formControlName="serviceTypeProvider" interface="action-sheet" mode='ios' okText="Select"
+                cancelText="Dismiss" placeholder="Please select"  [selectOptions]="serviceTypeSelectedOptions">
+                <ion-option *ngFor='let service of services' [value]='service.code'>
+                    {{service.code}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.serviceTypeProvider"></control-messages>
+        <div class="labelCls" stacked>
+            <p class="section-header">Service Start Date*</p>
+        </div>
+        <ion-item class="bottom-border">
+            <input class="dobInputcls fullwidth_in" formControlName="serviceStartDate" type="tel" placeholder="mm/dd/yyyy" [textMask]="{mask: startDateMask}"
+                (blur)="onServiceStartDateBlur = true" (focus)="onServiceStartDateBlur =false" />
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.serviceStartDate"></control-messages>
+
+        <div class="labelCls" stacked>
+            <p class="section-header">Service End Date*</p>
+        </div>
+
+        <ion-item class="bottom-border">
+            <input class="dobInputcls fullwidth_in" formControlName="serviceEndDate" type="tel" placeholder="mm/dd/yyyy" [textMask]="{mask: startDateMask}"
+                (blur)="onServiceEndDateBlur = true" (focus)="onServiceEndDateBlur =false" />
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.serviceEndDate"></control-messages>
+
+
+        <div class="labelCls" stacked>
+            <p class="section-header">Reimbursment Method*</p>
+        </div>
+        <ion-item class="bottom-border">
+            
+            <ion-select class="full-width" formControlName="reimbursmentMethord" interface="action-sheet" mode='ios' okText="Select"
+                cancelText="Dismiss" placeholder="Please select" [selectOptions]="reimbursementSelectedOptions">
+                <ion-option *ngFor='let reimbursmentMethod of reimbursmentMethods' [value]='reimbursmentMethod.method'>
+                    {{reimbursmentMethod.method}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+
+        <div class="labelCls" stacked>
+            <p class="section-header">Reimbursement Amount *</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" maxlength="19" placeholder="$" type="text" formControlName="reimbursmentAmount"></ion-input>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.reimbursmentAmount">
+
+        </control-messages>
+        <div class="payment-reciept">
+            <div class="sub-hint  sub-hint-top-align">
+                <p class="section-header">Add Receipt *</p>
+            </div>
+            <div class="section-header sub-hint-top-align">
+            <a href="javascript:void(0)" (click)="takeOrUploadReciept()" style="text-decoration: none; padding:15px;">
+                <ion-icon name="camera" style="color: #1866A3;"></ion-icon>
+                <span style="color: #1866A3;">Take or upload a photo</span>
+            </a></div>
+        </div>
+
+        <div>
+
+            <div class="labelCls" stacked>
+                <p class="section-header">Provider or Facility *</p>
+            </div>
+            <ion-item class="bottom-border">
+                <ion-label>Provider List</ion-label>
+                <ion-select class="full-width" formControlName="provider" interface="action-sheet" mode='ios' okText="Select" cancelText="Dismiss"
+                    placeholder="Please select">
+                    <ion-option *ngFor='let provider of providers' [value]='provider.providerName'>
+                        {{provider.providerName}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+            <div class="sub-hint sub-hint-top-align">
+                <span class="section-header">Can't find your provider?<a (click)="navigateToAddProviderForm()" style="color: #1866A3;">Add a Provider</a></span>
+            </div>
+        </div>
+
+
+        <div class="labelCls" stacked>
+            <p class="section-header" billedAmount>Billed Amount *</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" maxlength="19" placeholder="$" type="text" formControlName="billedAmount"></ion-input>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.billedAmount"></control-messages>
+        <div class="labelCls" stacked>
+            <p class="section-header">Amount Allowed By Insurance *</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" maxlength="19" placeholder="$" type="text" formControlName="allowedInsuranceAmount"></ion-input>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.allowedInsuranceAmount"></control-messages>
+        <div class="labelCls" stacked>
+            <p class="section-header" insurancePaidAmount>Insurance Paid Amount *</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" maxlength="19" placeholder="$" type="text" formControlName="insurancePaidAmount"></ion-input>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.insurancePaidAmount"></control-messages>
+
+        <div class="labelCls" stacked>
+            <p class="section-header" nonReimbursableAmount>Paid Non-Reimbursable Amount *</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" maxlength="19" placeholder="$" type="text" formControlName="nonReimbursableAmount"></ion-input>
+        </ion-item>
+        <control-messages [control]="schedulePayForm.controls.nonReimbursableAmount"></control-messages>
+
+        <div class="labelCls" stacked>
+            <p class="section-header" [ngClass]="{'no-error-label':schedulePayForm.get('myResponsiblity').touched}">My Responsiblity</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" placeholder="$ calculated automatically" type="text" formControlName="myResponsiblity"></ion-input>
+        </ion-item>
+
+        <div class="labelCls" stacked>
+            <p class="section-header" [ngClass]="{'no-error-label':schedulePayForm.get('reimbursedMyAccount').touched}">Reimbursed From My Account</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" placeholder="$ calculated automatically" type="text" formControlName="reimbursedMyAccount"></ion-input>
+        </ion-item>
+
+        <div class="labelCls" stacked>
+            <p class="section-header" [ngClass]="{'no-error-label':schedulePayForm.get('whatYouOwe').touched}">What You Owe</p>
+        </div>
+        <ion-item class="bottom-border">
+            <ion-input class="input-padding" placeholder="$ calculated automatically" type="text" formControlName="whatYouOwe"></ion-input>
+        </ion-item>
+
+        <ion-grid>
+            <ion-row>
+                <div class="buttonFull">
+                    <button class="ionBtncls" ion-button type="submit">Submit</button>
+                </div>
+                <div class="buttonFull">
+                    <button class="ionbtnclear" ion-button clear type="reset">Cancel</button>
+                </div>
+            </ion-row>
+            <p class="note-text">* indicates a required field</p>
+        </ion-grid>
+
+    </form>
+    <img class="shadow-img" />
+    <br>
+</ion-content>
+
+<footer></footer>

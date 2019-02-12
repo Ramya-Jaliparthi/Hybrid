@@ -1,0 +1,89 @@
+<header [title]="'Verify Your Account'" [hideMenu]="'true'" [hideBackButton]="true" [activeTab]="''"></header>
+
+<ion-content>
+    <div *ngFor="let alert of alerts" class="verifySecurityQuesBanner">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+    </div>
+
+    <div class="verifySecurityHolder">
+        <!-- <div style=""> -->
+            <form *ngIf="showSSN" [formGroup]="authSsnForm" (ngSubmit)="authenticateSsnInfo($event, authSsnForm)" class="personalInfoFromCls">
+                <ion-grid no-padding>
+                    <ion-row>
+                        <ion-col col-12>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold">*Required Field</div>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold padding_para">Enter the last 4 digits of your social security number to verify your identity Or answer 3 questions
+                                about your identity </div>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold padding_para ssnStudentIdVerify">
+                                <span class="spanLinkCls verifyWithStudent" (tap)="hideSSNForm()">Verify with Student Id </span>
+                            </div>
+                            <div padding-left class="subTitleCls">Last 4 Digits of Your SSN*</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>
+                            <ion-item>
+                                <ion-input formControlName="ssn" type="tel" #ssn maxlength="4" placeholder="4-digits" (blur)="onSsnBlur=true" (focus)="onSsnBlur=false"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <control-messages [control]="authSsnForm.controls.ssn" *ngIf="onSsnBlur"></control-messages>
+                    <ion-row padding>
+                        <ion-col col-12>
+                            <button ion-button type="submit" full class="continueBtn">Continue</button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="!isQuestionTried">
+
+                        <ion-col col-99>
+                            <div class="content-hr" (tap)="goToSecurityQuestionsPage()"> Or answer 3 questions about your identity </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row padding-bottom>
+                        <ion-col col-12 text-center>
+                            <a class="cancelBtn" (tap)="cancel()">Cancel</a>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </form>
+
+            <form *ngIf="!showSSN" [formGroup]="authSsnForm" (ngSubmit)="authenticateSsnInfo($event, authSsnForm)" class="personalInfoFromCls">
+                <ion-grid no-padding>
+                    <ion-row>
+                        <ion-col col-12>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold">*Required Field</div>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold padding_para">Enter your Student ID to verify your identity Or answer 3 questions about your identity </div>
+                            <div padding-left padding-bottom padding-top class="titleClsNoBold padding_para ssnStudentIdVerify">
+                                <span class="spanLinkCls verifyWithStudent"  (tap)="showSSNForm()">Verify with Social Security number </span>
+                            </div>
+                            <div padding-left class="subTitleCls">Student ID*</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>
+                            <ion-item>
+                                <ion-input formControlName="ssn" type="text" #ssn maxlength="50" placeholder="" (blur)="onSsnBlur=true" (focus)="onSsnBlur=false"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <control-messages [control]="authSsnForm.controls.ssn" *ngIf="onSsnBlur"></control-messages>
+                    <ion-row padding>
+                        <ion-col col-12>
+                            <button ion-button type="submit" full class="continueBtn">Continue</button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="!isQuestionTried">
+                        <ion-col col-99>
+                            <div class="content-hr" (tap)="goToSecurityQuestionsPage()"> Or answer 3 questions about your identity </div>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-grid>
+            </form>
+
+        <!-- </div> -->
+        <img class="shadow-img" />
+    </div>
+</ion-content>
+
+<footer [activeTab]="''"></footer>

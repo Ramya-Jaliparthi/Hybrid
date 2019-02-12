@@ -1,0 +1,422 @@
+{
+    "_meta": {
+      "matches": {
+        "facilities": [
+          {
+            "0": 1000945961
+          }
+        ],
+        "locations": [
+          {
+            "0": 100130650
+          }
+        ],
+        "contracts": [
+          {
+            "0": 100477170
+          }
+        ],
+        "contract_specializations": [
+          {
+            "0": 5483365
+          }
+        ],
+        "location_specializations": [
+          {
+            "0": 100141240
+          }
+        ],
+        "plans": [
+          {
+            "0": 1000042
+          }
+        ],
+        "networks": [
+          {}
+        ]
+      },
+      "others": {
+        "facilities": [
+          {
+            "0": 1000945961
+          }
+        ],
+        "locations": [
+          {
+            "0": 100130650
+          }
+        ],
+        "contracts": [
+          {
+            "0": 100477170
+          }
+        ],
+        "contract_specializations": [
+          {
+            "0": 5483365
+          }
+        ],
+        "location_specializations": [
+          {
+            "0": 100141240
+          }
+        ],
+        "plans": [
+          {
+            "0": 1000042
+          }
+        ],
+        "networks": [
+          {}
+        ]
+      }
+    },
+    "facilities": {
+      "disclaimers": [
+        null
+      ],
+      "service_messages": "Unknown Type: null",
+      "id": "string",
+      "type": "string",
+      "href": "string",
+      "photos": [
+        null
+      ],
+      "locations": [
+        {
+          "0": {
+            "-meta": {
+              "distance": 0
+            },
+            "id": 0,
+            "linked_affiliation_ids": {
+              "0": "string"
+            },
+            "aggregate_overall_rating": 0,
+            "aggregate_percent_recommended": 0,
+            "aggregate_environment_rating": "Unknown Type: null",
+            "aggregate_courtesy_rating": "Unknown Type: null",
+            "aggregate_communication_rating": "Unknown Type: null",
+            "aggregate_promptness_rating": "Unknown Type: null",
+            "number_of_ratings": 0,
+            "number_of_reviews_sources": 0,
+            "disclaimers": [
+              null
+            ],
+            "links": {
+              "reviews": "string",
+              "ratings": "string",
+              "summary": "string",
+              "acceptable_reviewers": "string",
+              "affiliated_professionals": {
+                "href": "string"
+              }
+            },
+            "specializations": {
+              "id": "string",
+              "facility_location_id": "string",
+              "facility_id": "string",
+              "is_certified": "Unknown Type: null",
+              "is_primary": "Unknown Type: null",
+              "field_specialty": {
+                "_id": 1234,
+                "name": "string",
+                "title": "Unknown Type: null",
+                "partner_code": "BCAAD",
+                "field": "Unknown Type: null"
+              },
+              "locations": [
+                null
+              ],
+              "contracts": [
+                null
+              ],
+              "specializations": [
+                null
+              ]
+            },
+            "contracts": {
+              "id": "string",
+              "disclaimers": [
+                null
+              ],
+              "hospital_affiliations": [
+                null
+              ],
+              "group_affiliations": [
+                null
+              ],
+              "specializations": {
+                "id": "string",
+                "facility_location_contract_id": "string",
+                "facility_location_id": "string",
+                "facility_id": "string",
+                "tier": "Unknown Type: null",
+                "is_certified": "Unknown Type: null",
+                "is_primary": "Unknown Type: null",
+                "field_specialty": {
+                  "_id": 0,
+                  "name": "string",
+                  "title": "Unknown Type: null",
+                  "partner_code": "string",
+                  "field": {
+                    "id": 0,
+                    "name": "Unknown Type: null",
+                    "partner_code": "Unknown Type: null"
+                  }
+                },
+                "locations": [
+                  null
+                ],
+                "contracts": [
+                  null
+                ],
+                "specializations": [
+                  null
+                ]
+              },
+              "facility_location_id": "string",
+              "facility_id": "string",
+              "description": "Unknown Type: null",
+              "information": "Unknown Type: null",
+              "future_effective_date": "Unknown Type: null",
+              "future_termination_date": "Unknown Type: null",
+              "identifiers": [
+                {
+                  "type_code": "string",
+                  "value": "string"
+                }
+              ],
+              "additional_data": [
+                {}
+              ],
+              "plan": {
+                "_id": "string",
+                "type_code": "string",
+                "name": "string",
+                "state_code": "string",
+                "partner_code": "Unknown Type: null"
+              },
+              "quality": {
+                "hqm_cms": [
+                  null
+                ],
+                "pqm": [
+                  "(empty array)"
+                ]
+              },
+              "referral_networks": [
+                {}
+              ],
+              "bdc": {},
+              "tiers": {},
+              "accreditations": {},
+              "highlights": {
+                "anp": [
+                  {
+                    "type_code": "ANP",
+                    "type": "accepting new patients",
+                    "value": "Y",
+                    "raw_value": "Y",
+                    "description": "Unknown Type: null"
+                  }
+                ]
+              },
+              "amenities": {},
+              "expertise": {},
+              "additional_information": {},
+              "limitations": {},
+              "awards": {},
+              "sortable_datum": {},
+              "disclaimer_datum": {
+                "fra-suppressed": [
+                  {
+                    "type_code": "FRA-suppressed",
+                    "type": "From Age",
+                    "value": 0,
+                    "raw_value": 0,
+                    "description": "Unknown Type: null"
+                  }
+                ],
+                "anp": [
+                  {
+                    "type_code": "ANP",
+                    "type": "accepting new patients",
+                    "value": "Y",
+                    "raw_value": "Y",
+                    "description": "Unknown Type: null"
+                  }
+                ],
+                "provspec": [
+                  {
+                    "type_code": "PROVSPEC",
+                    "type": "Provider Type with Partner Code Specialty",
+                    "value": "BCABM|BCAAD",
+                    "raw_value": "BCABM|BCAAD",
+                    "description": "Unknown Type: null"
+                  }
+                ],
+                "nsd": [
+                  {
+                    "type_code": "NSD",
+                    "type": "Unknown Type: null",
+                    "value": 19760116,
+                    "raw_value": 19760116,
+                    "description": "Unknown Type: null"
+                  }
+                ],
+                "gnr": [
+                  {
+                    "type_code": "GNR",
+                    "type": "Gender",
+                    "value": "B",
+                    "raw_value": "B",
+                    "description": "Unknown Type: null"
+                  }
+                ],
+                "toa_suppressed": [
+                  {
+                    "type_code": "TOA-suppressed",
+                    "type": "TO Age",
+                    "value": 999,
+                    "raw_value": 999,
+                    "description": "Unknown Type: null"
+                  }
+                ]
+              },
+              "locations": [
+                {}
+              ],
+              "contracts": [
+                {}
+              ]
+            },
+            "facility_id": 1000945961,
+            "name": "C Michael Knee MD",
+            "type_code": "S",
+            "is_primary": "Y",
+            "preformatted_hours": {
+              "days": "empty array",
+              "extended": true,
+              "generic_weekend": true
+            },
+            "reviews_canonical_id": "2223791560|01",
+            "address": {
+              "addr_line1": "44 Godwin Ave",
+              "addr_line2": "value",
+              "city": "Midland Park",
+              "state_code": "NJ",
+              "sub_national": "Unknown Type: null",
+              "county": "Bergen",
+              "country_code": "Unknown Type: null",
+              "postal_code": 3866,
+              "longitude": 40.984019,
+              "latitude": -74.136641
+            },
+            "identifiers": [
+              {
+                "type_code": "MUK",
+                "value": 31690057
+              }
+            ],
+            "languages": [
+              {}
+            ],
+            "phones": {
+              "voice": {
+                "number": 2014445004,
+                "type": "voice",
+                "type_code": "v",
+                "is_primary": "Y"
+              },
+              "fax": {
+                "number": 2014445003,
+                "type": "FAx",
+                "type_code": "F",
+                "is_primary": "Unknown Type: null"
+              }
+            },
+            "quality": {
+              "hqm_hcahps": {
+                "categories": {},
+                "number_of_completed_surveys": "Unknown Type: null",
+                "survey_response_rate_percent": "Unknown Type: null",
+                "overall_rating": 0,
+                "percent_recommended": "Unknown Type: null"
+              }
+            },
+            "additional_data": [
+              {}
+            ],
+            "bdc": {},
+            "accreditations": {},
+            "hours": {},
+            "amenities": {
+              "ha": {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "N",
+                "raw_value": "N",
+                "description": "Unknown Type: null"
+              }
+            },
+            "expertise": {},
+            "limitations": {},
+            "awards": {},
+            "sortable_datum": {},
+            "disclaimer_datum": {
+              "ha": {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "N",
+                "raw_value": "N",
+                "description": "Unknown Type: null"
+              }
+            },
+            "locations": {}
+          }
+        }
+      ],
+      "provider_id": "f1000945961",
+      "vpid": "Unknown Type: null",
+      "type_code": "G",
+      "name": "C Michael Knee MD",
+      "aliases": [
+        {}
+      ],
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": 31690057
+        }
+      ],
+      "languages": [
+        {}
+      ],
+      "videos": [
+        {}
+      ],
+      "locations_count": 1,
+      "additional_data": [
+        {}
+      ],
+      "bdc": {},
+      "accreditations": {},
+      "expertise": {},
+      "awards": {},
+      "sortable_datum": {},
+      "disclaimer_datum": {},
+      "contracts": [
+        {}
+      ],
+      "specializations": [
+        {}
+      ]
+    },
+    "disclaimers": [
+      {}
+    ],
+    "service_messages": "Unknown Type: null",
+    "benefits": "Unknown Type: null",
+    "cash_reward_reference_number": "Unknown Type: null"
+  }

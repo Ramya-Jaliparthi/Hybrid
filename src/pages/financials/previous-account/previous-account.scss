@@ -1,0 +1,55 @@
+@import "../common/financials.scss";
+
+page-previous-account {
+  #notifications-badge {
+    border-radius: 100px;
+  }
+
+  .heading {
+    color: color($colors, profiletextblue, base);
+    font-size: 16px;
+    @include Arial-bold(bold);
+  }
+
+  .subHeading {
+    color: color($colors, profiletextblue, base);
+    font-size: 18px;
+    @include Arial-bold(bold);
+  }
+
+  .accountHeading {
+    color: color($colors, profiletextblue, base);
+    font-size: 14px;
+    @include Arial-bold(medium);
+  }
+
+  .transactionHeading {
+    color: color($colors, profiletextblue, base);
+    font-size: 14px;
+    @include Arial-bold(bold);
+  }
+
+  .lineHeading {
+    color: color($colors, profiletextblue, base);
+    font-size: 13px;
+    @include Arial-bold(bold);
+  }
+
+  .balance {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #000000 !important;
+    font-size: 14px;
+  }
+
+  .futureYear {
+    color: color($colors, green, base);
+    font-size: 16px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+  }
+
+  .availDate {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: #818181
+  }
+}

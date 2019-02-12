@@ -1,0 +1,21 @@
+<section class="star-rating-component">
+
+  <div *ngIf="componentData?.isInActive" class="inactive-rating-bar" [ngStyle]="componentData?.inActiveRatingBarStyles">
+    <div class="solid-stars" [ngStyle]="componentData?.solidStarStyles">
+      <i *ngFor='let starItr of componentData.starNumberRange' class="fa fa-star"></i>
+    </div>
+  </div>
+  <div *ngIf="!componentData?.isInActive && componentData?.starNumberRange?.length" 
+  class="rating-bar" [ngStyle]="componentData?.ratingBarStyles">
+    <div class="solid-stars" [ngStyle]="componentData?.solidStarStyles">
+      <i *ngFor='let starItr of componentData.starNumberRange' class="fa fa-star"></i>
+    </div>
+    <div class="hollow-stars">
+      <!-- <i *ngFor='let starItr of componentData.starNumberRange' class="fa fa-star-o"></i> -->
+      <i *ngFor='let starItr of componentData.starNumberRange' class="fa fa-star"></i>
+    </div>
+  </div>
+  <div class="rating-text">
+    ({{componentData?.starRating}})
+  </div>
+</section>

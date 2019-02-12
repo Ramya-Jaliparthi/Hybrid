@@ -1,0 +1,14 @@
+<ion-grid no-padding no-margin >
+    <ion-row class="messageContainer barColorOrange authDetailsHeaderCls">
+        <ion-col>
+            <div class="messageHeaderTitle">Connect Your Account to Your Plan</div>
+            <div class="messageContent">Get full access to all your healthcare information.</div>
+        </ion-col>
+        <ion-col col-auto>
+             <button ion-button item-right icon-only (tap)="closeAuthInfoCard()" class="closeIconCls">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<auth-personal-info></auth-personal-info>

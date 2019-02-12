@@ -1,0 +1,23 @@
+import { FadVitalsSpecialitiesSearchResponseModelInterface } from './interfaces/fad-vitals-collection.interface';
+
+export class FadVitalsSpecialitiesSearchResponseModel implements FadVitalsSpecialitiesSearchResponseModelInterface {
+    public searchSpecialties: FVSSRSpecialityEntity[];
+}
+
+export class FVSSRSpecialityEntity {
+    public id: number;
+    public name: string;
+    public resourceTypeCode: string;
+}
+
+class IL8N {
+    public en: string;
+    public es: string;
+}
+
+class FVSSRSearchProvideType {
+    public id: number;
+    public name: string;
+    public type_code: string;
+    public resource_type_code: string;
+}

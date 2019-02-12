@@ -1,0 +1,40 @@
+page-my-claim-detail{
+    .content{
+         background: rgb(221, 221, 221) !important;
+    }
+    .claimDetailContainerCls{
+        ion-row{
+            padding: $padding-page-20 $padding-page-30 !important;
+        }
+    }
+    .bottomBorder{
+        border-bottom: 1px solid $card-content-section-border-color;
+    }
+    .claimDetailLabelCls{
+        font-family: arial-bold;
+        font-size:$card-content-body-medium-font-size;
+    }
+    .valCls{
+        font-size:$card-content-body-medium-font-size;
+    }
+    .boldContentCls{
+        font-family: arial-bold;
+        color: $card-content-font-color-normal;
+        font-size: $card-content-body-size;
+    }
+    .statusColorRed{
+        color: $error-font-color;
+    }
+    .statusColorGreen{
+        color: #3da148;
+    }
+    .statusColorOrange{
+        color: #e96c24;
+    }
+    .statusColorGray{
+        color: #818181;
+    }
+    .lineMsgCls{
+        font-size: $card-content-body-size;
+    }
+}

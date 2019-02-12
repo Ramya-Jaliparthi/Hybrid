@@ -1,0 +1,47 @@
+user-profile-card{
+    .cardArticleTitle {
+        font-family: arial-bold;
+        color: $card-content-font-color-normal;
+        font-size: $card-content-title-size;
+        word-break: break-word;
+        white-space: normal;
+        color: #1866A3;
+    }
+    
+    .cardArticleDescription {
+        font-size: $card-content-title-size;
+        overflow: hidden;
+        min-height: 50px;
+        max-height: 3.45em;
+        word-break: break-word;
+        white-space: normal;
+        font-weight: bold;
+        color: #818181;
+    }
+    
+    .newsCardThumbnailCls {
+        padding: 0px 10px 0px 0px;
+    }
+    
+    .cardReadArticleLinkCls {
+        padding-top: $padding-30;
+        font-family: arial-bold;
+        color: $card-content-font-color-highlighted;
+        font-size: 1 em;
+    }
+    .user-profile-item{
+        border: none;
+    }
+    .item-ios.item-block .item-inner{
+        border: none;
+    }
+    .item-md.item-block .item-inner{
+        border: none;
+    }
+    .label-ios{
+        margin: 0%;
+    }
+    .label-md{
+        margin: 0%;
+    }
+}

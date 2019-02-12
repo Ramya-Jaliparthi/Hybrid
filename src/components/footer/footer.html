@@ -1,0 +1,18 @@
+<div class="footer" *ngIf="!hideFooter">
+	<div class="tabbarMenu">
+		<img id="home" [src]="activeTab == 'home' ? config.assets_url+'/images/nav-icons/bottom-nav-home-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-home.png'"
+		 (tap)="launchApp('home')" />
+
+		<img id="myCards" [src]="activeTab == 'myCards' ? config.assets_url+'/images/nav-icons/bottom-nav-mycards-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mycards.png'"
+		 (tap)="launchApp('myCards');" />
+
+		<img id="myMedications" [src]="activeTab == 'myMedications' ? config.assets_url+'/images/nav-icons/bottom-nav-mymeds-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mymeds.png'"
+		 (tap)="launchApp('myMedications')" />
+
+		<img id="myClaims" [src]="activeTab == 'myClaims' ? config.assets_url+'/images/nav-icons/bottom-nav-myclaims-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-myclaims.png'"
+		 (tap)="launchApp('myClaims')" />
+
+		<img id="myDoctors" [src]="activeTab == 'myDoctors' ? config.assets_url+'/images/nav-icons/bottom-nav-mydocs-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mydocs.png'"
+		 (tap)="launchApp('myDoctors')" />
+	</div>
+</div>

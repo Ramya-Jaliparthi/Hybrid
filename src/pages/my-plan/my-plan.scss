@@ -1,0 +1,77 @@
+page-my-plan {
+
+    .scroll-content{
+        background-color: #dddddd;
+    }
+    .padding-page-30{
+        padding: $padding-page-30;
+    }
+
+    .card-container {
+       margin: 12px 0;
+    }
+
+    .plandesc {
+        font-family: $font-family-lable;
+        font-size: 1.2em;
+    }
+
+    .img-info{
+        max-width: 25px;
+    }
+
+    .padding-top-5{
+        padding-top: 5px;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+    .background-white{
+        background-color: white;
+    }
+    .blue{
+        color: $background-color-highlighted;
+    }
+    .item-row{
+        background-color: white;
+        font-size: 17px;
+        padding: .7em 0;
+        
+    }
+    .item-border{
+        border-bottom: 1px solid #dddddd;
+    }
+    ion-row{
+        .icon{
+            color: #818181;
+        }
+    }
+
+    ion-icon{
+        font-size:1.3em;
+    }
+
+    .item-grid{
+        background-color: white;
+    }
+    #whoIsCovered ion-col{
+        font-size: 16px;
+        padding: .4em 0;
+    }
+    #whoIsCovered ion-col span{
+        font-size: 11px;
+        color: #818181;
+        padding-left: .5em;
+    }
+
+    #coPays ion-col{
+        font-size: 16px;
+        padding: .4em 0;
+    }
+
+    .coPaysMsg {
+        font-size: 12px;        
+        font-style: italic;        
+    }
+}

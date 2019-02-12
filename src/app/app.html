@@ -1,0 +1,55 @@
+<ion-menu side="right" persistent="true" [content]="content" type="overlay" (ionOpen)="menuOpened()" (ionClose)="menuClosed()">
+
+  <ion-header class="menu-header">
+    <div class="register-section">
+      <div style="padding: 15px 0px;" (tap)="openPage('register')" *ngIf="isStateAnonymous()">
+        Don't have an account?
+        <br/>
+        <b>Register Now</b>
+      </div>
+      <div style="padding: 15px 0px;" *ngIf="!isStateAnonymous()">
+        Welcome
+        <br/>
+        <b>{{userName}}</b>
+      </div>
+    </div>
+
+    <div class="signin-section2">
+      <ion-grid style="padding:0;">
+        <ion-row (tap)="openPage('signin')" *ngIf="isStateAnonymous()">
+          <ion-col class="display-in-center" col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 style="padding:0px;">Sign&nbsp;In</ion-col>
+          <ion-col class="display-in-center" style="padding:0px;">
+            <div style="width:24px;height:24px;background-color:#115890;margin:0px;">
+              <img src [src]="config.assets_url+'/images/icons-ios/Asset77@2x.png'" />
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row (tap)="openPage('signout')" *ngIf="!isStateAnonymous()">
+          <ion-col class="display-in-center" style="padding:0px;" col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10>Sign&nbsp;Out</ion-col>
+          <ion-col class="display-in-center" style="padding:0px;">
+            <div style="width:24px;height:24px;background-color:#115890;margin:0px;">
+              <img src [src]="config.assets_url+'/images/icons-ios/Asset77@2x.png'" />
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+
+    <div style="clear:both"></div>
+
+  </ion-header>
+
+  <div style="clear:both;"></div>
+  <ion-content class="menu-common-content">
+    <div *ngFor="let p of pages" (tap)="openPage(p)" class="menu-common-item" [class.menu-active]="p.active" [class.group-menu]="p.startGroup">
+      <div style="display: inline-block; margin-top: 3px">
+        <img [src]="p.icon" height="30" />
+      </div>
+      <div class="menu-title">{{p.title}}</div>
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

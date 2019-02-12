@@ -1,0 +1,77 @@
+page-my-cards {
+
+    ion-content{
+        background-color:#dddddd !important;
+    }
+     
+     .background-blue{
+        background-color: #115890;
+        color: white;
+    }
+
+    .font-11{
+        font-size: $page-content-medium-font-size;
+    }
+    .icon-page{
+        font-size: 2em;
+    }
+    .icon-page-3{
+        font-size: 3em;
+    }
+
+    .cardsContainerCls{
+        background-color:#ffffff; 
+       height:88%;
+
+    }
+    .cardsContainerCls  ion-scroll{
+        position:inherit;
+    }
+    .cardsContainerCls .scroll-content {
+        margin-top: 0px !important; 
+        margin-bottom: 0px !important; 
+    }
+    
+     .subname{
+        display: inline-block; width: 80%;
+    }	
+    .subicon {
+        float:right; width: 15%;
+    }
+	.color-blue{
+        color: #317CB3;
+    }
+  
+   .titleContainerCls{
+       background-color: #115890; 
+       color: white; 
+       padding: 10px;
+   }
+   .titleCls{
+       text-align: left; 
+       font-family: $font-family-lable; 
+       font-size: $card-content-title-size;
+   }
+   .subTitle{
+       text-align: left; 
+       font-size: $page-content-medium-font-size;
+   }
+    .cardsContainerCls .swiper-slide{
+        align-items: start;
+        overflow: hidden;
+        height:93%;
+    }
+
+    
+     .label-grey{
+        color: #818181;
+    }
+
+    .paddingRightCls{
+        padding-right:15px;
+    }
+    
+    .scroll-content{
+        overflow:hidden;
+    }
+}

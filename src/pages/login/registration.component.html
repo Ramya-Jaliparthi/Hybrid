@@ -1,0 +1,115 @@
+<header [title]="'Register'"  [activeTab]="''">
+</header>
+<ion-content>
+    <div class="content">
+    <div class="nbspaceHeight" *ngIf="showInfoAlerSection">&nbsp;</div>
+    <div *ngFor="let alert of alerts">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+    </div>
+
+    <div class="registrationContainer">
+        <div>
+            
+            
+            <div class="signUpContainerCls">
+                <span class="signUpcls">Sign up!</span>
+                
+                 <!-- All fields are required. -->
+                 <div *ngIf="registerType == 'MOBILE'" class="mobileSignUpTxt">We'll send a text verification. Message and data rates may apply.</div>
+            </div>
+           
+
+            
+            <ion-segment [(ngModel)]="registerType">
+                <ion-segment-button value="emailAddress" (ionSelect)="enableEmailRegistration()" text-capitalize value="EMAIL">
+                    Email Address
+                </ion-segment-button>
+
+                <ion-segment-button value="mobileNumber" (ionSelect)="enableMobileRegistration()" text-capitalize value="MOBILE">
+                    Mobile Phone
+                </ion-segment-button>
+
+            </ion-segment>
+           
+
+            <form [formGroup]="registerForm" (ngSubmit)="registerUser($event, registerForm)" class="personalInfoFromCls">
+                
+                <div class="labelCls regLabelCls" *ngIf="registerType == 'EMAIL'">Email Address* (This will be your username)</div>
+                <ion-item *ngIf="registerType == 'EMAIL'">
+                    <ion-input id="email" formControlName="emailAddress" type="email" placeholder="yourname@domain.com" (blur)="onEmailBlur = true"
+                        (focus)="onEmailBlur = false"></ion-input>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.emailAddress" *ngIf="registerType == 'EMAIL' && onEmailBlur"></control-messages>
+                
+                
+                <div class="labelCls regLabelCls" *ngIf="registerType == 'MOBILE'">Phone Number* (This will be your username)</div>
+                <ion-item *ngIf="registerType == 'MOBILE'">
+                    <input formControlName="mobileNumber" class="mobileInputcls fullwidth_in" #mobileNumber type="tel" [textMask]="{mask: mobileMask}"
+                        placeholder="(555) 555-5555 (US phone number only)" (blur)="onMobileBlur = true" (focus)="onMobileBlur = false"/>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.mobileNumber" *ngIf="registerType == 'MOBILE' && onMobileBlur"></control-messages>
+                
+
+                <!-- <div style="text-align: center;color:#1d75bc;padding-top:15px;font-size: 18px;font-weight: bold;" >
+                    <span (tap)="toggleRegistrationType()">{{registrationTypeLabel}}</span>
+                </div> -->
+
+
+                <!--single line password validation-->
+                <!--
+                <div class="labelCls regLabelCls">Password*</div>
+                <ion-item class="inputPwdCls">
+                    <input #pwdInput type="password" formControlName="password" placeholder="Password" (blur)="setPasswordBlur()" (focus)="onPasswordBlur = false"/>
+                    <button class="pwdShowBtnCls" type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInput)" round text-capitalize>{{buttonCaption}}</button>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.password" *ngIf="onPasswordBlur"></control-messages>
+                <p><span class="regSubTitleCls">Password must include:</span>{{passwordFormat}} </p>
+                -->
+
+                <!-- multi line password validation -->
+                <div class="labelCls regLabelCls">Password*</div>
+                <ion-item class="inputPwdCls">
+                    <input #newPwdInput placeholder="Password" id="password" type="password" formControlName="passwordin" (focus)="onPasswordBlur = false" (blur)="onPasswordBlur = true"/>
+                    <!-- <label for="password" class="active">Password</label> -->
+                    <button class="pwdShowBtnCls"  [ngClass]="{'password-button-hide':buttonCaption=='Hide'}" type="button" ion-button item-end (tap)="togglePwdDisplay(newPwdInput)" round text-capitalize>{{buttonCaption}}</button>
+                </ion-item>
+                <control-messages [control]="registerForm.controls.passwordin" *ngIf="onPasswordBlur"></control-messages>
+                <ion-card id="passwordValidationHolder">
+                    <ion-card-content class="card-content">
+                        <password-validation [isBlurEvent]="onPasswordBlur" [password]="registerForm.value.passwordin"></password-validation>
+                    </ion-card-content>
+                </ion-card>
+                
+                <div class="settingsCls">
+                    <label class="switch">
+                        <input type="checkbox" formControlName="enableInfoAlert" id="enableInfo" />
+                        <span class="login_slider round"></span>
+                    </label>
+                    <div class="toggleContentCls">{{wishToReceiveHealthInfo}}
+                        <span (tap)="learnMore()" class="learnMore" text-end text-capitalize>learn more.</span>
+                    </div>
+                    <div class="clrBoth"></div>
+                </div>
+                <div class="settingsCls">
+                    {{iHaveReadAndAgree}}
+                    <span class="learnMore" (tap)="goToTermsOfService()">Terms of Use</span> and
+                    <span class="learnMore" (tap)="showPrivacyStatement()">Confidentiality.</span>
+                </div>
+                <div class="clrHeight"></div>                
+                <div class="submitBtnCls" text-center>
+                    <button #continue ion-button type="submit" full [disabled]="!isformDisabled(registerForm)">Continue</button>
+                    <!-- <div>Already have an account?
+                        <span (tap)="goToSignInPage()" class="outlyingLinkCls">Sign In</span>
+                    </div> -->
+                    <div class="fieldRequired">* Field is required.</div> 
+                </div> 
+                <p class="help_text">
+                    Welcome New Members!  You will be able to register on your plan effective date.
+                </p>
+            </form>
+        </div>
+        <img class="shadow-img" />
+    </div>
+    </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

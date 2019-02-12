@@ -1,0 +1,19 @@
+<div style="margin-top: 5px; margin-bottom:5px;background-color:white;" *ngIf="showAlert">
+    <ion-grid no-padding no-margin >
+        <ion-row class="messageContainer" [ngClass]="type">
+            <ion-col col-auto class="errorImgContainer" [hidden]="type == 'notification'">
+                    <ion-icon name="ios-alert-outline" class="errorIcon" [hidden]="!(type == 'error')"></ion-icon>                    
+                    <ion-icon name="ios-checkmark-circle-outline" class="errorIcon checkMarkIcon" [hidden]="!(type == 'info')"></ion-icon>                    
+            </ion-col>
+            <ion-col>
+                <div class="messageHeaderTitle" *ngIf="title" >{{title}}</div>
+                <div class="messageContent" [innerHTML]="message"></div>
+            </ion-col>
+                <ion-col col-auto *ngIf='!hideCloseButton && title != "" && message != ""'  >
+                <button ion-button item-right icon-only (tap)="closeMessageCard(alert)" class="closeIconCls">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

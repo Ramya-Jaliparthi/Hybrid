@@ -1,0 +1,129 @@
+page-verify-security-questions {
+
+
+  .active{
+    background: #92278f;
+    color: white;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .small{
+    font-size: 12px;
+  }
+  .border{
+    //border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+  }
+  .blue-md{
+    background: #115890
+  }
+  .round{
+    border-radius: 12px;
+  }
+  .link{
+    color: gray;
+    text-decoration: underline;
+    font-family:arial-bold;
+  }
+
+  .cancelBtn{
+    text-decoration: none;
+    color: #1866A3;
+    font-family:arial-bold;
+    font-weight: bold
+  }
+
+  .titleCls{
+    font-family:arial-bold;
+    font-size: 16px;
+  }
+  .titleClsNoBold{
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 13px !important;
+  }
+
+  .subTitleCls{
+    font-family:arial-bold;
+    font-size: $card-content-body-size;
+    padding-bottom: $padding-page-15;
+    border-bottom: 0.55px solid #c8c7cc;
+  }
+
+  .noBorder{
+    border-bottom: 0px solid #c8c7cc !important;
+  }
+
+  .modalContent{
+    background-color: #1866a3;
+    height: 100%;
+    color:#fff;
+
+  }
+  .content-ios hr {
+    height: 1.5px !important;
+    color: #2176b5;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .padding_para{
+    padding-bottom: 0px;
+    padding-top: 2px !important;
+  }
+
+  .content-hr{
+    padding-top: 10px;
+    text-align: center;
+    color: #2176b5;
+    font-weight: bold;
+    height: 100px;
+    font-size: 16px;
+  }
+  .modalCloseCls{
+    height: 40px;
+    width: 40px;
+    padding-right: 10px;
+    float: right;
+    background:none;
+  }
+
+  .orSection{
+    width: 9%;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    font-family: arial-bold;
+  }
+
+  .orMain{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+.info {
+  border-left: 7px solid #E06A30;
+  }
+  .continueBtn{
+    font-family:arial-bold;
+  }
+  .verifyWithStudent{
+    color:#5A829A; padding-right: 19px;
+  }
+  .ssnStudentIdVerify{
+    text-align: right;
+  }
+  .verifySecurityHolder{
+    margin-bottom:15px;
+    background-color:white;
+    padding-top: 38px;
+     margin-top:15px;
+  }
+  .verifySecurityQuesBanner{
+    margin-top: 0px;
+  }
+}

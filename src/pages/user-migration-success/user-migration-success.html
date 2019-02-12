@@ -1,0 +1,32 @@
+<ion-content no-scroll no-margin>
+    <!-- <div class="umSuccesscloseIcon">
+        <ion-icon name="close" (tap)="showAuth($event)" [ngClass]="'close-icon'" padding-right text-right></ion-icon>
+    </div>
+    <div class="trophyContainer">
+            <ion-icon name="ios-trophy"></ion-icon>
+    </div> -->
+    <ion-row class="iconHolder">
+        <ion-col col-10 class="trophyIcon">
+                <!--<ion-icon name="ios-trophy"></ion-icon>-->
+                <ion-img class="trophyImg" [src]="config.assets_url+'/images/icons-ios/trophy-alt.svg'"></ion-img> 
+        </ion-col>
+        <ion-col>
+            <ion-icon name="close" (tap)="cancel($event)" class="close-icon"></ion-icon>            
+        </ion-col>
+    </ion-row>
+    <ion-grid no-padding>
+        <!-- <ion-row class="trophyContainer">
+                <ion-icon name="ios-trophy"></ion-icon>
+        </ion-row> -->
+        <ion-row>
+            <ion-col no-padding align-self-center class="wrapContainer">
+                <div class="titleCls">Congratulations<br> you've upgraded!</div>
+                <div class="webAppTxt">You now have the same user name and password on Web and App</div>
+                <div class="webAppTxt subTitleCls">Your user name: {{selectedUserID}}</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="btnContainerCls" padding-top>
+        <input ion-button full type="button" (tap)="goNext($event)" value="Explore what's new" style="border: 0px !important;"/>
+    </div>
+</ion-content>

@@ -1,0 +1,66 @@
+page-my-financial {
+  .content-cls{
+        padding: $padding-30 $padding-page-30;
+        font-family:$font-family-lable;
+        
+        text-align:center;
+    }
+    .graphTitleCls{
+       
+        font-family:$font-family-lable;
+        font-size: $card-content-body-size;
+        text-align: center;
+        
+        padding-top:$padding-page-30;
+       
+        
+        
+    }
+     .messageCls{
+        text-align: center;
+        padding-bottom: $padding-page-30;
+         font-family:$font-family-lable;
+        font-size:$page-content-medium-font-size;
+        color:$card-title-color; 
+        
+    }
+    .graphSubTitleCls{
+       
+        font-size:$card-content-body-size;
+        text-align: center;
+        padding-bottom:$padding-30;
+        color:$card-title-color;
+        border-bottom: 1px solid $card-content-section-border-color; 
+        
+    }
+    .amountFont{
+        color:$card-content-font-color-normal; 
+         font-size:$card-content-body-size;
+    }
+     .graphLableTextCls{
+        text-align: center;
+        color:$card-title-color;
+        font-size:$card-content-body-size;
+    }
+    .graphLableAmountCls{
+        text-align: center;
+        font-family:$font-family-lable;
+         font-size:$card-content-body-size;
+
+    }
+    .paddingCls{
+        padding-top:10px !important;
+    }
+    .swiper-pagination{
+        bottom:0px !important;
+    }
+    .barGreenCls{
+        background-color:#3DA148;
+    }
+    .barGreyCls{
+        background-color:#B2B2B2;
+    }
+    .barPurpleCls{
+        background-color:#92278F;
+    }
+}

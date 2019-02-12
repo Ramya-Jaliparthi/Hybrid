@@ -1,0 +1,109 @@
+@import "../common/financials.scss";
+
+page-payment-success {
+  ion-content {
+    background: $background-color-normal;
+  }
+
+  div.title {
+    word-wrap: break-word;
+    padding: 24px 16px;
+    background-color: #ffffff !important;
+    font-size: 20px;
+    font-family: Arial;
+    color: #043167;
+    margin-top: 11px;
+    
+  }
+
+  .trans-amt {
+    font-size: 20px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #043167;
+    margin-top: 15px;
+  }
+
+  .payInfo {
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #043167;
+    text-align: justify;
+  }
+
+  .payeename {
+    color: #043167;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+  }
+
+  .payment-details {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+  }
+
+  .payment-title {
+    margin-bottom: 16px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #043167;
+  }
+
+  .date-info {
+    text-align: right;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 12px;
+  }
+
+  .buttonFull {
+    width: 100%;
+  }
+
+  .ionBtncls {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 100px;
+  }
+  .item-block {
+    min-height: 70px;
+}
+
+  .item-ios .item-button {
+    padding: 2rem;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .acc-info {
+    margin-left: 9.4rem;
+  }
+
+  .review-submit-success {
+    margin: 11px -16px;
+    display: flex;
+    border-left: 5px solid #3DA148;
+    height: 41px;
+    background: #F2F2F2;
+    margin-left:0px;
+    padding: 15px 0px 50px 5px;
+    font-size: 0.9em;
+}
+    
+    .success-text {
+        @include Roboto(bold);
+        font-size: 13px;
+        color: $title-color;
+        line-height: 41px;
+    }
+
+    .check-circle {
+        color: #3DA148;
+        padding: 0px 10px;
+        line-height: 41px;
+        font-size: 18px;
+    }
+  }
+

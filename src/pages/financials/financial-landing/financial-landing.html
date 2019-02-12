@@ -1,0 +1,68 @@
+<header [title]='"My Financials"'></header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider class="transactionHeading" (click)="navigateToAllTransactionsPage()">
+      All Transactions
+      <ion-badge item-end color="danger" id="notifications-badge">10</ion-badge>
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item-divider>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>
+
+  <ion-item-group>
+    <ion-item-divider class="heading">Account(s)</ion-item-divider>
+    <!--show current accounts -->
+    <ion-item ion-item *ngFor="let account of presentAccounts" (click)="navigateToDetailsPage(account)" class="accountHeading">
+      {{getHeader(account['accountType'])}}
+        <p class="availbalance">Available: ${{account.availBalance | number : '1.2-2'}}</p>
+        <p class="availDate">until {{account.planEndDate | date:'MM/dd/yyyy'}}</p>
+          <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+    <!--show future accounts only if present -->
+    <ion-item ion-item *ngFor="let account of futureAccounts" (click)="navigateToDetailsPage(account)" class="accountHeading">
+      <div>
+        <span class="futureYear">New!</span> {{getHeader(account['accountType'])}}
+        <p class="availDate">Account becomes available {{account.planStartDate | date:'MM/dd/yyyy'}}</p>
+      </div>
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+    <!--show previous account detail only if present -->
+    <ion-item class="accountHeading" ion-item *ngIf="previousAccounts.length > 0" (click)="navigateToPreviousAccountsPage()">
+      Previous Accounts
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>
+
+  <ion-item-group>
+    <ion-item class="lineHeading" (click)="navigateToMakePaymentPage()">Make Payment
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+    <!-- <ion-item class="lineHeading" (click)="navigateToSchedulePaymentPage()">Schedule Payment
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item> -->
+    <ion-item class="lineHeading" (click)="navigateToManageBankAccountsPage()">Manage Bank Accounts
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+    <ion-item class="lineHeading" (click)="navigateToManageDebitCardPage()">Manage Debit Cards
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>
+
+  <!-- <ion-item-group>
+    <ion-item-divider class="subHeading">About Alegeus Accounts</ion-item-divider>
+    <ion-item ion-item *ngFor="let detail of accountSummaryData" (click)="navigateToAboutDetailsPage(detail)" class="lineHeading">
+      About {{getHeader(detail['accountType'])}}
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>-->
+</ion-content>
+
+<footer></footer>

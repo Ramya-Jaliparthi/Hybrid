@@ -1,0 +1,13 @@
+<div id="card.id">
+	<div *ngIf="!card.hideHeader" class="card-header" (tap)="openCardApp(card.entryPage)">
+		<div *ngIf="card.title!==''">
+			<div class="messageCenterCardTitle">
+				{{card.title}}
+			</div>
+		</div>
+	</div>
+	<div [style.height]="card.height" class="card-content" id="{{card.id}}Content">
+		<ng-template card-host></ng-template>
+	</div>
+
+</div>

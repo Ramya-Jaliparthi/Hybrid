@@ -1,0 +1,143 @@
+page-card-personalize {
+
+    .personalizeTileApp{
+        background-color: #EFEDEE !important;
+        margin-top: 50px;
+        height: 110%;
+    }
+
+
+    .personalize .item-content{
+        padding:10px 15px 0px 10px;
+    }
+
+
+    .personalize .saveButton,.resetButton{
+        background-color: #2E89CF;
+    }
+
+    .personalize ion-item{
+        height:50px ;
+    }
+    .personalize .appName{
+        margin-right: 60px;
+    }
+
+    .personalize .appName div{
+        background: rgb(67, 67, 67);
+    }
+    .personalize ion-item item-content {
+        padding-top: 0px !important;
+    }
+    .personalize .item-content{
+        padding:0px;
+        height: 100%;
+    }
+    .personalize .list ion-item{
+        
+        background: #434343;
+    }
+    .personalize ion-reorder-button{
+        color: white !important;
+        padding-top: 3px;
+    }
+
+    .personalize .item-right-edit{
+        background:rgb(67, 67, 67); 
+        width: 70px;
+    }
+    .personalize .PersonalizeDisplayName{
+        color: #FDFAFA!important;
+        width:initial;
+        height: 60%;
+        vertical-align: top;
+        padding-top: 10px;	
+    }
+    .personalize .AliasDisplay{
+        color: #FDFAFA!important;
+        width:150px;
+        display:none;
+        padding-top: 10px;
+        font-size: 14px;
+        height: 17px;
+    }
+    .personalize .PersonalizeEditName{
+        display:none;
+        padding:5px 10px 5px 10px ;
+        margin-top: -15px;
+        height:25px;
+    }
+    .personalize .SaveAliasButton{
+        font-size: 28px;
+        padding: 9px 2px 9px 2px;
+        color: rgb(76, 217, 100);
+        display:none;
+    }
+    .personalize .setAliasOptionButton{
+        background:#809CBB;
+        color:white;	
+    }
+    .personalize #personalizeSettingsList .itemToggleButton{
+        height: 100%;
+        padding-right: 70px;
+        padding-left:0px;
+        margin-right: 1px;
+        position: absolute;
+        right: 55px;
+        top: 1px;
+    }
+    .personalize .enableReorderButton{
+        background: rgb(37,37,37);
+        display: inline-block;
+        height: 35px;
+        width:35px;
+        padding: 5px;
+        font-size:30px;
+    }
+
+    .personalize .orderCardPersonalize .item-content{
+        display:inline;
+    }
+
+
+    .personalize .orderCardPersonalize .toggle .track {
+        border-color: #11c1f3;
+        background-color: #11c1f3;
+    }
+
+    .personalize .saveButton,.resetButton{
+        background-color: #2E89CF;
+        font-size: 17px;
+        border: 0px;
+        margin: 10px 0px 10px 10px;
+        color: white;
+    }
+
+    .personalize  .noInternetMessage{
+        margin: 10px 20px 0px 20px;
+        color: orange;
+        font-size: 14px; 
+    }
+
+
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
+        .personalize .PersonalizeEditName{
+            width:90px;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){
+        .personalize .PersonalizeEditName{
+            width:180px;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1500px) and (orientation: portrait){
+        .personalize .PersonalizeEditName{
+            width:200px;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1500px) and (orientation:landscape){
+        .personalize .PersonalizeEditName{
+            width:250px;
+        }
+    }
+}

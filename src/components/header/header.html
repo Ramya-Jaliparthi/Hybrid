@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar align-title="center">
+    <div class="header-title" *ngIf="title && !hideTitle" [style.margin-left]="title == 'Register' ? '-2em' : ''">
+      {{title}}
+    </div>
+
+
+    <ion-buttons end>
+      <button class="burgerMenuCls mic_div" ion-button end (click)="launchApp('messageCenter')" *ngIf="showMessageCenter()">
+        <ion-icon name="ios-mail-outline"></ion-icon>
+        <ion-badge id="unreadcount" *ngIf="this.authService.messageAlertsCount > 0">{{this.authService.messageAlertsCount}}</ion-badge>
+      </button>
+    </ion-buttons>
+    <button class="burgerMenuCls" ion-button menuToggle end *ngIf="!hideMenu">
+      <ion-icon name="menu" style="color: #818181;"></ion-icon>
+    </button>
+    <img alt="logo" class="header-logo" *ngIf="!title" [src]="config.assets_url+'/images/icons-ios/myblue-logo-home-ios@3x.png'"
+    />
+  </ion-navbar>
+  <div class="footer" *ngIf="showTabberMenu">
+    <div class="tabbarMenu">
+
+      <img id="home" [src]="activeTab == 'home' ? config.assets_url+'/images/nav-icons/bottom-nav-home-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-home.png'"
+        [ngClass]="activeTab == 'home' ? 'selected' : 'not_selected'" (tap)="launchApp('home')" />
+
+      <img id="myCards" [src]="activeTab == 'myCards' ? config.assets_url+'/images/nav-icons/bottom-nav-mycards-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mycards.png'"
+        [ngClass]="activeTab == 'myCards' ? 'selected' : 'not_selected'" (tap)="launchApp('myCards');" />
+
+      <img id="myMedications" [src]="activeTab == 'myMedications' ? config.assets_url+'/images/nav-icons/bottom-nav-mymeds-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mymeds.png'"
+        [ngClass]="activeTab == 'myMedications' ? 'selected' : 'not_selected'" (tap)="launchApp('myMedications')" />
+
+      <img id="myClaims" [src]="activeTab == 'myClaims' ? config.assets_url+'/images/nav-icons/bottom-nav-myclaims-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-myclaims.png'"
+        [ngClass]="activeTab == 'myClaims' ? 'selected' : 'not_selected'" (tap)="launchApp('myClaims')" />
+
+      <img id="myDoctors" [src]="activeTab == 'myDoctors' ? config.assets_url+'/images/nav-icons/bottom-nav-mydocs-selected.png' : config.assets_url+'/images/nav-icons/bottom-nav-mydocs.png'"
+        [ngClass]="activeTab == 'myDoctors' ? 'selected' : 'not_selected'" (tap)="launchApp('myDoctors')" />
+
+    </div>
+  </div>
+
+</ion-header>

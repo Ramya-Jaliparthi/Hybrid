@@ -1,0 +1,156 @@
+<header [title]='"Manage Card Details"'></header>
+
+<ion-content>
+  <!-- in case if not in activate page -->
+  <ng-container *ngIf="!isActive && !showLostReport">
+    <ion-item-group *ngFor="let cardDetails of cardDetails">
+      
+      <!--show card details -->
+      <ion-item ion-item class="cardDetails">
+        <ion-grid>
+          <ion-row>
+            <ion-col [ngClass]="getCardStatus(cardDetails.cardStatusCode)">
+              {{getCardStatus(cardDetails.cardStatusCode)}}
+            </ion-col>
+          </ion-row>
+          <ion-row class="accountNbr">
+            <ion-col>xxxxxx-{{cardDetails.cardLast4Digits}}</ion-col>
+          </ion-row>
+          <ion-row class="accountHolder">
+            <ion-col>{{cardDetails.firstName}} {{cardDetails.lastName}}</ion-col>
+          </ion-row>
+          <ion-row class="issueSpace" *ngIf="cardDetails.IssueStatus">
+            <ion-col>Issue Status:</ion-col>
+            <ion-col>{{cardDetails.IssueStatus}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Mailed Date:</ion-col>
+            <ion-col>{{cardDetails.mailedDate}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Expiration Date:</ion-col>
+            <ion-col>{{cardDetails.activationDate}}</ion-col>
+          </ion-row>
+          <ion-row class="issueSpace" *ngIf="getCardStatus(cardDetails.cardStatusCode) !== 'Lost/Stolen'">
+            <ion-col>PIN:
+              <span *ngIf="pinToggle">{{fourDigitPIN}}</span>
+            </ion-col>
+            <ion-col>
+              <div *ngIf="!pinToggle" class="Pin" (click)="togglePin()">Show</div>
+              <div *ngIf="pinToggle" class="Pin" (click)="togglePin()">Hide</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <!--Show Lost/Stolen button only if status is active -->
+      <ion-item *ngIf="getCardStatus(cardDetails.cardStatusCode) === 'Active'" (click)="lostReport()">
+        <div class="accountHeading">Report Lost/Stolen</div>
+        <ion-icon item-end name="arrow-forward"></ion-icon>
+      </ion-item>
+      <!--Show Activate button only if status is 'New' -->
+      <!-- 
+
+    <ion-item *ngIf="getCardStatus(cardDetails.cardStatusCode) === 'New'">
+      <button ion-button class="ionBtncls" (click)="activateCard()">Activate</button> -->
+      <!-- <button class="ionBtncls" ion-button type="submit"  (click)="activateCard()">Activate</button>
+    </ion-item>  -->
+
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <div class="buttonFull">
+              <button class="ionBtncls" ion-button type="submit" *ngIf="getCardStatus(cardDetails.cardStatusCode) === 'New'"
+                (click)="activateCard()">Activate</button>
+            </div>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-item-group>
+  </ng-container>
+
+
+  <!-- in case if in activate page -->
+  <ng-container *ngIf="isActive">
+    <div class="group">
+   
+      <ion-list no-lines *ngFor="let cardDetails of cardDetails">
+        <ion-item class="heading">Activate Your Card</ion-item>
+        <ion-item>
+          <div class="activateText"> Do you want to activate your card ?</div>
+          <span class="accountNbr">xxxxxx-{{cardDetails.cardLast4Digits}}</span>
+        </ion-item>
+      </ion-list>
+
+      <ion-grid>
+        <ion-row>
+          <div class="buttonFull">
+            <button class="ionBtncls" ion-button type="submit" (click)="reqToActivate()">Activate</button>
+          </div>
+        </ion-row>
+        <ion-row>
+          <div class="buttonFull">
+            <button class="ionbtnclear" (click)="isActive=false">Cancel</button>
+          </div>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+  </ng-container>
+
+  <!-- in case if in stolen/Lost report -->
+  <ng-container *ngIf="showLostReport">
+    <ion-list no-lines *ngFor="let cardDetails of cardDetails">
+      <ion-item class="heading">Report Stolen/Lost Card</ion-item>
+      <ion-item>
+        <div class="activateText">Do you want to report your card ?</div>
+        <span class="accountNbr">xxxxxx-{{cardDetails.cardLast4Digits}}</span>
+      </ion-item>
+
+      <form [formGroup]="stolenForm" (ngSubmit)="reportToStolen()">
+        <ion-grid class="button-bg">
+          <div class="question-container">
+            <div class="questionContainer">
+              <p class="quesTitle">Do you want us to send new card? *</p>
+
+              <ion-list radio-group formControlName="sendCard">
+                <div class="box_transparent">
+                  <div class="options_box">
+                    <ion-item class="item item-block item-md item-radio">
+                      <ion-radio mode="md" value="false" item-left></ion-radio>
+                      <ion-label class="lable_padding">No</ion-label>
+                    </ion-item>
+                    <ion-item class="item item-block item-md item-radio ">
+                      <ion-radio mode="md" value="true" item-left></ion-radio>
+                      <ion-label class="lable_padding">Yes</ion-label>
+                    </ion-item>
+                  </div>
+                </div>
+              </ion-list>
+
+            </div>
+          </div>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <div class="buttonFull">
+              <button ion-button class="ionBtncls" type="submit">Report Stolen</button>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="buttonFull">
+              <button ion-button class="ionbtnclear" (click)="showLostReport=false">Cancel</button>
+            </div>
+          </ion-row>
+        </ion-grid>
+
+      </form>
+
+    </ion-list>
+  </ng-container>
+
+  <img class="shadow-img" />
+  <br>
+</ion-content>
+
+<footer></footer>

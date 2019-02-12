@@ -1,0 +1,101 @@
+<form [formGroup]="personalInfoForm" (ngSubmit)="authenticatePersonalInfo($event,personalInfoForm)" class="personalInfoFromCls">
+    <div *ngFor="let alert of alerts" class="alertMessageCard">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+            [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    </div>
+    <div class="personalInfoTitle">
+        <div>Personal Information</div>
+        <!-- <div>All fields are required.</div> -->
+    </div>
+    <div class="labelCls" text-capitalize >First Name*</div>
+    <ion-item>
+        <ion-input formControlName="firstName" #firstName type="text" (change)="fnChanged()" placeholder="First Name" (blur)="onFirstNameBlur = true" (focus)="onFirstNameBlur = false"></ion-input>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.firstName" *ngIf="onFirstNameBlur"></control-messages>
+    <ion-row *ngIf="invalidFN">
+        <ion-col col-1 class="alertIcon">
+            <ion-icon name="ios-alert-outline" color="red"></ion-icon>
+        </ion-col>
+        <ion-col col-11 class="validDob">Please enter valid First Name</ion-col>
+    </ion-row>
+    <div text-capitalize class="labelCls">Last Name*</div>
+    <ion-item>
+        <ion-input formControlName="lastName" #lastName type="text" (change)="lnChanged()" placeholder="Last Name" (blur)="onLastNameBlur=true" (focus)="onLastNameBlur=false"></ion-input>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.lastName" *ngIf="onLastNameBlur"></control-messages>
+    <ion-row *ngIf="invalidLN">
+        <ion-col col-1 class="alertIcon">
+            <ion-icon name="ios-alert-outline" color="red"></ion-icon>
+        </ion-col>
+        <ion-col col-11 class="validDob">Please enter valid Last Name</ion-col>
+    </ion-row>
+    <div class="labelCls">Date of Birth*</div>
+    <ion-item class="dobItemCls">
+        <input class="dobInputcls fullwidth_in" formControlName="dob" type="tel" placeholder="mm/dd/yyyy" [textMask]="{mask: dobMask}"
+            (blur)="onDobBlur = true" (focus)="onDobBlur =false"  (keyup)="onDOBKeyUp()"/>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.dob" *ngIf="onDobBlur"></control-messages>
+    <ion-row *ngIf="invalidDate">
+        <ion-col col-1 class="alertIcon">
+            <ion-icon name="ios-alert-outline" color="red"></ion-icon>
+        </ion-col>
+        <ion-col col-11 class="validDob">Please enter valid DOB</ion-col>
+    </ion-row>
+    <!--
+    <div *ngIf="registerType == 'EMAIL'">
+        <div class="labelCls" text-capitalize>Phone Number Type</div>
+        <ion-item>
+            <ion-select style="max-width:100%;" class="drawselectoptions"  interface="action-sheet" [selectOptions]="phoneNumberTypesSelectOptions" 
+                mode='ios' okText="Select" cancelText="Dismiss" placeholder="Phone Number Type" formControlName="phoneNumberType">
+                    <ion-option value="{{phoneType.value}}" *ngFor="let phoneType of phoneNumberTypes">{{phoneType.label}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+    -->
+    <div class="labelCls" *ngIf="registerType == 'EMAIL'" text-capitalize>Phone Number*</div>
+    <ion-item *ngIf="registerType == 'EMAIL'">
+        <input formControlName="mobileNumber" class="dobInputcls fullwidth_in" #mobileNumber [textMask]="{mask: mobileMask}" type="tel"
+            placeholder="Enter 10 digit number" (blur)="onMobileNumberBlur = true" (focus)="onMobileNumberBlur = false" />
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.mobileNumber" *ngIf="registerType == 'EMAIL' && onMobileNumberBlur"></control-messages>
+
+    <div class="labelCls" *ngIf="registerType == 'MOBILE'">Email Address*</div>
+    <ion-item *ngIf="registerType == 'MOBILE'">
+        <ion-input id="email" formControlName="emailAddress" type="email" placeholder="yourname@domain.com" (blur)="onEmailBlur = true"
+            (focus)="onEmailBlur = false"></ion-input>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.emailAddress" *ngIf="registerType == 'MOBILE' && onEmailBlur"></control-messages>
+
+    <div class="hintQuesNeed">
+        <a [ngClass]="type" (click)="changeShowStatus()">Why do we need this?</a>
+        <p class="hintQuesMsg" *ngIf="showHide">{{message}}</p>
+    </div>
+    <div class="labelCls" text-capitalize>Hint Question*</div>
+    <ion-item>
+        <!--
+        <ion-select formControlName="hintQuetion" (ionChange)="hintQuestions($event)" interface="popover" placeholder="Select One">
+            <ion-option *ngFor='let options of securityQuestionsOptions' [value]='options.value'>
+                {{options.label}}
+            </ion-option>
+        </ion-select>
+        -->
+        <ion-select class="hintQuestionLabel" class="drawselectoptions"  interface="action-sheet" [selectOptions]="hintQuestionsSelectOptions" 
+           mode='ios' okText="Select" cancelText="Dismiss" placeholder="Select a question" formControlName="hintQuetion">
+                <ion-option value="{{question.label}}" *ngFor="let question of securityQuestions">{{question.label}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.hintQuetion"></control-messages>
+    
+    <div class="labelCls" text-capitalize>Answer to Hint Question* </div>
+    <ion-item>
+            <input #pwdInput formControlName="hintAnswer" type="password" (blur)="hintAnswerBlur = true" (focus)="hintAnswerBlur = false"
+            class="answerToHintQues" minlength="3" maxlength="30" />
+    
+        <button class="pwdShowBtnCls" type="button" [ngClass]="{'password-button-hide':buttonCaption=='Hide'}" ion-button item-end (tap)="togglePwdDisplay(pwdInput)" round text-capitalize>{{buttonCaption}}</button>
+    </ion-item>
+    <control-messages [control]="personalInfoForm.controls.hintAnswer" *ngIf="hintAnswerBlur"></control-messages>
+    <div class="submitBtnCls" padding-bottom>
+        <button ion-button type="submit" full [disabled]="!isformDisabled(personalInfoForm)">Continue</button>
+    </div>
+    <div class="requireddiv">* Field is required.</div>
+</form>

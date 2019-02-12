@@ -1,0 +1,45 @@
+// Mixin for app font type, weight and family
+@mixin Arial-bold($weight) {
+  font-family: Arial-bold !important;
+  @if $weight==bold {
+    font-weight: 700 !important;
+  }
+  @if $weight==medium {
+    font-weight: 500 !important;
+  }
+  @if $weight==regular {
+    font-weight: 400 !important;
+  }
+  @if $weight==normal {
+    font-weight: 400 !important;
+  }
+  @if $weight==light {
+    font-weight: 300 !important;
+  }
+  @if $weight==thin {
+    font-weight: 100 !important;
+  }
+
+  .buttonFull {
+    width: 100%;
+    margin-left: -4px;
+  }
+
+  .ionBtncls {
+    font-size: 1em;
+    background-color: color($colors, appcolor, base);
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+  }
+
+  .ionbtnclear {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 35px;
+  }
+}

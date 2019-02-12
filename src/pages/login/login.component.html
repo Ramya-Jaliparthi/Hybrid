@@ -1,0 +1,171 @@
+<header [title]="'Sign In'" [activeTab]="''">
+</header>
+<ion-content>
+    <div class="content">
+        
+        <div class="registerSection">
+
+
+            <div class="register-login-section display-in-center">
+
+                <div class="sectionA">
+
+                    <ion-grid>
+                        <ion-row>
+                            <p class="headerLable notRegistered">Not Registered?</p>
+                        </ion-row>
+                        <ion-row>
+                            <p class="notRegistered createMyBlueAccount">{{createMyblueAccount}}</p>
+                        </ion-row>
+                    </ion-grid>
+
+                </div>
+                <div (tap)="gotoRegistrationPage()" class="sectionB display-in-center">
+                    <ion-grid>
+                        <ion-row class="registerNowLinkHolder">
+                            <ion-col col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 class="display-in-center registerNowHeader">
+                                <span class="txt-section">Register&nbsp;Now</span>
+                            </ion-col>
+                            <ion-col class="display-in-center registerNowImgHolder">
+                                <ion-img src [src]="config.assets_url+'/images/icons-ios/Asset77@2x.png'" class="registerNowImg"></ion-img>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <div class="clearBoth"></div>
+
+            </div>
+
+
+        </div>
+        
+        
+        <div class="showInfoAlerSection" *ngIf="showInfoAlerSection">&nbsp;</div>
+       
+        <div *ngFor="let alert of alerts">
+            <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+        </div>
+        <div class="showUserNameInfoSection" *ngIf="showUserNameInfoSection">
+            <ion-row class="middleContainerCls barColorOrange ">
+                <ion-col no-padding>
+                    <div class="boldContentCls">{{checkEmailOrMobileno}}</div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="loginContainer">
+            <div class="loginCardSection">
+
+                <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm($event)">
+
+                    <div class="labelClss">Username</div>
+                    <ion-item>
+                        <input #usernameInput type="email" size="60" formControlName="userName" placeholder="Username" (click)="launchChangeUsername(usernameInput)"
+                            [readonly]="isUserIdFieldDisabled" (blur)="onUserNameBlur = true" (focus)="onUserNameBlur = false"
+                            class="signInInputs" autocorrect="off" autocapitalize="off" autocomplete="off" />
+
+                    </ion-item>
+                    <control-messages [control]="loginForm.controls.userName" *ngIf="onUserNameBlur" class="errorMsg"></control-messages>
+                    <div class="forgotPasswordSection" (click)="gotoForgotUsername($event)">
+                        <span class="forgotPasswordLabel">Forgot username?</span>
+                    </div>
+
+                    <div class="labelClss">Password</div>
+                    <ion-item>
+                        <input #pwdInput type="password" formControlName="password" placeholder="Password" (blur)="onPasswordBlur = true" (focus)="onPasswordBlur = false"
+                            [(ngModel)]="userpwd" class="loginPassword" />
+                        <button class="pwdShowBtnCls" [ngClass]="{'password-button-hide':buttonCaption=='Hide'}" type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInput)" round text-capitalize>{{buttonCaption}}</button>
+                    </ion-item>
+                    <control-messages [control]="loginForm.controls.password" *ngIf="onPasswordBlur" class="errorMsg" id="passwordErrorMsg"></control-messages>
+                    <div class="forgotPasswordSection" (click)="gotoForgotPassword($event)">
+                        <span class="forgotPasswordLabel">Forgot password?</span>
+                    </div>
+
+
+                    <ion-grid responsive-sm class="rememberMeTouchId">
+                        <ion-row class="rememberMeSection">
+                            <ion-col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6>
+                                <label class="switch">
+                                    <input type="checkbox" id="rememberMe" checked formControlName="rememberme" (change)="toggleRememberme()" [(ngModel)]="isRemembermeEnabled"
+                                    />
+                                    <span class="login_slider round"></span>
+                                </label>
+                                <div class="rememberMe">Remember&nbsp;Me</div>
+
+                            </ion-col>                            
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+                                        <label class="switch">
+                                            <input type="checkbox" id="touchId" #touchId formControlName="biometric" (change)="handleToggleAction(touchId)" [(ngModel)]="isTouchIDUsed"
+                                            />
+                                            <span class="login_slider round"></span>
+                                        </label>
+                                        <div class="modeOfLoginTxt" >Use {{dectType}}</div>
+                                        <ion-icon name="ios-finger-print" class="fingerPrintIcon modeOfLoginImg" *ngIf='istouchNowEnabled'></ion-icon>
+                                        <ion-img  *ngIf='!istouchNowEnabled' class="faceIdImg" [src]="config.assets_url+'/images/icons-ios/face_id.svg'"></ion-img>                          
+                                    </ion-col>
+                        </ion-row>
+                        <!-- Face Id changes -->
+                        <!-- <ion-row>
+                            <ion-col col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+                                    <label class="switch">
+                                        <input type="checkbox" id="faceId"/>
+                                        <span class="login_slider round"></span>
+                                    </label>
+                                    <div class="touchIdTxt">
+                                        <div class="modeOfLoginTxt">Face&nbsp;ID</div>
+                                        <img class="modeOfLoginImg" src="../assets/images/icons-ios/faceid2.png" alt="faceId">                                         -->
+                                    <!-- </div> -->
+                                    <!-- <div class="faceIdImgHolder">                                         -->
+                                    <!-- </div> -->
+                                <!-- </ion-col> -->
+                    <!-- </ion-row>  -->
+                    </ion-grid>
+
+                    <div padding>
+                        <button ion-button type="submit" full>Sign In</button>
+                    </div>
+
+                    <div id="touchSectionContainer">
+                        <div (tap)="initiateTouchId()">
+                            <!-- <img id="touchiconid"  [src]="config.assets_url+'/images/common/touchID@2x.png'"/>                            
+                            <ion-icon name="ios-finger-print" class="modeOfLoginImg" *ngIf='istouchNowEnabled'></ion-icon>--> 
+                            <ion-icon name="ios-finger-print" class="fingerPrintIcon modeOfLoginImg" *ngIf='istouchNowEnabled'></ion-icon>
+                            <ion-img  *ngIf='!istouchNowEnabled' class="faceIdImg" [src]="config.assets_url+'/images/icons-ios/face_id.svg'"></ion-img> 
+                            <span class="signInusingTouchId">Sign in using {{dectType}}</span>
+                        </div>
+                    </div>
+
+
+                </form>
+                <!-- <div class="clearBoth"></div>
+                <div class="textoverline" *ngIf="isRegisterNowEnabled">
+                    <label>Need to create an account?</label>
+                </div>
+                <div (tap)="gotoRegistrationPage()" class="goToRegistrationLink" *ngIf="isRegisterNowEnabled">
+                    <span>Register Now</span>
+                </div>
+                <div class="clearBoth"></div> -->
+                <!--
+                <div class="forgotPasswordSection" (click)="gotoForgotUsername($event)">
+                    <span class="forgotPasswordLabel">Forgot Username?</span>
+                    <div style="float:right;margin-top:0.5em;padding-right:10px;">
+                        <img style="height:20px;opacity:0.5" [src]="config.assets_url+'/images/icons-ios/Asset11@2x.png'" />
+                    </div>
+                </div>
+                <div class="forgotPasswordSection" (click)="gotoForgotPassword($event)">
+                    <span class="forgotPasswordLabel">Forgot Password?</span>
+                    <div style="float:right;margin-top:0.5em;padding-right:10px;">
+                        <img style="height:20px;opacity:0.5" [src]="config.assets_url+'/images/icons-ios/Asset11@2x.png'" />
+                    </div>
+                </div>
+                -->
+
+            </div>
+            <img class="shadow-img" />
+        </div>
+
+
+    </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

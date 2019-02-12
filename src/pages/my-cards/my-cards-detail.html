@@ -1,0 +1,63 @@
+<ion-content no-padding>
+
+    <div style="height:100%">
+        <div class="modalContent">
+            <div>
+                <button class="modalCloseCls" (tap)="closeModal($event)">
+                    <ion-icon name="close" style="color:white; font-size:3em; "></ion-icon>
+                </button>
+            </div>
+            <div class="informationSectionClas">
+                <div class="imageContainerCls">
+                    <img [src]="config.assets_url+'/images/icons-ios/Asset85@2x.png'" style="height:35px; width:35px;" />
+                </div>
+                <div class="leftRightPadding titleTextCls">
+                    {{cardFrontData.MemName}}
+                </div>
+                <div class="leftRightPadding">
+                    {{memberType}}
+                </div>
+
+            </div>
+            <div style="height: 77%;">
+
+                <ion-grid no-padding no-margin class="cardDetailContainerCls">
+                    <ion-row class="bottomBorder" (tap)="goToContactUs()">
+                        <ion-col col-8 text-left align-self-center>
+                            <span class="cardDetailTitleLabelCls">Contact Us</span>
+                        </ion-col>
+                        <ion-col align-self-center text-right>
+                            <span class="cardDetailTitleLabelCls">
+                                <ion-icon class="detailArrowCls" name="ios-arrow-forward"></ion-icon>
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="cardDetailsContainerCls">
+                        <ion-col text-left no-padding>
+
+                            <div class="titleTextCls paddng-bottom">
+                                Member ID: {{cardFrontData.cardMemID}}
+                            </div>
+                            <div class="infoTextCls paddng-bottom">
+                                Member Suffix: {{removeLeadingJunkChar(cardFrontData.MemSuff)}}
+                            </div>
+                            <div class="infoTextCls paddng-bottom">
+
+                                {{(cardFrontData.rxBin && cardFrontData.rxBin != '') ? cardFrontData.rxBin.substring(0, cardFrontData.rxBin.indexOf('PCN:')
+                                ):""}}
+                            </div>
+                            <div class="infoTextCls paddng-bottom">
+                                {{(cardFrontData.rxBin && cardFrontData.rxBin != '') ? cardFrontData.rxBin.substring(cardFrontData.rxBin.indexOf('PCN:'),
+                                cardFrontData.rxBin.length) : ''}}
+                            </div>
+                            <div class="infoTextCls paddng-bottom">
+                                {{cardFrontData.ProdDesc}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

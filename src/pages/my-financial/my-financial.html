@@ -1,0 +1,64 @@
+<header [title]="'My Financials'">
+</header>
+
+
+<ion-content>
+    <alert-message-card *ngIf="alert" [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type"
+        [alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    <div style="margin-bottom:15px;background-color:white;margin-top:15px;" *ngFor="let account of financeBlalanceData;">
+
+        <!-- Show the card only of chart data available-->
+        <div *ngIf="account.dashboardBarChartData && account.dashboardBarChartData.length > 0">
+
+            <div class="graphTitleCls">
+                <div>
+                    {{account.AccountDisplayHeader}}
+                </div>
+            </div>
+            <div class="graphSubTitleCls">
+                {{account.AccountDisplaySubHeader}}
+            </div>
+
+
+            <div style="display:block;">
+                <canvas height="45" style="width:80%;margin-left:auto;margin-right:auto;" baseChart [datasets]="account.dashboardBarChartData"
+                    [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)" [colors]="chartColors"></canvas>
+            </div>
+            <div style="margin-left: 10%; padding-bottom:15px;" *ngIf="account.dashboardBarChartData.length > 0">
+                <ion-grid no-padding no-margin>
+                    <ion-row>
+                        <ion-col col-1 align-self-start>
+                            <div style="height:15px; width:15px;  " [ngClass]="account.firstBarColorCls"></div>
+                        </ion-col>
+                        <ion-col style="text-align:left">
+                            <span class="graphLableTextCls">{{account.firstLable}}</span>
+                            <br/>
+                            <span class="graphLableAmountCls">{{account.firstLableAmount |currency:'USD':true }}</span>
+                        </ion-col>
+                        <ion-col col-1 align-self-start>
+                            <div style="height:15px; width:15px; " [ngClass]="account.secondBarColorCls"></div>
+                        </ion-col>
+                        <ion-col style="text-align:left">
+                            <span class="graphLableTextCls">{{account.secondLable}}</span>
+                            <br/>
+                            <span class="graphLableAmountCls">{{account.secondLableAmount |currency:'USD':true}}</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="account.showAnnualElection">
+                        <ion-col class="paddingCls" style="text-align:center">
+                            <span class="graphLableAmountCls">{{account.AnnualElection|currency:'USD':true}}</span>
+                            <span class="graphLableTextCls">&nbsp;Annual Election</span>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <img class="shadow-img" />
+        </div>
+    </div>
+    <div id= "myFinancial" class="modal-body">
+    </div>
+
+</ion-content>
+
+<footer></footer>

@@ -1,0 +1,51 @@
+<ion-list no-margin>
+    <ion-list-header text-right class="background-blue" (tap)="resetFilters()" style="text-transform: none !important;">
+        Clear all
+    </ion-list-header>
+    <div no-padding class="itemHeaderBorderCls">
+        <ion-row (tap)="sortBy('-1')" class="rowBottomBorderCls">
+            <ion-col>Date</ion-col>
+            <ion-col text-right align-self-center style="font-family:roboto-light;">Most Recent</ion-col>
+            <ion-col col-2 text-right>
+                <img *ngIf="sortByOption == '-1'" class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'"
+                />
+            </ion-col>
+        </ion-row>
+        <ion-row (tap)="sortBy('1')">
+            <ion-col text-right align-self-center style="font-family:roboto-light;">Oldest First</ion-col>
+            <ion-col col-2 text-right>
+                <img class="img-med" *ngIf="sortByOption == '1'" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'"
+                />
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding class="itemHeaderBorderCls">
+        <ion-row>
+            <ion-col align-self-center no-padding>Members</ion-col>
+            <ion-col text-right no-padding (click)="toggleList('members',$event)">
+                <ion-icon ios="ios-arrow-down" md="md-arrow-down" class="iconCls"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding [hidden]="memberListHidden" class="accordionItemBorderCls">
+        <ion-row align-items-center (tap)="selectUser('All')">
+            <ion-col col-10 padding-left>All</ion-col>
+            <ion-col col-2 text-right *ngIf="displayName == 'All'">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row align-items-center (tap)="memberName == displayName ? selectUser(null) : selectUser(memberName)">
+            <ion-col col-10 padding-left class="ellipsis">{{memberName}}</ion-col>
+            <ion-col col-2 text-right *ngIf="memberName == displayName">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let dependent of dependentsList" (tap)="selectUser(dependent)">
+            <ion-col col-10 padding-left class="ellipsis">{{dependent.depFirstName}} {{dependent.depLastName}}</ion-col>
+            <ion-col col-2 text-right *ngIf="displayName == dependent.depFirstName+' '+dependent.depLastName">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-list>

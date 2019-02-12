@@ -1,0 +1,13 @@
+{
+  "name": "MyBlueApp",
+  "short_name": "MyBlueApp",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/images/icons-ios/myblue-logo-home-ios@3x.png",
+    "sizes": "219x60",
+    "type": "image/png"
+  }],
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7"
+}

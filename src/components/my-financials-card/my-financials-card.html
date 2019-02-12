@@ -1,0 +1,64 @@
+<div style="height:100%" (tap)="goToMyFinancials()">
+    <div>
+        <div id="fincard_placeholder" style="margin-top:15px; border-top:1px solid #DDDDDD" padding *ngIf="financeBlalanceData.length == 0">
+            Accessing your Financial Accounts...
+            <br/>
+        </div>
+        <ion-slides #slider pager={{isPagerNeeded}}>
+
+            <ion-slide *ngFor="let account of financeBlalanceData;">
+                <div class="graphTitleCls">
+                    {{account.AccountDisplayHeader}}
+                </div>
+                <div class="graphSubTitleCls">
+                    {{account.AccountDisplaySubHeader}}
+                </div>
+
+                <div style="min-height:130px">
+                    <div style="display:block; " *ngIf="account.dashboardBarChartData.length > 0">
+
+                        <canvas height="45" style=" width:80%;margin:auto;" baseChart [datasets]="account.dashboardBarChartData" [options]="barChartOptions"
+                            [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                            [colors]="chartColors"></canvas>
+                    </div>
+                    <div style="margin-left: 10%" *ngIf="account.dashboardBarChartData.length > 0">
+                        <ion-grid no-padding no-margin>
+                            <ion-row>
+                                <ion-col col-1 align-self-start>
+                                    <div style="height:15px; width:15px;" [ngClass]="account.firstBarColorCls"></div>
+                                </ion-col>
+                                <ion-col style="text-align:left">
+                                    <span class="graphLableTextCls">{{account.firstLable}}</span>
+                                    <br/>
+                                    <span class="graphLableAmountCls">{{account.firstLableAmount|currency:'USD':true}}</span>
+                                </ion-col>
+                                <ion-col col-1 align-self-start>
+                                    <div style="height:15px; width:15px; " [ngClass]="account.secondBarColorCls"></div>
+                                </ion-col>
+                                <ion-col style="text-align:left">
+                                    <span class="graphLableTextCls">{{account.secondLable}}</span>
+                                    <br/>
+                                    <span class="graphLableAmountCls">{{account.secondLableAmount|currency:'USD':true}}</span>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row *ngIf="account.showAnnualElection">
+                                <ion-col class="paddingTopCls">
+                                    <span class="graphLableAmountCls">{{account.AnnualElection|currency:'USD':true}}</span>
+                                    <span class="graphLableTextCls">&nbsp;Annual Election</span>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+
+                </div>
+
+
+            </ion-slide>
+
+        </ion-slides>
+
+    </div>
+    <div class="messageCls" *ngIf="financeBlalanceData.length > 1">
+        Swipe to view other accounts
+    </div>
+</div>

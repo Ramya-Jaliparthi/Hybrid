@@ -1,0 +1,134 @@
+<header [title]="'Sign In'" [activeTab]="''">
+</header>
+<ion-content>
+    <div class="content">
+        <div class="registerSection">
+
+
+            <div class="register-login-section display-in-center">
+
+                <div class="sectionA">
+
+                    <ion-grid>
+                        <ion-row>
+                            <p class="headerLable" style="margin:0">Not Registered?</p>
+                        </ion-row>
+                        <ion-row style="padding-top:5px">
+                            <p style="font-size: 0.9em;color:#fff;margin:0;">{{createMyblueAccount}}</p>
+                        </ion-row>
+                    </ion-grid>
+
+                </div>
+                <div (tap)="gotoRegistrationPage()" class="sectionB display-in-center">
+                    <ion-grid>
+                        <ion-row style="font-weight:bold;">
+                            <ion-col col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 class="display-in-center" style="font-size:1.4rem;">
+                                <span class="txt-section">Register&nbsp;Now</span>
+                            </ion-col>
+                            <ion-col class="display-in-center" style="margin-left:0px;">
+                                <ion-img src [src]="config.assets_url+'/images/icons-ios/Asset77@2x.png'" style="width:22px;height:22px;background-color:#0068A8"></ion-img>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <div style="clear:both;"></div>
+
+            </div>
+
+
+        </div>
+
+
+        <div style="height:10px;" *ngIf="showInfoAlerSection">&nbsp;</div>
+        <div *ngFor="let alert of alerts">
+            <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+        </div>
+        <div style="margin-bottom:15px;background-color:#f2f2f2;" *ngIf="showUserNameInfoSection">
+            <ion-row class="middleContainerCls barColorOrange ">
+                <ion-col no-padding>
+                    <div class="boldContentCls">{{checkEmailOrMobileno}}</div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div style="margin-bottom:15px;background-color:white">
+            <div class="loginCardSection">
+
+                <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm($event)">
+
+                    <div class="labelClss">Username</div>
+                    <ion-item>
+                        <input #usernameInput type="email" size="60" formControlName="userName" placeholder="Username" (click)="launchChangeUsername(usernameInput)"
+                            [readonly]="isUserIdFieldDisabled" (blur)="onUserNameBlur = true" (focus)="onUserNameBlur = false"
+                            class="signInInputs" autocorrect="off" autocapitalize="off" autocomplete="off" />
+
+                    </ion-item>
+                    <control-messages [control]="loginForm.controls.userName" *ngIf="onUserNameBlur" class="errorMsg"></control-messages>
+
+                    <div class="labelClss">Password</div>
+                    <ion-item>
+                        <input #pwdInput type="password" formControlName="password" placeholder="Password" (blur)="onPasswordBlur = true" (focus)="onPasswordBlur = false"
+                            [(ngModel)]="userpwd" style="border:0px;" />
+                        <button class="pwdShowBtnCls" type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInput)" round text-capitalize>{{buttonCaption}}</button>
+                    </ion-item>
+                    <control-messages [control]="loginForm.controls.password" *ngIf="onPasswordBlur" class="errorMsg" id="passwordErrorMsg"></control-messages>
+
+
+                    <ion-grid responsive-sm style="padding:20px 10px;">
+                        <ion-row>
+                            <ion-col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6>
+                                <label class="switch" style="float:left;">
+                                    <input type="checkbox" id="rememberMe" checked formControlName="rememberme" (change)="toggleRememberme()" [(ngModel)]="isRemembermeEnabled"
+                                    />
+                                    <span class="login_slider round"></span>
+                                </label>
+                                <div class="" style="padding-top: inherit; padding-left: 67px;line-height: 2.0em;">Remember&nbsp;Me</div>
+
+                            </ion-col>
+                            <ion-col col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+
+                                <label class="switch" style="float:left;">
+                                    <input type="checkbox" id="touchId" #touchId formControlName="biometric" (change)="handleToggleAction(touchId)" [(ngModel)]="isTouchIDUsed"
+                                    />
+                                    <span class="login_slider round"></span>
+                                </label>
+                                <div class="" style="padding-top: inherit; padding-left: 67px;line-height: 2.0em;">Touch&nbsp;ID</div>
+
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+
+                    <div padding>
+                        <button ion-button type="submit" full>Sign In</button>
+                    </div>
+
+                    <div id="touchSectionContainer" style="display:none;">
+                        <div (tap)="initiateTouchId()">
+                            <img id="touchiconid" style="width: 2em;" [src]="config.assets_url+'/images/common/touchID@2x.png'"
+                            />
+                            <span style="color:#1866a3; vertical-align: top;line-height: 2em; margin-left: 1em; ">Sign in using Touch ID</span>
+                        </div>
+                    </div>
+
+
+                </form>
+                <div style="clear:both;"></div>
+                <div class="forgotPasswordSection" (click)="gotoForgotUsername($event)">
+                    <span class="forgotPasswordLabel">Forgot Username?</span>
+                    <div style="float:right;margin-top:0.5em;padding-right:10px;">
+                        <img style="height:20px;opacity:0.5" [src]="config.assets_url+'/images/icons-ios/Asset11@2x.png'" />
+                    </div>
+                </div>
+                <div class="forgotPasswordSection" (click)="gotoForgotPassword($event)">
+                    <span class="forgotPasswordLabel">Forgot Password?</span>
+                    <div style="float:right;margin-top:0.5em;padding-right:10px;">
+                        <img style="height:20px;opacity:0.5" [src]="config.assets_url+'/images/icons-ios/Asset11@2x.png'" />
+                    </div>
+                </div>
+            </div>
+            <img class="shadow-img" />
+        </div>
+
+
+    </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

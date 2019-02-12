@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xscxml initialstate="home" xmlns="http://www.openstream.com/scxml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openstream.com/scxml scxml.xsd ">
+
+  <initial> <!-- Initialization actions go here -->
+	<!-- Use resource:// protocol for local folders and files -->
+	<!-- 
+	<send event="setLogLevel" to="x-dm" data="debug" />
+	 -->
+	<send event="disableButton" to="x-html" data="back"/>
+	<send event="start" to="x-html" url="resource://MyBlueApp/index.html" />
+  </initial>
+  
+  <datamodel>  
+
+	<!-- Http API Scxml snippet : begin -->
+	<data id="isHttpPostRequest" expr="'true'"/>
+	<!-- Http API Scxml snippet : end -->
+	
+	<!-- Speech API Scxml snippet : begin -->
+	<data id="pttButtonPressed" expr="'false'"/>
+	<data id="isProcessing" expr="'false'"/>
+	<!-- Speech API Scxml snippet : end -->
+	
+	<data id="dmUser" expr="''"/>
+	<data id="TargetName" expr="'My Blue'"/>
+	<data id="appEventData" expr="''" />
+	<data id="appeventTargetData" expr="''" />
+
+	<!-- Save file onto DOWNLOADS or cuemedata:// folders -->
+	<data id="saveFileTarget" expr="''" />
+	<data id="dbName" expr="'EvaSecureStorage'" />
+
+  </datamodel>
+  
+  <state id="home">
+  
+    <onentry>
+    	<send event="disableButton" to="x-html"  data="back" />
+		<!-- The below event will get the device and user information. Please refer document for more details. -->
+ 		<send event="setQueryXML" to="x-db" target="{&quot;db&quot;:&quot;EvaSecureStorage&quot;,&quot;trackId&quot;:&quot;setQuery&quot;}" url="sqlQueries.xml"/>
+		<send event="setOrientation" to="x-html" data="portrait" />
+		<send event="getDeviceParam" to="x-html" target="dm.user" />
+    </onentry>
+    
+	<go on="getDeviceParamResponse" from="x-html">
+		<assign location="_data.dmUser" expr="event.value"/>
+		<send event="execute" to="x-html" target="scxmlHandler.setDMId" data="event.value" />
+	</go>
+	
+	<!-- Device Biometrics using Touch START -->
+	<go on="click" from="x-html" node="setTargetName">
+		<assign location="_data.TargetName" expr="event.value"/>
+	</go>
+	<go on="click" from="x-html" node="cuemeReadyId">
+		<send event="getSupportedBiometrics" to="x-deviceBiometrics" data="" />
+	</go>
+	<go on="click" from="x-html" node="getSupportedBiometrics">
+		<send event="getSupportedBiometrics" to="x-deviceBiometrics" data="" />
+	</go>	
+	<go on="click" from="x-html" node="closeSplash">
+        <send event="stopSplash" to="x-container" />
+	</go>
+	
+			
+	<!-- Request Events -->
+		
+	<go on="getSupportedBiometricsResponse" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.getSupportedBiometricsDataResponse" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="setdeviceBiometricConfig">
+		<send event="setConfig" to="x-deviceBiometrics" data="event.value" />
+		<send event="isKeySaved" to="x-deviceBiometrics" target="_data.TargetName" data="event.value" />
+		
+	</go>	
+	<go on="click" from="x-html" node="deleteAll">
+		<send event="deleteAll" to="x-deviceBiometrics" data="" />
+	</go>		
+	
+	<go on="deleteAllSuccess" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.deleteAllTouchBiodataSuccess" data="deleteAllSuccess" />			
+	</go>		
+	
+	<go on="deleteAllFail" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.deleteAllTouchBiodataError" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="delete">
+		<send event="delete" to="x-deviceBiometrics" target="_data.TargetName" data="_data.TargetName" />
+	</go>		
+	
+	<go on="deleteSuccess" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.deleteTouchBiodataSuccess" data="deleteSuccess" />			
+	</go>		
+	
+	<go on="deleteFail" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.deleteTouchBiodataError" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="save">
+		<send event="save" to="x-deviceBiometrics" target="_data.TargetName" data="event.value" secure="true"/>
+	</go>		
+	
+	<go on="saveSuccess" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.saveTouchBiodataSuccess" data="Save Sucess" />			
+	</go>		
+	
+	<go on="saveFail" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.saveTouchBiodataError" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="read">
+		<send event="read" to="x-deviceBiometrics" target="_data.TargetName" data="event.value" />
+	</go>		
+	
+	<go on="readSuccess" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.readTouchBiodataSuccess" data="event.value" secure="true"/>			
+	</go>		
+	
+	<go on="readFail" from="x-deviceBiometrics">			
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.readTouchBiodataError" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="isKeySaved">
+		<send event="isKeySaved" to="x-deviceBiometrics" target="_data.TargetName" data="event.value" />
+	</go>
+	
+	<go on="isKeySavedResponse" from="x-deviceBiometrics" >
+		<send event="execute" to="x-html" target="scxmlHandler.touchId.touchBiodataKeySaved" data="event.value" />
+	</go>
+	
+	<!-- Device Biometrics using Touch END -->
+	
+	<go on="click" from="x-html" node="uploadLogs">
+		<send event="uploadLogs" to="x-dm" />
+	</go>
+
+	<go on="uploadComplete" from="x-dm">
+		<send event="execute" to="x-html" target="scxmlHandler.uploadComplete"/>
+	</go>
+	<go on="keyPressed" from="x-html">
+		<send event="execute" target="scxmlHandler.keyPressed" to="x-html" data="event.value"/>
+	</go>
+	
+	<go on="click" from="x-html" node="exitApplication" >
+		<send event="exitApplication" to="x-container"/>
+	</go>
+<!-- Launch App Events -->
+   		
+		<go on="click" from="x-html" node="addContact"  global="true">
+			<send event="addContact" to="x-launchapp" data="event.value"/>
+		</go>
+			
+
+	<!-- Cards related events-->
+	<go on="click" from="x-html" node="saveFileTarget"  global="true">
+		
+		<assign location="_data.saveFileTarget" expr="event.value" />
+	</go>
+	<go on="cleanupComplete" from="x-file" global="true">
+	</go>
+	
+	<go on="saveBase64Complete" from="x-file" global="true">
+		<send event="execute" to="x-html" target="scxmlHandler.cards.loadImgUrl" data="event.value"/>
+	</go>
+	
+	<go on="saveBase64Error" from="x-file" global="true">
+		<send event="execute" to="x-html" target="alert" data="saveBase64Error"/>
+	</go>
+<!-- Email and print -->
+	<go on="click" from="x-html" node="email"  global="true">
+	<send event="email" to="x-launchapp" data="event.value"/>
+	</go>
+
+	<go on="click" from="x-html" node="print"  global="true">
+		<send event="print" to="x-launchapp" data="event.value"/>
+	</go>
+
+<!-- File Service Component -->
+	 <go on="click" from="x-html" node="saveFileTarget"  global="true">
+		<assign location="_data.saveFileTarget" expr="event.value" />
+	 </go>
+
+	<go on="click" from="x-html" node="saveCard"  global="true">
+		<send event="save" to="x-file" target="_data.saveFileTarget" data="event.value"/>
+	</go>
+	<go on="click" from="x-html" node="viewurl"  global="true">
+		<send event="launch" to="x-launchapp" data="event.value"/>
+	</go>
+
+<!--  App Analytics -->	
+	  <go on="click" from="x-html" node="logappevent" global="true">
+ 			<send event="appEvent" to="x-dm" target="AppEvent_MyBlue" data="event.value" />
+	  </go>
+	<go on="click" from="x-html" node="appeventTarget"  global="true">
+		<assign location="_data.appeventTargetData" expr="event.value" />
+	</go>
+	<go on="click" from="x-html" node="sendappEvent"  global="true">
+		<send event="appEvent" to="x-dm" target="_data.appeventTargetData" data="event.value" />
+	</go>
+	
+	<go on="cuemeBroadcast" from="x-container">
+		<send event="execute" to="x-html" target="scxmlHandler.handleContainerBroadcast" data="event.value"/>
+  	</go>
+
+<!-- Swrve START-->
+	<go on="click" from="x-html" node="getSwrveUserId">
+		<send event="getUserId" to="xe-swrve" data="event.value" />
+	</go>
+	
+	<go on="userId" from="xe-swrve">			
+		<send event="execute" to="x-html" target="scxmlHandler.getSwrveUserIdSuccess" data="event.value" />			
+	</go>
+
+	<go on="getUserIdFail" from="xe-swrve">			
+		<send event="execute" to="x-html" target="scxmlHandler.getSwrveUserIdError" data="event.value" />			
+	</go>
+	
+	<go on="click" from="x-html" node="setSwrveUserProperties">
+		<send event="setUserProperties" to="xe-swrve" data="event.value" />
+	</go>
+	
+	<go on="setUserPropertiesSuccess" from="xe-swrve">			
+		<send event="execute" to="x-html" target="scxmlHandler.setUserPropertiesSuccess" data="event.value" />			
+	</go>
+
+	<go on="setUserPropertiesFail" from="xe-swrve">			
+		<send event="execute" to="x-html" target="scxmlHandler.setUserPropertiesFailed" data="event.value" />			
+	</go>
+<!-- SWRVE END-->
+	<!-- ******************************** Secure Storage API START ********************************* -->
+	
+		
+	 	
+	 	<go on="querySuccess" from="x-db" node="{&quot;db&quot;:&quot;EvaSecureStorage&quot;,&quot;trackId&quot;:&quot;setQuery&quot;}" global="true">
+	 		
+	 		<send event="execute" to="x-db" target="{&quot;db&quot;:&quot;EvaSecureStorage&quot;,&quot;QueryId&quot;:&quot;query_createAppStorage&quot;,&quot;trackId&quot;:&quot;createTable&quot;}" data="{}" />
+	 	</go>
+	 	
+	 	<go on="querySuccess" from="x-db" node="{&quot;db&quot;:&quot;EvaSecureStorage&quot;,&quot;QueryId&quot;:&quot;query_createAppStorage&quot;,&quot;trackId&quot;:&quot;createTable&quot;}" global="true">
+	 	
+	 		<send event="execute" to="x-html" target="evaSecureStorage.dbComponentReady" />
+	 	</go>
+	 	<go on="queryError" from="x-db" node="{&quot;db&quot;:&quot;EvaSecureStorage&quot;,&quot;QueryId&quot;:&quot;query_createAppStorage&quot;,&quot;trackId&quot;:&quot;createTable&quot;}" global="true">
+	 	
+	 		<send event="execute" to="x-html" target="evaSecureStorage.dbComponentReady" />
+	 	</go>
+	 		 			 	
+	 	<go on="queryError" from="x-db" target="EvaSecureStorage" global="true">
+<!-- 	 		<send event="execute" to="x-html" target="alert" data="Failed to load query xml"/> -->
+	 	</go>
+		
+		<!--	
+		<go on="click" from="x-html" node="CheckDBExists" global="true">    
+			<send event="checkDBExist" to="x-db" target="_data.dbName" data="" />
+		</go>  
+		 <go on="checkDBSuccess" from="x-db" > 
+			<send event="execute" to="x-html" target="evaSecureStorage.checkDBSuccess" data="event.value" />
+		</go>
+		<go on="checkDBFailed" from="x-db" >
+			<send event="execute" to="x-html" target="evaSecureStorage.checkDBFailed" data="event.value" />
+		</go> -->
+		
+		
+	 	<go on="click" from="x-html" node="handleDBReqObj" global="true">
+	          <send event="processRequest" to="x-db" data="event.value" />
+	    </go>
+	       
+	    <go on="processQueryResult" from="x-db"  global="true">
+			<send event="execute" to="x-html" target="invokeSuccessCallback" data="event.value"/>
+	    </go>
+	       
+	    <go on="processQueryError" from="x-db"  global="true">
+			<send event="execute" to="x-html" target="invokeErrorCallback" data="event.value"/>
+	    </go>
+	                                           
+	    <go on="batchRequestStarted" from="x-db"  global="true">
+			<send event="execute" to="x-html" target="invokeBatchStarted" data="event.value"/>
+	    </go>
+	       
+	    <go on="batchRequestComplete" from="x-db"  global="true">
+			<send event="execute" to="x-html" target="invokeBatchComplete" data="event.value"/>
+	    </go>
+
+<!-- ******************************** Secure Storage API END ********************************* -->
+
+<!-- ******************************** TestFairy API START ********************************* -->
+
+		<go on="click" from="x-html"  node="setServerEndpoint" global="true">
+			<send event="setServerEndpoint" to="xe-testfairy" data="event.value"/>
+	    </go>
+
+		<go on="click" from="x-html"  node="beginTestfairy" global="true">
+			<send event="begin" to="xe-testfairy" data="event.value"/>
+	    </go>
+
+		<go on="beginSuccess" from="xe-testfairy">
+			<!-- Commented to avoid alert message.... <send event="execute" to="x-html" target="alert" data="Begin Success"/> -->
+	    </go>
+
+		<go on="beginFail" from="xe-testfairy">
+			<!-- Commented to avoid alert message....<send event="execute" to="x-html" target="alert" data="Begin Failed"/>-->
+	    </go>
+
+		<go on="click" from="x-html"  node="getTestfairyVersion" global="true">
+			<send event="getVersion" to="xe-testfairy" data=""/>
+	    </go>
+		<go on="version" from="xe-testfairy">
+			<send event="execute" to="x-html" target=" alert" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="setTestfairyUserId" global="true">
+			<send event="setUserId" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="setTestfairyAttribute" global="true">
+			<send event="setAttribute " to=" xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="setTestfairyScreenName" global="true">
+			<send event="setScreenName" to="xe-testfairy" data="event.value" />
+		</go>
+		
+		<go on="click" from="x-html" node="showFeedbackDialog" global="true">
+			<send event="showFeedbackDialog" to="xe-testfairy" data="event.value" />
+		</go>
+		
+		<go on="feedbackCancelled" from="xe-testfairy" global="true">
+			<send event="execute" to="x-html" target="alert" data="event.value" />
+		</go>
+		
+		<go on="click" from="x-html" node="sendUserFeedback" global="true">
+			<send event="sendUserFeedback" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="takeScreenshot" global="true">
+			<send event="takeScreenshot" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="takeScreenshotFail" from="xe-testfairy" global="true">
+			<send event="execute" to="x-html" target="alert" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="hideWebViewElements" global="true">
+			<send event="hideWebViewElements" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="hideWebViewElementsFail" from="xe-testfairy" global="true">
+			<send event="execute" to="x-html" target=" alert" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="pauseTestfairy" global="true">
+			<send event="pause" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="resumeTestfairy" global="true">
+			<send event="resume" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="stopTestfairy" global="true">
+			<send event="stop" to="xe-testfairy" data="event.value" />
+		</go>
+
+		<go on="click" from="x-html" node="testfairylog" global="true">
+			<send event="log" to="xe-testfairy" data="event.value" />
+		</go>
+
+<!-- ******************************** enablescreen shot API End ********************************* -->
+
+
+        <go on="click" from="x-html" node="disableSecureScreen" global="true">
+            <send event="disableSecureScreen" to="x-container" />
+       </go>
+		
+<!-- ******************************** TestFairy API End ********************************* -->
+
+		<go on="click" from="x-html" node="getMessages">
+			<send event="getMessages" to="xe-swrve" data="event.value"/>
+		</go>
+		<go on="messages" from="xe-swrve">
+            <send event="execute" to="x-html" target="scxmlHandler.showMessages" data="event.value"/>
+        </go>
+
+		<go on="click" from="x-html" node="showMessage">
+			<send event="showMessage" to="xe-swrve" target="event.value" />
+		</go>
+
+		<go on="showMessageSuccess" from="xe-swrve" >
+			<send event="execute" to="x-html" target="scxmlHandler.showMessageSuccess" data="event.value" />
+		</go>
+
+		<go on="showMessageFail" from="xe-swrve" >
+			<send event="execute" to="x-html" target="showMessageFail" data="event.value" />
+		</go>
+
+ <!-- ********************Notification Badge Management API START ****************************** -->		
+
+		<go on="click" from="x-html" node="setBadgeCount" > 
+ 			<send event="setBadgeCount" to="x-container" data="event.value"/>
+ 		</go> 
+
+ 		<go on="click" from="x-html" node="clearBadgeCount" > 
+			<send event="clearBadgeCount" to="x-container" /> 
+		</go> 
+
+ <!-- ********************Notification Badge Management API END ****************************** -->		
+    <onexit>
+    </onexit>
+    
+  </state>
+  
+  <final>
+	<!-- Final events go here -->
+  </final>
+  
+</xscxml>

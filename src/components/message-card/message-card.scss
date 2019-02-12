@@ -1,0 +1,16 @@
+.messageContainer {
+    padding: $padding-page-30 0px $padding-page-30 $padding-page-10;
+    font-size: 0.9em;
+    background-color: #f2f2f2;
+    &.barColorGreen {
+        border-left: $padding-page-15 solid #3da148;
+    }
+    &.barColorOrange {
+        border-left: $padding-page-15 solid #f26300;
+    }
+    .messageHeaderTitle {
+        font-size: $card-content-title-size;
+        font-family: $font-family-lable;
+        padding-bottom: $padding-page-15;
+    }
+}

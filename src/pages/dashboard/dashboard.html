@@ -1,0 +1,92 @@
+<header [activeTab]="'home'"></header>
+
+
+<ion-content class="page-dashboard" (window:resize)="onResize($event)" >
+    <div id="dashboardTop"></div>
+    <div class="sub-header" *ngIf="isStateAnonymous()" ion-fixed [style.top]="subHeaderTop">
+
+    	
+    	<div class="register-login-section display-in-center">
+	    	<ion-grid >
+	    		<ion-row>
+		    		<ion-col col-9 (tap)="openPage('register')" class="sectionA display-in-center">
+
+		    			<ion-grid> 
+		    				<ion-row><p class="notSignedIn">You are not signed in.</p></ion-row>
+		    				<ion-row class="registerNowSection"> 
+		    						<ion-col col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8>
+		    							<p class="needToCreateAccount"><span class="smallTextCls">Need&nbsp;to&nbsp;create&nbsp;account? </span></p> 
+		    						</ion-col>
+		    						<ion-col><p class="registerNowTxt">Register&nbsp;Now</p></ion-col>
+		    				</ion-row>
+		    			</ion-grid>
+
+		    		</ion-col>
+		    		<ion-col col-3 (tap)="openPage('signin')" class="sectionB display-in-center">
+		    			<ion-grid>
+							  <ion-row>
+								<ion-col col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 class="display-in-center">
+								  <span class="txt-section">Sign&nbsp;In</span>
+								</ion-col>
+								<ion-col class="display-in-center" class="signInImgSection">
+                                    <div class="signInImgHolder">
+                                        <img src [src]="config.assets_url+'/images/icons-ios/Asset77@2x.png'" />
+                                    </div>
+								</ion-col>
+							  </ion-row>		  
+						</ion-grid>
+		    		</ion-col>
+	    		</ion-row>
+	    	</ion-grid>
+    	</div>
+    	
+    </div>
+
+    <div *ngFor="let alert of alerts" [style.margin-top]="isAlertShowing() ? '0px' : '87px'">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert" ></alert-message-card>
+    </div>
+    <div class="sub-header-loggedIn" *ngIf="isStateLoggedIn()">
+        <div class="dashBoardHolder">
+            <div>
+                <ion-grid no-padding no-margin>
+                    <ion-row>
+                        <ion-col text-center>
+                            <span class="welcomeTitleCls">Welcome, {{userDispName}}.</span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-auto (tap)="openPage('myPlan')" align-self-center>
+                            <img class="iconImgCls" [src]="config.assets_url+'/images/icons-ios/Asset46@2x.png'">
+                        </ion-col>
+                        <ion-col (tap)="openPage('myPlan')" align-self-center>
+                           <div class="headerLabelCls">My Plan</div>
+                        </ion-col>
+                        <ion-col (tap)="openPage('myCards')" col-auto align-self-center>
+                            <img class="iconImgCls" [src]="config.assets_url+'/images/icons-ios/Asset47@2x.png'">
+                        </ion-col>
+                        <ion-col (tap)="openPage('myCards')" align-self-center>
+                            <div class="headerLabelCls myCardsLink">My Cards</div>
+                        </ion-col>
+                        <ion-col col-auto align-self-center>
+                            <img  class="iconImgCls" [src]="config.assets_url+'/images/icons-ios/Asset48@2x.png'">
+                        </ion-col>
+                        <ion-col tappable (click)="openPage('findDoctor')"  align-self-center col-4>
+                            <div class="headerLabelCls">Find a Doctor &amp; Estimate Costs</div>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <img class="shadow-img"/>	
+        </div>
+    </div>
+
+    
+    <div class="grid" [style.margin-top]="isStateAnonymousAndAlert() ? '80px' : '15px'" no-padding>
+        <ng-container *ngFor="let card of cards">
+            <dashboard-card class="dashboard-grid-item" *ngIf="card.enabled" [card]="card" ></dashboard-card>
+        </ng-container>
+    </div>
+</ion-content>
+
+<footer [activeTab]="'home'"></footer>

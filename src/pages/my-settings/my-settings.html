@@ -1,0 +1,373 @@
+<header [title]="'Settings'"></header>
+<ion-content no-padding>
+    <div class="tabHolder" no-margin>
+        <ion-segment [(ngModel)]="settings" (ionChange)="showPreferences($event)">
+            <!-- <ion-segment-button class="headerTitle" value="profileSettings"> -->
+            <ion-segment-button class="headerTitle" id="profileTab" value="profileSettings">
+                Profile
+            </ion-segment-button>
+            <ion-segment-button class="headerTitle" value="preferenceSettings" [disabled]="disablePreference || loginResponse.HasActivePlan == 'false' ">
+                Preferences
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="settings" (swipe)="swiped($event)" class="profilePreferenceHolder">
+        <ion-list *ngSwitchCase="'profileSettings'" ngSelected="selected" class="profileTab">
+            <div *ngFor="let alert of alerts" class="profileBanner">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message"
+                    [type]="alert.type" [alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+            <div class="profileHolder">
+
+                <div class="preferenceEmailHolder usernameContainer" *ngIf='userName && isAVUser'>
+                    <b class="boldContentProfileName"> {{userName}}</b>
+
+                    <ion-icon class="tooltip iconContainer" color="profiletextblue" item-end name="ios-information-circle-outline">
+                        <p class="tooltiptext normalTxt">
+                            <span (click)="gotoContactUsPage()">Contact Us</span> to update any of this information.
+                        </p>
+                    </ion-icon>
+
+                    <div class="clearAll"></div>
+                </div>
+
+
+                <div *ngIf="!isAVUser">
+                    <ion-item no-lines class="normalTxt preferenceEmailHolder">
+                        <div *ngIf='this.authService.useridin'>Username: {{this.authService.useridin}}</div>
+                    </ion-item>
+                </div>
+
+                <div *ngIf="isAVUser">
+                    <ion-item no-lines class="normalTxt preferenceEmailHolder">
+                        <div class="dobHolder" *ngIf='userDOB'>Date of Birth: {{userDOB | dateFilter}}</div>
+                        <div *ngIf='this.authService.useridin'>Username: {{this.authService.useridin}}</div>
+                    </ion-item>
+
+                    <!--Mailing Address -->
+                    <div *ngIf='profileData.address1 || profileData.address2 || profileData.city'>
+                        <ion-item no-lines class="preferenceEmailHolder">
+                            <b class="txtfontsize"> Mailing Address</b>
+                        </ion-item>
+                        <div class="address">
+                            <div class="mailAddressTxt" *ngIf='profileData.address1'>
+                                {{profileData.address1}}
+                            </div>
+                            <div *ngIf="profileData.address2" class="mailAddressTxt">
+                                {{profileData.address2}}
+                            </div>
+                            <div *ngIf='profileData.city'>
+                                {{profileData.city}}, {{profileData.state}} ,{{profileData.zip}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Email-->
+                <div *ngIf="(!isAVUser && regType =='EMAIL') || (isAVUser)">
+                    <div *ngIf='showEmailInputfield' class="profileComponent">
+                        <ion-item no-lines class="leftpadding preferenceEmailHolder">
+                            <ion-icon class="iconFont mobileEmailIconName"  [name]="emailIconName" item-start [color]="emailiconcolor"></ion-icon>
+                            <ion-label class="">
+                                <b class="txtfontsize">Email</b>
+                            </ion-label>
+                            <button ion-button item-end clear *ngIf='editEmail' (tap)="verifiedlink('email',email)">
+                                <b class="border-bottom-verify">Verify your email</b>
+                            </button>
+                            <button ion-button item-end clear (tap)="emailEdit()">
+                                <b class="border-bottom-verify">Edit</b>
+                            </button>
+
+                        </ion-item>
+                        <span class="emailtextoverflow">
+                            {{email}}</span>
+                    </div>
+
+                    <div *ngIf="editEmailInputfield" class="profileComponent">
+                        <form [formGroup]="emailForm" (submit)="updateEmail()" novalidate>
+                            <ion-item class="editInputField">
+                                <ion-label stacked>
+                                    <b class="txtfontsize preferenceEmailHolder">Email*
+                                    </b>
+                                </ion-label>
+                                <ion-input class="editInputField" type="email" formControlName="email" [(ngModel)]="emailEditable"
+                                    (blur)="onEmailBlur = true" (focus)="onEmailBlur = false"></ion-input>
+                            </ion-item>
+                            <control-messages [control]="emailForm.controls.email" *ngIf="onEmailBlur"></control-messages>
+                            <ion-grid>
+                                <ion-row class="cancelSaveBtnHolder">
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionBtncls" button type="submit" ion-button [disabled]="!emailForm.valid">Save</button>
+                                    </div>
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionbtnclear" ion-button clear (tap)="cancelEditEmail()">Cancel</button>
+                                    </div>
+                                </ion-row>
+                                <div class="editFieldReq">* Field is required.</div>
+                            </ion-grid>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Add phone number -->
+                <div *ngIf="isAVUser">
+                    <div class="addPhone preferenceEmailHolder">
+                        <ion-label (tap)="showAddPhoneNumberDiv()" class="addPhonNumLink" *ngIf="isAddPhoneNumberBtnVisible">
+                            <ion-icon name="ios-add"></ion-icon>Add Phone Number
+                        </ion-label>
+                    </div>
+                    <div *ngIf="addphoneNumberInputfield" class="profileComponent addPhoneComponent">
+                        <form [formGroup]="addPhoneNumberForm" (submit)="addPhoneNumber()" novalidate>
+                            <ion-item class="editInputField">
+                                <ion-label stacked>
+                                    <b class="txtfontsize preferenceEmailHolder">Phone Number*
+                                    </b>
+                                </ion-label>
+                                <ion-input class="editInputField" formControlName="phoneNumber" [textMask]="{mask: mobileMask}"
+                                    type="tel" placeholder="Enter 10 digit number" (blur)="onAddMobileNumberBlur = true"
+                                    (focus)="onAddMobileNumberBlur = false" [(ngModel)]="addPhonenoEditable" maxlength="10"></ion-input>
+                            </ion-item>
+                            <control-messages [control]="addPhoneNumberForm.controls.phoneNumber" *ngIf="onAddMobileNumberBlur"></control-messages>
+                            <ion-grid>
+                                <ion-row class="cancelSaveBtnHolder">
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionBtncls" type="submit" ion-button [disabled]="!addPhoneNumberForm.valid">Save</button>
+                                    </div>
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionbtnclear" ion-button clear (tap)="cancelAddPhoneNumber()">Cancel</button>
+                                    </div>
+                                </ion-row>
+                                <div class="editFieldReq">* Field is required.</div>
+                            </ion-grid>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mobile Number -->
+                <div *ngIf="(!isAVUser && regType =='MOBILE') || (isAVUser)">
+                    <div *ngIf="showPhoneNumberInputfield" class="profileComponent">
+                        <ion-item no-lines class="leftpadding preferenceEmailHolder">
+                            <ion-icon class="iconFont mobileEmailIconName"  [name]="mobileIconName" item-start [color]="mobileIconColor"></ion-icon>
+                            <ion-label>
+                                <b class="txtfontsize">Phone Number</b>
+                            </ion-label>
+                            <button ion-button item-end clear *ngIf='editPhoneNo' (tap)="verifiedlink('phone',phoneno)">
+                                <b class="border-bottom-verify">Verify your number</b>
+                            </button>
+                            <button ion-button item-end clear (tap)="editPhoneNumber()">
+                                <b class="border-bottom-verify">Edit</b>
+                            </button>
+
+                        </ion-item>
+                        <span class="textpaddingleft"> Mobile : {{phoneno}}</span>
+                    </div>
+                    <div *ngIf="editphoneNumberInputfield" class="profileComponent">
+                        <form [formGroup]="phonenumberForm" (submit)="updatePhoneNumber()" novalidate>
+                            <ion-item class="editInputField">
+                                <ion-label stacked>
+                                    <b class="txtfontsize preferenceEmailHolder">Phone Number*
+                                    </b>
+                                </ion-label>
+                                <ion-input class="editInputField" formControlName="phoneNumber" [textMask]="{mask: mobileMask}"
+                                    type="tel" placeholder="Enter 10 digit number" (blur)="onMobileNumberBlur = true"
+                                    (focus)="onMobileNumberBlur = false" [(ngModel)]="phonenoEditable" maxlength="10"></ion-input>
+                            </ion-item>
+                            <control-messages [control]="phonenumberForm.controls.phoneNumber" *ngIf="onMobileNumberBlur"></control-messages>
+                            <ion-grid>
+                                <ion-row class="cancelSaveBtnHolder">
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionBtncls" type="submit" ion-button [disabled]="!phonenumberForm.valid">Save</button>
+                                    </div>
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionbtnclear" ion-button clear (tap)="cancelEditPhoneNumber()">Cancel</button>
+                                    </div>
+                                </ion-row>
+                                <div class="editFieldReq">* Field is required.</div>
+                            </ion-grid>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Hint Questions -->
+
+                <div *ngIf="isAVUser">
+                    <div *ngIf="showHintquestionInputfield" class="profileComponent">
+                        <ion-item no-lines class="preferenceEmailHolder">
+                            <ion-label>
+                                <b class="txtfontsize">Hint Question</b>
+                            </ion-label>
+
+                            <button ion-button item-end clear (tap)="editHintQuestion()">
+                                <b class="border-bottom-verify">Edit</b>
+                            </button>
+
+                        </ion-item>
+
+                        <span class="hintquationtextoverflow">{{hintQuestion}}</span>
+                        <ion-item no-lines class="preferenceEmailHolder profileComponent">
+                            <ion-label>
+                                <b class="txtfontsize">Hint Answer</b>
+                                <br>
+                                <span>{{hintanswer}}</span>
+                            </ion-label>
+                        </ion-item>
+                    </div>
+                    <div *ngIf="editHintquestionInputfield" class="profileComponent">
+                        <form [formGroup]="hintAnswerForm" (submit)="updateHintQuestion()" novalidate>
+                            <div>
+                                <ion-item class="editInputField">
+                                    <ion-label stacked>
+                                        <b class="txtfontsize preferenceEmailHolder">Hint Question*
+                                        </b>
+                                    </ion-label>
+                                    <ion-select class="drawselectoptions" formControlName="hintquation" [(ngModel)]="hintQuestionEditable"
+                                        interface="action-sheet" mode='ios' okText="Select" cancelText="Dismiss"
+                                        placeholder="Select a question" [selectOptions]="hintQuestionsSelectOptions">
+                                        <ion-option value="{{question.label}}" *ngFor="let question of securityQuestions">{{question.label}}</ion-option>
+                                    </ion-select>
+
+                                </ion-item>
+                            </div>
+                            <div>
+                                <ion-item class="editInputField profileComponent">
+                                    <ion-label stacked>
+                                        <b class="txtfontsize preferenceEmailHolder">Hint Answer*
+                                        </b>
+                                    </ion-label>
+                                    <ion-input [type]="passwordType" class="editInputField" formControlName="hintanswer"
+                                        [(ngModel)]="hintanswerEditable" (blur)="hintAnswerBlur = true" (focus)="hintAnswerBlur = false" minlength="3" maxlength="30"></ion-input>
+                                    <!-- <ion-icon item-end [name]="passwordIcon" class="" (click)='hideShowPassword()'></ion-icon> -->
+                                    <button class="pwdShowBtnCls editHintAnswerBtn" [ngClass]="{'password-button-hide':passwordText=='Hide'}" type="button" ion-button item-end
+                                        (tap)="hideShowPassword()" round text-capitalize>{{passwordText}}</button>
+                                </ion-item>
+                            </div>
+                            <control-messages [control]="hintAnswerForm.controls.hintanswer" *ngIf="hintAnswerBlur"></control-messages>
+                            <ion-grid>
+                                <ion-row class="cancelSaveBtnHolder">
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionBtncls" ion-button type="submit" [disabled]="!hintAnswerForm.valid">Save</button>
+                                    </div>
+                                    <div class="cancelSaveBtn">
+                                        <button class="ionbtnclear" ion-button clear (tap)="cancelEditHintQuestion()">Cancel</button>
+                                    </div>
+                                </ion-row>
+                                <div class="editFieldReq">* Field is required.</div>
+                            </ion-grid>
+                        </form>
+                    </div>
+                </div>
+
+                <ion-item class="ionitembackgroung updatePasswordHolder preferenceEmailHolder" (tap)="updateYourPassword()"
+                    no-lines>
+                    <ion-label>
+                        <b>Update your password</b>
+                    </ion-label>
+                    <ion-icon item-end class="detailArrowCls" name="ios-arrow-forward"></ion-icon>
+                </ion-item>
+            </div>
+
+
+            <div *ngIf="showUserProfileDrupal">
+                <ng-container *ngFor="let card of cards">
+                    <dashboard-card class="dashboard-grid-item" *ngIf="card.enabled" [card]="card"></dashboard-card>
+                </ng-container>
+            </div>
+
+            <img class="shadow-img" />
+        </ion-list>
+
+        <!--<div style="margin-bottom:15px;background-color:white;margin-top:0px;"></div>-->
+        <ion-list *ngSwitchCase="'preferenceSettings'" class="preferencesTab">
+            <div *ngFor="let alert of alerts" class="profileBanner">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message"
+                    [type]="alert.type" [alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+            <div class="profileHolder" (swipe)="swiped($event)">
+                <ion-item>
+                    <ion-row class="preferenceEmailHolder">
+                        <!-- <div class="boldContentCls">Marketing Communications</div> -->
+                        <div class="boldContentCls notifications">Notifications</div>
+                    </ion-row>
+                    <ion-row class="notificationTxtHolder">
+                        <ion-col col-12 text-wrap class="notificationsTxt">
+                            <!-- Yes, I wish to receive health-related information from Blue Cross Blue Shield of Massachusetts. -->
+                            <div class="selectLearnMoreTxt">
+                                Select how you wish to receive information from Blue Cross Blue Shield of
+                                Massachusetts.
+                                <span (tap)="learnMore()" class="cardReadArticleLinkCls" text-end text-capitalize>learn
+                                    more.</span>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <div>
+                                <div class="preferenceTitle mobilePhnTxt">Emails <span *ngIf="isVerifiedEmail" class="editLinkPreferences"
+                                        (tap)="editEmailPreference()">Edit</span></div>
+
+                                <div class="preferenceSliderHolder" (tap)="preferenceEmail()" *ngIf="!isVerifiedEmail">
+                                    <div class="verifyEmailTxt">
+                                        <span>Verify your email to receive notifications</span>
+                                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="emailSliderHolder" *ngIf="isVerifiedEmail">
+                                <label class="switch">
+                                    <input type="checkbox" (change)="updateMarketingCommPreferences($event)"
+                                        #emailMarketingChkBox id="emailMarketingChkBox" [(ngModel)]="emailMarketingFlag" />
+                                    <span class="login_slider round"></span>
+                                </label>
+                                <div class="login_sliderlabel boldContentCls">{{memEmailAddress}}</div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col *ngIf="!isAddPhoneNumberBtnVisible">
+                            <div>
+                                <div class="preferenceTitle mobilePhnTxt">Mobile Phone Number
+                                    <span *ngIf="isVerifiedMobile" class="editLinkPreferences" (tap)="editMobilePreference()">Edit</span>
+                                </div>
+                                <div class="preferenceSliderHolder" (tap)="preferenceMobile()" *ngIf="!isVerifiedMobile">
+                                    <div class="verifyEmailTxt">
+                                        Verfiy your mobile phone to receive notifications
+                                        <ion-icon name="ios-arrow-forward"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="emailSliderHolder preferenceMobileHolder" *ngIf="isVerifiedMobile">
+                                <label class="switch">
+                                    <input type="checkbox"  (change)="updateMarketingCommPreferences($event)"
+                                        [(ngModel)]="txtMsgMarketingFlag" #textMsgMarketingChkBox id="textMsgMarketingChkBox" />
+                                    <span class="login_slider round"></span>
+                                </label>
+                                <div class="login_sliderlabel boldContentCls">{{memMobileNumber}}</div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="preferenceEmailHolder preferencesFooterTxt">
+                        <ion-col>
+                            <div>
+                                <ul class="preferenceTxt">
+                                    <li>
+                                        *By enrolling in text alerts you are authorizing Blue
+                                        Cross Blue Shield of Massachusetts to send text
+                                        messages through an automatic dialing system.
+                                    </li>
+                                </ul>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <div class="clearAll">&nbsp;</div>
+                </ion-item>
+                <ion-item>
+
+                    <div class="clearAll">&nbsp;</div>
+                </ion-item>
+                <img class="shadow-img" />
+            </div>
+        </ion-list>
+    </div>
+</ion-content>
+<footer [activeTab]="'Settings'"></footer>

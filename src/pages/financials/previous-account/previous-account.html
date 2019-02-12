@@ -1,0 +1,19 @@
+<header [title]='"Previous Accounts"'></header>
+
+<ion-content>
+
+  <ion-item-group>
+    <ion-item-divider class="heading">Previous Accounts</ion-item-divider>
+    <ion-item ion-item *ngFor="let account of previousAccounts" (click)="navigateToDetailsPage(account)" class="accountHeading">
+      {{getHeader(account['accountType'])}}
+      <p class="balance">Available: ${{account.availBalance | number : '1.2-2'}} </p>
+      <p class="availDate">{{account.planStartDate | date:'MM/dd/yyyy'}} - {{account.planEndDate | date:'MM/dd/yyyy'}}</p>
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>
+
+</ion-content>
+
+<footer></footer>

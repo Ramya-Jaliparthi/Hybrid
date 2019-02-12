@@ -1,0 +1,85 @@
+auth-verification-success {
+.content {
+    background-color: white !important;
+    padding: 0px $padding-page-30 !important;
+
+    .scroll-content{
+        padding:$padding-page-30 0px !important;
+        margin: 0px !important;
+    }
+}    
+
+.close-icon-blue{
+        color: #1866a3;
+        font-size: 3em;
+        width: 100%;
+        background: white;
+        margin-bottom: -1px;
+    }
+    
+.shadowImgContainer{
+    background-color:white;
+    text-align: center;
+    padding-top: ($padding-page-30 * 5);
+}
+
+
+ion-row{
+    padding: $padding-page-10 $padding-page-30;
+}
+
+.promoHeader1Cls{
+    background-color: $auth-promo-header-color;
+    color: white;
+    font-size: $page-header-title-size;
+    border-top: 1px solid #818181;
+}   
+  
+    .bold{
+        font-weight: bold;
+    }
+    .small{
+        font-size: $card-content-body-size;
+    }
+    
+    .round{
+        border-radius: 12px;
+    }
+    .link{
+        color: black;
+        text-decoration: underline;
+    }
+
+    .buttonCls{
+        
+        border-radius: 12px;
+        line-height:2.25em;
+        
+    }
+    .padding-bottom-cls{
+        padding-bottom:5px;    
+    }
+    
+    .actionButton {
+        width:90%;
+        line-height:2.25em;
+        margin: 5% !important;
+        border: 0;
+    }
+    
+    .boldCaption {
+    	font-size: 1.5em;
+    	font-weight: bold;
+    }
+    
+    .bannerCls {
+    	padding-top: ($padding-page-30 *3);
+    }
+    .btnContainerCls {
+    	padding: ($padding-page-30 * 11) $padding-page-30 $padding-page-30 $padding-page-30;
+    	//font-weight: bold;
+        button{
+            font-family: arial-bold;
+        }
+    }
+}

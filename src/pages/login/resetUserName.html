@@ -1,0 +1,29 @@
+<header [title]="'Sign In'" [hideMenu]="''" [activeTab]="''"></header>
+<ion-content>
+    <div style="margin-bottom:15px;background-color:white;margin-top:15px;">
+        <div>
+            <div class="contentCls">
+                <div class="titleCls">Use a Different Username</div>
+                <p style="margin-top:0px;">You can continue to use your current Username, or choose a different account to sign in.</p>
+                <p>{{dectType}} will reset to be reactivated each time a new ID is used.</p>
+            </div>
+            <ion-grid no-padding no-margin>
+                <ion-row>
+                    <ion-col align-self-center>Username:&nbsp;{{username}}</ion-col>
+                    <ion-col col-auto align-self-center *ngIf="!isTouchIdEnabled">
+                        <img style="width: 2em;" [src]="config.assets_url+'/images/common/touch_disabled.png'" />
+                    </ion-col>
+                    <ion-col col-auto align-self-center *ngIf="isTouchIdEnabled">
+                        <img style="width: 2em;" [src]="config.assets_url+'/images/common/touchID@2x.png'" />
+                    </ion-col>
+                    <ion-col col-auto align-self-center style="padding-left : 10px;">{{isTouchIdEnabled ? "Enabled":"Disabled" }}</ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="btnContainercls">
+                <button ion-button type="button" full (tap)="chooseUsername()">Use a Different Username</button>
+            </div>
+        </div>
+        <img class="shadow-img" />
+    </div>
+</ion-content>
+<footer [activeTab]="''"></footer>

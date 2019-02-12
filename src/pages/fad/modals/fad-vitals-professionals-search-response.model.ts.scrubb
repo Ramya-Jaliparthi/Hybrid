@@ -1,0 +1,208 @@
+import { FadVitalsProfessionalsSearchResponseModelInterface } from './interfaces/fad-vitals-collection.interface';
+
+export class FadVitalsProfessionalsSearchResponseModel implements FadVitalsProfessionalsSearchResponseModelInterface {
+    public _meta: FVProSRMeta;
+    public totalCount: number;
+    public professionals: FVProSRProfessionalInSearchEntity[];
+}
+
+export class FVProSRMeta {
+    public counts: FVProSRCountsMeta;
+    public pages: FVProSRPagesMeta;
+    public matches: FVProSRMatchGroupMeta;
+    public others: FVProSRMatchGroupMeta;
+}
+
+class FVProSRCountsMeta {
+    public total: number;
+}
+
+class FVProSRPagesMeta {
+    total: number;
+    current: number;
+    next: number;
+    previous: number;
+}
+
+class FVProSRMatchGroupMeta {
+    professionals: number[];
+    locations: number[];
+    professional_specializations: number[];
+    field_specialties: number[];
+}
+
+class FVProSRIdentifierEntity {
+    public type_code: string;
+    public value: string;
+}
+
+class FVProSRLanguageEntity {
+    public type_code: any;
+    public name: string;
+}
+
+class FVProSRAddress {
+    public addr_line1: string;
+    public addr_line2: string;
+    public city: string;
+    public state_code: string;
+    public sub_national: any;
+    public county: string;
+    public country_code: any;
+    public postal_code: string;
+    public latitude: number;
+    public longitude: number;
+}
+
+class FVProSRPhoneVoiceEntity {
+    public number: string;
+    public type: string;
+    public type_code: string;
+    public is_primary: string;
+}
+
+class FVProSRPhone {
+    public voice: FVProSRPhoneVoiceEntity[];
+}
+
+class FVProSRLocationEntityMeta {
+    public distance: any;
+}
+
+class FVProSRAminity {
+    public type_code: string;
+    public type: string;
+    public value: string;
+    public raw_value: string;
+    public description: null;
+}
+
+class FVProSRAmenities {
+    [name: string]: FVProSRAminity[];
+}
+
+class FVProSRAffiliatedGroup {
+    public name: string;
+    public description: any;
+    public information: any;
+    public facility_id: number;
+    public facility_location_id: any;
+}
+
+export class FVProSRAffilitatedHospital extends FVProSRAffiliatedGroup {
+    public address: FVProSRAddress;
+}
+
+class FVProSRAward {
+    public type_code: string;
+    public name: string;
+    public value: any;
+    public datum_attributes: any;
+    public awd_authority_code: string;
+    public recog_type_code: string;
+    public institution: any;
+    public start_date: any;
+    public end_date: any;
+    public link: any;
+}
+
+class FVProSRAwards {
+    [awardName: string]: FVProSRAward[];
+}
+
+export class FVProSRProfessionalInSearchEntity {
+    public _meta: any;
+    public disclaimers: any[];
+    public id: number;
+    public provider_id: string;
+    public name: string;
+    public first_name: string;
+    public middle_name: string;
+    public last_name: string;
+    public type: string;
+    public gender: string;
+    public photos: any[];
+    public degrees: string[];
+    public awards: any;
+    public bdc: any;
+    public identifiers: FVProSRIdentifierEntity[];
+    public languages: FVProSRLanguageEntity[];
+    public href: string;
+    public locations: FVProSRLocation[];
+    public specializations: FVProSRSpecialization[];
+    public reviews: FVProSRReviews;
+    public links: FVProSRLinks;
+    public doctorName: string;
+    public specialty: string;
+
+}
+
+export class FVProSRLocation {
+    public _meta: FVProSRLocationEntityMeta;
+    public id: number;
+    public name: string;
+    public address: string;
+    public awards: any;
+    public bdc: any;
+    public phones: FVProSRPhone;
+    public cost: any;
+    public tiers: any;
+    public identifiers: FVProSRIdentifierEntity[];
+    public amenities: FVProSRAmenities;
+    public other_locations_count: number;
+    public disclaimers: any[];
+    public contracts: FVProSRContract[];
+    public phone: string;
+}
+
+class FVProSRContract {
+    public id: number;
+    public awards: FVProSRAwards;
+    public bdc: any;
+    public has_bdc_affiliated_facility: any;
+    public group_affiliations: FVProSRAffiliatedGroup[];
+    public hospital_affiliations: FVProSRAffilitatedHospital[];
+    public disclaimers: any[];
+    public future_effective_date: any;
+    public future_termination_date: null;
+    public identifiers: FVProSRIdentifierEntity[];
+    public tiers: any;
+    public is_pcp: any;
+    public is_pcp_for_accounts: any;
+    public specializations: FVProSRSpecialization[];
+}
+
+class FVProSRSpecialization {
+    public id: number;
+    public professional_id: number;
+    public is_certified: string;
+    public is_primary: any;
+    public field_specialty: FVProSRFieldSpeciality;
+    public locations: any[];
+    public contracts: any[];
+    public specializations: FVProSRSpecialization[];
+}
+
+class FVProSRFieldSpeciality {
+
+    public _id: number;
+    public name: string;
+    public title: any;
+    public partner_code: string;
+    public field: any;
+
+}
+
+class FVProSRReviews {
+    public overallRating: any;
+    public percent_recommended: any;
+    public total_ratings: number;
+}
+
+class FVProSRLinks {
+    public reviews: string;
+    public ratings: string;
+    public summary: string;
+    public acceptable_reviewers: string;
+    public affiliated_professionals: any;
+}

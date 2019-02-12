@@ -1,0 +1,168 @@
+.fadPage {
+    background-color: $page-background-color !important;
+    h1 {
+        @include Arial-bold(light);
+        font-size: 24px;
+        color: #043167;
+    }
+    
+    .search-container {
+        background: #E7EFF5;
+        padding: 15px;
+    }
+
+    .past-search {
+        // padding: 15px 0;
+        background-color: $card-content-font-color-highlighted-background;
+        margin-top: $popover-ios-border-radius;
+        p {
+            @include Arial-bold(light);
+            font-size: 14px;
+            color: $card-content-font-color-highlighted;
+            // text-align: center;
+            margin: 0;
+            // text-decoration: underline;
+        }
+        .past-search-arrow {
+            color: #999;
+        }
+    }
+    
+    // .past-search {
+    //     padding-top: 2px;
+
+    //     b {
+    //         color: #1866A3;
+    //         font-family: arial-bold;
+    //     }
+
+    //     .past-search-arrow {
+    //         color: #999;
+    //     }
+    // }
+
+    .drupal {
+        background: $card-content-font-color-highlighted-background;
+        margin-top: 10px;
+        // margin: 30px 0;
+        p {
+            @include Arial-bold(light);
+            font-size: 24px;
+            color: $page-content-light-label-color;
+            text-align: center;
+            // margin: 20px 0;
+        }
+    }
+    
+    .btn-item {
+        padding: 0 15px;
+        margin-top: 15px;
+        button {
+            @include Arial-bold(light);
+            font-size: 14px !important;
+            color: #FFFFFF;
+            // letter-spacing: -0.01px;
+            text-align: center;
+            background-color: $background-color-highlighted;
+            // border-radius: 5px;
+            // min-height: 44px;
+        }
+        // button[disabled] {
+        //     background: #F2F2F2;
+        //     border: 3px solid #DDDDDD;
+        //     color: #818181;
+        //     opacity: 1;
+        // }
+    }
+    
+    .list-container {
+        ion-item {
+            background-color: #E7EFF5;
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            padding: 0 15px;
+            
+        }
+        .search-box {
+            background: #FFFFFF;
+            border: 1px solid #6591B3;
+            border-radius: 100px;
+            height: 36px;
+            @extend %flexbox;
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(space-between);
+            ion-input {
+                @include Roboto(light);
+                font-size: 14px;
+                color: #000000;
+                text-align: left;
+                line-height: 36px;
+                padding-left: 15px;
+            }
+            input{
+                width: 100%;
+                margin-left: 10px;
+                border: none;
+            }
+            .search-icon-cont {
+                padding-right: 10px;
+                .search-icon {
+                    color: #1866A3;
+                    font-size: 24px;
+                }
+            }
+        }
+        .container-flex {
+            @extend %flexbox;
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(space-between);
+            margin: 15px 15px 0 15px;
+            .zip-box, .plan-box, .member-box {
+                height: 36px;
+                border-bottom: 1px solid #CCCCCC;
+                @extend %flexbox;
+                @include flex-direction(row);
+                @include align-items(center);
+                @include justify-content(space-between);
+                @include flex-grow(1);
+                ion-input {
+                    @include Roboto(regular);
+                    font-size: 14px;
+                    color: #000000;
+                    text-align: left;
+                    line-height: 36px;
+                }
+                input {
+                    @include Roboto(regular);
+                    font-size: 14px;
+                    color: #000000;
+                    text-align: left;
+                    line-height: 36px;
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                }
+                .plan-icon, .member-icon {
+                    font-size: 18px;
+                }
+            }
+            .initial-text {
+                @include Arial-bold(bold);
+                font-size: 14px;
+                color: #043167;
+                letter-spacing: -0.01px;
+                line-height: 19px;
+                margin: 0 10px 0 0;
+                min-width: 28px;
+            }
+        }
+        
+        ion-item.search-box-item {
+            padding: 0;
+        }
+    }
+}
+
+

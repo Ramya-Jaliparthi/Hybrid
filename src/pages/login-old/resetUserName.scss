@@ -1,0 +1,26 @@
+resetUserName{
+
+    .contentCls{
+
+        padding: $padding-page-30;
+    }
+
+    ion-row{
+        
+        padding: $padding-page-15 $padding-page-30;
+        border-top: 0.55px solid #c8c7cc;
+        border-bottom: 0.55px solid #c8c7cc;
+        font-family: arial-bold;
+    }
+    .btnContainercls{
+        padding: $padding-page-30;
+        button{
+            text-transform: none !important;
+        }
+    }
+
+    .titleCls{
+        font-family: arial-bold;
+        font-size: $card-content-title-size ;
+    }
+}

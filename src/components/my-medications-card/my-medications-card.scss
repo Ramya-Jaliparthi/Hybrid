@@ -1,0 +1,32 @@
+ my-medications-card {
+     .lastVisitCls {
+         padding-top: $padding-30 !important;
+         padding-bottom: $padding-10 !important;
+         border-bottom: 1px solid $card-content-section-border-color;
+     }
+     .subLableCls {
+         color: $card-title-color;
+         font-size: $card-content-body-medium-font-size;
+     }
+     .subDataCls {
+         padding: 0px $padding-10;
+     }
+     .padding-left-right {
+         padding-left: $padding-page-30 !important;
+         padding-right: $padding-page-30 !important;
+     }
+     .informationCls {
+         padding-top: $padding-30 !important;
+         padding-bottom: $padding-30 !important;
+     }
+     .nameCls {
+         color: $card-content-font-color-highlighted;
+         font-size: $card-content-title-size;
+         padding-bottom: $padding-20;
+         font-family: $font-family-lable;
+         text-transform: capitalize;
+     }
+     .smallFontCls {
+         font-size: $card-content-body-medium-font-size;
+     }
+ }

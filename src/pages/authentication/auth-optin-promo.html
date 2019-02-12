@@ -1,0 +1,56 @@
+<ion-content no-scroll no-margin>
+    <div style="width: 100%; text-align: right">
+        <ion-icon name="close" (tap)="showAuth($event)" [ngClass]="'close-icon'" padding-right text-right></ion-icon>
+    </div>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col text-center no-padding align-self-center>
+                <img [src]="config.assets_url+'/images/common/verify-graphic-ios.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col no-padding align-self-center>
+                <!-- <div class="titleCls">Verify Your MyBlue Account</div>
+                <div class="subTitleCls">Unlock access to your personal health information and benefits</div> -->
+                <div class="titleCls">Verify Your Account to view {{pageName}}</div>
+                <div class="subTitleCls">For your security and privacy you must
+                    completely verify your account to view {{pageName}}</div>
+            </ion-col>
+        </ion-row>
+        <!-- <ion-row padding-top>
+            <ion-col class="imgContentCls" no-padding col-auto align-self-center>
+                <img style="width:30px;" [src]="config.assets_url+'/images/icons-ios/verify-myplan-icon-ios@2x.png'" />
+            </ion-col>
+            <ion-col align-self-center class="secLabelCls">View your medical plan details</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="imgContentCls" no-padding col-auto align-self-center>
+                <img style="width:30px;" [src]="config.assets_url+'/images/icons-ios/home-myclaims-icon-ios@2x.png'" />
+            </ion-col>
+            <ion-col align-self-center class="secLabelCls">Review claim information</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="imgContentCls" no-padding col-auto align-self-center>
+                <img style="width:30px;" [src]="config.assets_url+'/images/icons-ios/home-mycard-icon-ios@2x.png'" />
+            </ion-col>
+            <ion-col align-self-center class="secLabelCls">Quickly access your member ID cards</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col align-self-center class="imgContentCls" no-padding col-auto>
+                <img style="width:30px;" [src]="config.assets_url+'/images/icons-ios/home-mymeds-icon-ios@2x.png'" />
+            </ion-col>
+            <ion-col align-self-center class="secLabelCls">View your medication history</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col align-self-center class="imgContentCls" no-padding col-auto>
+                <img style="width:30px;" [src]="config.assets_url+'/images/icons-ios/Asset33@2x.png'" />
+            </ion-col>
+            <ion-col align-self-center class="secLabelCls">View doctor visit history & contact information</ion-col>
+        </ion-row> -->
+    </ion-grid>
+    <div class="btnContainerCls" padding-top>
+        <input text-capitalize ion-button full type="button" (tap)="verifynow()" value="Verify Now" style="border: 0px !important;"
+        />
+        <div text-capitalize full outline text-underline type="button" class="textBtnCls" (tap)="showAuth($event)">Go to Home</div>
+    </div>
+</ion-content>

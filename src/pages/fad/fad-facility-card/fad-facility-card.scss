@@ -1,0 +1,331 @@
+page-fad-facility-card {
+    .scroll .scroll-content{
+            overflow: auto;
+    } 
+    accordion .card {
+        box-shadow: none;
+     }
+     accordion .card-header {
+        border: none;
+     }      
+     accordion .label-ios {
+         margin-top: 0;
+         margin-bottom: 0;
+     }
+     accordion .input-wrapper{
+         height: 25px;
+     }
+     accordion .card-header{
+         height: 25px;
+     }
+     button .button-inner{
+         display: none;
+     }
+     .body-content{
+         margin-bottom: 0;
+     }
+     .phoneNumber {
+        color: #1866A3;
+    }
+     accordion .header-title{
+         color: #1866A3 !important;
+     }
+     accordion a {
+         color:#666666;
+     }
+     .item-block {
+         width: 60%;
+         padding: 0px;
+     }
+     [col-12]{
+        padding: 0px;
+    }
+     .phone-icon{
+         color: #1866A3;
+     }
+     .accordion-container-div{
+        border-bottom: 1px #d9d9d9 solid;
+        font-size:12px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+     }  
+    .fad-facility-card-component {
+        .card-content {
+            padding-left: 15px;
+        }
+        .profile-card {
+            width: 100%;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.01px;
+            color: $disabled_text_color;
+            @include Roboto(regular);
+            box-shadow: none;
+            padding: 0px;
+            padding-top: 15px;
+            padding-left: 15px;
+            &.profile-card-separator {
+                border-top: 1px solid $doc-list-item-border-color;
+                border-bottom: 1px solid $doc-list-item-border-color;
+                border-radius: 0px;
+            }
+            &.mapItemMode {
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+           .btn-full-width{
+               margin-bottom: 0 !important;
+           }
+            .card-body {
+                .row {
+                    margin-bottom: 15px;
+                }
+                .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    /* If you want dots under the hoverable text */
+                    .tooltiptext {
+                        @include Roboto(light);
+                        font-size: 12px;
+                        color: $text-normal-color;
+                        text-align: left;
+                        letter-spacing: -0px;
+                        visibility: hidden;
+                        background-color: white;
+                        box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.25);
+                        border-radius: 6px;
+                        padding: 9px;
+                        position: absolute;
+                        z-index: 1;
+                        bottom: 150%;
+                        left: 50%;
+                        margin-left: -85px;
+                        width: 171px;
+                        height: 79px;
+                        a {
+                            color: $link-primary-color;
+                            line-height: 14px;
+                            cursor: pointer;
+                        }
+                        &::after {
+                            content: " ";
+                            position: absolute;
+                            top: 100%;
+                            /* At the bottom of the tooltip */
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: white transparent transparent transparent;
+                        }
+                    }
+                    &:hover .tooltiptext {
+                        visibility: visible;
+                    }
+                }
+                input[type="checkbox"] {
+                    position: relative;
+                    opacity: 1;
+                    pointer-events: all;
+                    height: 20px;
+                    width: 22px;
+                }
+                .profileCardTitle {
+                    font-size: 16px;
+                    color: $headings-dark-color;
+                    @include Arial-bold(bold);
+                }
+                .profileCardSubTitle {
+                    @include Roboto(light);
+                    font-size: 14px;
+                    color: $required-indicator-color;
+                    letter-spacing: -0.01px;
+                    line-height: 16px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .profile-card-article-body {
+                    .body-title {
+                        @include Arial-bold(bold);
+                        font-size: 12px;
+                        color: $headings-dark-color;
+                        letter-spacing: -0.01px;
+                        line-height: 16px;
+                    }
+                    .body-content {
+                        p.body-content-address {
+                            @include Roboto(light);
+                            font-size: 12px;
+                            color: $required-indicator-color;
+                            letter-spacing: -0.01px;
+                            line-height: 16px;
+                            margin: 2px 0px 0px 0px;
+                        }
+                        p.body-content-location {
+                            @include Arial-bold(medium);
+                            font-size: 12px;
+                            color: $required-indicator-color;
+                            letter-spacing: -0.01px;
+                            line-height: 16px;
+                            margin: 2px 0px 0px 0px;
+                        }
+                        span.phone-icon {
+                            font-family: FontAwesome5FreeSolid;
+                            font-size: 12px;
+                            color: $text-primary-color;
+                            letter-spacing: -0.01px;
+                        }
+                        .phoneNumber {
+                            @include Arial-bold(medium);
+                            color: $text-primary-color;
+                        }
+                        a {
+                            @include Roboto(light);
+                            font-size: 12px;
+                            color: $text-primary-color;
+                            letter-spacing: -0.01px;
+                            line-height: 16px;
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .authenticate-if-in-network {
+                    @include Roboto(light);
+                    font-size: 12px;
+                    color: #151515;
+                    letter-spacing: -0.01px;
+                    line-height: 16px;
+                    .check-circle {
+                        
+                        font-size: 16px;
+                        color: #1866A3;
+                        letter-spacing: -0.01px;
+                        line-height: 16px;
+                    }
+                    a {
+                        @include Roboto(light);
+                        font-size: 12px;
+                        color: $link-primary-color;
+                        letter-spacing: -0.01px;
+                        line-height: 16px;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+                .in-network {
+                    @include Roboto(light);
+                    font-size: 12px;
+                    color: $success-alerts-color;
+                    letter-spacing: -0.01px;
+                    line-height: 16px;
+                    min-width: 78px;
+                    float: left;
+                    .check-circle {
+                        font-family: FontAwesome5Pro(solid);
+                        font-size: 16px;
+                        color: $success-alerts-color;
+                        letter-spacing: -0.01px;
+                        line-height: 16px;
+                    }
+                }
+                .doctor-cost {
+                    @include Roboto(regular);
+                    font-size: 22px;
+                    color: $headings-dark-color;
+                    letter-spacing: -0.01px;
+                    line-height: 19px;
+                    sup {
+                        font-size: 60%;
+                        margin-left: -5px;
+                    }
+                }
+                .doctor-cost-info {
+                    @include Roboto(light);
+                    font-size: 10px;
+                    color: $required-indicator-color;
+                    letter-spacing: -0px;
+                    line-height: 16px;
+                }
+                .aside {
+                    min-height: 170px;
+                    height: 100%;
+                    position: relative;
+                    margin-top: -10px;
+                    a {
+                        position: absolute;
+                        top: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        right: 10px;
+                        height: 15px;
+                        margin: auto;
+                        cursor: pointer;
+                    }
+                    .fa-chevron-right {
+                        color: $link-secondary-color;
+                        width: 11px;
+                        height: 18px;
+                        cursor: pointer;
+                      }
+                }
+                .out-of-network-info {
+                    @include Roboto(light);
+                    font-size: 12px;
+                    background: $alert_red;
+                    border-radius: 10px;
+                    color: white;
+                    letter-spacing: -0.01px;
+                    line-height: 16px;
+                    width: 144px;
+                    .remove-icon {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                    .info-icon {
+                        font-size: 14px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+                .enhanced-benefit-marker {
+                    background: $content-background-color;
+                    border-radius: 36px;
+                    padding: 3px;
+                    padding-left: 10px;
+                    width: 154px;
+                    .enhanced-benefit-text {
+                        @include Roboto(light);
+                        font-size: 12px;
+                        color: $text-normal-color;
+                        letter-spacing: -0.01px;
+                        line-height: 16px;
+                    }
+                    .info-icon {
+                        font-size: 12px;
+                        color: $text-normal-color;
+                        letter-spacing: -0.01px;
+                        text-align: right;
+                        line-height: 16px;
+                    }
+                    .tooltiptext {
+                        height: 104px;
+                        width: 209px;
+                        padding: 11px;
+                        margin-left: -105px;
+                    }
+                }
+                .future-care-option {
+                    @include Arial-bold(medium);
+                    font-size: 12px;
+                    color: #333333;
+                    letter-spacing: -0.01px;
+                    line-height: 16px;
+                }
+                .margin {
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}

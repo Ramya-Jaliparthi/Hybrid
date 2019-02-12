@@ -1,0 +1,35 @@
+auth-personal-info-page{
+    .progress-container{
+        border-bottom: 1px solid #b2b2b2;
+        width: 100%;
+        height: 47px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+  
+
+    .progress{
+        height: 30px;
+        width: 30px;
+        border: 1px solid #92278f;
+        display: inline-block;
+        border-radius: 15px;
+        color: #92278f;
+        padding-top: 6px;
+        margin-left: 7px;
+    }
+    .active{
+        background: #92278f;
+        color: white;
+    }
+    .cancelBtnCls{
+        width:100%;
+        text-align: center;
+        text-decoration: none;
+        color: #1866A3;
+        font-weight: bold;
+        padding: 0px 0px $padding-page-30 0px; 
+    }
+    
+}

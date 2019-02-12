@@ -1,0 +1,121 @@
+page-my-claims {
+    .icon-page{
+        font-size: 2em;
+    }
+    .icon-page-3{
+        font-size: 3em;
+    }
+    .content{
+         background: rgb(221, 221, 221) !important;
+    }
+    
+    .middleContainerCls{
+        padding: $padding-page-30 !important;
+
+    }
+    .contentCls{
+            font-family: arial-bold;
+            font-size:$card-content-body-medium-font-size;
+            color: $card-content-font-color-normal;
+        }
+    .topContainerCls{
+        padding : $padding-page-30 $padding-page-30 $padding-page-10 $padding-page-30;
+        border-bottom: 1px solid $card-content-section-border-color;
+        
+        .lablecls{
+
+            font-size:$card-content-body-medium-font-size;
+            color: $page-content-light-label-color;
+        }
+    }
+    .bottomContainerCls{
+        padding: $padding-page-30 !important;
+
+        ion-row{
+            ion-col{
+                padding: 0px;
+            } 
+        }
+        img{
+            max-height: 20px;
+            padding-top:2px;
+        }
+    }
+    .mediumContentcls{
+
+            color: $card-content-font-color-normal;
+            //font-family: arial-bold;
+            font-size: $card-content-body-size;
+            //padding-bottom: $padding-page-10;
+        }
+    .middleContainerCls{
+        padding: $padding-page-30 !important;
+        border-bottom: 1px solid $card-content-section-border-color;
+        ion-row{
+            ion-col{
+                padding: 0px;
+            } 
+        }
+        .boldContentCls{
+            //color: $card-content-font-color-highlighted;
+            font-family: arial-bold;
+            font-size: $card-content-body-size;
+            padding-bottom: $padding-page-10;
+        }
+        
+        .smallContentcls{
+            font-size:$card-content-body-medium-font-size;
+            color: $page-content-light-label-color;
+        }
+        img{
+            height: 30px;
+        }
+    }
+
+    .lablecls{
+
+        font-size:$card-content-body-medium-font-size;
+        color: $page-content-light-label-color;
+    }
+    .amountCls{
+        font-family: arial-bold;
+        font-size: $card-content-body-size;
+    }
+    .statusColorGray{
+        color: #818181;
+    }
+    .autoComplete {
+        margin-top: 0px;
+		position: absolute;
+		width: inherit;
+		overflow-y: scroll;
+		z-index: 999;
+        border: 1px solid #dddddd;
+        font-family: $font-family-base;
+        font-size: .9em;
+	}
+
+    .detailArrowCls{
+        font-size: 2em;
+        font-weight: bold;
+        color: #818181;
+    }   
+    
+    alert-message-card  .error .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;
+    }
+
+    alert-message-card  .info .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;    
+    }
+
+    alert-message-card  .promo .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;       
+    }
+}

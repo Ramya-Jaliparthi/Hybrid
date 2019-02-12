@@ -1,0 +1,10 @@
+<ion-list>
+    <!--  <ion-list-header>Ionic</ion-list-header> -->
+      
+      <ion-item  no-padding *ngFor="let question of securityQuestionsOptions">
+        <ion-row align-items-center (click)="selectQuestions(question)" >
+            <ion-col col-10 padding-left  class="ellipsis">{{question.label}}</ion-col>
+        </ion-row>
+    </ion-item>
+  
+    </ion-list>

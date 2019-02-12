@@ -1,0 +1,285 @@
+<header [title]="'Financial Details'"></header>
+
+<ion-content>
+    <alert-message-card *ngIf="alert" [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message"
+        [type]="alert.type" [alert]="alert" [hideCloseButton]="alert.hideCloseButton">
+    </alert-message-card>
+
+    <ion-grid class="background-white">
+        <ion-row *ngIf='header'>
+            <ion-col class="graphTitleCls">
+                {{header}}
+            </ion-col>
+            <ion-col col-1 text-right (tap)="goToPlanInfoPage()">
+                <img class="img-info" src="../assets/images/icons-ios/Asset61@2x.png" />
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <img class="shadow-img" />
+
+    <ion-item-group>
+        <div *ngFor="let account of financeBalanceData;" class="background-white">
+            <div class="graphSubTitleCls">
+                <span>Effective Date: </span>{{convertDate(account.planStartDate) | date: 'MM/dd/yyyy'}} -
+                {{convertDate(account.planEndDate)
+                | date: 'MM/dd/yyyy'}}
+            </div>
+            <div style="min-height:120px">
+                <div style="margin-left: 10%">
+                    <ion-grid no-padding no-margin>
+                        <ion-row>
+                            <ion-col class="paddingTopCls">
+                                <span class="graphLableTextCls">&nbsp;Available Balance:</span>
+                                <span class="graphLableAmountCls">{{account.availBalance|currency:'USD':'symbol'}}</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <div style="margin-left:10%; margin-top: 10px; margin-bottom:10px;">
+                    <div class="barGreyCls lineChart" style="width:80%" *ngIf="account.chartData && account.chartData[0]">
+                        <canvas baseChart [datasets]="account.chartData[0]" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" [colors]="chartColors">
+                        </canvas>
+                    </div>
+                    <!-- Rollover Color compartment-->
+                    <div class="barLightGreenCls lineChart" [ngStyle]="setWidth('rollOver', account)" *ngIf="account.chartData && account.chartData[0].value">
+                        <canvas baseChart [datasets]="account.chartData[2]" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" [colors]="chartColors">
+                        </canvas>
+                    </div>
+                    <div class="barGreenCls lineChart" [ngStyle]="setWidth('available', account)" *ngIf="account.chartData && account.chartData[1]">
+                        <canvas baseChart [datasets]="account.chartData[2]" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" [colors]="chartColors">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="distanceBarLegend" *ngIf="account.chartData && account.chartData[0]">
+                    <ion-grid no-padding no-margin>
+                        <ion-row>
+                            <ion-col col-1 align-self-start>
+                                <div class="barCls" [ngClass]="firstBarColorCls"></div>
+                            </ion-col>
+                            <ion-col text-left>
+                                <ng-template [ngIf]="account.chartData[0][0].currYear && selectedAccountType !== 'HRA' && selectedAccountType !== 'HRD'"
+                                    [ngIfElse]="currYearNonHRA">
+                                    <div class="graphLableTextCls">Available ({{account.chartData[0][0].currYear}})</div>
+                                </ng-template>
+                                <ng-template #currYearNonHRA>
+                                    <div class="graphLableTextCls">Available</div>
+                                </ng-template>
+                                <div class="graphLableAmountCls">{{account.availBalance |currency:'USD':'symbol'}}</div>
+                            </ion-col>
+                            <ion-col col-1 align-self-start>
+                                <div class="barCls barLightGreenCls"></div>
+                            </ion-col>
+                            <!-- Rollover compartment legends-->
+                            <ion-col text-left>
+                                <div>
+                                    <div class="graphLableTextCls">
+                                        Available Rollover ({{account.chartData[0][1].roolOverYear}})
+                                    </div>
+                                    <div class="graphLableAmountCls">{{account.availableRollover|currency:'USD':'symbol'}}</div>
+                                </div>
+                            </ion-col>
+                            <ion-col col-1 align-self-start>
+                                <div class="barCls" [ngClass]="secondBarColorCls"></div>
+                            </ion-col>
+                            <ion-col text-left>
+                                <div class="graphLableTextCls">Spent</div>
+                                <div class="graphLableAmountCls">{{account.payments|currency:'USD':'symbol'}}</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </div>
+            <div style="min-height:120px">
+                <div style="margin-left: 10%">
+                    <ion-grid no-padding no-margin>
+                        <ion-row>
+                            <ion-col class="paddingTopCls">
+                                <ng-container *ngIf="selectedAccountType==='HRA' || selectedAccountType === 'HRD'; else NonHRAAccounts">
+                                    <span class="graphLableTextCls">&nbsp;Annual Allocation</span>
+                                </ng-container>
+                                <ng-template #NonHRAAccounts>
+                                    <ng-container *ngIf="selectedAccountType === 'ROL' || selectedAccountType === 'ROI' || selectedAccountType === 'DCA' || selectedAccountType === 'DFSA' || selectedAccountType === 'DFS' || selectedAccountType === 'FSL' || selectedAccountType === 'FSA'; else allOtherAccounts">
+                                        <span class="graphLableTextCls">&nbsp;Annual Election</span>
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #allOtherAccounts>
+                                    <span class="graphLableTextCls">&nbsp;Annual Election</span>
+                                </ng-template>
+                                <span class="graphLableAmountCls">{{account.annualElection|currency:'USD':'symbol'}}</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+                <div style="margin-left:10%; margin-top: 10px; margin-bottom:10px;">
+                    <div class="barWhiteCls lineChart" *ngIf="account.chartData && account.chartData[0]" [ngStyle]="account.chartData[1][1].width">
+                        <canvas baseChart [datasets]="account.chartData[0]" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" [colors]="chartColors">
+                        </canvas>
+                    </div>
+
+                    <div class="bardimGreenCls lineChart" [ngStyle]="account.chartData[1][0].width" *ngIf="account.chartData && account.chartData[1]">
+                        <canvas baseChart [datasets]="account.chartData[1]" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" [colors]="chartColors">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="distanceBarLegend" *ngIf="account.chartData && account.chartData[1]">
+                    <ion-grid no-padding no-margin>
+                        <ion-row>
+                            <ion-col col-1 align-self-start>
+                                <div class="barCls bardimGreenCls"></div>
+                            </ion-col>
+                            <ion-col text-left>
+                                <ng-container *ngIf="selectedAccountType==='HRA' || selectedAccountType === 'HRD'; else NonHRAAccounts">
+                                    <div class="graphLableTextCls">Allocated so far</div>
+                                </ng-container>
+                                <ng-template #NonHRAAccounts>
+                                    <ng-container *ngIf="selectedAccountType === 'ROL' || selectedAccountType === 'ROI' || selectedAccountType === 'DCA' || selectedAccountType === 'DFSA' || selectedAccountType === 'DFS' || selectedAccountType === 'FSL' || selectedAccountType === 'FSA'; else allOtherAccounts">
+                                        <div class="graphLableTextCls">Payroll Deposits YTD</div>
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #allOtherAccounts>
+                                    <div class="graphLableTextCls">Payroll Deposits YTD</div>
+                                </ng-template>
+                                <div class="graphLableAmountCls">{{account.contributionsYTD|currency:'USD':'symbol'}}</div>
+                            </ion-col>
+                            <ion-col col-1 align-self-start>
+                                <div class="barCls" [ngClass]="secondBarColorCls"></div>
+                            </ion-col>
+                            <ion-col text-left>
+                                <ng-container *ngIf="selectedAccountType==='HRA' || selectedAccountType === 'HRD'; else NonHRAAccountsLabel">
+                                    <div class="graphLableTextCls">Remaining Allocation</div>
+                                </ng-container>
+                                <ng-template #NonHRAAccountsLabel>
+                                    <ng-container *ngIf="selectedAccountType === 'ROL' || selectedAccountType === 'ROI' || selectedAccountType === 'DCA' || selectedAccountType === 'DFSA' || selectedAccountType === 'DFS' || selectedAccountType === 'FSL' || selectedAccountType === 'FSA'; else allOtherAccountsLabel">
+                                        <div class="graphLableTextCls">Remaining Payroll Deposits</div>
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #allOtherAccountsLabel>
+                                    <div class="graphLableTextCls">Remaining Payroll Deposits</div>
+                                </ng-template>
+                                <div class="graphLableAmountCls">{{account.remainingContributions|currency:'USD':'symbol'}}</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+
+            </div>
+            <!--Extra Details like deductibles, status and Family details -->
+            <div>
+                <div class="hrline"></div>
+                <ion-grid padding-left padding-right class="item-grid">
+                    <!--deductibles -->
+                    <ion-row class="item-row bottomRow" *ngIf="account.deductibleInfo && (account.accountType === 'HRA' || account.accountType === 'HRD')"
+                        (tap)="toggleFinancialDetail(0)">
+                        <ion-col col-11 class="blue"><b>Deductible Status</b></ion-col>
+                        <ion-col col-1 text-right>
+                            <ion-icon class="icon" [name]="financialDetail[0] == undefined ? 'arrow-down':financialDetailIcon[0]"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row id="familyDetail" [hidden]="financialDetail[0] == undefined ? true : financialDetail[0]">
+                        <ion-grid>
+                            <ion-row class="bottomRow">
+                                <ion-col class="title">
+                                    Deductible
+                                </ion-col>
+                                <ion-col text-right class="title">
+                                    &#36; {{account.deductibleInfo.deductible | number : '1.2-2'}}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="bottomRow">
+                                <ion-col>
+                                    Deductible Applied
+                                </ion-col>
+                                <ion-col text-right>
+                                    &#36; {{account.deductibleInfo.appliedDeductible | number : '1.2-2'}}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="bottomRow">
+                                <ion-col>
+                                    Deductibe Remaining
+                                </ion-col>
+                                <ion-col text-right>
+                                    &#36; {{account.deductibleInfo.remainingDeductible | number : '1.2-2'}}
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-row>
+
+                    <!--Family details -->
+                    <ion-row class="item-row bottomRow" (tap)="toggleFinancialDetail(1)">
+                        <ion-col col-11 class="blue"><b>Family Details</b></ion-col>
+                        <ion-col col-1 text-right>
+                            <ion-icon class="icon" [name]="financialDetail[1] == undefined ? 'arrow-down':financialDetailIcon[1]"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row id="familyDetail" [hidden]="financialDetail[1] == undefined ? true : financialDetail[1]">
+                        <ion-grid>
+                            <ion-row><span class="sub-info">The following family members are linked to this account.</span></ion-row>
+                            <ion-row class="bottomRow">
+                                <ion-col class="title">
+                                    Name
+                                </ion-col>
+                                <ion-col text-right class="title">
+                                    Status
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="bottomRow" *ngFor="let data of account.familyDetailInfo">
+                                <ion-col>{{data.firstName |titlecase}} {{data.middleInitial |titlecase}}
+                                    {{data.lastName|titlecase}}</ion-col>
+                                <ion-col text-right> {{getStatus(data.depStatus)}}</ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-row>
+
+                    <ion-row class="item-row bottomRow" (tap)="toggleFinancialDetail(2)">
+                        <ion-col col-11 class="blue"><b>Deadlines</b></ion-col>
+                        <ion-col col-1 text-right>
+                            <ion-icon class="icon" [name]="financialDetail[2] == undefined ? 'arrow-down':financialDetailIcon[2]"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row id="deadLines" [hidden]="financialDetail[2] == undefined ? true : financialDetail[2]">
+                        <ion-grid>
+                            <ion-row class="bottomRow">
+                                <ion-col>
+                                    Plan Start Date
+                                </ion-col>
+                                <ion-col text-right>
+                                    {{ convertDate(account.planStartDate) | date: 'MM/dd/yyyy' }}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="bottomRow">
+                                <ion-col>
+                                    Last Day for Spending
+                                </ion-col>
+                                <ion-col text-right>
+                                    {{ convertDate(account.spendingLastDate) | date: 'MM/dd/yyyy' }}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row class="bottomRow">
+                                <ion-col>
+                                    Last Day to Submit Claims
+                                </ion-col>
+                                <ion-col text-right>
+                                    {{ convertDate(account.submitClaimsLastDate)| date: 'MM/dd/yyyy' }}
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-row>
+
+                </ion-grid>
+                <div class="hrline"></div>
+            </div>
+            <!--Extra Details -->
+            <img class="shadow-img" />
+        </div>
+    </ion-item-group>
+
+</ion-content>
+
+<footer></footer>

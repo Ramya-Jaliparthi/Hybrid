@@ -1,0 +1,20 @@
+<ion-list no-margin>
+    <ion-list-header class="background-blue"></ion-list-header>
+    <ion-item (tap)="memberName == displayName ? selectUser(null) : selectUser(memberName)" no-padding>
+        <ion-row align-items-center>
+            <ion-col col-10 padding-left class="ellipsis">{{memberName}}</ion-col>
+            <ion-col col-2 text-right *ngIf="memberName == displayName">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+    </ion-item>
+    <ion-item (tap)="displayName == dependent.MemName ? selectUser(null) : selectUser(dependent)" no-padding *ngFor="let dependent of dependentsList">
+        <ion-row align-items-center>
+            <ion-col col-10 padding-left class="ellipsis">{{dependent.MemName}}</ion-col>
+            <ion-col col-2 text-right *ngIf="isDisplayNameEqual(dependent.MemName)">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+    </ion-item>
+
+</ion-list>

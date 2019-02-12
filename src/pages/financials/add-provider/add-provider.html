@@ -1,0 +1,76 @@
+<header [title]='"Add a Provider"'></header>
+
+<ion-content>
+  <br>
+  <ion-list>
+    <form [formGroup]="addProviderForm" (ngSubmit)="submitAProvider()">
+
+      <div class="labelCls">Provider Name *</div>
+      <ion-item class="bottom-border">
+        <ion-input type="text" formControlName="providerName" (ionFocus)="onProviderName=false" (ionBlur)="onProviderName=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerName" *ngIf="onProviderName"></control-messages>
+
+      <div class="labelCls">Address Line 1 *</div>
+      <ion-item class="bottom-border">
+        <ion-input type="text" formControlName="providerAddress1" (ionFocus)="onAddLine1Blur=false" (ionBlur)="onAddLine1Blur=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerAddress1" *ngIf="onAddLine1Blur"></control-messages>
+
+      <div class="labelCls">Address Line 2</div>
+      <ion-item class="bottom-border">
+        <ion-input type="text" formControlName="providerAddress2" (ionFocus)="onAddLine2Blur=false" (ionBlur)="onAddLine2Blur=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerAddress2" *ngIf="onAddLine2Blur"></control-messages>
+
+      <div class="labelCls">ZIP Code *</div>
+      <ion-item class="bottom-border">
+        <ion-input type="number" formControlName="providerZipCode" placeholder="00000" (ionFocus)="onZipCodeBlur=false" (ionBlur)="onZipCodeBlur=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerZipCode" *ngIf="onZipCodeBlur"></control-messages>
+
+      <div class="labelCls">City *</div>
+      <ion-item class="bottom-border">
+        <ion-input type="text" formControlName="providerCity" (ionFocus)="onCityBlur=false" (ionBlur)="onCityBlur=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerCity" *ngIf="onCityBlur"></control-messages>
+
+      <div class="labelCls">State *</div>
+      <ion-item class="bottom-border">
+        <ion-select (ionFocus)="onStateBlur=false" (ionBlur)="onStateBlur=true" [selectOptions]="stateSelectedOptions"
+          formControlName="providerState" interface="action-sheet" mode='ios' okText="Select" cancelText="Dismiss"
+          placeholder="Please select">
+          <ion-option *ngFor="let stateName of stateList" value="{{stateName.label}}">
+            {{stateName.label}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerState" *ngIf="onStateBlur"></control-messages>
+
+      
+
+      <div class="labelCls">Phone Number</div>
+      <ion-item class="bottom-border">
+        <ion-input type="number" formControlName="providerPhoneNumber" (ionFocus)="onPhNbrBlur=false" (ionBlur)="onPhNbrBlur=true"></ion-input>
+      </ion-item>
+      <control-messages [control]="addProviderForm.controls.providerPhoneNumber" *ngIf="onPhNbrBlur"></control-messages>
+
+      <ion-grid>
+        <ion-row>
+          <div class="buttonFull">
+            <button class="ionBtncls" ion-button type="submit" [disabled]="!addProviderForm.valid">Add</button>
+          </div>
+          <div class="buttonFull">
+              <button class="ionbtnclear" ion-button clear type="reset" (click)="clearAllFields()">Cancel</button>
+          </div>
+        </ion-row>
+        <p class="note-text">* indicates a required field</p>
+      </ion-grid>
+
+    </form>
+    <img class="shadow-img" />
+    <br>
+  </ion-list>
+</ion-content>
+
+<footer></footer>

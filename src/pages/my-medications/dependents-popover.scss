@@ -1,0 +1,55 @@
+
+page-dependents-popover{
+
+    width: 30%;
+    max-width: 502px;
+    max-height: 935px;
+    
+    .background-blue{
+        background-color: #115890;
+        color: white;
+        text-decoration: underline;
+    }
+    .img-med{
+        max-width: 1.5em;
+    }
+    .rowBottomBorderCls{
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    .itemHeaderBorderCls{
+        border: 1px solid #818181;
+        font-family:arial-bold;
+    }
+    .accordionItemBorderCls{
+        border-left: 1px solid #818181;
+        border-right: 1px solid #818181;
+        font-family:arial-bold;
+        ion-row{
+            border-bottom: 1px solid #818181;
+            background-color: #F2F2F2;
+        }
+    }
+    ion-row{
+        padding:$padding-page-15 $padding-page-30;
+    }
+
+    ion-col{
+        padding: 0px;
+    }
+    .iconCls{
+        color:#818181;
+        font-weight: bold;
+        font-size:2em;
+    }
+    .list-header-md {      
+        margin-bottom: 0px;      
+    }
+    .ellipsis {
+        width: 280px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+}

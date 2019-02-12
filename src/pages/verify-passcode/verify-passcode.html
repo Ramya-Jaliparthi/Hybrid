@@ -1,0 +1,135 @@
+<ion-header>
+	<ion-navbar [hideBackButton]="true">
+		<div class="header-title">{{title}}</div>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="contentWithNoMenuCls">
+
+	<div *ngFor="let alert of alerts">
+		<alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+	</div>
+
+	<div>
+		<ion-grid passcodeContainer-container>
+			<ion-row *ngIf="validateProfile">
+				<ion-col col-12>
+					<div class="titleCls">You're almost there!</div>
+					<div class="instructionSection">Once you verify your {{whichtype }}, your communication preferences will be saved.</div>
+				</ion-col>
+
+			</ion-row>
+			<ion-row>
+				<ion-col col-12>
+					<div class="titleCls" *ngIf="!settingProfile">Enter Your Verification Code</div>
+					<div class="titleCls" *ngIf="settingProfile && typeOf == 'email_address'">Verify New Email</div>
+					<div class="titleCls" *ngIf="settingProfile && typeOf == 'mobile_number'">Verify New Mobile Number</div>
+					<div class="instructionSection" *ngIf="settingProfile == false && registerType == 'EMAIL'">A 6-digit verification code has been sent to {{codeTypeVal}}. Please enter the code in the field below.</div>
+					<div class="instructionSection" *ngIf="settingProfile == false && registerType == 'MOBILE'">A 6-digit verification code has been sent to {{codeTypeVal | phone}} mobile number. Please enter the code in the field below.</div>
+					<div class="instructionSection" *ngIf="settingProfile && typeOf == 'email_address'">A 6-digit verification code has been sent to {{meassageName | phone}}. You have 10 minutes to enter it below.</div>
+					<div class="instructionSection" *ngIf="settingProfile && typeOf == 'mobile_number'">A 6-digit verification code has been sent to {{meassageName | phone}}. Please enter it below.</div>
+					<div class="instructionSection" *ngIf="fromPage == 'updatePassword'">A 6-digit verification code has been sent to {{meassageName}}. Please enter it below.</div>
+					<div class="instructionSection" *ngIf="fromPage == 'forgotUsernameFlow'">A 6-digit verification code has been sent to {{meassageName}}. You have 10 minutes to enter it below. </div>					
+				</ion-col>
+			</ion-row>
+			<ion-row class="padding-40">
+				<ion-col col-12>
+					<form novalidate [formGroup]="verifyaccesscodeForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+						<div class="input-field">
+
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode1" type="tel" tabindex="1" #accesscode1 (keydown)="handleBackspace(null,accesscode1,accesscode2,$event)"
+								 (keyup)="setFocus(null,accesscode1,accesscode2,$event)" formControlName="accesscode1" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode2" type="tel" tabindex="2" #accesscode2 (keydown)="handleBackspace(accesscode1,accesscode2,accesscode3,$event)"
+								 (keyup)="setFocus(accesscode1,accesscode2,accesscode3,$event)" formControlName="accesscode2" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode3" type="tel" tabindex="3" #accesscode3 (keydown)="handleBackspace(accesscode2,accesscode3,accesscode4,$event)"
+								 (keyup)="setFocus(accesscode2,accesscode3,accesscode4,$event)" formControlName="accesscode3" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode4" type="tel" tabindex="4" #accesscode4 (keydown)="handleBackspace(accesscode3,accesscode4,accesscode5,$event)"
+								 (keyup)="setFocus(accesscode3,accesscode4,accesscode5,$event)" formControlName="accesscode4" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode5" type="tel" tabindex="5" #accesscode5 (keydown)="handleBackspace(accesscode4,accesscode5,accesscode6,$event)"
+								 (keyup)="setFocus(accesscode4,accesscode5,accesscode6,$event)" formControlName="accesscode5" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+							<ion-col col-2 style="padding:0px;">
+								<input placeholder="" id="accesscode6" type="tel" tabindex="6" #accesscode6 (keydown)="handleBackspace(accesscode5,accesscode6,accesscode6,$event)"
+								 (keyup)="setFocus(accesscode5,accesscode6,accesscode6,$event)" formControlName="accesscode6" maxlength="1" class="inputCls"
+								/>
+							</ion-col>
+
+							<label for="accesscode" class="active"></label>
+						</div>
+
+					</form>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="resendInstructionSecCls padding-40" *ngIf="!(this.fromPage == 'accountRegistrationFlow' || this.fromPage == 'updatePassword')">
+					<ion-col col-12>
+						<div *ngIf="fromPage != 'forgotUsernameFlow' && !settingProfile">Didn't get your verification code?</div>
+						<div *ngIf="fromPage == 'forgotUsernameFlow' || settingProfile">Need a new verification code?</div>
+						<div class="padding-top">
+							<a class="cursor-pointer" id="sendItAgain" (tap)="this.resendAccessCode()">Send it again</a>
+						</div>
+					</ion-col>
+			</ion-row>
+
+			<ion-row class="resendInstructionSecCls padding-40" *ngIf="this.fromPage == 'accountRegistrationFlow' || this.fromPage == 'updatePassword'">
+				<ion-col col-12>
+					<div class="padding-top">
+						<div>Didn't receive a code?</div>
+						<a  *ngIf="commChannelType == 'EMAIL'" class="cursor-pointer" id="sendItAgain" (tap)="this.showResendAccessCode()">Click here to verify your email address and resend.</a>
+						<a  *ngIf="commChannelType == 'MOBILE'" class="cursor-pointer" id="sendItAgain" (tap)="this.showResendAccessCode()">Click here to verify your phone number and resend.</a>
+					</div>
+				</ion-col>
+			</ion-row>
+
+			<ion-row *ngIf="isEditCommChannelInfoFormShown && (this.fromPage == 'accountRegistrationFlow' || this.fromPage == 'updatePassword')" >
+					<ion-col col-12>
+							<form [formGroup]="editCommChannelInfoForm" (ngSubmit)="submitEditCommChannelInfoForm($event,editCommChannelInfoForm)" class="personalInfoFromCls">																											
+									
+									<div class="labelCls" *ngIf="commChannelType == 'MOBILE'" text-capitalize>Phone Number*</div>
+									<ion-item *ngIf="commChannelType == 'MOBILE'">
+										<input formControlName="mobileNumber" class="dobInputcls fullwidth_in" #mobileNumber [textMask]="{mask: mobileMask}" type="tel"
+											placeholder="Enter 10 digit number" (blur)="onMobileNumberBlur = true" (focus)="onMobileNumberBlur = false" [(ngModel)]="editCommChannelMobileValue" />
+									</ion-item>
+									<control-messages [control]="editCommChannelInfoForm.controls.mobileNumber" *ngIf="commChannelType == 'MOBILE' && onMobileNumberBlur"></control-messages>
+								
+
+									<div class="labelCls" *ngIf="commChannelType == 'EMAIL'">Email Address*</div>
+									<ion-item *ngIf="commChannelType == 'EMAIL'">
+										<ion-input id="email" formControlName="emailAddress" type="email" placeholder="yourname@domain.com" (blur)="onEmailBlur = true"
+											(focus)="onEmailBlur = false" [(ngModel)]="editCommChannelEmailvalue"></ion-input>
+									</ion-item>
+									<control-messages [control]="editCommChannelInfoForm.controls.emailAddress" *ngIf="commChannelType == 'EMAIL' && onEmailBlur"></control-messages>
+									
+									
+									<div class="submitBtnCls" padding-bottom>
+										<button ion-button type="submit" full [disabled]="!isEditCommChanngelFormSubmitDisabled(editCommChannelInfoForm)">Resend</button>
+									</div>
+									
+									<div class="cancelBtnCls" text-center>
+										<a href="#" (click)="cancelEditCommChannelForm()">Cancel</a>
+									</div>
+
+							</form>
+					</ion-col>
+			</ion-row>
+
+		</ion-grid>
+	</div>
+	<img class="shadow-img" />
+
+</ion-content>

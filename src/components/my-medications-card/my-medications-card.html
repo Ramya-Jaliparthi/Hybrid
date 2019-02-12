@@ -1,0 +1,28 @@
+<div *ngIf="memberInfo.rxDispDt else nodataerror">
+  <ion-grid no-padding (tap)="openPage()">
+    <ion-row>
+      <ion-col class="lastVisitCls padding-left-right">
+        <span class="subLableCls">Last Date of Fill:</span>
+        <span class="smallFontCls">
+          <b> {{memberInfo.rxDispDt}}</b>
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="informationCls  padding-left-right">
+      <ion-col>
+        <div class="nameCls">{{memberInfo.rxDrug|lowercase}}</div>
+        <div>
+          <span class="subLableCls">Dosage:</span>
+          <span class="subDataCls"> {{memberInfo.rxStrength}}</span>
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</div>
+<ng-template #nodataerror>
+  <div style="margin-top:15px; border-top:1px solid #DDDDDD" padding>You have no medications to display.</div>
+  <br/>
+</ng-template>

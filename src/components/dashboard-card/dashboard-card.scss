@@ -1,0 +1,27 @@
+dashboard-card {
+    .dashboardCardTitle {
+        overflow: hidden;
+        font-size: 17px;
+        color: #818181;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-family: Arial-bold;
+        margin-top: 2px;
+    }
+    .dashboardCardMenuIcon {
+        top: 7px !important;
+        border-radius: 0px !important;
+        height: 32px !important;
+        width: 32px !important;
+        float: left;
+    }
+    .card-content {
+        min-height: 50px;
+        background-color: white;
+    }
+    .card-header {
+        padding: 15px 15px 0 15px;
+        background-color: white;
+    }
+}

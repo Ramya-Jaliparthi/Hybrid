@@ -1,0 +1,43 @@
+<!--
+  Generated template for the FadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<header [title]="'All Specialties'"></header>
+
+<ion-content class="allSpecialtiesPage">
+    <ion-grid no-padding no-margin>
+        <!-- <ion-row>
+            <ion-col col-12 class="pl-15 pr-15">
+                <h1>All Specialties</h1>
+            </ion-col>
+        </ion-row> -->
+        <ng-container *ngFor="let character of indexMap.getKeys().sort();let charIndex=index;">
+            <ion-row>
+                <ion-col col-12>
+                    <accordion *ngIf="charIndex === 0" [title]="character" [expanded]="true">
+                        <ng-container [ngTemplateOutlet]="contentAccordion" [ngTemplateOutletContext]="{ character: character }"></ng-container>
+                    </accordion>
+                    <accordion *ngIf="charIndex > 0" [title]="character" [expanded]="false">
+                        <ng-container [ngTemplateOutlet]="contentAccordion" [ngTemplateOutletContext]="{ character: character }"></ng-container>
+                    </accordion>
+                </ion-col>
+            </ion-row>
+        </ng-container>
+
+    </ion-grid>
+</ion-content>
+
+<ng-template #contentAccordion let-character='character'>
+    <div>
+        <ul>
+            <li *ngFor="let specialty of indexMap.get(character)">
+                <a (click)="onListItemClicked(specialty)">{{specialty.name}} </a>
+            </li>
+        </ul>
+        <hr />
+    </div>
+</ng-template>
+
+<footer [activeTab]="''"></footer>

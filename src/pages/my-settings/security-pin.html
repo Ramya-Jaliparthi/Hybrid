@@ -1,0 +1,48 @@
+<header [title]="'Settings'"></header>
+
+<ion-content no-padding>
+    <div style="height:10px;background-color:lightgray;">&nbsp;</div>
+    <div style="margin-bottom:15px;background-color:white">
+        <div class="settingsCls">
+            <div style="float:left;">
+                <label class="switch" style="float:left;">
+                    <input type="checkbox" style="width: 40px;" (change)="toggleSecurityPinSwitch(pinInput)" [(ngModel)]="securitypinchked" [disabled]="disableSecurityPage"
+                    />
+                    <span class="login_slider round"></span>
+                </label>
+                <div class="login_sliderlabel">Use Security PIN</div>
+            </div>
+            <div style="float:left;width:4%;">&nbsp;</div>
+        </div>
+        <ion-item class="border-bottom">
+            <ion-row>
+                <ion-col>
+                    <div class="boldContentCls">
+                        <b>Security PIN</b>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item class="border-bottom">
+            <ion-row>
+                <ion-col>
+                    <input #pinInput type="password" [disabled]="disableSecurityPage" pattern="^[0-9]{4}$" inputmode="numeric" placeholder="4-digits"
+                        (blur)="onPinBlur = false" (focus)="onPinBlur = true" [(ngModel)]="securitypin" style="border:0px;" />
+                </ion-col>
+                <ion-col col-auto align-self-center>
+                    <button class="pwdShowBtnCls" type="button" [disabled]="disableSecurityPage" ion-button item-end (tap)="togglePinDisplay(pinInput)"
+                        round text-capitalize>{{pinCaption}}</button>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item>
+            <div class="boldContentCls" padding>
+                <button ion-button block solid style="height: 35px;" [disabled]="disableSecurityPage" (tap)="updateMemberPIN()">Save</button>
+            </div>
+            <div class="cancelBtnCls" (tap)="cancel()">Cancel</div>
+        </ion-item>
+        <img class="shadow-img" />
+    </div>
+</ion-content>
+
+<footer [activeTab]="'Settings'"></footer>

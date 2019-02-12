@@ -1,0 +1,151 @@
+<header [title]='whomToPay==="Myself" ? "Pay Myself" : "Pay a Provider"'></header>
+
+<ion-content>
+    <br>
+    <ion-list>
+        <form [formGroup]="makePayForm" (ngSubmit)="submitPayment()">
+
+            <div class="labelCls">Member *</div>
+            <ion-item class="bottom-border">
+                <ion-select formControlName="member" interface="action-sheet" mode='ios' okText="Select"
+                    [selectOptions]="memberSelectedOptions" cancelText="Dismiss" [selectOptions]="memberSelectedOptions"
+                    placeholder="Please select">
+                    <ion-option *ngFor="let memberName of members" value="{{memberName.memberFullName}}">
+                        {{memberName.memberFullName}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+            <control-messages [control]="makePayForm.controls.member"></control-messages>
+
+            <div>
+                <div class="labelCls"> Provider <span *ngIf="whomToPay==='Provider'">*</span></div>
+                <ion-item class="bottom-border">
+                    <ion-select [selectOptions]="providerSelectedOptions" formControlName="selectProvider" interface="action-sheet"
+                        mode='ios' okText="Select" cancelText="Dismiss" placeholder="Please select">
+                        <ion-option *ngFor="let provider of providers" value="{{provider.providerName}}">
+                            {{provider.providerName}}
+                        </ion-option>
+                    </ion-select>
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.selectProvider"></control-messages>
+                <div class="select-provider">
+                    <p>Can’t find your provider?
+                        <a (click)="navigateToAddProviderForm()">Add a Provider</a>
+                    </p>
+                </div>
+            </div>
+
+            <!--Only for pay myself-->
+            <div *ngIf="whomToPay==='Myself'">
+                <div class="labelCls" [ngClass]="{'disableLabelCls':!isUserAddedAccount}">Reimbursment Method *</div>
+                <ion-item class="bottom-border">
+                    <ion-select [disabled]="!isUserAddedAccount" [selectOptions]="reimbursementSelectedOptions"
+                        formControlName="reimbursment" interface="action-sheet" mode='ios' okText="Select" cancelText="Dismiss"
+                        placeholder="Check">
+                        <ion-option *ngFor='let methodName of reimbursmentMethods' value="{{methodName.method}}">
+                            {{methodName.method}}
+                        </ion-option>
+                    </ion-select>
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.reimbursment"></control-messages>
+                <div *ngIf="!isUserAddedAccount" class="select-provider">
+                    <p>Prefer Direct Deposit?
+                        <a (click)="navigateToAddBankAccount()">Add Bank Account</a>
+                    </p>
+                </div>
+            </div>
+            <!--Only for pay a provider-->
+            <div *ngIf="whomToPay==='Provider'">
+                <div class="labelCls">Your Account Number with Provider</div>
+                <ion-item class="bottom-border">
+                    <ion-input type="number" formControlName="accountNumber"></ion-input>
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.accountNumber"></control-messages>
+            </div>
+
+            <div class="labelCls">Payment Amount *</div>
+            <ion-item class="bottom-border">
+                <ion-input type="number" formControlName="paymentAmount" placeholder="$"></ion-input>
+            </ion-item>
+            <control-messages [control]="makePayForm.controls.paymentAmount"></control-messages>
+
+            <div class="labelCls">Service Type *</div>
+            <ion-item class="bottom-border">
+                <ion-select [selectOptions]="serviceTypeSelectedOptions" formControlName="serviceType" interface="action-sheet"
+                    mode='ios' okText="Select" cancelText="Dismiss" placeholder="Please select">
+                    <ion-option *ngFor="let serviceName of services" value="{{serviceName.code}}">
+                        {{serviceName.code}}
+                    </ion-option>
+                </ion-select>
+            </ion-item>
+            <control-messages [control]="makePayForm.controls.serviceType"></control-messages>
+
+            <ng-container *ngIf="!showMoreThan1Day">
+                <div class="labelCls">Service Date *</div>
+                <ion-item class="bottom-border">
+                    <input class="dobInputcls fullwidth" type="tel" formControlName="serviceStartDate" placeholder="MM/DD/YYYY"
+                        [textMask]="{mask: startDateMask}" />
+                    <!-- <ion-input type="tel" formControlName="serviceStartDate" placeholder="mm/dd/yyyy" [textMask]="{mask: startDateMask}"></ion-input> -->
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.serviceStartDate"></control-messages>
+            </ng-container>
+
+            <div *ngIf="!showMoreThan1Day" class="showMoreThan1Day">
+                <a (click)="showServiceEndDate()">+ <span>Service date covers more than 1 day</span></a>
+            </div>
+            <div *ngIf="showMoreThan1Day">
+
+                <div class="labelCls">Service Start Date *</div>
+                <ion-item class="bottom-border">
+                    <input class="dobInputcls fullwidth" type="tel" formControlName="serviceStartDate" placeholder="MM/DD/YYYY"
+                        [textMask]="{mask: startDateMask}" />
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.serviceStartDate"></control-messages>
+                <div class="labelCls">Service End Date *</div>
+                <ion-item class="bottom-border">
+                    <input class="dobInputcls fullwidth" type="tel" formControlName="serviceEndDate" placeholder="MM/DD/YYYY"
+                        [textMask]="{mask: startDateMask}" />
+                </ion-item>
+                <control-messages [control]="makePayForm.controls.serviceEndDate"></control-messages>
+
+            </div>
+
+            <div class="labelCls">Note</div>
+            <ion-item class="bottom-border">
+                <ion-textarea rows="3" formControlName="userComments"></ion-textarea>
+            </ion-item>
+            <control-messages [control]="makePayForm.controls.userComments"></control-messages>
+
+            <div class="upload-photo-section">
+                <p class="section-header"> Receipts <span *ngIf="whenTosubmit==='Now'">*</span></p>
+                <button class="uploadReciepts" (click)="takeOrUploadReciept()">
+                    <ion-icon name="camera"></ion-icon>&nbsp; Upload your reciept
+                </button>
+                <!-- <input type = "file" /> -->
+            </div>
+            <control-messages [control]="makePayForm.controls.userComments"></control-messages>
+
+            <div class="disclaimer-text">
+                <p>{{agreeText}} <a (click)='navigateToAlegeusTermsPage()'>Terms & Conditions of Alegeus.</a>
+                </p>
+            </div>
+
+            <ion-grid>
+                <ion-row>
+                    <div class="buttonFull">
+                        <button class="ionBtncls" ion-button type="submit" *ngIf="whenTosubmit==='Now'">Submit</button>
+                        <button class="ionBtncls" ion-button type="submit" *ngIf="whenTosubmit==='Later'">Save</button>
+                    </div><div class="buttonFull">
+                            <button class="ionbtnclear" ion-button clear type="reset" (click)="clearAllFields()">Cancel</button>
+                    </div>
+                </ion-row>
+                <p class="note-text">* indicates a required field</p>
+            </ion-grid>
+
+        </form>
+        <img class="shadow-img" />
+        <br>
+    </ion-list>
+</ion-content>
+
+<footer></footer>

@@ -1,0 +1,157 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../../assets/fonts";
+$assets-url: "../../assets";
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+$alert-min-width: 80%;
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: ( primary : #488aff, 
+            secondary : #0068A8, 
+            danger : #f53d3d,
+            light : #f4f4f4,
+            dark : #222,
+            green : #25bd27, 
+            red : #e13838,
+            appcolor : #1866a3,
+            app-secondary-color : #043167,
+            profiletextblue : #043167);
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$button-ios-background-color:#1866a3;
+$button-ios-font-size:1.25em;
+$button-ios-text-color:#fff;
+$button-ios-outline-border-style:none;
+$button-ios-outline-border-width:0px;
+$button-ios-border-radius:0px;
+$segment-button-ios-text-color: #000000;
+$segment-button-ios-background-color-activated:#FFFFFF;
+$segment-button-ios-background-color: #FFFFFF;
+$segment-button-ios-border-radius: 0px;
+$toggle-ios-handle-background-color:#FFFFFF;
+$toggle-ios-background-color-off:#818181;
+$toggle-ios-border-color-off:#818181;
+$toggle-ios-background-color-on: #3da148;
+$alert-ios-sub-title-font-size:1.1em;
+$alert-ios-sub-title-text-color:#000000;
+$menu-ios-background :#1866a3;
+$alert-ios-max-width:80%;
+$toolbar-background:#FFFFFF;
+$segment-button-ios-height:4rem;
+$text-input-ios-highlight-color:#dedede;
+$text-input-ios-highlight-color-invalid:#dedede;
+$text-input-ios-highlight-color-valid:#dedede;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$segment-button-md-text-color-activated: #000000;
+$segment-button-md-border-bottom-color: #DEDEDE;
+$segment-button-md-border-color-activated: #1866a3;
+$toggle-md-track-background-color-off:#818181;
+$toggle-md-track-background-color-on:#3da148;
+$toggle-md-handle-background-color-on:#FFFFFF;
+$toggle-md-handle-background-color-off:#FFFFFF;
+$button-md-background-color:#1866a3;
+$alert-md-sub-title-font-size:1.1em;
+$alert-md-max-width:80%;
+$button-md-text-transform: capitalize;
+$text-input-md-highlight-color:#dedede;
+$text-input-md-highlight-color-invalid:#dedede;
+$text-input-md-highlight-color-valid:#dedede;
+//$chip-md-height:50px;
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+$segment-button-wp-text-color-activated : #000000;
+$segment-button-wp-border-bottom-color: #DEDEDE;
+$segment-button-wp-border-color-activated: #1866a3;
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+@import "roboto";
+@import "noto-sans";
+$font-family-base: 'roboto-light';
+$font-family-base-bold: 'roboto-bold';
+$font-family-lable: 'arial-bold';
+//$font-size-base: 1.2rem;
+//Card content styles
+$card-content-title-size: 1.1em;
+$page-header-title-size:1.5em;
+$card-content-body-size: 0.9em;
+$card-content-body-medium-font-size: 1.2rem;
+$card-content-body-small-font-size: 0.6em;
+$card-content-number-highlight-font-size: 2em;
+$input-field-font-size:0.9em;
+$page-content-small-font-size: 0.6em;
+$page-content-medium-font-size: 0.8em;
+$page-background-color:#dddddd;
+$page-content-light-label-color: #818181;
+$card-title-color:#707070;
+$card-content-font-color-normal: #000000;
+$card-content-font-color-highlighted: #1866A3;
+$card-content-font-color-highlighted-background: #fff;
+$card-content-section-border-color:#EEE;
+$popover-ios-arrow-background: #115890;
+$popover-ios-border-radius: 2px;
+$popover-ios-width: 60%;
+$background-color-highlighted:#1866A3;
+$background-color-normal:white;
+$background-color-sign-register-promo:#0068A8;
+$search-filter-secondary-color:#bfd5e7;
+$error-font-color:#C1272D;
+$padding-30:10px;
+$padding-20:7px;
+$padding-10:4px;
+$padding-page-30: 15px;
+$padding-page-20: 10px;
+$padding-page-15: 7px;
+$padding-page-10: 5px;
+$auth-promo-header-color: #6591b3;
+$toast-ios-background:(#043167);
+$toast-md-background:(#043167);
+$radio-md-color-off: ( #000000);
+$radio-ios-color-off: ( #000000);
+$radio-md-color-on: (#000000);
+$radio-ios-color-on: (#000000);
+$action-sheet-ios-title-color:(#000000);
+$action-sheet-md-title-color:(#000000);
+$action-sheet-ios-button-text-color:(#000000);
+$action-sheet-md-button-text-color:(#000000);
+$action-sheet-ios-title-font-weight:(bold);
+$action-sheet-ios-button-font-size:(1.2em);
+$action-sheet-ios-button-padding:(10px);
+$action-sheet-md-title-font-weight:(bold);
+$action-sheet-md-button-font-size:(1.2em);
+$action-sheet-md-button-padding:(10px);
+$searchBarColor:#E7EFF5;
+$text-normal-color: #333333;
+$background-gray-color:#f2f2f2;

@@ -1,0 +1,209 @@
+<!--
+  Generated template for the FadHomeSearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding no-margin>
+  <ion-row class="search-container">
+    <ion-col col-12>
+      <form novalidate [formGroup]="searchForm">
+        <div class="container-flex">
+          <div class="search-box">
+            <ion-input #search type="text" [(ngModel)]="searchText" (tap)="searchForMatchingText($event)" (keyup.enter)="searchOnEnter($event)"
+              formControlName="searchTextField" [placeholder]="placeholderText">
+            </ion-input>
+            <span (click)="clearTargetValue()" *ngIf="searchText" class="clear-icon">
+              <i class="fas fa-times-circle"></i>
+            </span>
+            <span class="search-icon" (click)="onSearch({});" *ngIf="searchType !== fadSearchType.zip">
+              <i class="fas fa-search"></i>
+            </span>
+            <span class="zip-icon" (click)="onSearch({});" *ngIf="searchType === fadSearchType.zip">
+              <i class="fal fa-location-arrow"></i>
+            </span>
+          </div>
+          <div class="search-cancel">
+            <span (click)="cancelSearch()">Cancel</span>
+          </div>
+        </div>
+        <div class="errorMsg" *ngIf="searchForm.get('searchTextField').errors">
+          <ion-icon name="ios-alert-outline" class="errorIcon"></ion-icon>
+          <span no-padding no-margin *ngIf="searchForm.get('searchTextField').errors['invalidZipSearch']">
+            {{fadConstants.errorMessages.invalidZipSearch}}</span>
+          <span no-padding no-margin *ngIf="searchForm.get('searchTextField').errors['zipNoMatch']">
+            {{fadConstants.errorMessages.zipNoMatch}}</span>
+        </div>
+      </form>
+    </ion-col>
+  </ion-row>
+
+  <ng-container *ngIf="searchType === fadSearchType.plan">
+    <!-- <ion-row class="auth-plan-row">
+      <ion-col col-12>
+        <div class="auth-plan-section">
+          <div class="auth-no-search">
+            <hr />
+            <dl>
+              <dt>
+                <strong>My Current Plan:</strong>
+              </dt>
+              <dd>HMO Blue</dd>
+            </dl>
+          </div>
+
+          <div class="auth-searched-plans">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">HMO Blue New England</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Managed Blue for Seniors</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Access Blue</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Network Blue</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Blue Choice</a>
+              </li>
+            </ul>
+            <hr />
+            <dl>
+              <dt>
+                <strong>My Current Plan:</strong>
+              </dt>
+              <dd>HMO Blue</dd>
+            </dl>
+          </div>
+
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row class="anonymous-plan-row">
+      <ion-col col-12>
+        <div class="anonymous-plan-section">
+          <div class="anonymous-no-plan" *ngIf="!searchText">
+            <h6>Don’t know or see your plan?</h6>
+            <p>
+              <a href="javascript:void(0)" (click)="goToLogin($event)">Login</a> or
+              <a href="javascript:void(0)" (click)="goToRegistration($event)">create an account</a>, and we'll select your plan for you.</p>
+          </div>
+          <div class="anonymous-searched-plans" *ngIf="searchText">
+            <ul>
+              <li *ngFor="let plan of filteredPlanList; let i = index" [ngClass]="{'selected-item': (i === 0)}">
+                <a #planElements href="javascript:void(0)" (click)="planSelect($event, plan)" [innerHTML]="getMatchHighlightedText(plan.simpleText)"></a>
+              </li>
+            </ul>
+            <hr />
+            <p>
+              <a href="javascript:void(0)" (click)="planSelect($event, null)">I don’t know my plan</a>
+            </p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+
+  <ng-container *ngIf="searchType === fadSearchType.zip">
+    <ion-row class="zip-row">
+      <ion-col col-12>
+        <div class="zip-section">
+          <div *ngIf="zipCodeList?.options?.length > 0 && searchText?.length > 2">
+            <ul>
+              <li *ngFor="let location of zipCodeList?.options; let i = index" [ngClass]="{'selected-item': (i === 0)}">
+                <a #zipElements href="javascript:void(0)" (click)="zipSelect($event, location)">{{location.contextText}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+
+  <ng-container *ngIf="searchType === fadSearchType.member">
+    <ion-row class="member-row">
+      <ion-col col-12>
+        <div class="member-section">
+          <ul>
+            <li>
+              <a href="javascript:void(0)">John Sample</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Jane Sample</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">George Sample</a>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+
+  <ng-container *ngIf="searchType === fadSearchType.search">
+    <ion-row class="default-search-row">
+      <ion-col col-12>
+        <div class="default-search-section">
+          <div class="default-no-search" *ngIf="!searchText || searchText.length <= 2">
+            <h6>Not sure what to search for?</h6>
+            <ul>
+              <li>
+                <a href="javascript:void(0)" (click)="allSpecialitySelect($event)">All Specialties</a>
+              </li>
+            </ul>
+          </div>
+          <ng-container *ngIf="searchText && searchText.length > 2">
+            <div class="all-search">
+              <ul *ngIf="procedureList?.options?.length > 0 || (specialtyList?.options?.length > 0 && searchText?.length === 3)">
+                <ng-container *ngIf="searchText?.length === 3">
+                  <li *ngFor="let specialty of specialtyList?.options; let i = index" [ngClass]="{'selected-item': (i === 0)}">
+                    <a #specialtyElements href="javascript:void(0)" (click)="specialtySelect($event, specialty)">{{specialty.simpleText}}</a>
+                  </li>
+                </ng-container>
+              </ul>
+              <div class="all-search-sub-section specialty-procedure-search" *ngIf="specialtyList?.options?.length > 0 && searchText?.length > 3">
+                <!-- <h6>Are you looking for?</h6> -->
+                <ul>
+                  <li *ngFor="let specialty of specialtyList?.options; let i = index" [ngClass]="{'selected-item': (i === 0)}">
+                    <a #specialtyElements href="javascript:void(0)" (click)="specialtySelect($event, specialty)">{{specialty.simpleText}}</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="all-search-sub-section" *ngIf="doctorList?.options?.length > 0">
+                <h4 [ngClass]="{'selected-item': (specialtyList?.options?.length <= 0)}">
+                  <a #allDoctors href="javascript:void(0)" (click)="allDoctorsSelect($event)">{{doctorList.category}}</a>
+                </h4>
+                <ul>
+                  <li *ngFor="let doctor of doctorList?.options">
+                    <a href="javascript:void(0)" (click)="doctorSelect($event, doctor)" [innerHTML]="getMatchHighlightedText(doctor.contextText)"></a>
+                    <p>{{doctor.infoText}}</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="all-search-sub-section" *ngIf="facilityList?.options?.length > 0">
+                <h4 [ngClass]="{'selected-item': (specialtyList?.options?.length <= 0 && doctorList?.options?.length <= 0)}">
+                  <a #allFacility href="javascript:void(0)" (click)="allFacilitiesSelect($event)">{{facilityList.category}}</a>
+                </h4>
+                <ul>
+                  <li *ngFor="let facility of facilityList?.options">
+                    <a href="javascript:void(0)" (click)="facilitySelect($event, facility)" [innerHTML]="getMatchHighlightedText(facility.contextText)"></a>
+                    <p>{{facility.infoText}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ng-container>
+
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+
+</ion-content>

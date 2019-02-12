@@ -1,0 +1,35 @@
+contact-us-card{
+
+	.contantUsContentCls{
+		font-size: $card-content-body-small-font-size;
+		text-align: center;
+		padding: $padding-30 $padding-page-30;
+		
+		
+	}
+	.linkSectionCls{
+		width:100%;
+		padding-left:$padding-page-30;
+		padding-right:$padding-page-30;
+		.item-inner{
+			border-bottom: 0px;
+		}
+		margin: 0.5em 0;
+	}
+	.linkTextCls{
+		color:$card-content-font-color-highlighted;
+		text-decoration: none;
+    	font-family:$font-family-lable;
+		font-size: $card-content-title-size;
+	}
+	.content{
+		border-bottom:1px solid $card-content-section-border-color;
+		background: white !important;
+	}
+
+	.detailArrowCls{
+        font-size: 2em;
+        font-weight: bold;
+        color: #818181;
+    }
+}

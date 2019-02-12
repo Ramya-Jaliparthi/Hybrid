@@ -1,0 +1,28 @@
+<ion-content>
+    <ion-grid class="background-blue">
+        <ion-row no-padding>
+            <ion-col text-right>
+                <ion-icon name="close" class="close-icon" (click)="close($event)"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+                <img class="visit-icon" [src]="config.assets_url+'/images/icons-ios/mobile-menu-myplan-ios@2x.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-20 arial-bold">My Plan</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-17">Insurance Terms</ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div *ngFor="let item of planInfoList">
+        <div class="planInfoBodyCls" [innerHTML]="item.Body"></div>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <button full ion-button class="btnCls" (tap)="close($event)">Close</button>
+</ion-footer>

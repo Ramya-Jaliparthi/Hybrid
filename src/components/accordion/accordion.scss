@@ -1,0 +1,48 @@
+@import '../../assets/styles/_fonts';
+
+accordion {
+    .card {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .header-title:focus, .header-title:hover {
+        text-decoration: underline !important;
+        color:#1768A3 !important;
+    }
+    .header-subtitle {
+        @include Roboto(light);
+        font-size: 14px;
+        color: #000000;
+        letter-spacing: -0.23px;
+        margin-top: 2px;
+    }
+    .card-header {
+        background-color: #fff;
+        @include Roboto(bold);
+        font-size: 13px;
+        color: #043167;
+        padding: 0;
+        border-top: 1px solid #c8c7cc;
+    }
+    .card-header:last-child {
+        border-bottom: 1px solid #c8c7cc;
+    }
+    .card-content {
+        padding: 0px 16px !important;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+    }
+    ion-item {
+        background-color: #fff !important;
+        color: #043167 !important;
+        border: none !important;
+        @include Roboto(bold);
+        font-size: 13px !important;
+        ion-icon {
+            color: #043167 !important;
+            font-weight: bold;
+        }
+    }
+}

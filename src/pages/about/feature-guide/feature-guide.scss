@@ -1,0 +1,69 @@
+page-feature-guide {    
+    .slides{
+        height: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .slide-zoom{
+        height:100%;
+
+    }
+    .blue-slide{
+        background: #ffffff;
+    }
+    ion-icon{
+            font-size: 2em !important;
+            color: white;
+            padding-top:15px;
+            padding-right: 15px;
+        }
+    .close-icon-blue{
+        color: #1866a3;
+        font-weight: bold;
+        background: none !important;
+        padding-right: 1em;
+    }
+    .close-icon-white{
+        color: white;
+        font-weight: bold;
+        background:none !important;
+        padding-right: 1em;
+    }
+    .swiper-pagination {
+        bottom: 20px !important;
+    }
+    .bgColorBlue{
+        background-color: #1866a3 !important;
+    }
+    .slide1Cls{
+        background-image: url($assets-url+'/images/feature-guide/slide1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    .slide2Cls{
+        background-image: url($assets-url+'/images/feature-guide/slide2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    .slide3Cls{
+        background-image: url($assets-url+'/images/feature-guide/slide3.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    .slide4Cls{
+        background-image: url($assets-url+'/images/feature-guide/slide4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    .slide5Cls{
+        background-image: url($assets-url+'/images/feature-guide/slide5.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+}

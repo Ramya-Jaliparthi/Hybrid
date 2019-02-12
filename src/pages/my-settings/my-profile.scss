@@ -1,0 +1,206 @@
+page-my-profile {
+    .border-right {
+        border-right: 1px solid #dddddd;
+    }
+    .item[no-lines].border-bottom {
+        border-bottom: 4px solid #dddddd;
+    }
+    .border-bottom-verify {
+        border-bottom: 1px solid #1866a3;
+    }
+    /*
+    input:checked+.login_slider {
+        background-color: #25bd27;
+    }
+    input:focus+.login_slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked+.login_slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .login_slider.round {
+        border-radius: 34px;
+    }
+    .login_slider.round:before {
+        border-radius: 50%;
+    } */
+    .pwdShowBtnCls {
+        width: 60px !important;
+        padding: 0 2rem;
+        height: 18px !important;
+        font-size: 1.2rem !important;
+        margin-top: 26px !important;
+    }
+    .errorMsg {
+        font-family: $font-family-base;
+        font-size: 0.9em;
+    }
+    .word-wrap {
+        width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    ul {
+        white-space: normal;
+        word-wrap: break-word;
+        margin-top: auto;
+        margin-left: -20px;
+    }
+    .boldContentCls {
+        font-family: arial-bold;
+        color: $card-content-font-color-normal;
+        font-size: $card-content-body-size;
+    }
+    .boldContentProfileName {
+        font-family: arial-bold;
+        color: $card-content-font-color-normal;
+        font-size: 22px;
+        color: #043167
+    }
+    .ionBtncls {
+        font-size: 1.0em;
+        background-color: #1866a3;
+        width: 100%;
+        border-radius: 0px;
+        font-weight: bold;
+        padding: 0 1em;
+    }
+    .ionbtnclear {
+        font-size: 1.2em;
+        width: 100%;
+        border-radius: 0px;
+        font-weight: bold;
+        padding: 0 1em;
+        height: 35px;
+    }
+    .txtfontsize {
+        font-size: 15px;
+        font-family: arial-bold;
+    }
+    .textpaddingleft {
+        padding-left: 35px;
+    }
+    .ionitempaddingright {
+        padding-right: 15px;
+    }
+    .emailtextoverflow {
+        padding-left: 35px;
+        overflow: hidden;
+        width: 90%;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .hintquationtextoverflow {
+        padding-left: 15px;
+        overflow: hidden;
+        width: 90%;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .detailArrowCls {
+        font-size: 1.4em;
+        font-weight: normal;
+        color: #1866a3;
+    }
+    .optdetailArrowCls {
+        font-size: 1.7em;
+        font-weight: normal;
+        color: #1866a3;
+    }
+    .emailverifiedcolor {
+        color: #1866a3;
+        font-weight: bold;
+        font-size: 10px;
+        padding-left: 30px;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    .ionitembackgroung {
+        background: #f2f2f2;
+        margin-top: 10px;
+    }
+    .textcolor {
+        color: map-get($colors, profiletextblue);
+    }
+    .opttextcolor {
+        color: map-get($colors, profiletextblue);
+        font-size: 20px;
+    }
+    .rightArrowAlign {
+        text-align: end;
+        font-size: 1.2em;
+    }
+    .iconFont {
+        padding-top: 4px;
+        font-size: 1.2em;
+    }
+    .labelClss {
+        padding: ($padding-page-30 * 2) $padding-page-20 0px $padding-page-30;
+        font-family: arial-bold; //border-bottom: 0.55px solid #c8c7cc;
+    }
+    .drupalconten {
+        text-align: center;
+        height: 130px;
+        padding-top: 40px;
+        font-size: 22px;
+        white-space: inherit
+    }
+    .address {
+        padding-top: 0px;
+        padding-left: 15px;
+        margin: 0px;
+    }
+    .leftpadding {
+        padding-left: 10px;
+    }
+    .cardReadArticleLinkCls {
+        padding-top: $padding-30;
+        font-family: arial-bold;
+        color: $card-content-font-color-highlighted;
+        font-size: 1 em;
+        text-decoration: underline;
+    }
+    .item-md ion-icon[item-left]+.item-inner,
+    .item-md ion-icon[item-left]+.item-input,
+    .item-md ion-icon[item-start]+.item-inner,
+    .item-md ion-icon[item-start]+.item-input {
+        margin-left: 4px;
+    }
+    .item-input-has-focus .label-md[stacked],
+    .input-has-focus .label-md[stacked],
+    .item-input-has-focus .label-md[floating],
+    .input-has-focus .label-md[floating] {
+        color: #000;
+    }
+    .item-input .label-md,
+    .item-select .label-md,
+    .item-datetime .label-md {
+        color: #000;
+    }
+    .question-container .options_box .item-ios .item-block {
+        min-height: 34px;
+    }
+    .question-container .options_box .item-ios .item-block {
+        min-height: 34px;
+    }
+    .item-block {
+        min-height: 34px;
+    }
+    .select-ios .select-icon .select-icon-inner{
+        left:0 !important;
+        top : 60% !important;
+    }
+    .select-ios .select-placeholder{
+        padding-right:8px;
+    }
+    .select-md .select-icon .select-icon-inner{
+        left:0 !important;
+    }
+    .select-md .select-placeholder{
+        padding-right:8px;
+    }
+}

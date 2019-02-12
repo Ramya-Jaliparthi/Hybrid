@@ -1,0 +1,34 @@
+<header [title]="titleName" [activeTab]="''"></header>
+<ion-content>
+    <div style="margin-bottom:15px;background-color:white;padding-top:15px;">
+
+        <div *ngFor="let item of detailArticleInfo">
+            <div class="" style="text-align: center;" *ngIf="item.MobileImages.length > 0 else fallbackImage">
+                <img [src]="'http://myblueapi.bluecrossma.acsitefactory.com/'+item.MobileImages">
+            </div>
+            <ng-template #fallbackImage>
+                <div class="" style="text-align: center;" *ngIf="item.RegularImages.length > 0">
+                    <img [src]="'http://myblueapi.bluecrossma.acsitefactory.com/'+item.RegularImages">
+                </div>
+            </ng-template>
+            <div class="imgContainerCls">
+                <div class="imgIconDivCls">
+                    <img *ngIf="titleName == 'Health and Wellness'" [src]="config.assets_url+'/images/icons-ios/Asset34@2x.png'" />
+
+                </div>
+                <div class="subTitleCls">{{titleName}}</div>
+                <div style="clear:both;"></div>
+            </div>
+            <div padding>
+                <div class="articleTitleCls" [innerHTML]="item.Title"></div>
+                <div class="createdCls">{{item.CreatedAt}}</div>
+                <div class="articleBodyCls" [innerHTML]="item.Body | safeHtml"></div>
+            </div>
+        </div>
+
+        <img class="shadow-img" />
+    </div>
+
+</ion-content>
+
+<footer [activeTab]="''"></footer>

@@ -1,0 +1,221 @@
+@import "../common/financials.scss";
+
+page-make-payment {
+  form {
+    background-color: $background-color-normal;
+  }
+  .text-input {
+    font-family: roboto-light;
+    font-size: 17px;
+    margin: 0px !important;
+}
+  .item-ios,
+  .item-md {
+    padding-left: 0px !important;
+  }
+
+  .select-ios {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  ion-textarea,
+  .disclaimer-text {
+    padding-left: 16px;
+  }
+
+  .upload-photo-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .whom-to-pay {
+    margin-left: 16px;
+    p {
+      @include Arial-bold(bold);
+      font-size: 14px;
+      display: table;
+      color: $card-content-font-color-normal;
+      .radio-btn {
+        opacity: 1;
+        pointer-events: all;
+        height: 26px;
+        width: 26px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .radio-label {
+        @include Arial-bold(bold);
+        padding-left: 5px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    .radio-md .radio-inner {
+      background-color: #1866a3;
+    }
+
+    .radio-ios .radio-inner {
+      background-color: #1866a3;
+    }
+
+    .item-ios .radio-ios[item-left],
+    .item-ios .radio-ios[item-start] {
+      margin: 2px 6px 4px 3px;
+    }
+    .item-md .radio-md[item-left],
+    .item-md .radio-md[item-start] {
+      margin: 2px 6px 4px 3px;
+    }
+
+    .item-radio-checked.item-ios ion-label {
+      @include Arial-bold(bold);
+      font-size: 0.9em;
+    }
+    .item-radio-checked.item-md ion-label {
+      @include Arial-bold(bold);
+      font-size: 0.9em;
+    }
+
+    .item-radio.item-md ion-label {
+      font-size: 0.9em;
+    }
+
+    .item-radio.item-ios ion-label {
+      font-size: 0.9em;
+    }
+  }
+
+  ion-select {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .select-provider {
+    p {
+      margin-left: 16px;
+      @include Arial-bold(regular);
+      font-size: 14px;
+      a {
+        color: $card-content-font-color-highlighted;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .showMoreThan1Day {
+    @include Arial-bold(regular);
+    font-size: 14px;
+    padding: 30px 10px 6px 15px;
+    a {
+      color: $card-content-font-color-highlighted;
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .section-header {
+    @include Arial-bold(bold);
+    font-size: 14px;
+    color: $card-content-font-color-normal;
+  }
+
+  ion-input {
+    @include Arial-bold(regular);
+    font-size: 14px;
+    //padding-left: 16px;
+    color: $card-content-font-color-normal;
+  }
+
+  ion-textarea {
+    @include Arial-bold(regular);
+    font-size: 14px;
+    //padding-left: 16px;
+    color: $card-content-font-color-normal;
+  }
+
+  .disclaimer-text {
+    font-size: 12px;
+    color: #4a4a4a;
+    a {
+      @include Arial-bold(bold);
+      text-decoration: underline;
+      color: $text-primary-color;
+    }
+  }
+
+  .note-text {
+    @include Arial-bold(light);
+    font-size: 13px;
+    color: #4a4a4a;
+  }
+
+  .uploadReciepts {
+    background-color: $button-ios-text-color;
+    @include Arial-bold(bold);
+    border: 1px solid $card-content-font-color-highlighted;
+    color: color($colors, appcolor, base);
+    width: 100%;
+    padding: 10px;
+  }
+
+  // .full-width {
+  //   width: 100%;
+  //   max-width: 100%;
+  //   border-bottom: none;
+  //   padding: 11px 6px 11px 0px;
+  // }
+
+  .dobInputcls {
+    font-family: roboto-light;
+    border: none !important;
+    padding-left: 0px;
+  }
+
+
+
+  .disableLabelCls {
+    padding: 30px 10px 6px 15px;
+    color: #cecbcb;
+  }
+
+  .buttonFull {
+    width: 100%;
+    margin-left: -2px;
+  }
+
+  .ionBtncls {
+    font-size: 1.2em;
+    background-color: #1866a3;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+  }
+
+  .ionbtnclear {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 35px;
+    margin-left: 0px;
+    color: #1866A3;
+   
+  }
+
+  .bottom-border {
+    border-bottom: 0.55px solid #c8c7cc;
+  }
+  
+  .bottom-border .item-inner {
+    border-bottom: none !important;
+  }
+  
+
+}

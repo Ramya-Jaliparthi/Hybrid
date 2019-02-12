@@ -1,0 +1,110 @@
+page-my-medications {
+
+    .list-header-md {
+        padding-left: 16px;
+        margin-bottom: 0%; 
+        min-height: 4.5rem;
+        border-top: 1px solid #dedede;
+        font-size: 1.4rem;
+        color: #757575;
+    }
+
+    .background-blue{
+        background-color: #115890;
+        color: white;       
+    }
+    .border-right{
+        border-right: 1px solid #dddddd;
+    }
+    .border-bottom{
+        border-bottom: 1px solid #dddddd;
+    }
+    .icon-page{
+        font-size: 2em;
+    }
+    .arial-bold{
+        font-family: arial-bold;
+    }
+    .scroll-content{
+        background-color: #dddddd;
+    }
+    .background-white{
+        background-color: white;
+    }
+    .font-11{
+        font-size: $card-content-body-medium-font-size;
+    }
+    .font-13{
+        font-size: 13px;
+    }
+    .font-16{
+        //font-size: 1.1em;
+    }
+    .label-grey{
+        color: #818181;
+    }
+    .padding-left-right{
+        padding: 0 15px;
+    }
+    .color-blue{
+        color: #317CB3;
+    }
+    .img-icon{
+        max-width: 2em;
+    }
+    .padding-top-bottom-5{
+        padding: 5px 0 0px 0px;
+    }
+    .padding-top-bottom-10{
+        padding: 10px 0;
+    }
+    .margin-right-10{
+        margin-right: 10px;
+    }
+    .color-map{
+        color: #92278f;
+    }
+    .img-small{
+        max-width: 1.2em;
+    }
+    .padding-left-5{
+        padding-left: 5px;
+    }
+    .autoComplete {
+        margin-top: 0px;
+		position: absolute;
+		width: inherit;
+		overflow-y: scroll;
+		z-index: 999;
+        border: 1px solid #dddddd;
+        font-family: $font-family-base;
+        font-size: .9em;
+	}
+    .rowPadding{
+        padding: 10px 15px;
+    }
+    .lablecls{
+        padding-bottom: 3px !important;
+        font-size:$card-content-body-medium-font-size;
+        color: $page-content-light-label-color;
+    }
+
+    alert-message-card  .error .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;
+    }
+
+    alert-message-card  .info .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;    
+    }
+
+    alert-message-card  .promo .messageContent{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;       
+    }
+    
+}

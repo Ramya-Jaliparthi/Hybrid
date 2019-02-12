@@ -1,0 +1,19 @@
+<ion-item class="user-profile-item" *ngFor="let item of articleInfo |slice:0:1" style="border: none">
+
+  <ion-row>
+    <ion-col>
+      <p class="cardArticleTitle" [innerHTML]="item.Title"></p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row (tap)="openDrupalVideo(item.VideoUrl)">
+    <ion-col *ngIf="item.RegularImages.length > 0">
+      <img [src]="'http://myblueapi.bluecrossma.acsitefactory.com/'+item.RegularImages" />
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <p class="cardArticleDescription" [innerHTML]="item.Body"></p>
+  </ion-row>
+
+</ion-item>

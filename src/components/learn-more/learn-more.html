@@ -1,0 +1,35 @@
+<header [title]="titleName" [activeTab]="''"></header>
+<ion-content>
+    <div style="margin-bottom:15px;background-color:white;padding-top:15px;" *ngIf="pageName == 'MarketingCommLearnMore'">
+
+        <ion-item>
+            <ion-row text-wrap class="learn-more-title">
+                <div class="boldContentCls" *ngIf='!(fromPage == "preferenceSettings")'>Learn More </div>
+                <div class="boldContentCls" *ngIf='fromPage == "preferenceSettings"'>Learn More about Communications from Blue Cross</div>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12 text-wrap class="learnMoreTxt" style="white-space: normal; word-wrap: break-word;">
+                        If you select Yes to email and text, you consent to receive messages (including emails) through an unencrypted method of communication, which means that such information can be at risk of being accessed by third parties during transmission or storage, as the internet is not a secured method of communication.  By selecting Yes to text, you consent to receiving autodialed, prerecorded calls and texts to your mobile device.
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12 text-wrap class="learnMoreTxt" style="white-space: normal; word-wrap: break-word;">
+                        The information included in emails and texts may include health information and information related to the management of your health.
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12 text-wrap class="learnMoreTxt" style="white-space: normal; word-wrap: break-word;">
+                        Your carrier’s message and data rates apply.  Message frequency varies and is based on your account settings and plan usage. 
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <button class="learn-more-button-back" ion-button type="submit" full *ngIf='fromPage == "preferenceSettings"' (click)="goBack()">Back</button>
+            </ion-row>
+        </ion-item>
+
+        <img class="shadow-img" />
+    </div>
+
+</ion-content>
+
+<footer [activeTab]="''"></footer>

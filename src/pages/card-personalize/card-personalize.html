@@ -1,0 +1,19 @@
+<header [title]="'Personalize'">
+</header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-group reorder="true" (ionItemReorder)="reorderItems($event)">
+      <ion-item *ngFor="let card of cards">
+        <ion-label>{{ card.title }}</ion-label>
+        <ion-toggle [(ngModel)]="card.enabled"></ion-toggle>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <button ion-button full (tap)="savePersonalization()">Save</button>
+
+</ion-content>
+
+<footer></footer>

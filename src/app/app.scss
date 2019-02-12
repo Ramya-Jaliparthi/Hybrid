@@ -1,0 +1,400 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+:root {
+    /*--myblue-safe-area-inset-bottom : 34px; // To verify on chrome desktop */
+    --myblue-safe-area-inset-bottom: constant(safe-area-inset-bottom);
+    --myblue-safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+.ios .scroll-content {
+    margin-top: 55px;
+    margin-bottom: 47px;
+}
+
+.md .scroll-content {
+    margin-top: 106px;
+}
+
+.fadPage  {
+    .scroll-content {
+        // margin-top: 55px;
+    }
+}
+
+page-fad-medical-index {
+    ul {
+        padding-left: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            padding: 5px 0;
+            a {
+                font-family: Roboto;
+                font-weight: 700 !important;
+                font-size: 14px;
+                color: #1866A3;
+                line-height: 18px;
+                text-decoration: underline;
+            }
+        }
+    }
+    hr {
+        background: #DDDDDD;
+        height: 2px !important;
+        margin: 15px 0;
+    }
+}
+
+page-fad-home-search {
+    ion-input {
+        .text-input {
+            font-size: inherit !important;
+            width: 100% !important;
+        }
+    }
+}
+
+page-fad-search-list, page-fad-facility-list {
+    accordion {
+        .header-title {
+            text-decoration: none;
+            font-family: arial-bold;
+            font-weight: 700 !important;
+            font-size: 14px;
+            line-height: 16px;
+            color: #043167;
+            letter-spacing: -0.23px;
+        }
+        .header-title:hover, .header-title:focus {
+            text-decoration: none !important;
+            color: #043167 !important;
+        }
+        .header-subtitle {
+            font-family: Roboto;
+            font-weight: 300 !important;
+            font-size: 14px;
+            color: #000000;
+            letter-spacing: -0.23px;
+            margin-top: 2px;
+        }
+        button[icon-only].button {
+            margin-right: 13px;
+            ion-icon.icon {
+                font-size: 24px;
+                padding: 0
+            }
+        }
+        ion-label {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-direction: normal;
+            -webkit-box-orient: vertical;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        ion-card {
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+        }
+    }
+    .sort-accordion {
+        .header-title {
+            font-size: 14px;
+        }
+    }
+}
+
+.platform-ipad .scroll-content {
+    @media(orientation: landscape) {
+        margin-bottom: 128px;
+    }
+    margin-bottom: 96px;
+}
+
+.alert-wrapper .alert-title {
+    font-size: 17px;
+}
+
+.contentWithNoMenuCls .scroll-content {
+    margin-top: 55px !important;
+}
+
+.menu-common-content .scroll-content {
+    margin-top: 40px !important;
+    margin-bottom: 25px !important;
+}
+
+.menu-header {
+    background: #115890;
+    color: white;
+    padding: 0px 8px;
+    border-bottom: 1px solid white;
+}
+
+.register-section {
+    width: 60%;
+    float: left;
+    border-right: 1px solid white;
+}
+
+.display-in-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-section2 {
+    width: 35%;
+    float: right;
+    padding: 20px 0px 15px 0px;
+    font-weight: bold; //line-height: 30px;
+}
+
+.signin-section {
+    width: 35%;
+    float: right;
+    padding: 15px 0px;
+    font-weight: bold;
+    line-height: 30px;
+    background-image: url($assets-url+'/images/icons-ios/Asset77@2x.png');
+}
+
+.menu-common-content {
+    background: #115890;
+    color: white;
+    margin-top: 24px;
+}
+
+.menu-common-item {
+    background: #115890;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 50px;
+}
+
+.menu-active {
+    background: #317cb3;
+}
+
+.group-menu {
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+.menu-title {
+    vertical-align: middle;
+    display: inline-block;
+    height: 38px;
+    padding-left: 10px
+}
+
+.card-content-cls {
+    font-family: roboto-light;
+    color: $card-content-font-color-normal;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    padding: $padding-30 $padding-page-30;
+}
+
+input[type="button"] {
+    font-family: arial-bold;
+    font-size: $card-content-title-size;
+}
+
+control-messages div, app-control-messages div {
+    color: $error-font-color;
+    padding-left: $padding-page-10;
+    padding-top: $padding-page-10;
+}
+
+control-messages .errorIcon, app-control-messages .errorIcon {
+    padding: 0px 6px;
+}
+
+.segment-button {
+    font-family: arial-bold;
+    color: #818181 !important;
+    font-weight: normal;
+    font-size: $card-content-title-size !important;
+    border-bottom: 1px solid #c8c7cc !important;
+    padding-top: 5px;
+}
+
+.segment-button.segment-activated {
+    font-family: arial-bold;
+    font-weight: normal;
+    color: #000000 !important;
+    font-size: $card-content-title-size !important;
+    border-bottom: 5px solid #1866a3 !important;
+}
+
+.text-input {
+    font-family: roboto-light;
+    font-size: $input-field-font-size;
+    margin: 0px !important;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: $input-field-font-size !important;
+}
+
+.password-button-hide {
+    background-color: #818181;
+}
+
+.shadow-img {
+    content: url($assets-url+'/images/icons-ios/Asset38@2x.png');
+    position: absolute;
+    border: none;
+    height: 12px;
+    width: 100%;
+}
+
+.menu-common-content {
+    background-color: #115890 !important;
+}
+
+.popover-arrow {
+    margin-top: 10px;
+}
+
+.popover-content {
+    margin-top: 10px;
+    width: 70% !important;
+}
+
+.platform-android {
+    .popover-content {
+        margin-top: 40px !important;
+        width: 70% !important;
+    }
+}
+
+.question-container{
+    margin-bottom: 20px;
+}
+.question-container .drawupselectoptions{
+    max-width:100%;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.question-container .action-sheet-ios .action-sheet-button {
+    color:#115890;
+}
+
+ion-content {
+    background-color: #dddddd !important;
+}
+
+.searchFilterContainer {
+    color: $card-content-font-color-highlighted-background; //height: 65px;
+    background-color: $background-color-sign-register-promo;
+    ion-row {
+        ion-col {
+            padding: $padding-page-20 $padding-page-30 !important;
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    .searchLabelCls {
+        font-family: arial-bold;
+        font-size: $card-content-body-size;
+        padding-left: $padding-page-15;
+        padding-top: 5px;
+        float: left;
+    }
+    .searchImgcls {
+        float: left;
+    }
+    .rightBorderCls {
+        border-right: 1px solid white;
+    }
+    .memberNameCls {
+        font-size: $card-content-body-size;
+    }
+    .memberTypeCls {
+        font-size: $card-content-body-medium-font-size;
+        color: $search-filter-secondary-color;
+    }
+    .searchbar {
+        background: none !important;
+        padding: 0px !important;
+        border: 0px !important;
+        font-family: roboto-light;
+        color: $page-content-light-label-color;
+        font-size: $card-content-body-size;
+        min-height: 34px !important;
+    }
+}
+
+.item-inner {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: $background-color-highlighted !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.highlight-matching-text {
+    background-color: #1866A3;
+    color: white;
+}
+
+ion-infinite-scroll {
+    .infinite-loading {
+        .infinite-loading-text {
+            display: inline-block;
+            position: relative;
+            top: -7px;
+            margin: 0 10px;
+        }
+        .infinite-loading-spinner {
+            display: inline-block;
+        }
+        .infinite-loading-spinner .spinner-ios line, .infinite-loading-spinner .spinner-ios-small line, .infinite-loading-spinner .spinner-crescent circle {
+            stroke: #1866A3;
+        }
+    }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    ion-app.ios {
+        padding-bottom: var(--myblue-safe-area-inset-bottom);
+    }
+    .footer {
+        padding-bottom: var(--myblue-safe-area-inset-bottom);
+    }
+    .ios .scroll-content {
+        margin-top: 55px;
+        margin-bottom: calc(47px + var(--myblue-safe-area-inset-bottom));
+    }
+}

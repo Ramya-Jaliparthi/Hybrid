@@ -1,0 +1,19 @@
+//@import '../../../assets/styles/_include.scss';
+
+
+.error-icon {
+    position: relative;
+    font-size: 18px;
+    color: #C1272D;
+    margin-right: 5px;
+    display: inline;
+}
+
+.error-message {
+    position: relative;
+    color: #C1272D;
+    font-size: 14px;
+    top: -2px;
+    display: inline;
+    /*@include Roboto(regular);*/
+}

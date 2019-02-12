@@ -1,0 +1,100 @@
+<header [title]='"Make Payment"'></header>
+<ion-content>
+        <form [formGroup]="makePayForm" (ngSubmit)="navigateToNextPage()">
+        
+            <!-- <div class="labelCls">When Do you want to Submit it ? *</div>
+            <ion-list class="whom-to-pay" radio-group formControlName="whenTosubmit">
+                <ion-list no-lines class="item item-block item-md item-radio ">
+                    <ion-radio mode="md" value="Now" item-left></ion-radio>
+                    <ion-label>Now</ion-label>
+                </ion-list>
+                <ion-list no-lines class="item item-block item-md item-radio ">
+                    <ion-radio mode="md" value="Later" item-left></ion-radio>
+                    <ion-label>Later</ion-label>c 
+                </ion-list>
+            </ion-list>
+
+            <div class="labelCls">Who Do you want to Pay ? *</div>
+            <ion-list class="whom-to-pay" radio-group formControlName="whomToPay">
+                <ion-list no-lines class="item item-block item-md item-radio">
+                    <ion-radio mode="md" value="Myself" item-left></ion-radio>
+                    <ion-label>Myself</ion-label>
+                </ion-list>
+                <ion-list no-lines class="item item-block item-md item-radio ">
+                    <ion-radio mode="md" value="Provider" item-left></ion-radio>
+                    <ion-label>Provider</ion-label>
+                </ion-list>
+            </ion-list>
+
+             -->
+
+            <ion-grid class="button-bg">
+                <div class="question-container">              
+                
+                        <div class="questionContainer">
+                            <p class="quesTitle">When Do you want to Submit it ? *</p>
+        
+                            <ion-list radio-group formControlName="whenTosubmit">
+                                <div class="box_transparent">
+                                    <div class="options_box">
+                                        
+                                        <ion-item class="item item-block item-md item-radio">
+        
+                                            <ion-radio mode="md" value="Now" item-left></ion-radio>
+                                            <ion-label class="lable_padding">Now</ion-label>
+                                        </ion-item>
+        
+                                        <ion-item class="item item-block item-md item-radio ">
+        
+                                            <ion-radio mode="md" value="Later" item-left></ion-radio>
+                                            <ion-label class="lable_padding">Later</ion-label>
+                                        </ion-item>
+                                        
+                                    </div>
+                                </div>
+                            </ion-list>
+        
+                        </div>
+                        <div class="questionContainer">
+                                <p class="quesTitle">Who Do you want to Pay ? *</p>
+            
+                                <ion-list radio-group formControlName="whomToPay">
+                                    <div class="box_transparent">
+                                        <div class="options_box">
+                                            
+                                            <ion-item class="item item-block item-md item-radio ">
+            
+                                                <ion-radio mode="md" value="Myself" item-left></ion-radio>
+                                                <ion-label class="lable_padding">Myself</ion-label>
+                                            </ion-item>
+            
+                                            <ion-item class="item item-block item-md item-radio ">
+            
+                                                <ion-radio mode="md" value="Provider" item-left></ion-radio>
+                                                <ion-label class="lable_padding">Provider</ion-label>
+                                            </ion-item>
+                                        </div>
+                                    </div>
+                                </ion-list>
+            
+                            </div>
+        
+                    </div>
+                <ion-row>
+                    <div class="buttonFull">
+                        <button class="ionBtncls" ion-button type="submit"> Next</button>
+                    </div>
+                    <div class="buttonFull">
+                        <button class="ionbtnclear" ion-button clear type="reset" (click)="clearAllFields()">Cancel</button>
+                    </div>
+                </ion-row>
+                <p class="note-text">* indicates a required field</p>
+            </ion-grid>
+
+        </form>
+        <img class="shadow-img" />
+   
+
+</ion-content>
+
+<footer></footer>

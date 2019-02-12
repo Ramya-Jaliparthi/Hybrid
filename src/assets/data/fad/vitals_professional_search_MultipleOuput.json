@@ -1,0 +1,108 @@
+{
+  "professionals": [
+    {
+     "doctorName": "Smith S Ho",
+     "specialty": "Internal Medicine",
+      "locations": [
+        {
+          "id": 100927456,
+          "name": "St Joseph Hospital",
+          "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+          "phone": "3018916100"
+        },
+        {
+          "id": 100927456,
+          "name": "St Joseph Hospital",
+          "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+          "phone": "3018916100"
+        },
+        {
+          "id": 100927456,
+          "name": "St Joseph Hospital",
+          "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+          "phone": "3018916100"
+        },
+        {
+          "id": 100927456,
+          "name": "St Joseph Hospital",
+          "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+          "phone": "3018916100"
+        }
+      ],
+      "reviews": {
+        "overallRating": 0,
+        "percentRecommended": 0,
+        "totalRatings": 0
+      }
+    },
+ {
+     "doctorName": "Smith A Stroustrup",
+     "specialty": "Internal Medicine",
+      "locations": [
+        {
+          "id": 100927452,
+          "name": "Faculty Practice Associates",
+          "address": "5 E 98th St, New York, NY, New York 10029",
+          "phone": "2122416186"
+        }
+      ],
+      "reviews": {
+        "overallRating": 0,
+        "percentRecommended": 0,
+        "totalRatings": 0
+      }
+    },
+{
+     "doctorName": "Smith Apisarnthanarax",
+     "specialty": "Radiation Oncology",
+      "locations": [
+        {
+          "id": 10092741,
+          "name": "Liver Tumor Clinic at Uwmc",
+          "address": "1959 NE Pacific St 3rd Fl, Seattle, WA, King 98195",
+          "phone": "2122416186"
+        }
+      ],
+      "reviews": {
+        "overallRating": 0,
+        "percentRecommended": 0,
+        "totalRatings": 0
+      }
+    },
+{
+     "doctorName": "Smith D Christenbury",
+     "specialty": "Physical Therapist",
+      "locations": [
+        {
+          "id": 10092741,
+          "name": "Physical Therapy Center LLC",
+          "address": "2400 South Blvd Ste 203, Charlotte, NC, Mecklenburg 28203",
+          "phone": "9808331293"
+        }
+      ],
+      "reviews": {
+        "overallRating": 0,
+        "percentRecommended": 0,
+        "totalRatings": 0
+      }
+    },
+{
+     "doctorName": "Smitha Bhat",
+     "specialty": "Psychologist",
+      "locations": [
+        {
+          "id": 1009274231,
+          "name": "Smitha Bhat PsyD",
+          "address": "300 E Roosevelt Rd Ste 105, Wheaton, IL, Dupage 60187",
+          "phone": "9808331293"
+        }
+      ],
+      "reviews": {
+        "overallRating": 4.3,
+        "percentRecommended": 92.0,
+        "totalRatings": 350
+      }
+    }
+
+  ]
+}

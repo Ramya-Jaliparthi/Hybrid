@@ -1,0 +1,55 @@
+<ion-list no-margin>
+    <ion-list-header text-right class="background-blue" (tap)="resetFilters()" style="text-transform: none !important;">
+        Clear all
+    </ion-list-header>
+    <div no-padding class="itemHeaderBorderCls">
+        <ion-row (tap)="sortBy('mostRecent')" class="rowBottomBorderCls">
+            <ion-col>Date</ion-col>
+            <ion-col col-auto text-right align-self-center style="padding-left:30px;font-family:roboto-light;">Most Recent</ion-col>
+            <ion-col col-2 text-right>
+                <img *ngIf="sortByOption == 'mostRecent'" class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'"
+                />
+            </ion-col>
+        </ion-row>
+        <ion-row (tap)="sortBy('oldestFirst')">
+            <ion-col text-right align-self-center style="padding-left:30px;font-family:roboto-light;">Oldest First</ion-col>
+            <ion-col col-2 text-right>
+                <img class="img-med" *ngIf="sortByOption == 'oldestFirst'" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'"
+                />
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding class="itemHeaderBorderCls">
+        <ion-row>
+            <ion-col align-self-center no-padding>Members</ion-col>
+            <ion-col text-right no-padding (click)="toggleList('members',$event)">
+                <ion-icon ios="ios-arrow-down" md="md-arrow-down" class="iconCls"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding [hidden]="memberListHidden" class="accordionItemBorderCls">
+        <ion-row *ngFor="let item of memberList" (tap)="selectMember(item)">
+            <ion-col no-padding align-self-center class="ellipsis">{{item.name}}</ion-col>
+            <ion-col no-padding col-2 text-right [hidden]="!item.selected">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding class="itemHeaderBorderCls">
+        <ion-row>
+            <ion-col no-padding align-self-center>Visit Types</ion-col>
+            <ion-col no-padding text-right (click)="toggleList('visitTypes',$event)">
+                <ion-icon ios="ios-arrow-down" md="md-arrow-down" class="iconCls"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div no-padding [hidden]="visitTypesHidden" class="accordionItemBorderCls">
+
+        <ion-row *ngFor="let item of visitTypes" (tap)="selectVisitType(item)">
+            <ion-col no-padding align-self-center>{{item.type}}</ion-col>
+            <ion-col no-padding col-2 text-right [hidden]="!item.selected">
+                <img class="img-med" [src]="config.assets_url+'/images/icons-ios/Asset96@2x.png'" />
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-list>

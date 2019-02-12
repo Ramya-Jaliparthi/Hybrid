@@ -1,0 +1,189 @@
+registration{
+    .toggleItemCls{
+        width: 100px;
+        border:1px solid red;
+    }
+    .content{
+         background: rgb(221, 221, 221) !important;
+    }
+    .scroll-content{
+        padding-left:0px !important;
+        padding-right: 0px !important;
+    }
+
+    p{
+        font-family : roboto-light;
+        padding-left:$padding-page-30;
+        padding-right:$padding-page-30;
+    }
+    .signUpContainerCls{
+        padding:0px $padding-page-30 $padding-page-30 $padding-page-30;
+        font-size: 0.9em;
+    }
+    .signUpcls{
+
+        //font-weight: bold;
+        font-size: 1.4em;
+        font-family: arial-bold;
+        
+    }
+    ion-row{
+        padding:0px $padding-page-30 $padding-page-30 $padding-page-30;
+}
+    .regSubTitleCls{
+        padding-bottom: $padding-20;
+        font-family: arial-bold;
+    }
+    .inputPwdCls{
+        border-bottom: 0px;
+        ion-label{
+            border-bottom : 0px !important;
+            padding-left: $padding-page-30 !important;
+            padding-bottom: 0px !important;
+        }
+        input{
+            width: 100%;
+            border: 0px;
+            font-family: roboto-light;
+            font-weight: normal;
+            font-size: $card-content-body-size;
+            //padding-left: $padding-page-30 !important;
+            //border: 1px solid green;
+            padding-left: 0px;
+            padding-right: 15px;
+        }
+    }
+    .submitBtnCls{
+        padding:0px $padding-page-30 $padding-page-30 $padding-page-30;
+        font-family: arial-bold !important;
+
+        div{
+            padding: $padding-page-30 0px $padding-page-30 0px;
+        }
+    }
+    
+    .pwdShowBtnCls{
+        width: 60px !important;
+        padding: 0 2rem;
+        height: 20px !important;
+        font-size: 1.2rem !important;
+        font-family: arial-bold;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right:15px !important;
+    }
+    .settingsCls{
+        padding:5px $padding-page-30;
+        width:100%;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        display:none;
+    }
+    .login_slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .1s;
+    }
+    .login_slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .1s;
+    }
+    .login_sliderlabel {
+        float:left;
+        padding:0px 10px 20px 10px;
+        width: 80%;
+        font-family: arial-bold;
+        
+    }
+    .toggleContentCls{
+        float:right;
+        padding:0px 10px 10px 10px;
+        width: 79%;
+        font-family: roboto-light;
+    }
+    input:checked + .login_slider {
+        background-color: #25bd27;
+    }
+
+    input:focus + .login_slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .login_slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .login_slider.round {
+        border-radius: 34px;
+    }
+    .login_slider.round:before {
+        border-radius: 50%;
+    }
+
+    .learnMore{
+		padding-top: $padding-30;
+	    font-family : arial-bold;
+	    color: $card-content-font-color-highlighted;
+	    font-size: 1 em;
+	    text-decoration: underline;
+	}
+}
+
+.mobileInputcls{
+    font-family: roboto-light;
+    border: none !important;
+    font-size: 1.4rem !important;
+    padding-left:0px;
+}
+
+.personalInfoFromCls ion-item .item-inner ion-label {
+    color: #000000;
+    border-bottom: 0px solid #DDDDDD;
+}
+
+.labelCls{
+    padding:($padding-page-30 * 2) $padding-page-20 0px $padding-page-30;
+    //font-weight:bold;
+    font-family: arial-bold;
+    font-size:$card-content-title-size;
+    border-bottom: 0.55px solid #c8c7cc;
+}
+.outlyingLinkCls{
+    //font-weight: bold;
+    font-family : arial-bold;
+    color: $card-content-font-color-highlighted;
+    
+}
+.fullwidth_in{
+		width:100%;
+    }
+.noBorder .item-inner{
+    border: none !important;
+
+    ion-label{
+        border: none !important;
+    }
+}
+.spanLinkCls, .alertSpanLinkCls{
+    text-decoration: underline;
+    //color: #1866a3;
+}

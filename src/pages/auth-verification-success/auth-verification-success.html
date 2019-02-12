@@ -1,0 +1,37 @@
+<ion-content no-scroll no-margin>
+    <div style="width: 100%; text-align: right">
+        <ion-icon name="close" (tap)="cancel($event)" [ngClass]="'close-icon-blue'" padding-right text-right></ion-icon>
+    </div>
+
+    <div class="shadowImgContainer">
+        <div>
+            <ion-row class="borderCls">
+                <ion-col class="contentCls" no-padding>
+                    <img [src]="config.assets_url+'/images/icons-ios/congrats-checkmark-icon-ios@3x.png'" [srcset]="config.assets_url+'/images/icons-ios/congrats-checkmark-icon-ios@2x.png 2x,'+ config.assets_url+'/images/icons-ios/congrats-checkmark-icon-ios@3x.png 3x'"
+                    />
+                </ion-col>
+            </ion-row>
+            <ion-row class="borderCls">
+                <ion-col class="boldCaption" no-padding>
+                    Congratulations!
+
+                </ion-col>
+            </ion-row>
+            <ion-row class="borderCls">
+                <ion-col class="contentCls" no-padding>
+                    You now have access to your personal health information and benefits.
+
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="bannerCls">
+            <img [src]="config.assets_url+'/images/icons-ios/congrats-graphic-banner-ios@2x.png'" />
+
+        </div>
+
+
+    </div>
+    <div class="btnContainerCls">
+        <button text-capitalize ion-button (tap)="goNext()" full>Sign In to MyBlue</button>
+    </div>
+</ion-content>

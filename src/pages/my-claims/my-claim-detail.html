@@ -1,0 +1,86 @@
+<header [title]="'Claim Details'" [activeTab]="'myClaims'"></header>
+<ion-content>
+    <img class="shadow-img" />
+    <div style="margin-bottom:15px;background-color:white;margin-top:15px;" *ngFor="let claimDetail of claimDetails">
+        <div>
+            <ion-grid no-padding no-margin class="claimDetailContainerCls">
+                <ion-row class="bottomBorder">
+                    <ion-col>
+                        <span class="claimDetailLabelCls">Date of Service:&nbsp;</span>
+                        <span class="valCls" *ngIf="!!claimDetail">{{claimDetail.DOS}}</span>
+                    </ion-col>
+                    <ion-col text-right>
+                        <span class="claimDetailLabelCls">Claim No.&nbsp;</span>
+                        <span class="valCls" *ngIf="!!claimDetail">{{claimDetail.intClmNum}}</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="bottomBorder">
+                    <ion-col>
+                        <div class="boldContentCls" *ngIf="!!claimDetail">{{claimDetail.provName}}</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="bottomBorder">
+                    <ion-col>
+                        <span class="boldContentCls" *ngIf="!!claimDetail">{{claimDetail.memFName}}</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="bottomBorder">
+                    <ion-col>
+                        <div>
+                            <span class="boldContentCls">Status: </span>
+                            <span [ngClass]="{'boldContentCls': true,'statusColorRed':claimDetail.status == 'Denied','statusColorGreen':claimDetail.status == 'Completed','statusColorOrange':claimDetail.status =='Partial','statusColorGray':claimDetail.status =='Pending'}"
+                                *ngIf="!!claimDetail">
+                                {{ claimDetail.status}}</span>
+                        </div>
+                        <div *ngIf="!!claimDetail" class="lineMsgCls">{{claimDetail.lineMsg}}</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Amount Submitted
+                    </ion-col>
+                    <ion-col text-right align-self-start [ngClass]="{'boldContentCls':true,'statusColorGray':claimDetail.prvSubAmt == 0}" *ngIf="!!claimDetail">
+                        {{claimDetail.prvSubAmt | currency:'USD':true}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div>Amount Allowed</div>
+                        <div>by Blue Cross</div>
+                    </ion-col>
+                    <ion-col text-right align-self-start [ngClass]="{'boldContentCls':true,'statusColorGray':claimDetail.alldAmt == 0}" *ngIf="!!claimDetail">
+                        {{claimDetail.alldAmt | currency:'USD':true}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div>Amount Paid</div>
+                        <div>by Blue Cross</div>
+                    </ion-col>
+                    <ion-col text-right align-self-start [ngClass]="{'boldContentCls':true,'statusColorGray':claimDetail.paidAmt == 0}" *ngIf="!!claimDetail">
+                        {{claimDetail.paidAmt | currency:'USD':true}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div>Amount Toward</div>
+                        <div>Your Deductible</div>
+                    </ion-col>
+                    <ion-col text-right align-self-start [ngClass]="{'boldContentCls':true,'statusColorGray':claimDetail.dedAmt == 0}" *ngIf="!!claimDetail">
+                        {{claimDetail.dedAmt | currency:'USD':true }}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Total Amount Billed
+                    </ion-col>
+                    <ion-col text-right align-self-start [ngClass]="{'boldContentCls':true,'statusColorGray':claimDetail.youOweAmt == 0}" *ngIf="!!claimDetail">
+                        {{claimDetail.youOweAmt | currency:'USD':true}}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <img class="shadow-img" />
+    </div>
+</ion-content>
+<footer [activeTab]="'myClaims'"></footer>

@@ -1,0 +1,218 @@
+@import './_colors.scss';
+@import './_fonts.scss';
+.text-bold {
+    @include Roboto(bold);
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 0.5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+.btn-half-width-right {
+  width: 48%;
+  float: right;
+}
+
+.btn-half-width-left {
+  width: 48%;
+  float: left;
+  text-align: center;
+}
+
+.btn-90 {
+    width: 90%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.sign-in-text {
+    color: $non-vdk-24-blue;
+}
+
+.prv-color {
+    color: $non-vdk-25-blue;
+}
+
+.btn {
+    text-transform: capitalize;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.br-top {
+    border-top: 1px solid $black-color-border;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right !important;
+}
+
+h2 {
+    font-size: 20px;
+    @include Roboto(bold);
+}
+
+h3 {
+    font-size: 18px;
+    // font-weight: 700;
+    @include Roboto(bold);
+}
+
+p {
+    font-size: 14px;
+}
+
+.ft-5 {
+    // font-weight: 500;
+    @include Roboto(medium);
+}
+
+.br {
+    border: 1px solid $border-gray;
+}
+
+.br-grey {
+    border-top: 1px solid $non-vdk-14-grey;
+    border-left: 1px solid $non-vdk-14-grey;
+    border-right: 1px solid $non-vdk-14-grey;
+    // border-bottom: 1px solid $non-vdk-14-grey;
+    @media only screen and (max-width: 992px) {
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid $non-vdk-14-grey;
+        border-right: 0px solid $non-vdk-14-grey;
+    }
+}
+
+.br-trl-grey {
+    border-top: 1px solid $non-vdk-11-grey;
+    border-left: 1px solid $non-vdk-11-grey;
+    border-right: 1px solid $non-vdk-11-grey;
+}
+
+.br-trl-B2 {
+    border-top: 1px solid $non-vdk-11-grey;
+    @media only screen and (min-width: 992px) {
+        border-left: 1px solid $non-vdk-11-grey;
+        border-right: 1px solid $non-vdk-11-grey;
+    }
+}
+
+.br-blr {
+    border-bottom: 1px solid $border-gray;
+    border-left: 1px solid $border-gray;
+    border-right: 1px solid $border-gray;
+}
+
+.font-18 {
+    font-size: 18px
+}
+
+.ft-16 {
+    font-size: 16px
+}
+
+.font-13-grey {
+    font-size: 12px;
+    color: $disabled_text_color;
+}
+
+.font-14-grey {
+    font-size: 14px;
+    color: $text-disabled-gray;
+}
+
+.font-16-grey {
+    font-size: 16px;
+    color: $text-disabled-gray;
+    * {
+        font-size: 16px;
+    }
+}
+
+.info-text {
+    a {
+        // font-weight: 500;
+        @include Roboto(medium);
+        font-size: 12px;
+        color: $link-primary-color;
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: $link-secondary-color;
+        ;
+    }
+    a:focus {
+        text-decoration: underline;
+        color: $new-color;
+    }
+    p {
+        font-size: 12px;
+        color: $black-color;
+    }
+}
+
+.verify-text {
+    a {
+        font-size: 16px;
+        color: $link-primary-color;
+        line-height: 22px;
+        // font-weight: 400;
+        @include Roboto(regular);
+    }
+    a:hover {
+        text-decoration: underline;
+        color: $link-secondary-color;
+        ;
+    }
+    a:focus {
+        text-decoration: underline;
+        color: $new-color;
+    }
+    p {
+        font-size: 16px;
+        color: $text-disabled-gray;
+        line-height: 22px;
+        // font-weight: 400;
+        @include Roboto(regular);
+    }
+}
+
+.font-15-grey {
+    font-size: 15px;
+    color: $non-vdk-3-grey;
+}
+
+
+/* Border Styles */
+
+.border-top-white {
+    border-top: 1px solid $non-vdk-11-grey;
+}
+
+.border-bottom-white {
+    border-bottom: 1px solid $background-white-color;
+}

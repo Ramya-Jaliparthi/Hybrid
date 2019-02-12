@@ -1,0 +1,159 @@
+<header [title]="showVerificationform ? 'Verify Your Account' : 'Forgot Username?'">
+</header>
+
+
+<ion-content no-padding>
+    <div *ngIf="showErrorMsgSection" class="errorBannerSection">
+        <ion-row class="middleContainerCls barColorOrange ">
+            <ion-col col-auto class="errorIconContainer">
+                <ion-icon name="ios-alert-outline" class="errorIcon"></ion-icon>
+            </ion-col>
+            <ion-col class="errorContent">
+                <div class="messageHeaderTitle" [innerHTML]="errorBannerTitle"></div>
+                <div class="boldContentCls">
+                    <span [innerHTML]="infoNotMatchRecords"></span>
+                    <span (tap)="gotoRegistration()">If you don't have an account,<br> <a>Register Now</a></span><br>
+                    <span [innerHTML]="verifyUnuserErrorPart"></span>
+                </div>
+                <!-- <div class="boldContentCls">
+                    <span (tap)="gotoRegistration()">If you don't have an account,
+                        <a>Register Now</a>.</span>
+                </div> -->
+            </ion-col>
+            <ion-col col-auto>
+                <button ion-button item-right icon-only (tap)="closeErrorMsgSection()" class="closeIconCls">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div *ngFor="let alert of errorAlerts" class="alertMessageContainer">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+            [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    </div>
+    <div *ngIf="showForgotUserform" class="verificationCodeFormCls">
+        <div>
+            <!--
+            <div class="pageSectionCls itemBottomBorder">
+                <div class="infoCls">{{needInfoFirst}}</div>
+            </div>
+            -->
+
+            <form [formGroup]="forgotUserForm" (ngSubmit)="getUserDetails($event, forgotUserForm)">
+
+
+                <div class="labelCls">Email Address</div>
+                <ion-item>
+                        <ion-input id="email" formControlName="emailAddress" [(ngModel)]="emailValue"  type="email" placeholder="yourname@domain.com" 
+                        autocorrect="off" autocapitalize="off" autocomplete="off"  (blur)="onEmailBlur()" (focus)="onEmailFocus()"
+                        (keyup)="onEmailKeyUp()"  (change)="onEmailChange($event)"></ion-input>
+                </ion-item>
+                <control-messages [control]="forgotUserForm.controls.emailAddress" *ngIf="isEmailBlur"></control-messages>
+
+                <div class="hrLine">
+                    <span>OR</span>
+                </div>
+
+                <div class="labelCls">Mobile Number</div>
+                <ion-item>
+                    <input formControlName="mobileNumber" [(ngModel)]="mobileNumberValue" class="mobileInputcls fullwidth_in" id="mobileNumberField" #mobileNumber type="tel"
+                         [textMask]="{mask: mobileMask}" placeholder="(555) 555-5555 (US phone number only)" autocorrect="off" autocapitalize="off" autocomplete="off"
+                        (keyup)="onMobileKeyUp()" (change)="onMobileChange($event)" (blur)="onMobileBlur()" (focus)="onMobileFocus()" />
+                </ion-item>
+                <control-messages [control]="forgotUserForm.controls.mobileNumber" *ngIf="isMobileBlur"></control-messages>
+
+
+                <div class="submitBtnCls" text-center>
+                    <button ion-button type="submit" full [disabled]="!isformDisabled(forgotUserForm)">Continue</button>
+                </div>
+
+                <div class="cancelBtnCls" text-center>
+                    <a href="#" (click)="cancelShowForgotUserForm()">Cancel</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <div class="verificationCodeFormCls" *ngIf="showDOBform">
+        <div>
+            <div class="pageSectionCls">
+                <div class="titleCls">
+                    <strong>Confirm Your Identity</strong>
+                </div>
+                <div class="infoCls">{{weHaveFoundMatch}}</div>
+            </div>
+            <form [formGroup]="verityAuthForm" (ngSubmit)="submitAuthFormDetails($event, verityAuthForm)">
+                <div>
+                    <div class="labelCls">Date of Birth*</div>
+                    <ion-item class="dobItemCls">
+                        <input id="dobInput" #dobInput formControlName="dateOfBirth" type="tel" autocomplete="off" placeholder="mm/dd/yyyy"
+                            [textMask]="{mask: dobMask}" (blur)="dateOfBirthBlur = true" (focus)="dateOfBirthBlur =false" pattern="[0-9/]*"
+                            inputmode="numeric" class="dobInput dobInputcls" />
+                    </ion-item>
+                    <control-messages [control]="verityAuthForm.controls.dateOfBirth" *ngIf="dateOfBirthBlur"></control-messages>
+                </div>
+                <div class="submitBtnCls" text-center>
+                    <button ion-button type="submit" full [disabled]="!isDOBformDisabled(verityAuthForm)">Continue</button>
+                </div>
+                <div class="pageSectionCls">* Field is required.</div>
+                <!--
+                <div class="cancelBtnCls" text-center>
+                    <a href="#" (click)="gotoLoginPage()">Cancel</a>
+                </div>
+                -->
+
+            </form>
+        </div>
+        <img class="shadow-img" />
+    </div>
+
+    <div *ngIf="showVerificationform" class="verificationCodeFormCls">
+            <div>
+                <div class="pageSectionCls">
+                    <div class="titleCls">
+                        <strong>Verification Code</strong>
+                    </div>
+                    <div class="infoCls">A 6-digit verification code has been sent to {{maskingEmail}}. You have 10 minutes to enter it below.</div>
+                </div>
+                <form [formGroup]="verificationCodeForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                    <div class="input-field col s12 accessCodeContainer">
+                        <input placeholder="" id="accesscode1" #accesscode1 (keydown)="handleBackspace(null, accesscode1,accesscode2,$event)" (keyup)="setFocus(null, accesscode1,accesscode2,$event)"
+                            type="tel" formControlName="accesscode1" maxlength="1" width="20" class="inputCls" />
+                        <input placeholder="" id="accesscode2" #accesscode2 (keydown)="handleBackspace(accesscode1, accesscode2,accesscode3,$event)"
+                            (keyup)="setFocus(accesscode1, accesscode2,accesscode3,$event)" type="tel" formControlName="accesscode2"
+                            maxlength="1" width="20" class="inputCls" />
+                        <input placeholder="" id="accesscode3" #accesscode3 (keydown)="handleBackspace(accesscode2, accesscode3,accesscode4,$event)"
+                            (keyup)="setFocus(accesscode2, accesscode3,accesscode4,$event)" type="tel" formControlName="accesscode3"
+                            maxlength="1" width="20" class="inputCls" />
+                        <input placeholder="" id="accesscode4" #accesscode4 (keydown)="handleBackspace(accesscode3, accesscode4,accesscode5,$event)"
+                            (keyup)="setFocus(accesscode3, accesscode4,accesscode5,$event)" type="tel" formControlName="accesscode4"
+                            maxlength="1" width="20" class="inputCls" />
+                        <input placeholder="" id="accesscode5" #accesscode5 (keydown)="handleBackspace(accesscode4, accesscode5,accesscode6,$event)"
+                            (keyup)="setFocus(accesscode4, accesscode5,accesscode6,$event)" type="tel" formControlName="accesscode5"
+                            maxlength="1" width="20" class="inputCls" />
+                        <input placeholder="" id="accesscode6" #accesscode6 (keydown)="handleBackspace(accesscode5, accesscode6,accesscode6,$event)"
+                            (keyup)="setFocus(accesscode5, accesscode6,accesscode6,$event)" type="tel" formControlName="accesscode6"
+                            maxlength="1" width="20" class="inputCls" />
+                        <label for="accesscode" class="active"></label>
+                    </div>
+                    <div class="nbsp">&nbsp;</div>
+                    <div class="resendSectionCls">
+                        <div>Need a new verification code?</div>
+                        <div class="padding-top" id="sendAnchorTagId">
+                            <a class="cursor-pointer" (tap)="resendVerificationCode()">Send it Again</a>
+                        </div>
+                    </div>
+    
+                    <div class="submitBtnCls" text-center>
+                        <button ion-button type="submit" full [disabled]="disableAccessBtn">Continue</button>
+                    </div>
+                </form>
+            </div>
+            <img class="shadow-img" />
+        </div>
+
+
+</ion-content>
+<footer></footer>

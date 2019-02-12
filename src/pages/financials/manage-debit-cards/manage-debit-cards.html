@@ -1,0 +1,25 @@
+<header [title]='"Manage Debit Cards"'></header>
+
+<ion-content>
+  <!--success-->
+  <div class="review-submit-success" *ngIf="notifyTextMsg">
+      <span class="check-circle">
+        <i class="fal fa-check-circle"></i>
+      </span>&nbsp;
+      <span class="success-text">{{notifyTextMsg}}</span>
+    </div>
+    
+  <ion-item-group>
+    <!--show card details -->
+    <ion-item ion-item *ngFor="let card of cardLists, let index = i" (click)="navigateToCardDetailsPage(card)" class="accountHeading">
+        <div [ngClass]="getCardStatus(card.cardStatusCode)"> {{getCardStatus(card.cardStatusCode)}}</div>
+        <div class="accountNbr">xxxxxx-{{card.cardLast4Digits}}</div>
+      <div class="accountHolder"> {{card.firstName}} {{card.lastName}}</div>
+      <ion-icon item-end name="arrow-forward"></ion-icon>
+    </ion-item>
+  </ion-item-group>
+  <img class="shadow-img" />
+  <br>
+</ion-content>
+
+<footer></footer>

@@ -1,0 +1,34 @@
+<header [title]="'About MyBlue App'"></header>
+
+
+<ion-content class="background">
+    <ion-list no-margin>
+        <ion-grid ion-item no-padding>
+            <ion-row justify-content-start>
+                <ion-col col-6>
+                    <img alt="logo" padding-left style="height: 25px;" [src]="config.assets_url+'/images/icons-ios/myblue-logo-about@3x.png'"
+                    />
+                </ion-col>
+                <ion-col col-6 text-right>
+                    <p style="white-space:normal;word-wrap:break-word;">Build {{ buildNumber }} Version {{ versionNumber }} </p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <button no-padding ion-item (tap)="itemSelected('terms')">
+            <label class="bold">Terms of Use</label>
+            <ion-icon class="detailArrowCls" md="ios-arrow-forward"></ion-icon>
+        </button>
+        <button no-padding ion-item (tap)="itemSelected('privacy')">
+            <label class="bold">Confidentiality</label>
+            <ion-icon class="detailArrowCls" md="ios-arrow-forward"></ion-icon>
+        </button>
+        <button no-padding ion-item (tap)="itemSelected('feature-guide')">
+            <label class="bold">Feature Guides</label>
+            <ion-icon class="detailArrowCls" md="ios-arrow-forward"></ion-icon>
+        </button>
+    </ion-list>
+    <img class="shadow-img" />
+
+</ion-content>
+
+<footer></footer>

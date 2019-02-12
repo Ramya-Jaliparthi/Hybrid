@@ -1,0 +1,206 @@
+page-ssn-auth {
+    .progress-container{
+        border-bottom: 1px solid #b2b2b2;
+        width: 100%;
+        text-align: center;
+        height: 47px;
+        padding: 10px;
+    }
+    .progress{
+         height: 30px;
+        width: 30px;
+        border: 1px solid #92278f;
+        display: inline-block;
+        border-radius: 15px;
+        color: #92278f;
+        padding-top: 6px;
+        margin-left: 7px;
+    }
+    .active{
+        background: #92278f;
+        color: white;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .small{ 
+        font-size: 12px;
+    }
+    .border{
+        //border-top: 1px solid #b2b2b2;
+        border-bottom: 1px solid #b2b2b2;
+    }
+    .blue-md{
+        background: #115890
+    }
+    .round{
+        border-radius: 12px;
+    }
+    .link{
+        color: gray;
+        text-decoration: underline;
+        font-family:arial-bold;
+    }
+
+    .titleCls{
+        font-family:arial-bold;
+        font-size: 16px;
+    }
+    .titleClsNoBold{
+        font-weight: 400;
+        font-size: 15px;
+        padding-top: 10px !important;
+    }
+
+    .padding_para{
+        padding-bottom: 0px;
+        padding-top: 2px !important;
+    }
+
+
+    .subTitleCls{
+        font-family:arial-bold;
+        font-size: $card-content-body-size;
+        padding-bottom: $padding-page-15;
+        border-bottom: 0.55px solid #c8c7cc;
+    }
+
+     .noBorder{
+        border-bottom: 0px solid #c8c7cc !important;
+    }
+    
+    .modalContent{
+        background-color: #1866a3;
+        height: 100%;
+        color:#fff;
+        
+    }
+    .content-ios hr {
+        height: 1.5px !important;
+        color: #2176b5;
+        background-color: rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .content-hr{
+        padding-top: 10px;
+        text-align: center;
+        color: #2176b5;
+        font-weight: bold;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    .modalCloseCls{
+        height: 40px;
+        width: 40px;
+        padding-right: 10px;
+        float: right;
+        background:none;
+    }
+
+    .orSection{
+        width: 9%;
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        font-size: 18px;
+        font-family: arial-bold;
+    }
+
+    .orMain{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .hrLine{
+        padding-top:15px; 
+        width:100%; 
+        text-align:center; 
+        border-bottom: 1px solid #dedede; 
+        line-height:0.1em; 
+        margin:10px 0 20px;
+    }
+    .hrLine span { 
+        background:#fff; 
+        padding:0 10px; 
+        font-weight: bold;
+        font-family: arial-bold;
+        font-size: 1.1em;
+    }
+    .socialSecurityOr {
+        padding-top: 25px;
+    }
+    .ansSecurity{
+        font-size: 1.1em;
+    }
+    .ansSecurity:first-child{
+        padding-bottom: 0px;
+    }
+    .verifyIdentityCancel {
+        text-decoration: none;
+        color: #1866A3;
+        font-weight: bold;
+    }
+    .showContactNumberForm {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .progress-container form{
+    height: -webkit-fill-available;
+}
+
+.showContactNumberForm .labelCls {
+    min-height: 403px;
+}
+
+.alertIcon{
+        padding-top: 5px;
+        font-size: 20px;
+        text-align: right;
+        margin-left:10px;
+    }
+    .errLabelCls{
+        padding:30px 10px 0px 15px;
+        font-family: arial-bold;
+        font-size: 1.1em;
+        border-bottom: 0.55px solid #c8c7cc;
+        color: #C1272D;
+    }
+    .errMsg{
+        padding-top: 5px;
+        padding-left:10px;
+        color: #C1272D;
+    }
+    .showContactNumberForm .contactNumber{
+        margin-top: 20px;
+    }
+    .lnLink{
+        color: #1866A3;
+        font-family: arial-bold;
+        padding-left: 12px;
+        padding-top: 18px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .chooseOneOf3 {
+        font-size: 16px;
+    }
+    .ssnAuthSubmit{
+        font-family:arial-bold;
+    }
+    .ssnAuthLockMsg{
+        word-break:keep-all
+    }
+    .alertMessageCardContainer{
+        margin-top : '0px'
+    }
+    .ssnAuthContainer{
+        margin-bottom:15px;
+        background-color:white;
+    }
+    .securityQuesTxt{
+        border: none;
+    }
+}

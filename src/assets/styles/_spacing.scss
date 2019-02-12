@@ -1,0 +1,120 @@
+$margin-list: 0 30;
+@each $current-margin-val in $margin-list {
+    $i: index($margin-list, $current-margin-val);
+    .m-#{$current-margin-val} {
+        margin: #{$current-margin-val}px !important;
+    }
+}
+
+$margin-top-bottom-list: -5 0 5 20 25;
+@each $current-margin-top-bottom-val in $margin-top-bottom-list {
+    $i: index($margin-top-bottom-list, $current-margin-top-bottom-val);
+    .mt-mb-#{$current-margin-top-bottom-val} {
+        margin: #{$current-margin-top-bottom-val}px auto !important;
+    }
+}
+
+$margin-right-list: -15 0 5 10 12 15 20 35;
+@each $current-margin-right-val in $margin-right-list {
+    $i: index($margin-right-list, $current-margin-right-val);
+    .mr-#{$current-margin-right-val} {
+        margin-right: #{$current-margin-right-val}px !important;
+    }
+}
+
+$margin-left-list: -25 -15 0 3 5 10 12 15 20 25;
+@each $current-margin-left-val in $margin-left-list {
+    $i: index($margin-left-list, $current-margin-left-val);
+    .ml-#{$current-margin-left-val} {
+        margin-left: #{$current-margin-left-val}px !important;
+    }
+}
+
+$margin-top-list: -15 -5 0 2 5 10 14 15 20 25 30 40 100;
+@each $current-margin-top-val in $margin-top-list {
+    $i: index($margin-top-list, $current-margin-top-val);
+    .mt-#{$current-margin-top-val} {
+        margin-top: #{$current-margin-top-val}px !important;
+    }
+}
+
+$margin-bottom-list: -10 0 5 10 12 17 20 25 30 35 40;
+@each $current-margin-bottom-val in $margin-bottom-list {
+    $i: index($margin-bottom-list, $current-margin-bottom-val);
+    .mb-#{$current-margin-bottom-val} {
+        margin-bottom: #{$current-margin-bottom-val}px !important;
+    }
+}
+
+$padding-list: 0 10 15 20 25;
+@each $current-padding-val in $padding-list {
+    $i: index($padding-list, $current-padding-val);
+    .pd-#{$current-padding-val} {
+        padding: #{$current-padding-val}px !important;
+    }
+}
+
+$padding-left-list: 0 5 10 15 20;
+@each $current-padding-left-val in $padding-left-list {
+    $i: index($padding-left-list, $current-padding-left-val);
+    .pl-#{$current-padding-left-val} {
+        padding-left: #{$current-padding-left-val}px !important;
+    }
+}
+
+$padding-top-list: 0 10 15 20 40;
+@each $current-padding-top-val in $padding-top-list {
+    $i: index($padding-top-list, $current-padding-top-val);
+    .pt-#{$current-padding-top-val} {
+        padding-top: #{$current-padding-top-val}px !important;
+    }
+}
+
+$padding-bottom-list: -10 0 5 10 15 17 20 25 30 40;
+@each $current-padding-bottom-val in $padding-bottom-list {
+    $i: index($padding-bottom-list, $current-padding-bottom-val);
+    .pb-#{$current-padding-bottom-val} {
+        padding-bottom: #{$current-padding-bottom-val}px !important;
+    }
+}
+
+$padding-right-list: 0 15 20;
+@each $current-padding-right-val in $padding-right-list {
+    $i: index($padding-right-list, $current-padding-right-val);
+    .pr-#{$current-padding-right-val} {
+        padding-right: #{$current-padding-right-val}px !important;
+    }
+}
+
+$padding-top-bottom-list: 10 25;
+@each $current-padding-top-bottom-val in $padding-top-bottom-list {
+    $i: index($padding-top-bottom-list, $current-padding-top-bottom-val);
+    .pt-pb-#{$current-padding-top-bottom-val} {
+        padding: #{$current-padding-top-bottom-val}px auto !important;
+    }
+}
+
+.fluid-width {
+  max-width: 100% !important;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+.pt-1rem{
+  padding-top: 1rem !important;
+}
+.pb-1rem{
+  padding-bottom: 1rem !important;
+}
+.pd-lr{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.pl-15 {
+    padding-left: 15px !important;
+}
+
+.pr-15 {
+    padding-right: 15px !important;
+}

@@ -1,0 +1,14 @@
+<header [title]="'Confidentiality'" [activeTab]="''"></header>
+<ion-content>
+    <div style="margin-bottom:15px;background-color:white;padding-top:15px;">
+        <div padding>
+            <div *ngFor="let item of privacyPolicyData"> 
+                <div class="tAndCTitleCls"><h2>{{item.Title}}</h2></div>
+                <div class="tAndCItemBody" [innerHTML]="item.Body | safeHtml"></div>
+            </div>
+        </div>
+        <img class="shadow-img"/>	
+    </div>
+</ion-content>
+
+<footer [activeTab]="''"></footer>

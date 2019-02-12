@@ -1,0 +1,82 @@
+<header [title]="'My Claims'" [activeTab]="'myClaims'">
+</header>
+<ion-content>
+    <ion-grid class="searchFilterContainer" no-padding no-margin>
+        <ion-row>
+            <ion-col align-self-center *ngIf="!isSearchBarShown && config.showFeature('myClaimsSearch')" col-auto class="rightBorderCls">
+                <div (tap)="showSearchBar()">
+                    <img [src]="config.assets_url+'/images/icons-ios/search-white.png'" style="float:left;width: 1.8em; height: 1.8em" />
+                    <div class="searchLabelCls">Search</div>
+                </div>
+            </ion-col>
+            <ion-col align-self-center *ngIf="isSearchBarShown" class="rightBorderCls">
+                <ion-searchbar #searchInput [autocomplete]="true" [placeholder]="'Search claims'" (ionInput)="onSearchInput($event)"></ion-searchbar>
+                <ion-list class="autoComplete" [style.display]="showAutoComplete && (getUniqueClaims() | claimsFilter:selectedVisitType).length > 0 ? 'block' : 'none'"
+                    style="max-height: 440px;">
+                    <ion-item *ngFor="let claim of (getUniqueClaims() | claimsFilter:selectedVisitType)" (click)="selectItem(claim)">
+                        <div class="mediumContentcls" text-capitalize>{{claim.provName | lowercase}}</div>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+            <ion-col align-self-center *ngIf="!isSearchBarShown">
+                <div class="memberNameCls">{{memberName}}</div>
+                <div class="memberTypeCls" *ngIf="memberName != 'All'">{{memberType}}</div>
+            </ion-col>
+            <ion-col *ngIf="config.showFeature('myClaimsDependents')" align-self-center col-auto #filterOption (click)="toggleFilterOptionsOnContainer(arrowDropDownIcon)">
+                <ion-icon name="ios-arrow-dropdown" class="icon-page" #arrowDropDownIcon (click)="toggleFilterOptions($event)"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <alert-message-card *ngIf="alert" [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type"
+        [alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    <div *ngFor="let claim of (claimsdata | claimsFilter:selectedVisitType | orderBy:sortDirection:'lastDOS')" style="margin-bottom:15px;background-color:white;margin-top:15px;">
+        <div (tap)="showClaimsDetails(claim, $event)">
+            <div class="topContainerCls">
+                <span class="lablecls">Date of Service:&nbsp;</span>
+                <span class="contentCls">{{claim.lastDOS}}</span>
+            </div>
+            <ion-row class="middleContainerCls">
+                <ion-col no-padding>
+                    <div class="boldContentCls">{{claim.provName}}</div>
+                    <div class="mediumContentcls">{{claim.memFName}} {{claim.memLName}}</div>
+                    <div class="smallContentcls">{{claim.isDependent?'Dependent':dispMemberType}}</div>
+                </ion-col>
+                <ion-col col-auto align-self-center *ngIf="claim.clmStatus!='Pending'">
+                    <ion-icon class="detailArrowCls" ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+                </ion-col>
+            </ion-row>
+            <div class="bottomContainerCls">
+                <ion-row>
+                    <ion-col align-self-center>
+                        <div class="lablecls">Amount Covered:</div>
+                        <div [ngClass]="{'amountCls':true,'statusColorGray':claim.billedAmt == 0}" *ngIf="claim.clmStatus!='Pending'">{{claim.billedAmt | currency:'USD':true }}</div>
+                        <div [ngClass]="{'amountCls':true}" *ngIf="claim.clmStatus=='Pending'">&#126;</div>
+                    </ion-col>
+
+                    <ion-col align-self-center>
+                        <div class="lablecls">What You Owe:</div>
+                        <div [ngClass]="{'amountCls':true,'statusColorGray':claim.youOweAmt == 0}" *ngIf="claim.clmStatus!='Pending'">{{claim.youOweAmt | currency:'USD':true }}</div>
+                        <div [ngClass]="{'amountCls':true}" *ngIf="claim.clmStatus=='Pending'">&#126;</div>
+                    </ion-col>
+                    <ion-col align-self-center text-right>
+                        <img *ngIf="claim.clmStatus=='Denied'" [src]="config.assets_url+'/images/icons-ios/Asset27@2x.png'" />
+                        <!-- denied -->
+                        <img *ngIf="claim.clmStatus=='Complete' && claim.clm_paymt_stat == 'Paid'" [src]="config.assets_url+'/images/icons-ios/Asset28@2x.png'"
+                        />
+                        <!-- completed -->
+                        <img *ngIf="claim.clmStatus=='Complete' && claim.clm_paymt_stat == 'Denied'" [src]="config.assets_url+'/images/icons-ios/Asset27@2x.png'"
+                        />
+                        <!-- denied -->
+                        <img *ngIf="claim.clmStatus=='Pending'" [src]="config.assets_url+'/images/icons-ios/Asset30@2x.png'" />
+                        <!-- pending -->
+                        <img *ngIf="claim.clmStatus=='Partial'" [src]="config.assets_url+'/images/icons-ios/Asset29@2x.png'" />
+                        <!-- partially denied -->
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+        <img class="shadow-img" />
+    </div>
+
+</ion-content>
+<footer [activeTab]="'myClaims'"></footer>

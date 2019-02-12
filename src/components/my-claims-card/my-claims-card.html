@@ -1,0 +1,35 @@
+<div *ngIf="memberInfo.clmDOS else nodataerror">
+  <div class="content-cls" (tap)="openMyClaims()">
+    <div>
+      <span class="countFont">{{memberInfo.numOfClmsSinceLastLogin}}</span> Unread Claims
+    </div>
+  </div>
+  <div class="subTitleCls">
+    Latest Claim
+  </div>
+  <div class="myClaimesGridCls" (tap)="openPage()">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-4 align-self-center>
+          <div class="companyNameCls">{{memberInfo.clmPrvName|lowercase}}</div>
+        </ion-col>
+        <ion-col col-5 align-self-center>
+          <div>Covered:&nbsp;
+            <span [ngClass]="{'statusColorGray': memberInfo.clmAllowAmt == 0}" style="font-weight: normal;font-family:roboto-light;">{{memberInfo.clmAllowAmt | currency:'USD':true }}</span>
+          </div>
+        </ion-col>
+        <ion-col col-3 align-self-center text-right>
+          <img *ngIf="memberInfo.clmStatus=='Denied'" [src]="config.assets_url+'/images/icons-ios/Asset27@2x.png'" />
+          <img *ngIf="memberInfo.clmStatus=='Complete' && memberInfo.clmPaymtStatus == 'Paid'" [src]="config.assets_url+'/images/icons-ios/Asset28@2x.png'"/>
+          <img *ngIf="memberInfo.clmStatus=='Complete' && memberInfo.clmPaymtStatus == 'Denied'" [src]="config.assets_url+'/images/icons-ios/Asset27@2x.png'"/>
+          <img *ngIf="memberInfo.clmStatus=='Pending'" [src]="config.assets_url+'/images/icons-ios/Asset30@2x.png'" />
+          <img *ngIf="memberInfo.clmStatus=='Partial'" [src]="config.assets_url+'/images/icons-ios/Asset29@2x.png'" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+<ng-template #nodataerror>
+  <div style="margin-top:15px; border-top:1px solid #DDDDDD" padding>You have no claims to display.</div>
+  <br/>
+</ng-template>

@@ -1,0 +1,60 @@
+<ion-content no-margin>
+    <ion-row padding-bottom class="pagQuesTitle">
+        <ion-col col-12 text-center>
+            <p class="header-title">Verify Your Account</p>
+        </ion-col>
+    </ion-row>
+    <div class="securityQuesContainer">
+        <div>
+            <div class="progress-container">
+                <div class="progress">1</div>
+                <div class="progress">2</div>
+                <div class="progress active">3</div>
+            </div>
+            <div *ngFor="let alert of alerts" class="alertMsgCard">
+                <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+                    [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+            </div>
+            <div class="question-container">
+
+                <p class="confirmYourIdentity confirmText">Confirm your Identity</p>
+                <p class="confirmText">You have 4 minutes to answer the security questions.</p>
+
+                <div *ngFor="let question of securityQuestions;let i = index" class="questionContainer">
+                    <p class="quesTitle">Question {{i+1}}</p>
+                    <p class="ques"> {{question.Text.Statement}}</p>
+
+                    <ion-list radio-group [(ngModel)]="selectedChoice[question.QuestionId]">
+                        <div class="box_transparent">
+                            <div class="options_box">
+                                <ion-list-header>
+                                    <p class="ques_item">Choose one of the following :</p>
+                                </ion-list-header>
+                                <ion-item *ngFor="let item of question.Choices, let i = index" class="item item-block item-md item-radio ">
+
+                                    <ion-radio mode="md" value="{{item.ChoiceId}}" item-left></ion-radio>
+                                    <ion-label class="lable_padding">{{ item.Text.Statement }}</ion-label>
+                                </ion-item>
+                            </div>
+                        </div>
+                    </ion-list>
+
+                </div>
+
+            </div>
+            <ion-row padding>
+                <ion-col col-12>
+                    <button ion-button (click)="postAnsweres()" full class="securityQueContinue">Continue</button>
+                </ion-col>
+            </ion-row>
+            <div *ngIf="!isMediCareUser">
+            <ion-row padding-bottom>
+                <ion-col col-12 text-center>
+                    <a class="link secQuestionsCancel" (tap)="cancel()">or enter social security number</a>
+                </ion-col>
+            </ion-row>
+           </div>
+        </div>
+    </div>
+
+</ion-content>

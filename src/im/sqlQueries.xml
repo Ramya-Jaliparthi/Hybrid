@@ -1,0 +1,75 @@
+<queries>
+
+	<query id="query_createAppStorage">
+		<sql>
+			<![CDATA[
+				CREATE TABLE IF NOT EXISTS APP_STORAGE (KEY VARCHAR(512), VALUE VARCHAR(1024), LAST_UPDATED_TIME VARCHAR(64), RESERVED1 VARCHAR(512),RESERVED2 VARCHAR(512),PRIMARY KEY(KEY))
+			]]>
+		</sql>
+		<parameters></parameters>
+	</query>	
+		
+	<query id="query_setStorageItem">
+	    <sql>
+	        <![CDATA[
+	        	INSERT OR REPLACE INTO APP_STORAGE(KEY, VALUE, LAST_UPDATED_TIME) VALUES(?,?,?) 
+	        ]]>
+	    </sql>
+	    <parameters>KEY:string,VALUE:string,LAST_UPDATED_TIME:string</parameters>
+	</query>
+	
+	<query id="query_updateStorageItem">
+	    <sql>
+	        <![CDATA[
+	        	UPDATE APP_STORAGE SET VALUE = ?, LAST_UPDATED_TIME = ? WHERE KEY = ?
+	        ]]>
+	    </sql>
+	    <parameters>VALUE:string,LAST_UPDATED_TIME:string,KEY:string</parameters>
+	</query>
+	
+	<query id="query_getAllStorageData">
+	    <sql>
+	        <![CDATA[
+	        	SELECT KEY, VALUE, LAST_UPDATED_TIME FROM APP_STORAGE
+	        ]]>
+	    </sql>
+	    <parameters></parameters>
+	</query>
+	
+	<query id="query_getStorageItem">
+	    <sql>
+	        <![CDATA[
+	        	SELECT VALUE FROM APP_STORAGE WHERE KEY = ?
+	        ]]>
+	    </sql>
+	    <parameters>KEY:string</parameters>
+	</query>
+	
+	<query id="query_getStorageCount">
+	    <sql>
+	        <![CDATA[
+	        	SELECT COUNT(*) FROM APP_STORAGE
+	        ]]>
+	    </sql>
+	    <parameters></parameters>
+	</query>
+
+	
+	<query id="query_removeStorageItem">
+	    <sql>
+	        <![CDATA[
+	        	DELETE FROM APP_STORAGE WHERE KEY = ?
+	        ]]>
+	    </sql>
+	    <parameters>KEY:string</parameters>
+	</query>
+
+	<query id="query_clearAppStorage">
+	    <sql>
+	        <![CDATA[
+	        	DELETE FROM APP_STORAGE
+	        ]]>
+	    </sql>
+	</query>
+
+</queries>

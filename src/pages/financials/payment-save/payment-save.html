@@ -1,0 +1,78 @@
+<header [title]='"Payment Transaction Details"'></header>
+
+<ion-content>
+    <div class="review-submit-success">
+        <span class="check-circle">
+          <i class="fal fa-check-circle"></i>
+        </span>&nbsp;
+        <span class="success-text">Success!</span>
+      </div>
+
+  <ion-item-group>
+    <div class="title">
+      <ng-container *ngIf="whomToPay==='Myself'; else ProviderLater">
+        Saved Payment to you
+      </ng-container>
+      <ng-template #ProviderLater>
+        <ng-container *ngIf="whomToPay==='Provider'">
+          Saved Payment to your Provider
+        </ng-container>
+      </ng-template>
+    </div>
+
+    <ion-item no-lines class="payInfo">
+      <span class="trans-amt"><b>$10,000<sup>00</sup></b></span>
+      <span *ngIf="payType==='Check'">to be paid by check</span>
+      <span>to be paid by direct deposit to <br />
+        <div class="acc-info">[Account Name]</div>
+      </span>
+    </ion-item>
+
+    <ion-item no-lines class="payment-details">
+      <div class="payment-title"> Transactions Details </div>
+      <div class="payeename"><b>John Doe</b></div>
+      <div><b>Provider: </b>Jane Smith</div>
+      <div><b>Service Type: </b>Dental</div>
+      <div><b>Note: </b>Note all about</div>
+    </ion-item>
+
+    <ion-item no-lines>
+      <div class="date-info" *ngIf="whenTosubmit==='Now'">Date of Transaction: 12/02/2018</div>
+      <div class="date-info">Date of Service: 12/01/2018 - 12/02/2018</div>
+    </ion-item>
+
+    <ion-item no-lines>
+      <div class="trans-amt" *ngIf="!isRecieptUploaded">You need to upload a reciept before <br/> you can submit your payment.</div>
+      <div class="trans-amt" *ngIf="isRecieptUploaded"><b>Everything looks good ?</b></div>
+    </ion-item>
+
+    <div class="btn-group">
+      <ion-grid>
+        <ion-row no-lines>
+          <div class="buttonFull">
+            <button class="ionBtncls" ion-button (click)="navigateBackToMakePayment()">
+              Edit Payment</button>
+          </div>
+        </ion-row>
+      </ion-grid>
+      <ion-item no-lines>
+        <div class="text-align-center"> or </div>
+      </ion-item>
+      <ion-grid>
+        <ion-row no-lines>
+          <div class="buttonFull">
+            <button [disabled]="!isRecieptUploaded" class="ionbtnclear" ion-button clear (click)="navigateToPaymentSuccess()">
+              Submit Payment</button>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </ion-item-group>
+
+  <img class="shadow-img" />
+  <br>
+
+</ion-content>
+
+<footer></footer>

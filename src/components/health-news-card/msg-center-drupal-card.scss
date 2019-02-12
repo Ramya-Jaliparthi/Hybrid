@@ -1,0 +1,42 @@
+msg-center-drupal-card {
+    .mediumContentcls {
+        color: $card-content-font-color-normal;
+        font-size: $card-content-body-size;
+    }
+    .middleContainerCls {
+        padding: 11px 2px !important;
+        ion-row {
+            ion-col {
+                padding: 0px;
+            }
+        }
+        .boldContentCls {
+            font-family: arial-bold;
+            font-size: $card-content-body-size;
+            padding-bottom: $padding-page-10;
+        }
+    }
+    .item-md {
+        .label-md {
+            margin: 6px 0px 6px 0px;
+        }
+        p {
+            color: #000;
+        }
+    }
+    .item-ios {
+        .label-ios {
+            margin: 6px 0px 6px 0px;
+        }
+        p {
+            color: #000;
+        }
+    }
+    .drupalContent {
+        margin-bottom: 15px;
+        background-color: white;
+        .drupalContainerCls {
+            padding: 6px 2px 3px 2px;
+        }
+    }
+}

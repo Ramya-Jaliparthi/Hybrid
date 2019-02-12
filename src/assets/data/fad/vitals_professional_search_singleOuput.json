@@ -1,0 +1,40 @@
+{
+    "professionals": [
+      {
+       "doctorName": "Smith S Ho",
+       "specialty": "Internal Medicine",
+        "locations": [
+          {
+            "id": 100927456,
+            "name": "St Joseph Hospital",
+            "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+            "phone": "3018916100"
+          },
+          {
+            "id": 100927456,
+            "name": "St Joseph Hospital",
+            "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+            "phone": "3018916100"
+          },
+          {
+            "id": 100927456,
+            "name": "St Joseph Hospital",
+            "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+            "phone": "3018916100"
+          },
+          {
+            "id": 100927456,
+            "name": "St Joseph Hospital",
+            "address": "7610 Carroll Ave Ste 280, Takoma Park, MD, Montgomery 20912",
+            "phone": "3018916100"
+          }
+        ],
+        "reviews": {
+          "overallRating": 0,
+          "percentRecommended": 0,
+          "totalRatings": 0
+        }
+      }
+  
+    ]
+  }

@@ -1,0 +1,203 @@
+<!--
+  Generated template for the FadFacilityListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="fad-facility-list-component">
+  <div class="div-tab" *ngIf="!showFilter">
+    <span class="filter" (click)="toggleFilter()" *ngIf="facilityList?.length > 0">
+      <span class="icon">
+        <i class="fal fa-plus-circle"></i>
+      </span>Filter</span>
+    <span class="in-active">Map</span>
+    <span>List</span>
+  </div>
+  <form [formGroup]="form">
+    <div class="filter-container" [ngClass]="{ 'hide': !showFilter}">
+      <div class="filter-top" (click)="toggleFilter()">
+        <span class="icon">
+          <i class="fal fa-minus-circle"></i>
+        </span>
+        Filter
+      </div>
+      <div class="filter-btn">
+        <!-- <button ion-button block full class="apply" (click)="applyFilter()">Apply Filters</button> -->
+        <button ion-button block full class="clear" (click)="clearFilter()">Clear Filters</button>
+      </div>
+      <ion-grid no-padding no-margin>
+        <ion-row>
+          <ion-col col-12>
+            <accordion [expanded]="accordionExpanded" [title]="'Sort By'" [subtitle]="selectedSort" class="sort-accordion">
+              <div class="md-radio" *ngFor="let item of sortList; let i = index">
+                <label for="sort-{{i}}">
+                  <span>{{ sortList[i].value }}</span>
+                  <input id="sort-{{i}}" (change)="sortChange()" type="radio" [value]="sortList[i].value" formControlName="sort" [checked]="sortList[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <ng-container *ngIf="filterDisplayList?.length > 0">
+              <div class="filter-display-list">
+                <div class="md-checkbox" formArrayName="filterDisplayList" *ngFor="let control of form.controls.filterDisplayList.controls; let i = index">
+                  <label for="options-{{i}}">
+                    <span>{{ filterDisplayList[i].name }} ({{ filterDisplayList[i].count || '0' }})</span>
+                    <input id="options-{{i}}" type="checkbox" [formControlName]="i" [checked]="filterDisplayList[i].selected">
+                    <div class="outer">
+                      <div class="inner"></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </ng-container>
+            <accordion [expanded]="accordionExpanded" [title]="'Distance'" *ngIf="locationGeo?.length > 0">
+              <div class="md-radio" *ngFor="let item of locationGeo; let i = index">
+                <label for="location-{{i}}">
+                  <span>{{ locationGeo[i].name }} ({{ locationGeo[i].count || '0' }})</span>
+                  <input id="location-{{i}}" type="radio" [value]="locationGeo[i].value" formControlName="locationGeo" [checked]="locationGeo[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Gender'" *ngIf="professionalGender?.length > 0">
+              <div class="md-radio" *ngFor="let control of professionalGender; let i = index">
+                <label for="gender-{{i}}">
+                  <span>{{ professionalGender[i].name }} ({{ professionalGender[i].count || '0' }})</span>
+                  <input id="gender-{{i}}" type="radio" [value]="professionalGender[i].value" formControlName="professionalGender" [checked]="professionalGender[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Languages'" *ngIf="professionalLanguages?.length > 0">
+              <div class="md-radio" *ngFor="let control of professionalLanguages; let i = index">
+                <label for="language-{{i}}">
+                  <span>{{ professionalLanguages[i].name }} ({{ professionalLanguages[i].count || '0' }})</span>
+                  <input id="language-{{i}}" type="radio" [value]="professionalLanguages[i].value" formControlName="professionalLanguage" [checked]="professionalLanguages[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Rating'" *ngIf="overallRating?.length > 0">
+              <div class="md-radio" *ngFor="let control of overallRating; let i = index">
+                <label for="rating-{{i}}">
+                  <span>{{ overallRating[i].name }} ({{ overallRating[i].count || '0' }})</span>
+                  <input id="rating-{{i}}" type="radio" [value]="overallRating[i].value" formControlName="overallRating" [checked]="overallRating[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Ages Treated'" *ngIf="treatedTypeCodes?.length > 0">
+              <div class="md-radio" *ngFor="let control of treatedTypeCodes; let i = index">
+                <label for="treatedType-{{i}}">
+                  <span>{{ treatedTypeCodes[i].name }} ({{ treatedTypeCodes[i].count || '0' }})</span>
+                  <input id="treatedType-{{i}}" type="radio" [value]="treatedTypeCodes[i].value" formControlName="treatedTypeCode" [checked]="treatedTypeCodes[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Specialties'" *ngIf="fieldSpecialtyIds?.length > 0">
+              <div class="md-radio" *ngFor="let control of fieldSpecialtyIds; let i = index">
+                <label for="specialty-{{i}}">
+                  <span>{{ fieldSpecialtyIds[i].name }} ({{ fieldSpecialtyIds[i].count || '0' }})</span>
+                  <input id="specialty-{{i}}" type="radio" [value]="fieldSpecialtyIds[i].value" formControlName="fieldSpecialtyId" [checked]="fieldSpecialtyIds[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Blue Distinction Recognition'" *ngIf="bdcTypeCodes?.length > 0">
+              <div class="md-radio" *ngFor="let control of bdcTypeCodes; let i = index">
+                <label for="bdcTypeCodes-{{i}}">
+                  <span>{{ bdcTypeCodes[i].name }} ({{ bdcTypeCodes[i].count || '0' }})</span>
+                  <input id="bdcTypeCodes-{{i}}" type="radio" [value]="bdcTypeCodes[i].value" formControlName="bdcTypeCode" [checked]="bdcTypeCodes[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Awards'" *ngIf="awardTypeCodes?.length > 0">
+              <div class="md-radio" *ngFor="let control of awardTypeCodes; let i = index">
+                <label for="awardTypeCodes-{{i}}">
+                  <span>{{ awardTypeCodes[i].name }} ({{ awardTypeCodes[i].count || '0' }})</span>
+                  <input id="awardTypeCodes-{{i}}" type="radio" [value]="awardTypeCodes[i].value" formControlName="awardTypeCode" [checked]="awardTypeCodes[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Clinical Quality Measure'" *ngIf="cqms?.length > 0">
+              <div class="md-radio" *ngFor="let control of cqms; let i = index">
+                <label for="cqms-{{i}}">
+                  <span>{{ cqms[i].name }} ({{ cqms[i].count || '0' }})</span>
+                  <input id="cqms-{{i}}" type="radio" [value]="cqms[i].value" formControlName="cqms" [checked]="cqms[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Disorder Treated'" *ngIf="disordersTreatedTypeCodes?.length > 0">
+              <div class="md-radio" *ngFor="let control of disordersTreatedTypeCodes; let i = index">
+                <label for="disorder-{{i}}">
+                  <span>{{ disordersTreatedTypeCodes[i].name }} ({{ disordersTreatedTypeCodes[i].count || '0' }})</span>
+                  <input id="disorder-{{i}}" type="radio" [value]="disordersTreatedTypeCodes[i].value" formControlName="disordersTreatedTypeCode"
+                    [checked]="disordersTreatedTypeCodes[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Treatment Method'" *ngIf="treatmentMethodsTypeCodes?.length > 0">
+              <div class="md-radio" *ngFor="let control of treatmentMethodsTypeCodes; let i = index">
+                <label for="treatment-{{i}}">
+                  <span>{{ treatmentMethodsTypeCodes[i].name }} ({{ treatmentMethodsTypeCodes[i].count || '0' }})</span>
+                  <input id="treatment-{{i}}" type="radio" [value]="treatmentMethodsTypeCodes[i].value" formControlName="treatmentMethodsTypeCode"
+                    [checked]="treatmentMethodsTypeCodes[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+            <accordion [expanded]="accordionExpanded" [title]="'Hospitals & Medical Groups'" *ngIf="grpHospitalAffiliationIds?.length > 0">
+              <div class="md-radio" *ngFor="let control of grpHospitalAffiliationIds; let i = index">
+                <label for="grpHospital-{{i}}">
+                  <span>{{ grpHospitalAffiliationIds[i].name }} ({{ grpHospitalAffiliationIds[i].count || '0' }})</span>
+                  <input id="grpHospital-{{i}}" type="radio" [value]="grpHospitalAffiliationIds[i].value" formControlName="grpHospitalAffiliationId"
+                    [checked]="grpHospitalAffiliationIds[i].selected">
+                  <div class="outer">
+                    <div class="inner"></div>
+                  </div>
+                </label>
+              </div>
+            </accordion>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </form>
+  <div *ngIf="!isNoSearchResults && facilityList && facilityList.length > 0" [ngClass]="{ 'hide': showFilter}">
+    <div *ngFor="let facility of facilityList; trackBy: trackByFn">
+      <page-fad-facility-card [componentInput]="getFacilityCardInput(facility)"></page-fad-facility-card>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content loadingText="Loading..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</div>

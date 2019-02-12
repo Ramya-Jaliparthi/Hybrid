@@ -1,0 +1,78 @@
+<header [title]="'Verify Your Account'" [hideMenu]="'true'" [hideBackButton]="true" [activeTab]="''">
+</header>
+
+<ion-content>
+
+	<div class="progress-container">
+		<div class="progress">1</div>
+		<div class="progress active">2</div>
+		<div class="progress">3</div>
+	</div>
+
+	<alert-message-card [showAlert]="showAlertMessage" [title]="alertMessageTitle" [message]="alertMessage" [type]="alertMessageType"></alert-message-card>
+	<div *ngFor="let alert of alerts" class="alertMessageContainer">
+		<alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+		 [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+	</div>
+
+	<div class="memberInfoContainer">
+		<div>
+			<form [formGroup]="authMemberCardInfoForm" (ngSubmit)="authenticateMemberCardInfo($event, authMemberCardInfoForm)" class="personalInfoFromCls" >
+				<ion-grid no-padding >
+					<ion-row>
+						<ion-col [ngClass]="{'disablesubTitleCls':memIDError==true}">
+							<div padding-left padding-top class="enterYourMemberId">Enter your Member ID Number</div>
+							<div padding-left padding-top class="titleCls errorlabel" [ngClass]="{'errorsubTitleCls':quesError==true}">Member ID Card*</div>
+							<!-- <div padding-left class="infoCls">All fields are required</div> -->
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<!-- <div padding-left padding-top [ngClass]="quesError ? 'errorsubTitleCls' : 'subTitleCls'">Member ID</div> -->
+							<ion-item class="memberIdClass">
+								<ion-input formControlName="memberid" #memberId (keyup)="setMaxLength(memberId, 12)" maxlength="12" type="text" placeholder="9 or 12 digit member ID"
+								 class="memberIdInputField" (blur)="onMemIdBlur=true" (focus)="onMemIdBlur=false" [readonly]="memIDError"></ion-input>
+							</ion-item>
+							<control-messages [control]="authMemberCardInfoForm.controls.memberid" *ngIf="onMemIdBlur"></control-messages>
+							<!-- <div padding-left class="memberIdTxt">9 or 12 digit member ID</div> -->
+						</ion-col>
+						<!-- <ion-col col-6>
+							<div padding-left padding-top [ngClass]="quesError ? 'errorsubTitleCls' : 'subTitleCls'">Suffix</div>
+							<ion-item [ngClass]='memberIdClass'>
+								<ion-input formControlName="suffix" #suffix (keyup)="setSuffixLength(suffix, 2)" maxlength="2" type="tel" placeholder="2-digits"
+								 style="padding-left: 15px;" (blur)="onSuffixBlur=true" (focus)="onSuffixBlur=false"></ion-input>
+							</ion-item>
+							<control-messages [control]="authMemberCardInfoForm.controls.suffix" *ngIf="onSuffixBlur"></control-messages>
+						</ion-col> -->
+					</ion-row>
+					<ion-row *ngIf="quesError">
+						<ion-col col-1 class="alertIcon">
+							<ion-icon class="warningIcon" name="ios-alert-outline" color="red"></ion-icon>
+						</ion-col>
+						<ion-col col-11 class="memberIdError">Please enter valid Member ID &amp; Suffix </ion-col>
+					</ion-row>
+					<ion-row padding>
+						<ion-col col-12>
+							<img [src]="config.assets_url+'/images/icons-ios/auth-screen2-card-example@5x.png'" />
+						</ion-col>
+					</ion-row>
+					<ion-row padding-left padding-right>
+						<ion-col col-12>
+							<button ion-button type="submit" full class="memberInfoContinueBtn" [disabled]="!isformDisabled(authMemberCardInfoForm,'ionbtn')">Continue</button>
+							<div class="fieldRequired">* Field is required</div>
+						</ion-col>
+					</ion-row>
+					<!--<ion-row padding-top padding-bottom>
+						<ion-col col-12 text-center>
+							<a padding-bottom class="cancelBtn" (tap)="cancel()">Cancel</a>
+						</ion-col>
+					</ion-row>-->
+				</ion-grid>
+			</form>
+		</div>
+		<img class="shadow-img" />
+	</div>
+
+</ion-content>
+
+<footer [activeTab]="''"></footer>

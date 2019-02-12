@@ -1,0 +1,115 @@
+<!--
+  Generated template for the FadLandingPageSearchResultsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-content>
+  <ion-grid>List Page</ion-grid>
+</ion-content> -->
+
+<!-- <ion-content padding>
+  <accordion *ngFor="let character of indexMap.getKeys().sort();let charIndex=index;" [title]="character">
+   <ion-list>
+     <ion-item *ngFor="let specialityName of indexMap.get(character)">
+      {{specialityName}}
+     </ion-item>
+     <ion-item>
+     
+    </ion-item>
+   </ion-list>
+  
+</accordion>
+</ion-content> -->
+
+<div class="fad-profile-card-component">
+  <div col-12 [class]="['card','profile-card', componentInput?.mode!=='MapItem'? 'profile-card-separator':'mapItemMode','mat-card','mobile-adjustments'].join(' ')">
+    <div class="card-body">
+      <div class="row btn-full-width">
+
+        <div col-1 no-padding no-margin>
+          <div class="md-checkbox">
+            <label>
+              <span></span>
+              <input type="checkbox" class="profileCardTitle profileCardCheckbox">
+              <div class="outer">
+                <div class="inner"></div>
+              </div>
+            </label>
+          </div>
+          <!-- <input type="checkbox" class="profileCardTitle profileCardCheckbox"> -->
+        </div>
+
+        <div col-10 no-margin class="card-content">
+          <div class="row">
+            <div col-12 no-padding>
+              <span class="profileCardTitle" (tap)="openProfile()">{{doctorName}}</span>
+              <div class="profileCardSubTitle">{{speciality}}</div>
+            </div>
+            <!-- *ngIf="doctorStarRating?.totalRatings>0" -->
+            <div col-12 no-padding>
+              <app-star-rating-component [componentInput]="doctorStarRating"></app-star-rating-component>
+            </div>
+
+            <!-- <div col-12 no-padding *ngIf="doctorStarRating.ratingInPercentage==0" style="font-size:14px">
+              <i *ngFor='let starItr of starNumberRange' class="fa fa-star"></i>
+            </div> -->
+
+          </div>
+
+          <div class="profilecard">
+            <div class="profile-card-article-body">
+              <div class="body-title">
+                {{medicalGroup}}
+              </div>
+              <div class="body-content">
+                <p class='body-content-address mt-2 mb-2'>{{address}}</p>
+                <span class="phone-icon">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </span>&nbsp;
+                <a class="phoneNumber" [href]="'tel:+'+phoneNumber">{{phoneNumber}} </a>
+                <p *ngIf="numberOfLocations>1" class='body-content-location mt-2 mb-2'>+ {{numberOfLocations-1}} more locations
+                </p>
+              </div>
+            </div>
+          </div>
+          <ng-container>
+            <ion-row class="margin">
+              <ion-col col-12>
+                <accordion [title]="noofaddress" [expanded]="false" *ngIf="isLocationsMore">
+                  <div>
+                    <ng-container *ngFor="let specialty of addresslist;let charIndex=index;">
+                      <div *ngIf="charIndex != 0" class="accordion-container-div">
+                        <a>{{specialty.address}} </a>
+                        <br>
+                        <span class="phone-icon" *ngIf="charIndex != 0">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>&nbsp;
+                        <a class="phoneNumber" [href]="'tel:+'+specialty.phone">{{specialty.phone}} </a>
+                      </div>
+                    </ng-container>
+                  </div>
+                </accordion>
+              </ion-col>
+            </ion-row>
+          </ng-container>
+
+          <div class="row">
+            <div class="authenticate-if-in-network">
+              <span class="check-circle">
+                <i class="fas fa-exclamation-circle"></i>
+              </span>&nbsp;
+              <a (tap)="gotoLoginPage()">{{authService.useridin?'Authenticate':'Login'}}</a>&nbsp;to see if In-Network
+            </div>
+          </div>
+        </div>
+
+        <div col-1 class="aside text-right" (tap)="openProfile()" no-padding no-margin>
+          <a href="javascript:void(0)" title="Click Here to View the Document Details">
+            <i class="fa fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

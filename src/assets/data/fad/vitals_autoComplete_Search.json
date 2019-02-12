@@ -1,0 +1,864 @@
+{
+    
+    "searchParameter": "string",
+  "professionalsCount": 87,
+  "facilitiesCount": 68,
+  "searchSpecialtyCount": 28,
+    "professionals": [
+        {
+            "id": 1001308258,
+            "provider_id": "p1001308258",
+            "name": "Test Infosolutions",
+            "type": "P",
+            "specialty": "Nurse Practitioner in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1001308258/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 102555792,
+                    "city": "Hoover",
+                    "state": "AL",
+                    "contract_id": 109382197
+                }
+            ]
+        },
+        {
+            "id": 1002295690,
+            "provider_id": "p1002295690",
+            "name": "Enrique Testa",
+            "type": "P",
+            "specialty": "Gynecology in Boston, MA",
+            "specialty_count": 2,
+            "href": "/api/professionals/1002295690/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 310234150,
+                    "city": "Allston",
+                    "state": "MA",
+                    "contract_id": 310721101
+                }
+            ]
+        },
+        {
+            "id": 1002283362,
+            "provider_id": "p1002283362",
+            "name": "Silvia Z Testa",
+            "type": "P",
+            "specialty": "Pediatric Neonatal Perinatal in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1002283362/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 310234196,
+                    "city": "Brighton",
+                    "state": "MA",
+                    "contract_id": 310471134
+                }
+            ]
+        },
+        {
+            "id": 1001014596,
+            "provider_id": "p1001014596",
+            "name": "Victor J Test",
+            "type": "P",
+            "specialty": "Pulmonary Diseases in Boston, MA",
+            "specialty_count": 2,
+            "href": "/api/professionals/1001014596/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 101958427,
+                    "city": "Durham",
+                    "state": "NC",
+                    "contract_id": 107207805
+                }
+            ]
+        },
+        {
+            "id": 1001014036,
+            "provider_id": "p1001014036",
+            "name": "Matthew R Test",
+            "type": "P",
+            "specialty": "Pediatrics in Boston, MA",
+            "specialty_count": 2,
+            "href": "/api/professionals/1001014036/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 101958365,
+                    "city": "Seattle",
+                    "state": "WA",
+                    "contract_id": 107207594
+                }
+            ]
+        },
+        {
+            "id": 1002168964,
+            "provider_id": "p1002168964",
+            "name": "Nicholas C Testani",
+            "type": "P",
+            "specialty": "Physical Therapy in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1002168964/profile",
+            "locations_count": 4,
+            "locations": [
+                {
+                    "id": 310234447,
+                    "city": "Danvers",
+                    "state": "MA",
+                    "contract_id": 311165566
+                }
+            ]
+        },
+        {
+            "id": 1002199323,
+            "provider_id": "p1002199323",
+            "name": "Alisa M Testa",
+            "type": "P",
+            "specialty": "Licensed Independent Clinical Social Worker in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1002199323/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 310234099,
+                    "city": "Leominster",
+                    "state": "MA",
+                    "contract_id": 311541966
+                }
+            ]
+        },
+        {
+            "id": 1001014201,
+            "provider_id": "p1001014201",
+            "name": "Timothy R Test Sr",
+            "type": "P",
+            "specialty": "Licensed Professional Counselor in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1001014201/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 101958387,
+                    "city": "Gettysburg",
+                    "state": "PA",
+                    "contract_id": 107207656
+                }
+            ]
+        },
+        {
+            "id": 1001067061,
+            "provider_id": "p1001067061",
+            "name": "Kezia Testa",
+            "type": "P",
+            "specialty": "Nurse Practitioner - Family in Boston, MA",
+            "specialty_count": 2,
+            "href": "/api/professionals/1001067061/profile",
+            "locations_count": 4,
+            "locations": [
+                {
+                    "id": 103197705,
+                    "city": "Groton",
+                    "state": "CT",
+                    "contract_id": 111783140
+                }
+            ]
+        },
+        {
+            "id": 1001015262,
+            "provider_id": "p1001015262",
+            "name": "Jacqueline B Testa",
+            "type": "P",
+            "specialty": "Licensed Professional Counselor in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1001015262/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 101958920,
+                    "city": "East Windsor",
+                    "state": "CT",
+                    "contract_id": 107209569
+                }
+            ]
+        },
+        {
+            "id": 1001012341,
+            "provider_id": "p1001012341",
+            "name": "Lucinda E Testo",
+            "type": "P",
+            "specialty": "Licensed Professional Counselor in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1001012341/profile",
+            "locations_count": 2,
+            "locations": [
+                {
+                    "id": 101960480,
+                    "city": "Glastonbury",
+                    "state": "CT",
+                    "contract_id": 107215124
+                }
+            ]
+        },
+        {
+            "id": 1001065169,
+            "provider_id": "p1001065169",
+            "name": "John A Testa",
+            "type": "P",
+            "specialty": "Internal Medicine in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/professionals/1001065169/profile",
+            "locations_count": 4,
+            "locations": [
+                {
+                    "id": 101958988,
+                    "city": "Cheshire",
+                    "state": "CT",
+                    "contract_id": 107209827
+                }
+            ]
+        }
+    ],
+    "facilities": [
+        {
+            "id": 1000287779,
+            "provider_id": "f1000287779",
+            "name": "SBMC Stress Test Panel",
+            "type": "F",
+            "specialty": "Cardiovascular Disease in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000287779/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100379375,
+                    "city": "Livingston",
+                    "state": "NJ",
+                    "contract_id": 101375743
+                }
+            ]
+        },
+        {
+            "id": 1000102655,
+            "provider_id": "f1000102655",
+            "name": "Institute for Back Test and Reh",
+            "type": "F",
+            "specialty": "Physical Therapist in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000102655/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100162052,
+                    "city": "Ridgefield",
+                    "state": "NJ",
+                    "contract_id": 102533311
+                }
+            ]
+        },
+        {
+            "id": 1000062880,
+            "provider_id": "f1000062880",
+            "name": "State of Me Hlth and Environmental Test Lab",
+            "type": "F",
+            "specialty": "Independent Laboratory in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000062880/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100073029,
+                    "city": "Augusta",
+                    "state": "ME",
+                    "contract_id": 100275318
+                }
+            ]
+        },
+        {
+            "id": 1000441223,
+            "provider_id": "f1000441223",
+            "name": "Milton Cardiac Testing PC",
+            "type": "F",
+            "specialty": "Medical Group in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000441223/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 310002046,
+                    "city": "Milton",
+                    "state": "MA",
+                    "contract_id": 310104554
+                }
+            ]
+        },
+        {
+            "id": 1000393026,
+            "provider_id": "f1000393026",
+            "name": "Testosterone Optimization Program Inc",
+            "type": "F",
+            "specialty": "Orthopedic Surgery in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000393026/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100553757,
+                    "city": "Fresno",
+                    "state": "CA",
+                    "contract_id": 102012388
+                }
+            ]
+        },
+        {
+            "id": 1000444471,
+            "provider_id": "f1000444471",
+            "name": "Melrose Wakefield Cardiac Testing",
+            "type": "F",
+            "specialty": "Medical Group in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000444471/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 310001951,
+                    "city": "Melrose",
+                    "state": "MA",
+                    "contract_id": 310102517
+                }
+            ]
+        },
+        {
+            "id": 1000079159,
+            "provider_id": "f1000079159",
+            "name": "Thomas Testa DPM PA",
+            "type": "F",
+            "specialty": "Podiatry-Surgical Chiropody in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000079159/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100118278,
+                    "city": "Nutley",
+                    "state": "NJ",
+                    "contract_id": 100432946
+                }
+            ]
+        },
+        {
+            "id": 1000220628,
+            "provider_id": "f1000220628",
+            "name": "Lisa M Testa OD Inc",
+            "type": "F",
+            "specialty": "Optometrist in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000220628/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100362325,
+                    "city": "Akron",
+                    "state": "OH",
+                    "contract_id": 101313452
+                }
+            ]
+        },
+        {
+            "id": 1000307941,
+            "provider_id": "f1000307941",
+            "name": "Tisa K Testai DO PC",
+            "type": "F",
+            "specialty": "Internal Medicine in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000307941/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100415170,
+                    "city": "Rochester Hills",
+                    "state": "MI",
+                    "contract_id": 101503910
+                }
+            ]
+        },
+        {
+            "id": 1000017791,
+            "provider_id": "f1000017791",
+            "name": "Nelso A Testa DDS PC",
+            "type": "F",
+            "specialty": "Multi-Specialty Clinic or other Group Practice in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000017791/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100017815,
+                    "city": "Omaha",
+                    "state": "NE",
+                    "contract_id": 100067001
+                }
+            ]
+        },
+        {
+            "id": 1000138813,
+            "provider_id": "f1000138813",
+            "name": "Dream Sleep Testing LLC",
+            "type": "F",
+            "specialty": "Sleep Medicine in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000138813/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 101514159,
+                    "city": "Bay City",
+                    "state": "MI",
+                    "contract_id": 102373241
+                }
+            ]
+        },
+        {
+            "id": 1000285711,
+            "provider_id": "f1000285711",
+            "name": "Complete Lab Tests LLC",
+            "type": "F",
+            "specialty": "Independent Laboratory in Boston, MA",
+            "specialty_count": 1,
+            "href": "/api/facilities/1000285711/profile",
+            "locations_count": 1,
+            "locations": [
+                {
+                    "id": 100463978,
+                    "city": "Westmont",
+                    "state": "IL",
+                    "contract_id": 101681380
+                }
+            ]
+        }
+    ],
+    "searchSpecialties": [
+        {
+            "id": 311000299,
+            "name": "Sleep Diagnostic Testing",
+            "name_translated": {
+                "en": "Sleep Diagnostic Testing",
+                "es": null
+            },
+            "resourceTypeCode": "F",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 11,
+                    "name": "Facility",
+                    "type_code": "F",
+                    "resourceTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "id": 311000253,
+            "name": "Audiology",
+            "name_translated": {
+                "en": "Audiology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000116,
+            "name": "Interventional Cardiology",
+            "name_translated": {
+                "en": "Interventional Cardiology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000210,
+            "name": "Reproductive Endocrinology",
+            "name_translated": {
+                "en": "Reproductive Endocrinology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000277,
+            "name": "Assisted Reproductive Technology",
+            "name_translated": {
+                "en": "Assisted Reproductive Technology",
+                "es": null
+            },
+            "resourceTypeCode": "F",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 11,
+                    "name": "Facility",
+                    "type_code": "F",
+                    "resourceTypeCode": "F"
+                }
+            ]
+        },
+        {
+            "id": 311000060,
+            "name": "Cardiovascular Disease",
+            "name_translated": {
+                "en": "Cardiovascular Disease",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000165,
+            "name": "Pediatric Cardiology",
+            "name_translated": {
+                "en": "Pediatric Cardiology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000141,
+            "name": "Neurotology",
+            "name_translated": {
+                "en": "Neurotology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000204,
+            "name": "Pulmonary Disease",
+            "name_translated": {
+                "en": "Pulmonary Disease",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000180,
+            "name": "Pediatric Otolaryngology",
+            "name_translated": {
+                "en": "Pediatric Otolaryngology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000157,
+            "name": "Otolaryngology",
+            "name_translated": {
+                "en": "Otolaryngology",
+                "es": null
+            },
+            "resourceTypeCode": "P",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 10,
+                    "name": "Professional",
+                    "type_code": "P",
+                    "resourceTypeCode": "P"
+                }
+            ]
+        },
+        {
+            "id": 311000297,
+            "name": "PET Scan Providers",
+            "name_translated": {
+                "en": "PET Scan Providers",
+                "es": null
+            },
+            "resourceTypeCode": "F",
+            "description": {
+                "en": null,
+                "es": null
+            },
+            "suppress_display": null,
+            "search_provider_types": [
+                {
+                    "id": 11,
+                    "name": "Facility",
+                    "type_code": "F",
+                    "resourceTypeCode": "F"
+                }
+            ]
+        }
+    ],
+    "procedures": [
+        {
+            "id": 100803,
+            "name": "Knee Repair (Inpatient)",
+            "locale_name": "Knee Repair (Inpatient)",
+            "description": "Knee Repair is surgery to repair any of the bones or tissues of the knee. For the purposes of this estimate, this is an inpatient procedure, with a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee repair",
+              "surgery"
+            ]
+          },
+          {
+            "id": 101101,
+            "name": "Knee Repair ACL (Arthroscopic)",
+            "locale_name": "Knee Repair ACL (Arthroscopic)",
+            "description": "Arthroscopic ACL Repair uses a long thin tube to examine and repair a torn Anterior Cruciate Ligament (ACL) in the knee. For the purposes of this estimate this is an outpatient procedure without a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee",
+              "acl",
+              "surgery"
+            ]
+          },
+          {
+            "id": 102301,
+            "name": "Knee Repair Cartilage (Arthroscopic)",
+            "locale_name": "Knee Repair Cartilage (Arthroscopic)",
+            "description": "Arthroscopic Knee Cartilage Repair uses a long thin tube to examine and repair the padding (cartilage) between the bones  in the knee. For the purposes of this estimate this is an outpatient procedure without a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee repair",
+              "surgery"
+            ]
+          },
+          {
+            "id": 100801,
+            "name": "Knee Replacement - Full (Inpatient)",
+            "locale_name": "Knee Replacement - Full (Inpatient)",
+            "description": "Knee Replacement is surgery to replace the knee with an artificial joint. For the purposes of this estimate this is an inpatient procedure with a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "artificial knee",
+              "surgery"
+            ]
+          },
+          {
+            "id": 102302,
+            "name": "Knee Repair Fluid Sac Removal (Arthroscopic)",
+            "locale_name": "Knee Repair Fluid Sac Removal (Arthroscopic)",
+            "description": "Arthroscopic Fluid Sac Removal in the Knee uses a long thin tube to remove the fluid sac (synovial tissue) within the knee. For the purposes of this estimate this is an outpatient procedure without a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee repair",
+              "surgery"
+            ]
+          },
+          {
+            "id": 102303,
+            "name": "Knee Repair Dead Bone Removal (Arthroscopic)",
+            "locale_name": "Knee Repair Dead Bone Removal (Arthroscopic)",
+            "description": "Arthroscopic Dead Bone Removal in the Knee uses a long thin tube to remove areas of dead bone to promote healing. For the purposes of this estimate this is an outpatient procedure without a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee repair",
+              "surgery"
+            ]
+          },
+          {
+            "id": 116503,
+            "name": "X-Ray Knee (4+ Views)",
+            "locale_name": "X-Ray Knee (4+ Views)",
+            "description": "An X-ray of the Knee is an imaging exam that uses a small amount of radiation to make a picture of the bones in the knee. In this exam, 4 or more images are taken from different angles.",
+            "default_resource_type": "F",
+            "keywords": [
+              "leg",
+              "xray",
+              "x ray",
+              "xr"
+            ]
+          },
+          {
+            "id": 116502,
+            "name": "X-Ray Knee (Three Views)",
+            "locale_name": "X-Ray Knee (Three Views)",
+            "description": "An X-ray of the Knee is an imaging exam that uses a small amount of radiation to make a picture of the bones in the knee. In this exam, three images are taken from different angles.",
+            "default_resource_type": "F",
+            "keywords": [
+              "leg",
+              "xray",
+              "x ray",
+              "xr"
+            ]
+          },
+          {
+            "id": 100802,
+            "name": "Artificial Joint Repair/Revision Hip or Knee",
+            "locale_name": "Artificial Joint Repair/Revision Hip or Knee",
+            "description": "Artificial Hip or Knee Revision/Repair is surgery to fix or replace an artificial joint. For the purposes of this estimate this is an inpatient procedure with a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "artificial knee repair",
+              "artificial hip repair",
+              "artificial knee replacement artificial hip replacement",
+              "surgery"
+            ]
+          },
+          {
+            "id": 116501,
+            "name": "X-Ray Knee (One or Two Views)",
+            "locale_name": "X-Ray Knee (One or Two Views)",
+            "description": "An X-ray of the Knee is an imaging exam that uses a small amount of radiation to make a picture of the bones in the knee. In this exam one or two images are taken from different angles.",
+            "default_resource_type": "F",
+            "keywords": [
+              "leg",
+              "xray",
+              "x ray",
+              "xr"
+            ]
+          },
+          {
+            "id": 110201,
+            "name": "Joint Replacement Multiple Lower Limb",
+            "locale_name": "Joint Replacement Multiple Lower Limb",
+            "description": "Multiple Lower Limb Joint Replacement is surgery to replace both knees, both hips, or both ankles with artificial joints. For the purposes of this estimate, this is an inpatient procedure, with a hospital stay.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee",
+              "hip",
+              "ankle",
+              "knees",
+              "hips",
+              "ankles",
+              "surgery",
+              "replacement"
+            ]
+          },
+          {
+            "id": 104502,
+            "name": "MRI Lower Limb (without Contrast)",
+            "locale_name": "MRI Lower Limb (without Contrast)",
+            "description": "An MRI of a Lower Limb is a scan to create a detailed 3-D image of the bones and tissues of the leg.",
+            "default_resource_type": "F",
+            "keywords": [
+              "knee",
+              "ankle",
+              "foot",
+              "leg",
+              "thigh",
+              "calf",
+              "mri",
+              "magnetic resonance imaging"
+            ]
+          }
+    ]
+}

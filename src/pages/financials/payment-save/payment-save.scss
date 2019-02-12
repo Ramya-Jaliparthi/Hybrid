@@ -1,0 +1,130 @@
+@import "../common/financials.scss";
+
+page-payment-save {
+  ion-content {
+    background: $background-color-normal;
+  }
+
+  div.title {
+    word-wrap: break-word;
+    padding: 24px 16px;
+    background-color: #ffffff !important;
+    font-size: 20px;
+    font-family: Arial;
+    color: #043167;
+    margin-top: -3px;
+  }
+
+  .trans-amt {
+    font-size: 20px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #043167;
+  }
+
+  .payInfo {
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #043167;
+    text-align: justify;
+  }
+
+ .acc-info {
+    margin-left: 9.4rem;
+  }
+
+  .payeename {
+    color: #043167;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+  }
+
+  .payment-details {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+  }
+
+  .payment-title {
+    margin-bottom: 16px;
+    color: #043167;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+  }
+
+  .buttonFull {
+    width: 100%;
+    margin-left: -2px;
+  }
+
+  .ionBtncls {
+    font-size: 1em;
+    background-color: #1866a3;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+  }
+
+  .item-ios .item-button {
+    padding: 2rem;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .ionbtnclear {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 35px;
+    margin-left: -4px;
+  }
+
+  .payment-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .date-info {
+    display: flex;
+    flex: 1;
+    align-content: flex-end;
+    font-family: roboto-light;
+    font-size: 1.3rem;
+    margin-left: 8rem;
+  }
+
+  .btn-group {
+    background: #ffffff !important;
+  }
+
+  .review-submit-success {
+    margin: 11px -16px;
+    margin: 15px -16px;
+    display: flex;
+    padding: 0px;
+    border-left: 5px solid #3DA148;
+    height: 41px;
+    background: #F2F2F2;
+    margin-left:0px;
+    padding: 15px 0px 50px 5px;
+    font-size: 0.9em;
+    margin-top: 15px;
+
+    
+    .success-text {
+        @include Roboto(bold);
+        font-size: 13px;
+        color: $title-color;
+        line-height: 41px;
+    }
+
+    .check-circle {
+        color: #3DA148;
+        padding: 0px 10px;
+        line-height: 41px;
+        font-size: 18px;
+    }
+    
+}
+}

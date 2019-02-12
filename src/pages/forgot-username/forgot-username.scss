@@ -1,0 +1,304 @@
+.forgot-page-css{
+ .content{
+         background: rgb(221, 221, 221) !important;
+    }
+    .scroll-content{
+        padding-left:0px !important;
+        padding-right: 0px !important;
+    }
+    .pageSectionCls{
+        padding:$padding-page-30;
+    }
+    .titleCls{
+        color:$card-content-font-color-highlighted; 
+        font-size: $card-content-title-size;
+        font-weight:bold;
+        padding-bottom:$padding-page-20;
+        font-family:$font-family-lable;
+        color: #000;
+    }
+
+    .dobInputcls{
+        font-family: roboto-light;
+        border: none !important;
+        padding-left:0px;
+    }
+
+    .labelCls{
+        padding:($padding-page-30 * 2) $padding-page-20 0px $padding-page-30;
+        font-weight:bold;
+        font-family: arial-bold;
+        font-size:$card-content-title-size;
+    }
+    .hrLine{
+        padding-top:50px; 
+        width:80%; 
+        text-align:center; 
+        border-bottom: 1px solid #dedede; 
+        line-height:0.1em; 
+        margin:0 auto;
+    }
+    .hrLine span { 
+        background:#fff; 
+        padding:0 10px; 
+        font-weight: bold;
+        font-family: arial-bold;
+        font-size: 1.1em;
+    }
+    ion-item{
+        padding:0px !important;
+    }
+    .input{
+        padding-left:$padding-page-30;
+    }
+    .submitBtnCls{
+        button{
+            font-family: arial-bold;
+        }
+        padding:$padding-page-30*2 $padding-page-30 $padding-page-30 $padding-page-30;
+    }
+    
+    .cursor-pointer{
+        color:$card-content-font-color-highlighted;
+        //border-bottom:1px solid $card-content-font-color-highlighted;
+        font-weight: bold;
+        text-decoration: none;
+        
+   }
+   .padding-top{
+       padding-top:$padding-page-20;
+   }
+    .resendSectionCls{
+       padding-left:$padding-page-30;
+       padding-top:$padding-page-30;
+   }
+
+   .verificationCodeFormCls input[type="text"],input[type="password"]{
+        width:15%;
+        border:0;
+        text-align: center;
+        border-bottom:3px solid darkgray;
+        line-height:1.5em;
+        font-size:1.1em;
+        font-weight:lighter;
+        color: darkgray;
+    }
+    .verificationCodeFormCls input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+        color:lightgray;
+        font-size:0.8em;
+    }
+
+    .resentMsgCls{
+        background-color: $background-color-sign-register-promo;
+        color:$card-content-font-color-highlighted-background;
+        padding:$padding-page-30;
+        font-weight:bold;
+        font-family: arial-bold;
+        font-size:$card-content-title-size;
+    }
+
+    .registerSection{
+        width:100%;
+        height:50px;
+        background-color: $background-color-sign-register-promo;
+        color: $card-content-font-color-highlighted-background;
+        padding-top:$padding-page-10;
+    }
+
+    .registerLeftSection{
+        width:70%;
+	    height:100%;
+	    float:left;
+         padding-left:$padding-page-30; 
+    }
+    .registerMiddleSection{
+        width:1px;
+        height:100%;
+        float:left;
+        margin-top:-10px;
+        background-color:$background-color-normal;
+    }
+    .registerRightSection{
+        width:28%;
+        height:100%;
+        float:right;
+        text-align:center;
+       
+    }
+
+    .registerLeftSection .headerLable{
+        
+        line-height:2em;
+        font-weight:bold;
+        font-family:$font-family-lable;
+    }
+    .registerLeftSection .textContent{
+        
+        color:$card-content-font-color-highlighted-background;
+        display:block;
+        font-size: $card-content-body-size;
+    }
+    .registerRightSection .headerLable{
+        padding-right:$padding-page-10;
+        line-height:2em;
+        font-weight:bold;
+        font-family:$font-family-lable;
+    }
+
+    /*alert-message-card .messageContainer {
+        padding: 15px 10px 15px 35px;
+        font-size: 0.9em;
+    }
+
+    alert-message-card .info {
+        border-left: $padding-page-15 solid #49A14A;        
+        background-image: url($assets-url+'/images/icons-ios/congrats-checkmark-icon-ios.png');
+        background-position: 5px 15px;
+        background-size: 22px;
+        background-repeat: no-repeat;
+    }
+    
+    alert-message-card  .error {
+        border-left:$padding-page-15 solid #B82433;        
+        background-image: url($assets-url+'/images/icons-ios/verifyidentity_error.png');
+        background-position: 5px 15px;
+        background-size: 22px;
+        background-repeat: no-repeat;
+    }
+    
+    alert-message-card .promo {
+        border-left:$padding-page-15 solid #c6dcee;
+        background-image: url($assets-url+'/images/icons-ios/select icon@2x.png');
+        background-position: 5px 15px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }   
+
+    alert-message-card  .error .messageHeaderTitle{
+        font-size: $card-content-title-size;
+        color: #B82433; 
+        font-weight: bold;
+        font-family:$font-family-lable;
+        padding-bottom: $padding-page-15;
+        
+    }
+    alert-message-card  .info .messageHeaderTitle{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;
+        padding-bottom: $padding-page-15;
+    }
+
+    alert-message-card  .promo .messageHeaderTitle{
+        font-size: $card-content-title-size;       
+        font-weight: bold;
+        font-family:$font-family-lable;
+        padding-bottom: $padding-page-15;
+    }*/
+    .mobileInputcls{
+        padding-left:15px;
+        background-color:#ffffff;
+    }
+    .mobileInputPlaceHolder::placeholder{
+        color: #dcdcdc;
+    }
+    .middleContainerCls.barColorOrange{
+        border-left:7px solid #C1272D;
+        padding: 15px;
+        border-bottom: 1px solid #EEE;
+    }
+    
+    .middleContainerCls .boldContentCls{ 
+        font-family: arial-bold;
+        font-size: 0.9em;
+        padding-bottom: 5px;
+     }
+    .dobInput {
+        width: 100%;
+        padding-left: 15px;
+        border: 0px !important;
+        text-align: left;
+        font-size: 0.9em !important;
+        font-weight: 100;
+    }
+
+    .cancelBtnCls{
+        padding-bottom: 20px;
+        padding-top: 10px;
+        font-family: arial-bold;
+        font-size: 0.9em;
+        text-decoration: none;
+        color: #1866A3;
+        font-weight: bold;
+    }
+
+    .middleContainerCls.barColorOrange a{
+        text-decoration: underline;        
+     } 
+
+     .verificationCodeFormCls .cancelBtnCls a{
+        color: #1866A3;
+        text-decoration: none;
+        font-family: arial-bold;
+        font-weight: bold;
+     }  
+	 .fullwidth_in{
+        width: 100%
+     }
+     .closeIconCls {
+        background: none !important;
+        color: #2f75ab;
+        font-size: 1.20em !important;
+        height: auto !important;
+        width: auto !important;
+        margin: 0px !important;
+        min-width: auto !important;
+        box-shadow: none !important;
+    }
+    .messageHeaderTitle{
+        font-size: $card-content-title-size; 
+        font-weight: bold;
+        font-family:$font-family-lable;
+        padding-bottom: $padding-page-15;
+        padding-top: 5px;       
+    }
+    .errorContent{
+        padding-left: 10px;
+    }
+    .errorIconContainer .errorIcon {
+        font-size: 1.8em;
+    }
+    .infoCls{
+        font-size: 14px;
+        padding-top: $padding-page-15;
+    }
+    .inputCls{
+        width:15%;
+        border:0;
+        border-bottom:3px solid darkgray;
+        line-height:1.5em;
+        font-size: 1.4em !important;
+        margin-right:5px;
+        float: left;
+        text-align: center;
+        border-radius: 0px;
+    }
+    .verificationCodeFormCls {
+        margin-bottom:15px;
+        background-color:white;
+        margin-top:10px;
+    }
+    .errorBannerSection{
+        margin-bottom:15px;
+        background-color:#FFFFFF;
+    }
+    .accessCodeContainer {
+        padding-left: 15px;
+    }
+    .nbsp{
+        padding-top: 30px;
+    }
+    .alertMessageContainer{
+        margin-top: 10px;
+    }
+}

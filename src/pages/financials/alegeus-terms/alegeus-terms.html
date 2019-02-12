@@ -1,0 +1,18 @@
+<header [title]='"Terms & Conditions"'></header>
+
+<ion-content>
+  <ion-grid class="textAgree">
+    <ion-row no-padding>
+      <ion-col text-right>
+        <ion-icon name="close" class="close-icon" (click)="close($event)"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{termsConditions}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <img class="shadow-img" />
+  <br>
+</ion-content>

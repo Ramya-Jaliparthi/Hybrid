@@ -1,0 +1,27 @@
+<ion-grid *ngIf="articleInfo" no-padding no-margin>
+  <ion-row *ngFor="let item of articleInfo |slice:0:1">
+    <ion-col col-2 *ngIf="(item.ThumbnailImage.length>0 && (title === 'Tools and Resources' || title == 'News and Updates'|| title == 'Health and Wellness')) else fallbackImage">
+      <img [src]="'http://myblueapi.bluecrossma.acsitefactory.com/'+item.ThumbnailImage" class="newsCardThumbnailCls" />
+    </ion-col>
+    <ng-template #fallbackImage>
+      <ion-col col-2 *ngIf="item.RegularImages.length > 0 && (title === 'Tools and Resources' || title == 'News and Updates'|| title == 'Health and Wellness')">
+        <img [src]="'http://myblueapi.bluecrossma.acsitefactory.com/'+item.RegularImages" class="newsCardThumbnailCls" />
+      </ion-col>
+    </ng-template>
+    <ion-col (tap)="readArticle()" col-10>
+      <div class="cardArticleTitle" [innerHTML]="item.Title"></div>
+      <div class="" style="text-align: center;" *ngIf="item.ShortDescription.length > 0 else fallbackDescription">
+        <div class="cardArticleDescription" [innerHTML]="item.ShortDescription"></div>
+      </div>
+      <ng-template #fallbackDescription>
+        <div class="cardArticleDescription" [innerHTML]="item.Body"></div>
+      </ng-template>
+
+    </ion-col>
+  </ion-row>
+  <ion-row (tap)="readArticle()" justify-content-end>
+    <ion-col>
+      <div class="cardReadArticleLinkCls" text-end text-capitalize>learn more</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

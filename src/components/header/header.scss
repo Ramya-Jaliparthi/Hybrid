@@ -1,0 +1,70 @@
+header {
+    .back-button {
+        padding: 0px !important;
+    }
+    ion-navbar {
+        height: 4em;
+        background: white;
+        padding: 10px $padding-page-30 !important;
+        .back-button {
+            color: #818181;
+        }
+    }
+    ion-header {
+        height: 4em;
+    }
+    .burgerMenuCls {
+        padding: 0px;
+        margin: 0px;
+        min-width: auto;
+    }
+    [name=menu] {
+        font-size: 30px;
+        padding: 0px;
+    }
+    .mic_div {
+        font-size: 26px;
+        margin-right: 10px;
+        color: #1866a3;
+    }
+    .header-title {
+        text-align: center;
+        font-size: $page-header-title-size;
+        color: #1866A3;
+        font-family: arial-bold;
+        padding: 0px 10px;
+    }
+    .header-logo {
+        margin-top: 5px;
+        height: 25px;
+    }
+    .footer {
+        width: 100%;
+        background: #115890
+    }
+    .tabbarMenu img {
+        width: 19%;
+        height: 100%;
+        padding-bottom: 3px;
+        margin: 0;
+        vertical-align: middle;
+    }
+    .selected {
+        padding-bottom: 0px !important;
+    }
+    .not_selected {
+        padding-bottom: 3px !important;
+    }
+    .tabbarMenu {
+        height: 51px;
+    }
+    #unreadcount {
+        background-color: red;
+        color: white;
+        font-size: 10px;
+        position: relative;
+        top: -12px;
+        right: 12px;
+        border-radius: 10px;
+    }
+}

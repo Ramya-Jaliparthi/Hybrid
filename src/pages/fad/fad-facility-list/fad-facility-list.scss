@@ -1,0 +1,127 @@
+page-fad-facility-list {
+    .fad-facility-list-component {
+        background-color: white
+    }
+    .div-tab {
+        height: 35px;
+        margin-top: 20px;
+        border-bottom: 4px solid $text-primary-color;
+
+        > span {
+            float: right;
+            margin-right: 15px;
+            height: 32px;
+            width: 50px;
+            padding-top: 8px;
+            padding-left: 12px;
+            z-index: 1;
+            background: $selected-background-color;
+            color: white;
+            border-radius: 5px 5px 0 0;
+            @include Arial-bold(bold);
+            font-size: 14px;
+        }
+
+        .in-active  {
+            color: $selected-background-color;
+            background: white;
+            border-bottom: 1px solid $text-primary-color;
+        }
+
+        .filter {
+            float: left;
+            background: $text-primary-color;
+            width: 90px;
+            border-radius: 0px 5px 0 0;
+            .icon {
+                font-size: 13px;
+                margin: 0px 5px;
+            }
+        }
+    }
+    ion-infinite-scroll {
+        padding-top: 15px;
+    }
+
+    .hide {
+        display: none;
+    }
+    .filter-container {
+        background: #E7EFF5;
+        .filter-display-list {
+            background: #FFFFFF;
+            margin: 15px 0;
+            padding: 1px 15px;
+        }
+        .filter-top {
+            background: #1866A3;
+            border-radius: 0 5px 0 0;
+            height: 32px;
+            width: 100%;
+            @include Arial-bold(bold);
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: -0px;
+            margin-top: 20px;
+            @extend %flexbox;
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(flex-start);
+            .icon {
+                font-size: 13px;
+                margin: 0px 5px 0 15px;
+            }
+        }
+        .filter-btn {
+            padding: 15px;
+            @extend %flexbox;
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(space-between);
+            button.apply {
+                background: -webkit-linear-gradient(-180deg, #1866A3 57%, #125893 100%);
+                background: linear-gradient(-180deg, #1866A3 57%, #125893 100%);
+                border: 1px solid #0E4E9A;
+                box-shadow: 0 0 2px 0 rgba(0,0,0,0.30);
+                border-radius: 5px;
+                @include Arial-bold(bold);
+                font-size: 16px;
+                color: #FFFFFF;
+                letter-spacing: -0.01px;
+                text-align: center;
+                height: 44px;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                margin-right: 5px;
+            }
+            button.clear {
+                background: #FFFFFF;
+                background: -webkit-linear-gradient(-180deg, #FFFFFF 63%, #DEE7EE 100%);
+                background: linear-gradient(-180deg, #FFFFFF 63%, #DEE7EE 100%);
+                border: 1px solid #6591B3;
+                border-radius: 5px;
+                @include Arial-bold(bold);
+                font-size: 16px;
+                color: $text-primary-color;
+                letter-spacing: -0.01px;
+                text-align: center;
+                height: 44px;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }            
+        }
+        .md-radio, .md-checkbox {
+            label {
+                @include Roboto(light);
+                font-size: 14px;
+                color: #000000;
+                letter-spacing: -0.23px;
+            }
+        }
+        .md-checkbox {
+            margin: 15px 0;
+        }
+    }
+}

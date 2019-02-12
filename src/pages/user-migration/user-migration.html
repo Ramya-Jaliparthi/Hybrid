@@ -1,0 +1,134 @@
+<header [title]="'Profile Update'" [activeTab]=" " [hideMenu]="'true'" [hideBackButton]="true" [showTabberMenu]="false"></header>
+<ion-content>
+    <div class="pageMigrationContainer">
+
+            <div *ngFor="let alert of alerts">
+                    <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"></alert-message-card>
+                </div>
+
+        <div class="question-container tems-padding">
+            <p class="profileWarning" *ngIf="((migrationtype == multipleApp)||(migrationtype == singleAppWeb)||(migrationtype == multiAppSingleWeb))">
+                <span>{{memFirstName}}</span>, We Noticed you Created Multiple Usernames</p>
+            <p class="confirmText" *ngIf="migrationtype == multipleApp">Let's merge those together and update your information below. </p>
+            <p class="profileWarning" *ngIf="((migrationtype == singleApp)||(migrationtype == singleWeb))">Update Your
+                Profile Information</p>
+            <p class="confirmText" *ngIf="migrationtype == singleApp">We've enhanced our security standards to keep
+                your account safe.</p>
+            <p class="confirmText ques" *ngIf="migrationtype == singleWeb">Please review and update your information below
+                to make sure we have it right.</p>
+            <p class="confirmText" *ngIf="((migrationtype == singleAppWeb)||(migrationtype == multiAppSingleWeb))">Let's
+                use your latest information to keep your account up to date.</p>
+
+        </div>
+        <div class="question-container">
+            <div *ngIf="migrationtype == multipleApp || migrationtype == multiAppSingleWeb">
+                <p class="ques tems-padding" *ngIf="migrationtype == multipleApp || migrationtype == multiAppSingleWeb">Which username would you like to keep ?</p>
+                <!-- <p class="ques tems-padding" *ngIf="migrationtype == multiAppSingleWeb">Which active username would you like to keep -->
+                    <!-- ?</p> -->
+                <ion-list radio-group [(ngModel)]="selectedUserId">
+                    <div class="box_transparent">
+                        <div class="options_box">
+                            <ion-item *ngFor="let item of userAccounts, let i = index" class="item item-block item-md item-radio tems-padding ">
+                                <ion-radio mode="md" [value]="item" item-left></ion-radio>
+                                <ion-label class="lable_padding">{{ item.userID }}</ion-label>
+                            </ion-item>
+                        </div>
+                    </div>
+                </ion-list>
+
+                <div class="olduser" *ngIf="migrationtype == multiAppSingleWeb">
+                    <p class="ques tems-padding">Old Username</p>
+                    <p class="tems-padding"> {{userIdLoggedInold}}</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="question-container">
+            <form [formGroup]="userMigrationForm" (ngSubmit)="submitMigrationInfo($event, userMigrationForm)">
+
+                <div class="question-container">
+                    <div *ngIf="migrationtype == singleApp" class="labelClss">
+                        <p class="ques tems-padding paddingTop">Email Address</p>
+                        <p class="tems-padding"> {{userIdLoggedIn}}</p>
+                    </div>
+                    <div *ngIf="(migrationtype == singleWeb)">
+                            <div class="labelClsBorder"> <p class="ques tems-padding paddingTop">Email Address*</p> </div>
+                    
+                        <ion-item>
+                        
+                            <ion-input id="email" class="tems-padding" formControlName="emailAddress" type="email" placeholder="yourname@domain.com"  (blur)="setEmailBlur()"  (focus)="onEmailBlur = false"></ion-input>
+                        
+                        </ion-item>
+                       
+                        <control-messages [control]="userMigrationForm.controls.emailAddress" *ngIf="onEmailBlur"></control-messages>
+                    </div>
+                    <div *ngIf="migrationtype == singleAppWeb" class="labelClss">
+                        <div class="activeuser">
+                            <p class="ques tems-padding paddingTop">Active Username</p>
+                            <p class="tems-padding"> {{userIdLoggedInNew}}</p>
+                        </div>
+                        <div class="olduser">
+                            <p class="ques tems-padding paddingTop">Old Username</p>
+                            <p class="tems-padding"> {{userIdLoggedInold}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--
+                <div class="question-container">
+                    <p class="ques"> Hint Question :</p>
+                    <div (click)="presentPopover($event)" style="display:flex;  border-bottom: 0.55px solid #c8c7cc;">
+                        <ion-label style="text-align: left;">{{displayName}}</ion-label>
+                        <ion-icon style="float: right;" name="md-arrow-dropdown" id="icon_lang"></ion-icon>
+                    </div>
+                </div>
+                -->
+                
+                <div class="question-container">
+                        <div class="labelClsBorder"><p class="ques tems-padding paddingTop"> Hint Question*</p> </div>
+                        <ion-item>
+                            <ion-select class="drawselectoptions tems-padding"  interface="action-sheet" [selectOptions]="hintQuestionsSelectOptions" 
+                                [(ngModel)]="hintQuestionForSubmit" mode='ios' okText="Select" cancelText="Dismiss" placeholder="Select a question" formControlName="hintQuestionSelected"
+                                (ionChange)="isformDisabled(userMigrationForm)"
+                                >
+                                    <ion-option value="{{question.label}}" *ngFor="let question of securityQuestions">{{question.label}}</ion-option>
+                            </ion-select>
+                        </ion-item>
+                </div>
+                
+
+
+               <div class="labelClss">
+                    <div class="labelClsBorder"><p class="ques textMarging tems-padding paddingTop"> Answer to Hint Question*</p></div>
+
+                    <ion-item>
+                        <ion-input #pwdInput formControlName="hintAnswer" class="tems-padding" minlength="3" maxlength="30" type="{{ (buttonCaption == 'Show') ? 'password' : 'text' }}"
+                        autocorrect="off" autocapitalize="off" autocomplete="off"
+                        (keyup)="isformDisabled(userMigrationForm)" (change)="isformDisabled(userMigrationForm)" (blur)="onHintBlur = true" (focus)="onHintBlur = false"></ion-input>
+                        <button class="pwdShowBtnCls" [ngClass]="{'password-button-hide':buttonCaption=='Hide'}"  type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInput)"
+                            round text-capitalize>{{buttonCaption}}</button>
+                     </ion-item>  
+                   <!-- <ion-item>
+                        <input #pwdInputMig formControlName="hintAnswer" maxlength="30" type="password" (blur)="setHintBlur()"
+                            (focus)="onHintBlur = false" (keyup)="isformDisabled(userMigrationForm)" (change)="isformDisabled(userMigrationForm)" style="border:0px;"/> 
+                        <button class="pwdShowBtnCls" type="button" ion-button item-end (tap)="togglePwdDisplay(pwdInputMig)"
+                            round text-capitalize>{{buttonCaption}}</button>
+                    </ion-item>  -->
+                    <control-messages [control]="userMigrationForm.controls.hintAnswer" *ngIf="onHintBlur"> </control-messages>
+                </div>
+                <div>
+                    <div class="continueBtnHolder">
+                       <!-- <button [disabled]="!isformDisabled(userMigrationForm)" ion-button full
+                            style="font-family:arial-bold">Continue</button> -->
+
+                            <button [disabled]="setContinueButtonDisabled" ion-button full>Continue</button>
+                    </div>
+                    <div  class="lableRequired tems-padding">*Field is required.</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</ion-content>

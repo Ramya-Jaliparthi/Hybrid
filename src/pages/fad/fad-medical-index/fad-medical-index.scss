@@ -1,0 +1,11 @@
+.allSpecialtiesPage {
+    background-color: #ffffff !important;
+    h1 {
+        @include Roboto(light);
+        font-size: 24px;
+        color: #043167;
+    }
+    a {
+        color: #043167;    
+    }
+}

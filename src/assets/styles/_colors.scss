@@ -1,0 +1,215 @@
+@import '_vdk-colors.scss';
+// ================================================================================
+// spk/cleanup - defining non-vdk-colors
+$non-vdk-1:#18669C;
+$non-vdk-2:#0D47A1;
+$non-vdk-3-grey: #818181;
+$non-vdk-4-grey: #808080; //grey
+$non-vdk-5-brown: #875050;
+$non-vdk-6-grey: #9e9e9e;
+$non-vdk-7-grey: #f3f3f3;
+$non-vdk-8-grey: #7b7b7b;
+$non-vdk-9-green: #3EA04B;
+$non-vdk-10-red:#D21820;
+$non-vdk-11-grey: #B2B2B2;
+$non-vdk-12-grey:#666666;
+$non-vdk-14-grey:#d3d3d3; // lightgray
+$non-vdk-13-grey: rgba(0, 0, 0, .54);
+$non-vdk-15-grey:#DCE4EB;
+$non-vdk-16-grey:rgba(49, 124, 179, 0.50);
+$non-vdk-17-grey:#E1E1E1;
+$non-vdk-18-grey:rgba(0, 0, 0, 0.15);
+$non-vdk-19-grey:#CCCCCC;
+$non-vdk-20-black:#070707;
+$non-vdk-21-black:rgba(0, 0, 0, 0.87);
+$non-vdk-22-grey:#dfdfdf;
+$non-vdk-23-grey:#A9A9A9;
+$non-vdk-24-blue: #01579b;
+$non-vdk-25-blue: #0076bf;
+$non-vdk-26-blue: #f9f9f9;
+$non-vdk-27-blue: #c2c2c2;
+$non-vdk-28-black: #1D1D26;
+$non-vdk-29-grey: #B7B7B7;
+$non-vdk-30-grey: #B6B6B6;
+$non-vdk-31-grey: #E2E2E2;
+$non-vdk-32-grey: #DDD;
+$non-vdk-33-blue: #13598f;
+$non-vdk-34-blue: #1764a0;
+$non-vdk-35-blue: #165e96;
+$non-vdk-36-blue: #1866A7;
+$non-vdk-37-white: #f6f6f6;
+$non-vdk-38-blue: #C6DCED;
+$non-vdk-39-blue: #0000ff; // blue
+$non-vdk-40-blue: #E96C24;
+$non-vdk-41-red: #ff0000; //red
+$non-vdk-42-red: #9227BF;
+$non-vdk-43-blue:#317CB3;
+$non-vdk-44-orange:#ffa500; //orange
+$non-vdk-45-gray:#D1E1F2;
+$non-vdk-46-black:#231F20;
+$non-vdk-47-blue:#1176C0;
+$non-vdk-48-grey:#BFBFBF;
+$non-vdk-49-blue:#3ACFD5;
+$non-vdk-50-black:#0c2a00;
+$non-vdk-51-grey:#999999;
+$non-vdk-52-blue:#337ab7;
+$non-vdk-53-black:#063262;
+$non-vdk-54-black:#042c58;
+$non-vdk-55-white:#f5f5f5;
+$non-vdk-56-grey:#2A2A2A;
+$non-vdk-57-grey:#f2f2f2;
+// ================================================================================
+// Old styles - will be discontinued!!!! dont reuse - refer above this line
+$header-color: $headings-dark-color;
+$primary-color: $headings-dark-color;
+$unread-doc-color: $headings-dark-color;
+$read-doc-color: $title-color;
+$file-card-border-color:$non-vdk-11-grey;
+$link-color: $text-primary-color;
+$required-indicator-color:$non-vdk-12-grey;
+$disabed-background-color: $non-vdk-3-grey;
+$tooltip-color: $disabed-background-color;
+$disabled_text_color:$disabed-background-color;
+$border-gray: $disabed-background-color;
+$radio-button-border-color: $non-vdk-13-grey;
+$radio-label-color: $text-normal-color;
+$light-label-color: $radio-label-color;
+$mail-message-abstract-color: $radio-label-color;
+$new-color: $text-primary-color;
+$text-gray-color: $non-vdk-3-grey;
+$icon-color: $text-primary-color;
+$black_color: $title-color;
+$black-color-border: $title-color;
+$black-text: $radio-label-color;
+$content-background-color: $background-gray-color;
+$white_background: $background-white-color;
+$button_white_background: $background-white-color;
+$alert_red: $error-alert-color;
+$tooltip-shadowcolor:$non-vdk-14-grey;
+$selected-background-color: $forms-select-muted-color;
+$dropdown-background-color: $non-vdk-16-grey;
+$content-background-color-alt: $non-vdk-15-grey;
+// Icon Color
+$folder-icon-color:$link-secondary-color;
+
+/* buttons */
+
+$btn-primary-color:$background-white-color;
+$btn-primary-bkg-color:$background-title-separator-color;
+$filter-component-background-color: $non-vdk-15-grey;
+$chkbox-border-color:$non-vdk-19-grey;
+$chkbox-bkg-color:$non-vdk-17-grey;
+$banner-box-shadow-color:$non-vdk-18-grey;
+$border-color: $textbox-border;
+$light-text-color: $text-disabled-gray;
+$list-background-color: $non-vdk-26-blue;
+
+// New Colors for the buttons as per the VDK
+$btn-disabled-text-color:#949494;
+$btn-primary-border-color:#0E4E9A;
+$btn-primary-bkg-gradient-color1:$text-primary-color;
+$btn-primary-bkg-gradient-color2:#125893;
+
+$btn-primary-hover-bkg-gradient-color1:#033065;
+$btn-primary-hover-bkg-gradient-color2:#02234B;
+
+$global-default-txt-bkg-color:$text-primary-color;
+$doc-list-item-border-color: #e0e0e0;
+$list-item-seperator-color:#dddddd;
+$searchBarColor:#E7EFF5;
+$searchButtonBgColor:#1764A0;
+$field-border-color:#cccccc;
+$scrollBarTrackColor:#EEEEEE;
+$scrollBarThumbColor:#A9A9A9;
+
+
+/* spk/cleanup
+// title
+$title-color: #000000;
+$primary-color: #1D75BC;
+$headings-dark-color: #043167;
+$forms-select-muted-color: #6591B3;
+// background
+$background-default-color: #1D75BC;
+$background-blue-fair-color: rgb(198, 220, 238);
+$background-white-color: #ffffff;
+$background-gray-color:#f2f2f2;
+$background-gray-fair-color:#f2f2f2;
+$background-title-separator-color:#1866A3;
+// text
+$text-white-color:#ffffff;
+$text-primary-color: #1866A3;
+$text-disabled-color: #1866A3;
+$text-disabled-gray: #4D4D4D;
+$text-normal-color: #333333;
+$text-sub-heading: #3F759F;
+$text-sub-list: #151515;
+$link-primary-color: #1065A5;
+$link-secondary-color: #043167;
+$textbox-border: #D8D8D8;
+$text-bkg-color: #F1F1F1;
+$text-white-color: #FFFFFF;
+$placeholder-text: #8C8C8C;
+
+// alerts
+$success-alerts-color: #3da148;
+$error-alert-color: #c1272d;
+$unread-docs-alert-color: #c1272d;
+$notification-alerts-color:#1866A3;
+// limited use
+$secondary-accent-orange-color: #e96c24;
+$promotional-content-orange-color: #F68C0B;
+$secondary-accent-purple-color: #92278F;
+$button_hover_background: #C6DCEE;
+
+
+//already defined
+$header-color: #043167;
+$primary-color: #043167;
+$unread-doc-color: #043167;
+$read-doc-color: #000000;
+$file-card-border-color:#B2B2B2;
+$link-color: #1866A3;
+$required-indicator-color:#666666;
+$disabed-background-color: #818181;
+$tooltip-color: #818181;
+$disabled_text_color: #818181;
+$border-gray: #818181;
+$radio-button-border-color: rgba(0, 0, 0, .54);
+$radio-label-color: #333333;
+$mail-message-abstract-color: #333333;
+$new-color: #1866A3;
+$icon-color: #1866A3;
+$black_color: #000000;
+$black-color-border: #000000;
+$black-text: #333333;
+$content-background-color: #F2F2F2;
+$white_background: #FFFFFF;
+$button_white_background: #FFFFFF;
+$button_hover_background: #C6DCEE;
+$list-background-color: #f9f9f9;
+$border-color: #ddd;
+
+
+// $success_green: #3DA148;
+$alert_red: #C1272D;
+$tooltip-shadowcolor: #d3d3d3;
+$selected-background-color: #6591B3;
+$dropdown-background-color:rgba(49, 124, 179, 0.50);
+$content-background-color-alt: #DCE4EB;
+*/
+
+
+@mixin TransactionStatusColor($color) {
+  font-family: Roboto !important;
+  font-weight: 500 !important;
+  @if $color==completed {
+    color: #3da148;
+  }
+  @if $color==pending {
+    color: #999999;
+  }
+  @if $color==action {
+    color: #92278f;
+  }
+}

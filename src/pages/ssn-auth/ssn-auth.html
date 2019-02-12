@@ -1,0 +1,129 @@
+<header [title]="'Verify Your Account'" [hideMenu]="'true'" [hideBackButton]="true" [activeTab]="''">
+
+</header>
+
+<ion-content>
+	<div *ngFor="let alert of alerts" class="alertMessageCardContainer">
+		<alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+		 [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+	</div>
+	<div class="ssnAuthContainer">
+		<div>
+			<div class="progress-container">
+				<div class="progress">1</div>
+				<div class="progress">2</div>
+				<div class="progress active">3</div>
+			</div>
+			<form *ngIf="!showFailurePage" [formGroup]="authSsnForm" (ngSubmit)="authenticateUser($event, authSsnForm)" class="personalInfoFromCls">
+				<ion-grid no-padding>
+					<!-- <ion-row>
+						<ion-col col-12>
+							<div padding-left padding-bottom padding-top class="titleClsNoBold">*Required Field</div>
+						</ion-col>
+					</ion-row> -->
+					
+						<ion-row>
+							<ion-col col-12>								
+								<div padding-left class="noBorder socialSecurityOr chooseOneOf3">Choose one of the three methods below<br> to verify your identity</div>
+							</ion-col>
+						</ion-row>
+						<div *ngIf="!exceedauthLNAttempt">
+						<ion-row >
+								<ion-col col-12>
+								<div class="labelCls securityQuesTxt">Security Questions</div>
+								</ion-col>
+							<ion-col col-12>								
+								<div class="lnLink"><span (tap)="getAuthLexisNexis()">Answer 3 Identity Questions</span></div>								
+							</ion-col>
+						</ion-row>
+						<div class="hrLine">
+						</div>
+					</div>
+					<div *ngIf="!isMediCareUser">						
+					<ion-row>
+						<ion-col col-12>
+							<div class="border labelCls">Social Security Number</div>
+							<ion-item>
+								<ion-input formControlName="ssn" type="tel" (keyup)="onSsnKeyUp()" [(ngModel)]="ssnNumber" (change)="onSsnChange($event)"
+								 #ssn maxlength="4" placeholder="Enter the last 4-digits of your social security number" (blur)="onSsnBlur()" (focus)="onSsnFocus()"
+								 disabled="{{isSsnDisabled}}"></ion-input>
+							</ion-item>
+						</ion-col>
+					</ion-row>
+					<ion-row *ngIf="ssnError">
+						<ion-col col-1 class="alertIcon">
+							<ion-icon name="ios-alert-outline" color="red"></ion-icon>
+						</ion-col>
+						<ion-col col-9 class="errMsg">Please enter valid SSN</ion-col>
+					</ion-row>
+					<control-messages [control]="authSsnForm.controls.ssn" *ngIf="isSsnBlur"></control-messages>
+					<div class="hrLine socialSecurityOr">
+						<span>OR</span>
+					</div>
+					<ion-row>
+						<ion-col col-12>
+							<div class="border labelCls">Student ID</div>
+							<ion-item>
+								<ion-input formControlName="studentId" #studentId [(ngModel)]="studentIdNumber" (blur)="onStudentIdBlur()" (focus)="onStudentIdFocus()"
+								 (keyup)="onStudentIdKeyUp()" placeholder="Enter the student ID number provided by your univ..." disabled="{{isStudentIdDisabled}}"
+								 (change)="onStudentIdChange($event)"></ion-input>
+							</ion-item>
+						</ion-col>
+					</ion-row>
+					<ion-row *ngIf="studentError">
+						<ion-col col-1 class="alertIcon">
+							<ion-icon name="ios-alert-outline" color="red"></ion-icon>
+						</ion-col>
+						<ion-col col-9 class="errMsg">Please enter valid Student ID</ion-col>
+					</ion-row>
+					<control-messages [control]="authSsnForm.controls.studentId" *ngIf="isStudentIdBlur"></control-messages>
+
+					
+
+					<ion-row padding>
+						<ion-col col-12>
+							<button ion-button type="submit" full class="ssnAuthSubmit" [disabled]="isDisableSubmitButton()">Continue</button>
+						</ion-col>
+					</ion-row>
+					</div>
+					<!--<ion-row padding-bottom>
+						<ion-col col-12 text-center>
+							<a class="link verifyIdentityCancel" (tap)="cancel()">Cancel</a>
+						</ion-col>
+					</ion-row>-->
+				</ion-grid>
+			</form>
+			<form *ngIf="showFailurePage">
+				<ion-grid class="showContactNumberForm">
+					<div class="labelCls">
+						<ion-row>
+							<div class="ssnAuthLockMsg" *ngIf="appAuthLock">You've exceeded the maximum number of verification attempts. Please try again in 24 hours, or call Member Service
+								at
+								<a href="tel:8887721722">1&#8209;888&#8209;772&#8209;1722</a> Monday through Friday, 8:00 a.m. to 6:00 p.m. ET.
+							</div>
+							<div class="ssnAuthLockMsg" *ngIf="ssnAuthLock">You've exceeded the maximum number of attempts to verify your account. Try again in 24 hours, or call Member Service
+								at
+								<a href="tel:8887721722">1&#8209;888&#8209;772&#8209;1722</a> Monday through Friday, 8:00 a.m. to 6:00 p.m. ET
+								<span class="contactNumber"> and mention "Authentication Lock".</span>
+							</div>
+							<div class="ssnAuthLockMsg" *ngIf="studentAuthLock">You've exceeded the maximum number of verification attempts. Try again in 24 hours, or call Member Service at
+								<a href="tel:8887536615">1&#8209;888&#8209;753&#8209;6615</a> Monday through Friday, 8:00 a.m. to 6:00 p.m. ET
+								<span class="contactNumber"> and mention "Student Authentication Lock".</span>
+							</div>
+						</ion-row>
+
+					</div>
+					<ion-row padding>
+						<ion-col col-12>
+							<button ion-button type="button" full class="ssnAuthSubmit" (tap)="accesscodeCheck()">OK</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</form>
+
+		</div>
+		<img class="shadow-img" />
+	</div>
+</ion-content>
+
+<footer [activeTab]="''"></footer>

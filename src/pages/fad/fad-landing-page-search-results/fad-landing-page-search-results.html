@@ -1,0 +1,87 @@
+<header [title]="pageTitle"></header>
+
+<ion-content>
+  <ion-grid class="fadSearchContainer" no-padding no-margin>
+    <ion-grid class="fadSearchBarText">
+      <ion-row>
+        <ion-col>
+          <div class="search-field-group">
+            <label class="label-value">{{search}}</label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="mr-6 fadSearchBarRow">
+        <ion-col col-3>
+          <label class="label-text">near</label>
+          <label class="label-value">{{fadService?.zip?.profileId}}</label>
+        </ion-col>
+        <ion-col col-8>
+          <label class="label-text">on plan</label>
+          <label class="label-value">{{fadService?.plan?.simpleText}}</label>
+        </ion-col>
+        <ion-col col-1>
+          <ion-icon name="arrow-down" (tap)="gotoLandingPage()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row class="ml-2">
+        <ion-col col-12 class="search-results-meta-info-container">
+          <div class="result-count" *ngIf="totalCount == 1">{{totalCount}} result</div>
+          <div class="result-count" *ngIf="totalCount > 1 || totalCount == 0">{{totalCount}} results</div>
+        </ion-col>
+        <ng-container *ngIf="!isNoSearchResults">
+          <ion-col col-12 class="not-signed-on-section position-relative" *ngIf="!isAnonymousUser()">
+            <div class="container-vertical-center-align request-sign-in-section" col-11>
+              Looking for cost estimates?
+              <a href="javascript:void(0)" (click)="gotoLogin($event)">Sign in</a> or
+              <a href="javascript:void(0)" (click)="gotoRegistration($event)">create an account</a>.
+            </div>
+            <div class="container-vertical-center-align close-icon" col-1>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+          </ion-col>
+        </ng-container>
+      </ion-row>
+    </ion-grid>
+  </ion-grid>
+
+  <page-fad-search-list *ngIf="( profileType=== fadSearchCategories.allProfessional || (profileType===fadSearchCategories.speciality && resourceTypeCode===fadConstants.ProfessionalCode) )"
+    [componentInput]="searchListComponentInput" (applyFilter)="applyFilter($event);" (clearFilter)="clearFilter($event);" (infiniteScroll)="loadMoreProfessionals($event);"></page-fad-search-list>
+
+  <page-fad-facility-list *ngIf="( profileType=== fadSearchCategories.allFacility || (profileType===fadSearchCategories.speciality && resourceTypeCode===fadConstants.FacilityCode) )"
+    [componentInput]="facilityListComponentInput" (applyFilter)="applyFilter($event);" (clearFilter)="clearFilter($event);" (infiniteScroll)="loadMoreFacilities($event);"></page-fad-facility-list>
+
+  <ion-grid class="no-results" *ngIf="totalCount == 0">
+    <ion-row>
+      <ion-col col-12 class="no-results-text">
+        <p>Oops. We couldn’t find any results for “{{search}}”</p>
+      </ion-col>
+      <ion-col col-12 class="">
+        <button ion-button block full>Clear Filters</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="no-results-filter-options">
+        <h4>Or try filtering by:</h4>
+        <ul>
+          <li>Filter 1</li>
+          <li>Filter 2</li>
+          <li>Filter 3</li>
+          <li>Filter 4</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="no-results-link">
+        <p>You can also
+          <a>request a written estimate.</a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<footer></footer>

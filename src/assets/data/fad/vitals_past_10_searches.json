@@ -1,0 +1,114 @@
+{
+    "searchHistory": [
+        {
+            "planId": 1000001,
+            "searchKeyword": "NetworkBlue",
+            "zipcode": "02108",
+            "city": "Boston",
+            "state": "MA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000002,
+            "searchKeyword": "Blue Open Access POS",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000003,
+            "searchKeyword": "Par Network",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000004,
+            "searchKeyword": "Preferred Care Blue",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000005,
+            "searchKeyword": "Horizon Direct Access",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000006,
+            "searchKeyword": "Network S",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000007,
+            "searchKeyword": "Blue Preferred POS",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000008,
+            "searchKeyword": "Blue Classic",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000009,
+            "searchKeyword": "Alternate Network",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        },
+        {
+            "planId": 1000010,
+            "searchKeyword": "Preferred Care",
+            "zipcode": "20147",
+            "city": "Ashburn",
+            "state": "VA",
+            "planName": "NetworkBlue",
+            "dependant": "Past Search 2",
+            "date": "Jul. 10,2018",
+            "userId": "Nick"
+        }
+    ]
+}

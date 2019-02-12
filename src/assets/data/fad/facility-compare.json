@@ -1,0 +1,1879 @@
+{
+  "_meta": {
+    "counts": {
+      "total": 172
+    },
+    "pages": {
+      "total": 18,
+      "current": 1,
+      "next": 2,
+      "previous": null
+    },
+    "matches": {
+      "facilities": [
+        1001325901,
+        1001326261,
+        1001321219,
+        1001324520,
+        1000884178,
+        1001305267,
+        1001219426,
+        1000880858,
+        1000900594,
+        1000899846
+      ],
+      "locations": [
+        310002288,
+        310000588,
+        310004438,
+        310000943,
+        100013359,
+        100013361,
+        100013354,
+        100013347,
+        100013368,
+        101649115,
+        100539899,
+        100000337,
+        101532669,
+        100040752
+      ],
+      "location_specializations": [
+        310003102,
+        310001389,
+        310005489,
+        310001660,
+        100013871,
+        100013874,
+        100013866,
+        100013859,
+        100013880,
+        100803471,
+        100581363,
+        100000343,
+        100725050,
+        100043677
+      ],
+      "field_specialties": [
+        311000339,
+        10204,
+        10060,
+        10001,
+        10205,
+        10031
+      ]
+    },
+    "others": {
+      "facilities": [],
+      "locations": [],
+      "location_specializations": [],
+      "field_specialties": []
+    }
+  },
+  "disclaimers": [
+    {
+      "id": 32,
+      "text": "This group practice may include health care professionals who are not in your plan’s network. When scheduling an appointment through a group practice, make sure you'll be seen by a health care professional who is in your network. Using this tool, you can also search by name or specialty for health care professionals in your network.",
+      "category": "top_profile",
+      "priority": 100,
+      "applicable_level": "e"
+    }
+  ],
+  "facilities": [
+    {
+      "_meta": null,
+      "id": 1001325901,
+      "provider_id": "f1001325901",
+      "name": "Kevin J McBride MD PC",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "NPI",
+          "value": "1467611541"
+        }
+      ],
+      "href": "/api/facilities/1001325901/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 9.11477469372146
+          },
+          "id": 310002288,
+          "name": "Kevin J McBride MD PC",
+          "address": {
+            "addr_line1": "2110 Dorchester Avenue Suite 314",
+            "addr_line2": null,
+            "city": "Dorchester",
+            "state_code": "MA",
+            "sub_national": null,
+            "county": "Suffolk",
+            "country_code": null,
+            "postal_code": "02124",
+            "latitude": 42.276601,
+            "longitude": -71.066368
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "6172960242",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "NPI",
+              "value": "1467611541"
+            },
+            {
+              "type_code": "EL",
+              "value": "0000M19338|01"
+            }
+          ],
+          "amenities": {},
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "550dcccbf7"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/0000M19338%7C01/reviews?reviews_canonical_id=0000M19338%7C01",
+            "ratings": "/api/facilities/0000M19338%7C01/ratings",
+            "summary": "/api/facilities/0000M19338%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/0000M19338%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=550dcccbf7"
+            }
+          },
+          "contracts": [
+            {
+              "id": 310031590,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "700|MAB1|0000M19338||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 310003102,
+              "facility_location_id": 310002288,
+              "facility_id": 1001325901,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 311000339,
+                "name": "Medical Group",
+                "title": null,
+                "partner_code": null,
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1001326261,
+      "provider_id": "f1001326261",
+      "name": "Kevin Malone DO PC",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "NPI",
+          "value": "1578529087"
+        }
+      ],
+      "href": "/api/facilities/1001326261/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 19.96671471031
+          },
+          "id": 310000588,
+          "name": "Kevin Malone DO PC",
+          "address": {
+            "addr_line1": "10 Research Place Suite 203",
+            "addr_line2": null,
+            "city": "North Chelmsford",
+            "state_code": "MA",
+            "sub_national": null,
+            "county": "Middlesex",
+            "country_code": null,
+            "postal_code": "01863",
+            "latitude": 42.6274,
+            "longitude": -71.36612
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "9782759547",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "0000M19080|01"
+            },
+            {
+              "type_code": "NPI",
+              "value": "1578529087"
+            }
+          ],
+          "amenities": {},
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "d75dfd7da2"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/0000M19080%7C01/reviews?reviews_canonical_id=0000M19080%7C01",
+            "ratings": "/api/facilities/0000M19080%7C01/ratings",
+            "summary": "/api/facilities/0000M19080%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/0000M19080%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=d75dfd7da2"
+            }
+          },
+          "contracts": [
+            {
+              "id": 310186482,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "700|MAB1|0000M19080||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 310001389,
+              "facility_location_id": 310000588,
+              "facility_id": 1001326261,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 311000339,
+                "name": "Medical Group",
+                "title": null,
+                "partner_code": null,
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1001321219,
+      "provider_id": "f1001321219",
+      "name": "Kevin S Tomany MD PC",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "NPI",
+          "value": "1720179047"
+        }
+      ],
+      "href": "/api/facilities/1001321219/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 19.96671471031
+          },
+          "id": 310004438,
+          "name": "Kevin S Tomany MD PC",
+          "address": {
+            "addr_line1": "10 Research Place Suite 203",
+            "addr_line2": null,
+            "city": "North Chelmsford",
+            "state_code": "MA",
+            "sub_national": null,
+            "county": "Middlesex",
+            "country_code": null,
+            "postal_code": "01863",
+            "latitude": 42.6274,
+            "longitude": -71.36612
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "9782759650",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "0000M17217|01"
+            },
+            {
+              "type_code": "NPI",
+              "value": "1720179047"
+            }
+          ],
+          "amenities": {},
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "8273cbea4d"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/0000M17217%7C01/reviews?reviews_canonical_id=0000M17217%7C01",
+            "ratings": "/api/facilities/0000M17217%7C01/ratings",
+            "summary": "/api/facilities/0000M17217%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/0000M17217%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=8273cbea4d"
+            }
+          },
+          "contracts": [
+            {
+              "id": 310111886,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "700|MAB1|0000M17217||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 310005489,
+              "facility_location_id": 310004438,
+              "facility_id": 1001321219,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 311000339,
+                "name": "Medical Group",
+                "title": null,
+                "partner_code": null,
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1001324520,
+      "provider_id": "f1001324520",
+      "name": "Kevin P Sullivan MD PC",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "NPI",
+          "value": "1235127895"
+        }
+      ],
+      "href": "/api/facilities/1001324520/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 21.6596320814846
+          },
+          "id": 310000943,
+          "name": "Kevin P Sullivan MD PC",
+          "address": {
+            "addr_line1": "24 Newton Street",
+            "addr_line2": null,
+            "city": "Southboro",
+            "state_code": "MA",
+            "sub_national": null,
+            "county": "Worcester",
+            "country_code": null,
+            "postal_code": "01772",
+            "latitude": 42.3076,
+            "longitude": -71.524694
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5084814700",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "0000M17840|01"
+            },
+            {
+              "type_code": "NPI",
+              "value": "1235127895"
+            }
+          ],
+          "amenities": {},
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "4c6ab47fde"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/0000M17840%7C01/reviews?reviews_canonical_id=0000M17840%7C01",
+            "ratings": "/api/facilities/0000M17840%7C01/ratings",
+            "summary": "/api/facilities/0000M17840%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/0000M17840%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=4c6ab47fde"
+            }
+          },
+          "contracts": [
+            {
+              "id": 310006651,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "700|MAB1|0000M17840||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 310001660,
+              "facility_location_id": 310000943,
+              "facility_id": 1001324520,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 311000339,
+                "name": "Medical Group",
+                "title": null,
+                "partner_code": null,
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1000884178,
+      "provider_id": "f1000884178",
+      "name": "Kevin Warren",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": "32289464"
+        },
+        {
+          "type_code": "NPI",
+          "value": "1649357906"
+        }
+      ],
+      "href": "/api/facilities/1000884178/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 762.521442696403
+          },
+          "id": 100013359,
+          "name": "Kevin Warren",
+          "address": {
+            "addr_line1": "2600 Morehouse Ave",
+            "addr_line2": "",
+            "city": "Elkhart",
+            "state_code": "IN",
+            "sub_national": null,
+            "county": "Elkhart",
+            "country_code": null,
+            "postal_code": "46517",
+            "latitude": 41.660467,
+            "longitude": -85.960485
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5742958800",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8883415050",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "000000992482|05"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1267070"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "2e351b2c87"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 4,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000992482%7C05/reviews?reviews_canonical_id=000000992482%7C05",
+            "ratings": "/api/facilities/000000992482%7C05/ratings",
+            "summary": "/api/facilities/000000992482%7C05/summary",
+            "acceptable_reviewers": "/api/facilities/000000992482%7C05/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=2e351b2c87"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100050304,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000992482||05"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100013871,
+              "facility_location_id": 100013359,
+              "facility_id": 1000884178,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10204,
+                "name": "Psychologist - Clinical",
+                "title": null,
+                "partner_code": "BCALJ",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        },
+        {
+          "_meta": {
+            "distance": 767.113663928789
+          },
+          "id": 100013361,
+          "name": "Kevin Warren",
+          "address": {
+            "addr_line1": "300 N Washington St",
+            "addr_line2": "",
+            "city": "Wakarusa",
+            "state_code": "IN",
+            "sub_national": null,
+            "county": "Elkhart",
+            "country_code": null,
+            "postal_code": "46573",
+            "latitude": 41.538348,
+            "longitude": -86.02426
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5748624511",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8883415050",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "000000992482|03"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1293366"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "ba1ce82f69"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 4,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000992482%7C03/reviews?reviews_canonical_id=000000992482%7C03",
+            "ratings": "/api/facilities/000000992482%7C03/ratings",
+            "summary": "/api/facilities/000000992482%7C03/summary",
+            "acceptable_reviewers": "/api/facilities/000000992482%7C03/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=ba1ce82f69"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100050259,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000992482||03"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100013874,
+              "facility_location_id": 100013361,
+              "facility_id": 1000884178,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10204,
+                "name": "Psychologist - Clinical",
+                "title": null,
+                "partner_code": "BCALJ",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        },
+        {
+          "_meta": {
+            "distance": 763.555672471555
+          },
+          "id": 100013354,
+          "name": "Kevin Warren",
+          "address": {
+            "addr_line1": "1001 W Hively Ave",
+            "addr_line2": "",
+            "city": "Elkhart",
+            "state_code": "IN",
+            "sub_national": null,
+            "county": "Elkhart",
+            "country_code": null,
+            "postal_code": "46517",
+            "latitude": 41.659587,
+            "longitude": -85.980573
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5742947641",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8883415050",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "LUK",
+              "value": "1036873"
+            },
+            {
+              "type_code": "EL",
+              "value": "000000992482|02"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "02cfc42540"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 4,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000992482%7C02/reviews?reviews_canonical_id=000000992482%7C02",
+            "ratings": "/api/facilities/000000992482%7C02/ratings",
+            "summary": "/api/facilities/000000992482%7C02/summary",
+            "acceptable_reviewers": "/api/facilities/000000992482%7C02/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=02cfc42540"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100050238,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000992482||02"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100013866,
+              "facility_location_id": 100013354,
+              "facility_id": 1000884178,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10204,
+                "name": "Psychologist - Clinical",
+                "title": null,
+                "partner_code": "BCALJ",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        },
+        {
+          "_meta": {
+            "distance": 777.37281276813
+          },
+          "id": 100013347,
+          "name": "Kevin Warren",
+          "address": {
+            "addr_line1": "20531 Darden Rd",
+            "addr_line2": "",
+            "city": "South Bend",
+            "state_code": "IN",
+            "sub_national": null,
+            "county": "St Joseph",
+            "country_code": null,
+            "postal_code": "46637",
+            "latitude": 41.730624,
+            "longitude": -86.265892
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5742720100",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8883415050",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "000000992482|04"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1213408"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "87615f4409"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 4,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000992482%7C04/reviews?reviews_canonical_id=000000992482%7C04",
+            "ratings": "/api/facilities/000000992482%7C04/ratings",
+            "summary": "/api/facilities/000000992482%7C04/summary",
+            "acceptable_reviewers": "/api/facilities/000000992482%7C04/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=87615f4409"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100050265,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000992482||04"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100013859,
+              "facility_location_id": 100013347,
+              "facility_id": 1000884178,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10204,
+                "name": "Psychologist - Clinical",
+                "title": null,
+                "partner_code": "BCALJ",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        },
+        {
+          "_meta": {
+            "distance": 783.355736805454
+          },
+          "id": 100013368,
+          "name": "Kevin Warren",
+          "address": {
+            "addr_line1": "827 W 13th St",
+            "addr_line2": "",
+            "city": "Rochester",
+            "state_code": "IN",
+            "sub_national": null,
+            "county": "Fulton",
+            "country_code": null,
+            "postal_code": "46975",
+            "latitude": 41.060986,
+            "longitude": -86.223432
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "5742234331",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8883415050",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "LUK",
+              "value": "1516979"
+            },
+            {
+              "type_code": "EL",
+              "value": "000000992482|01"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "16fbaea166"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 4,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000992482%7C01/reviews?reviews_canonical_id=000000992482%7C01",
+            "ratings": "/api/facilities/000000992482%7C01/ratings",
+            "summary": "/api/facilities/000000992482%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/000000992482%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=16fbaea166"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100050275,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000992482||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100013880,
+              "facility_location_id": 100013368,
+              "facility_id": 1000884178,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10204,
+                "name": "Psychologist - Clinical",
+                "title": null,
+                "partner_code": "BCALJ",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1001305267,
+      "provider_id": "f1001305267",
+      "name": "Kevin Denny",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": "11033807"
+        },
+        {
+          "type_code": "NPI",
+          "value": "1669599155"
+        }
+      ],
+      "href": "/api/facilities/1001305267/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 2689.6300822525
+          },
+          "id": 101649115,
+          "name": "Kevin Denny",
+          "address": {
+            "addr_line1": "711 Van Ness Ave Ste 300",
+            "addr_line2": "",
+            "city": "San Francisco",
+            "state_code": "CA",
+            "sub_national": null,
+            "county": "San Francisco",
+            "country_code": null,
+            "postal_code": "94102",
+            "latitude": 37.781913,
+            "longitude": -122.420714
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "4155678200",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "943017042|01"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1482231"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "8637b80851"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/943017042%7C01/reviews?reviews_canonical_id=943017042%7C01",
+            "ratings": "/api/facilities/943017042%7C01/ratings",
+            "summary": "/api/facilities/943017042%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/943017042%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=8637b80851"
+            }
+          },
+          "contracts": [
+            {
+              "id": 102668682,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "040|CAB1|943017042||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100803471,
+              "facility_location_id": 101649115,
+              "facility_id": 1001305267,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10060,
+                "name": "Multi-Specialty Clinic or other Group Practice",
+                "title": null,
+                "partner_code": "BCA70",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1001219426,
+      "provider_id": "f1001219426",
+      "name": "Kevin Matteson",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": "11130736"
+        },
+        {
+          "type_code": "NPI",
+          "value": "1063669786"
+        }
+      ],
+      "href": "/api/facilities/1001219426/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 2000.25985133367
+          },
+          "id": 100539899,
+          "name": "Kevin Matteson",
+          "address": {
+            "addr_line1": "111 N Park St",
+            "addr_line2": "",
+            "city": "Cortez",
+            "state_code": "CO",
+            "sub_national": null,
+            "county": "Montezuma",
+            "country_code": null,
+            "postal_code": "81321",
+            "latitude": 37.349926,
+            "longitude": -108.574985
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "9705656670",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "841611938|01"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1069491"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "U",
+                "raw_value": "U",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "67d4a38b88"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/841611938%7C01/reviews?reviews_canonical_id=841611938%7C01",
+            "ratings": "/api/facilities/841611938%7C01/ratings",
+            "summary": "/api/facilities/841611938%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/841611938%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=67d4a38b88"
+            }
+          },
+          "contracts": [
+            {
+              "id": 102747446,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "050|COB1|841611938||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100581363,
+              "facility_location_id": 100539899,
+              "facility_id": 1001219426,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10001,
+                "name": "General Surgery",
+                "title": null,
+                "partner_code": "BCA02",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1000880858,
+      "provider_id": "f1000880858",
+      "name": "Kevin M Lenny LCSW",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": "32491002"
+        },
+        {
+          "type_code": "NPI",
+          "value": "1467808543"
+        }
+      ],
+      "href": "/api/facilities/1000880858/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 267.153635375847
+          },
+          "id": 100000337,
+          "name": "Kevin M Lenny LCSW",
+          "address": {
+            "addr_line1": "215 Highland Ave Ste C",
+            "addr_line2": "",
+            "city": "Haddon Township",
+            "state_code": "NJ",
+            "sub_national": null,
+            "county": "Camden",
+            "country_code": null,
+            "postal_code": "08108",
+            "latitude": 39.910129,
+            "longitude": -75.046691
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "8568543155",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "8568540992",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "9006027580|01"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1226580"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "N",
+                "raw_value": "N",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "b2eefc3ea3"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/9006027580%7C01/reviews?reviews_canonical_id=9006027580%7C01",
+            "ratings": "/api/facilities/9006027580%7C01/ratings",
+            "summary": "/api/facilities/9006027580%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/9006027580%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=b2eefc3ea3"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100001187,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "780|NJB1|9006027580|01|01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100000343,
+              "facility_location_id": 100000337,
+              "facility_id": 1000880858,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10205,
+                "name": "Social Worker - Clinical",
+                "title": null,
+                "partner_code": "BCALY",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1000900594,
+      "provider_id": "f1000900594",
+      "name": "Kevin A Kline DO",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "MUK",
+          "value": "33219183"
+        },
+        {
+          "type_code": "NPI",
+          "value": "1124105697"
+        }
+      ],
+      "href": "/api/facilities/1000900594/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 1121.86455185549
+          },
+          "id": 101532669,
+          "name": "Kevin A Kline DO",
+          "address": {
+            "addr_line1": "1905 S High St",
+            "addr_line2": "",
+            "city": "Kirksville",
+            "state_code": "MO",
+            "sub_national": null,
+            "county": "Adair",
+            "country_code": null,
+            "postal_code": "63501",
+            "latitude": 40.179028,
+            "longitude": -92.581403
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "6606657008",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "000000407231|01"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1190449"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "a8926329e0"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000407231%7C01/reviews?reviews_canonical_id=000000407231%7C01",
+            "ratings": "/api/facilities/000000407231%7C01/ratings",
+            "summary": "/api/facilities/000000407231%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/000000407231%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=a8926329e0"
+            }
+          },
+          "contracts": [
+            {
+              "id": 102425235,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000407231||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100725050,
+              "facility_location_id": 101532669,
+              "facility_id": 1000900594,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10060,
+                "name": "Multi-Specialty Clinic or other Group Practice",
+                "title": null,
+                "partner_code": "BCA70",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_meta": null,
+      "id": 1000899846,
+      "provider_id": "f1000899846",
+      "name": "Kevin Miller MD",
+      "type": "F",
+      "photos": [],
+      "awards": {},
+      "bdc": {},
+      "identifiers": [
+        {
+          "type_code": "NPI",
+          "value": "1255330015"
+        },
+        {
+          "type_code": "MUK",
+          "value": "30827757"
+        }
+      ],
+      "href": "/api/facilities/1000899846/profile",
+      "disclaimers": [],
+      "locations": [
+        {
+          "_meta": {
+            "distance": 1044.13464561527
+          },
+          "id": 100040752,
+          "name": "Kevin Miller MD",
+          "address": {
+            "addr_line1": "664 Office Pkwy",
+            "addr_line2": "",
+            "city": "Saint Louis",
+            "state_code": "MO",
+            "sub_national": null,
+            "county": "Saint Louis",
+            "country_code": null,
+            "postal_code": "63141",
+            "latitude": 38.668198,
+            "longitude": -90.433174
+          },
+          "awards": {},
+          "bdc": {},
+          "phones": {
+            "voice": [
+              {
+                "number": "3149976463",
+                "type": "Voice",
+                "type_code": "V",
+                "is_primary": "Y"
+              }
+            ],
+            "fax": [
+              {
+                "number": "3149974423",
+                "type": "Fax",
+                "type_code": "F",
+                "is_primary": null
+              }
+            ]
+          },
+          "cost": null,
+          "identifiers": [
+            {
+              "type_code": "EL",
+              "value": "000000407219|01"
+            },
+            {
+              "type_code": "LUK",
+              "value": "1603770"
+            }
+          ],
+          "amenities": {
+            "ha": [
+              {
+                "type_code": "HA",
+                "type": "Handicap Accessible",
+                "value": "Y",
+                "raw_value": "Y",
+                "description": null
+              }
+            ]
+          },
+          "tiers": null,
+          "linked_affiliation_ids": [
+            "a5731532e0"
+          ],
+          "disclaimers": [],
+          "other_locations_count": 0,
+          "reviews": {
+            "overall_rating": 0,
+            "percent_recommended": 0,
+            "total_ratings": 0
+          },
+          "links": {
+            "reviews": "/api/facilities/000000407219%7C01/reviews?reviews_canonical_id=000000407219%7C01",
+            "ratings": "/api/facilities/000000407219%7C01/ratings",
+            "summary": "/api/facilities/000000407219%7C01/summary",
+            "acceptable_reviewers": "/api/facilities/000000407219%7C01/acceptable_reviewers",
+            "affiliated_professionals": {
+              "href": "/api/api/professionals/search?linked_affiliation_ids%5B%5D=a5731532e0"
+            }
+          },
+          "contracts": [
+            {
+              "id": 100152277,
+              "awards": {},
+              "bdc": {},
+              "coe": null,
+              "er": null,
+              "identifiers": [
+                {
+                  "type_code": "BCA",
+                  "value": "834|INB2|000000407219||01"
+                }
+              ],
+              "future_effective_date": null,
+              "future_termination_date": null,
+              "disclaimers": [],
+              "tiers": {}
+            }
+          ],
+          "specializations": [
+            {
+              "id": 100043677,
+              "facility_location_id": 100040752,
+              "facility_id": 1000899846,
+              "is_certified": null,
+              "is_primary": null,
+              "field_specialty": {
+                "_id": 10031,
+                "name": "Psychiatry",
+                "title": null,
+                "partner_code": "BCA26",
+                "field": null
+              },
+              "locations": [],
+              "contracts": [],
+              "specializations": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cash_reward_reference_number": null
+}

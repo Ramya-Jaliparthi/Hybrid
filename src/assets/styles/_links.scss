@@ -1,0 +1,22 @@
+@import '_fonts';
+@import '_colors';
+@mixin vdkTextLink () {
+    margin-top: 5px;
+    a {
+        color: $link-primary-color;
+        // text-decoration: underline;
+    }
+    a:hover {
+        cursor: pointer;
+        color: $link-secondary-color;
+        // text-decoration: transparent;
+    }
+    a:focus {
+        cursor: pointer;
+        color: $link-color;
+        // text-decoration: transparent;
+    }
+    span {
+        @include Roboto(light);
+    }
+}

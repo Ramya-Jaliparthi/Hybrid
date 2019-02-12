@@ -1,0 +1,2523 @@
+{
+  "searchSpecialties": [{
+      "id": 311000137,
+      "name": "Neuromusculoskeletal Medicine/Osteopathic Manipulative Medicine",
+      "name_translated": {
+        "en": "Neuromusculoskeletal Medicine/Osteopathic Manipulative Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000195,
+      "name": "Physical Medicine and Rehabilitation",
+      "name_translated": {
+        "en": "Physical Medicine and Rehabilitation",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000270,
+      "name": "Physical Therapy",
+      "name_translated": {
+        "en": "Physical Therapy",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000133,
+      "name": "Neurology",
+      "name_translated": {
+        "en": "Neurology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000136,
+      "name": "Neuromuscular Medicine",
+      "name_translated": {
+        "en": "Neuromuscular Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000227,
+      "name": "Surgery - Neurological",
+      "name_translated": {
+        "en": "Surgery - Neurological",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000103,
+      "name": "Gynecology",
+      "name_translated": {
+        "en": "Gynecology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000231,
+      "name": "Surgery - Plastic",
+      "name_translated": {
+        "en": "Surgery - Plastic",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000234,
+      "name": "Surgery - Thoracic",
+      "name_translated": {
+        "en": "Surgery - Thoracic",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000107,
+      "name": "Hospice and Palliative Medicine",
+      "name_translated": {
+        "en": "Hospice and Palliative Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000089,
+      "name": "Endocrinology/Diabetes and Metabolism",
+      "name_translated": {
+        "en": "Endocrinology/Diabetes and Metabolism",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000212,
+      "name": "Rheumatology",
+      "name_translated": {
+        "en": "Rheumatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000114,
+      "name": "Infectious Diseases",
+      "name_translated": {
+        "en": "Infectious Diseases",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000018,
+      "name": "Licensed Mental Health Counselor",
+      "name_translated": {
+        "en": "Licensed Mental Health Counselor",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000254,
+      "name": "Certified Nurse Midwife",
+      "name_translated": {
+        "en": "Certified Nurse Midwife",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000027,
+      "name": "General Dentistry",
+      "name_translated": {
+        "en": "General Dentistry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000229,
+      "name": "Surgery - Pediatric",
+      "name_translated": {
+        "en": "Surgery - Pediatric",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000159,
+      "name": "Pain Medicine",
+      "name_translated": {
+        "en": "Pain Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000347,
+      "name": "Physician Assistant - Primary Care",
+      "name_translated": {
+        "en": "Physician Assistant - Primary Care",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000163,
+      "name": "Pediatric Allergy and Immunology",
+      "name_translated": {
+        "en": "Pediatric Allergy and Immunology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000151,
+      "name": "Ophthalmology",
+      "name_translated": {
+        "en": "Ophthalmology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000190,
+      "name": "Pediatric Urology",
+      "name_translated": {
+        "en": "Pediatric Urology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000360,
+      "name": "All",
+      "name_translated": {
+        "en": "All",
+        "es": ""
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": "",
+        "es": ""
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000210,
+      "name": "Reproductive Endocrinology",
+      "name_translated": {
+        "en": "Reproductive Endocrinology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000271,
+      "name": "Speech-Language Pathology",
+      "name_translated": {
+        "en": "Speech-Language Pathology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000036,
+      "name": "Family Medicine - Nurse Practitioner",
+      "name_translated": {
+        "en": "Family Medicine - Nurse Practitioner",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000349,
+      "name": "Nurse Practitioner - Primary Care",
+      "name_translated": {
+        "en": "Nurse Practitioner - Primary Care",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000268,
+      "name": "Occupational Therapy",
+      "name_translated": {
+        "en": "Occupational Therapy",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000060,
+      "name": "Cardiovascular Disease",
+      "name_translated": {
+        "en": "Cardiovascular Disease",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000078,
+      "name": "Dermatology",
+      "name_translated": {
+        "en": "Dermatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000098,
+      "name": "Gastroenterology",
+      "name_translated": {
+        "en": "Gastroenterology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000240,
+      "name": "Urology",
+      "name_translated": {
+        "en": "Urology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000253,
+      "name": "Audiology",
+      "name_translated": {
+        "en": "Audiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000206,
+      "name": "Radiation Oncology",
+      "name_translated": {
+        "en": "Radiation Oncology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000341,
+      "name": "Internal Medicine - Physician Assistant",
+      "name_translated": {
+        "en": "Internal Medicine - Physician Assistant",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000141,
+      "name": "Neurotology",
+      "name_translated": {
+        "en": "Neurotology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000255,
+      "name": "Chiropractic",
+      "name_translated": {
+        "en": "Chiropractic",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000204,
+      "name": "Pulmonary Disease",
+      "name_translated": {
+        "en": "Pulmonary Disease",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000040,
+      "name": "Pediatrics - Nurse Practitioner",
+      "name_translated": {
+        "en": "Pediatrics - Nurse Practitioner",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000102,
+      "name": "Gynecologic Oncology",
+      "name_translated": {
+        "en": "Gynecologic Oncology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000032,
+      "name": "Orthodontics",
+      "name_translated": {
+        "en": "Orthodontics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000358,
+      "name": "Licensed Applied Behavioral Analyst",
+      "name_translated": {
+        "en": "Licensed Applied Behavioral Analyst",
+        "es": ""
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": "",
+        "es": ""
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 8,
+        "name": "Behavioral Health Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000106,
+      "name": "Hematology and Medical Oncology",
+      "name_translated": {
+        "en": "Hematology and Medical Oncology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000124,
+      "name": "Medical Oncology",
+      "name_translated": {
+        "en": "Medical Oncology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000088,
+      "name": "Endocrinology",
+      "name_translated": {
+        "en": "Endocrinology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000024,
+      "name": "Psychology",
+      "name_translated": {
+        "en": "Psychology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000165,
+      "name": "Pediatric Cardiology",
+      "name_translated": {
+        "en": "Pediatric Cardiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000066,
+      "name": "Clinical Cardiac Electrophysiology",
+      "name_translated": {
+        "en": "Clinical Cardiac Electrophysiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000012,
+      "name": "Child and Adolescent Psychiatry",
+      "name_translated": {
+        "en": "Child and Adolescent Psychiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000362,
+      "name": "Addiction Medicine",
+      "name_translated": {
+        "en": "Addiction Medicine",
+        "es": ""
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": "",
+        "es": ""
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000147,
+      "name": "Obstetrics and Gynecology",
+      "name_translated": {
+        "en": "Obstetrics and Gynecology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000180,
+      "name": "Pediatric Otolaryngology",
+      "name_translated": {
+        "en": "Pediatric Otolaryngology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000203,
+      "name": "Public Health and General Preventive Medicine",
+      "name_translated": {
+        "en": "Public Health and General Preventive Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000168,
+      "name": "Pediatric Dermatology",
+      "name_translated": {
+        "en": "Pediatric Dermatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000080,
+      "name": "Developmental Behavioral Pediatrics",
+      "name_translated": {
+        "en": "Developmental Behavioral Pediatrics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000010,
+      "name": "Addiction Psychiatry",
+      "name_translated": {
+        "en": "Addiction Psychiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000022,
+      "name": "Psychiatry",
+      "name_translated": {
+        "en": "Psychiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000015,
+      "name": "Geriatric Psychiatry",
+      "name_translated": {
+        "en": "Geriatric Psychiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000363,
+      "name": "Advanced Heart Failure and Transplant Cardiology",
+      "name_translated": {
+        "en": "Advanced Heart Failure and Transplant Cardiology",
+        "es": ""
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": "",
+        "es": ""
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000224,
+      "name": "Surgery - General",
+      "name_translated": {
+        "en": "Surgery - General",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000257,
+      "name": "Dietitian/Nutritionist",
+      "name_translated": {
+        "en": "Dietitian/Nutritionist",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000033,
+      "name": "Pediatric Dentistry",
+      "name_translated": {
+        "en": "Pediatric Dentistry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000026,
+      "name": "Endodontics",
+      "name_translated": {
+        "en": "Endodontics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000068,
+      "name": "Clinical Genetics",
+      "name_translated": {
+        "en": "Clinical Genetics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000359,
+      "name": "Adult Medicine",
+      "name_translated": {
+        "en": "Adult Medicine",
+        "es": ""
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": "",
+        "es": ""
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000233,
+      "name": "Surgery - Plastic Within Head and Neck",
+      "name_translated": {
+        "en": "Surgery - Plastic Within Head and Neck",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000038,
+      "name": "Internal Medicine - Nurse Practitioner",
+      "name_translated": {
+        "en": "Internal Medicine - Nurse Practitioner",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000082,
+      "name": "Diagnostic Lab Immunology",
+      "name_translated": {
+        "en": "Diagnostic Lab Immunology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000020,
+      "name": "Psychiatric Nurse",
+      "name_translated": {
+        "en": "Psychiatric Nurse",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000226,
+      "name": "Surgery - Hand",
+      "name_translated": {
+        "en": "Surgery - Hand",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000101,
+      "name": "Geriatric Medicine",
+      "name_translated": {
+        "en": "Geriatric Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000228,
+      "name": "Surgery - Orthopaedic",
+      "name_translated": {
+        "en": "Surgery - Orthopaedic",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000176,
+      "name": "Pediatric Neonatal Perinatal",
+      "name_translated": {
+        "en": "Pediatric Neonatal Perinatal",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000235,
+      "name": "Surgery - Vascular",
+      "name_translated": {
+        "en": "Surgery - Vascular",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000170,
+      "name": "Pediatric Endocrinology",
+      "name_translated": {
+        "en": "Pediatric Endocrinology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000069,
+      "name": "Clinical Molecular Geneticist",
+      "name_translated": {
+        "en": "Clinical Molecular Geneticist",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000122,
+      "name": "Medical Genetics",
+      "name_translated": {
+        "en": "Medical Genetics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000044,
+      "name": "Allergy and Immunology",
+      "name_translated": {
+        "en": "Allergy and Immunology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000149,
+      "name": "Occupational Medicine",
+      "name_translated": {
+        "en": "Occupational Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000070,
+      "name": "Clinical Neurophysiology",
+      "name_translated": {
+        "en": "Clinical Neurophysiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000186,
+      "name": "Pediatric Rheumatology",
+      "name_translated": {
+        "en": "Pediatric Rheumatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000348,
+      "name": "Physician Assistant - Specialty Care",
+      "name_translated": {
+        "en": "Physician Assistant - Specialty Care",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000183,
+      "name": "Pediatric Pulmonology",
+      "name_translated": {
+        "en": "Pediatric Pulmonology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000039,
+      "name": "Internal Medicine - Physician",
+      "name_translated": {
+        "en": "Internal Medicine - Physician",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000037,
+      "name": "Family Medicine - Physician",
+      "name_translated": {
+        "en": "Family Medicine - Physician",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000251,
+      "name": "Optometry",
+      "name_translated": {
+        "en": "Optometry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000342,
+      "name": "Pediatrics - Physician Assistant",
+      "name_translated": {
+        "en": "Pediatrics - Physician Assistant",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000216,
+      "name": "Sleep Medicine",
+      "name_translated": {
+        "en": "Sleep Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000029,
+      "name": "Oral and Maxillofacial Surgery",
+      "name_translated": {
+        "en": "Oral and Maxillofacial Surgery",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000118,
+      "name": "Maternal and Fetal Medicine",
+      "name_translated": {
+        "en": "Maternal and Fetal Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000196,
+      "name": "Podiatry",
+      "name_translated": {
+        "en": "Podiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000134,
+      "name": "Neurology With Special Qualification in Child Neurology",
+      "name_translated": {
+        "en": "Neurology With Special Qualification in Child Neurology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000041,
+      "name": "Pediatrics - Physician",
+      "name_translated": {
+        "en": "Pediatrics - Physician",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000173,
+      "name": "Pediatric Hematology Oncology",
+      "name_translated": {
+        "en": "Pediatric Hematology Oncology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000105,
+      "name": "Hematology",
+      "name_translated": {
+        "en": "Hematology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000016,
+      "name": "Licensed Independent Clinical Social Worker",
+      "name_translated": {
+        "en": "Licensed Independent Clinical Social Worker",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000042,
+      "name": "Adolescent Medicine",
+      "name_translated": {
+        "en": "Adolescent Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000237,
+      "name": "Therapeutic Radiology",
+      "name_translated": {
+        "en": "Therapeutic Radiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000340,
+      "name": "Family Medicine - Physician Assistant",
+      "name_translated": {
+        "en": "Family Medicine - Physician Assistant",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000242,
+      "name": "Vascular Neurology",
+      "name_translated": {
+        "en": "Vascular Neurology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000157,
+      "name": "Otolaryngology",
+      "name_translated": {
+        "en": "Otolaryngology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000131,
+      "name": "Nephrology",
+      "name_translated": {
+        "en": "Nephrology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000171,
+      "name": "Pediatric Gastroenterology",
+      "name_translated": {
+        "en": "Pediatric Gastroenterology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000218,
+      "name": "Sports Medicine",
+      "name_translated": {
+        "en": "Sports Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000350,
+      "name": "Nurse Practitioner - Specialty Care",
+      "name_translated": {
+        "en": "Nurse Practitioner - Specialty Care",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000067,
+      "name": "Clinical Cytogenetics",
+      "name_translated": {
+        "en": "Clinical Cytogenetics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000223,
+      "name": "Surgery - Colon and Rectal",
+      "name_translated": {
+        "en": "Surgery - Colon and Rectal",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000017,
+      "name": "Licensed Marriage and Family Therapist",
+      "name_translated": {
+        "en": "Licensed Marriage and Family Therapist",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000132,
+      "name": "Neurodevelopmental Disabilities",
+      "name_translated": {
+        "en": "Neurodevelopmental Disabilities",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000217,
+      "name": "Spinal Cord Injury Medicine",
+      "name_translated": {
+        "en": "Spinal Cord Injury Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000238,
+      "name": "Transplant Hepatology",
+      "name_translated": {
+        "en": "Transplant Hepatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000174,
+      "name": "Pediatric Infectious Diseases",
+      "name_translated": {
+        "en": "Pediatric Infectious Diseases",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000065,
+      "name": "Clinical Biochemical Genetics",
+      "name_translated": {
+        "en": "Clinical Biochemical Genetics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000014,
+      "name": "Forensic Psychiatry",
+      "name_translated": {
+        "en": "Forensic Psychiatry",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000034,
+      "name": "Periodontics",
+      "name_translated": {
+        "en": "Periodontics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000356,
+      "name": "Licensed Alcohol and Drug Counselor",
+      "name_translated": {
+        "en": "Licensed Alcohol and Drug Counselor",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000177,
+      "name": "Pediatric Nephrology",
+      "name_translated": {
+        "en": "Pediatric Nephrology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000116,
+      "name": "Interventional Cardiology",
+      "name_translated": {
+        "en": "Interventional Cardiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000035,
+      "name": "Prosthodontics",
+      "name_translated": {
+        "en": "Prosthodontics",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000021,
+      "name": "Psychiatric Nurse Practitioner",
+      "name_translated": {
+        "en": "Psychiatric Nurse Practitioner",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000178,
+      "name": "Pediatric Neurodevelopmental Disabilities",
+      "name_translated": {
+        "en": "Pediatric Neurodevelopmental Disabilities",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000056,
+      "name": "Blood Banking/Transfusion Medicine",
+      "name_translated": {
+        "en": "Blood Banking/Transfusion Medicine",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000125,
+      "name": "Medical Toxicology",
+      "name_translated": {
+        "en": "Medical Toxicology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000123,
+      "name": "Medical Microbiology",
+      "name_translated": {
+        "en": "Medical Microbiology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000230,
+      "name": "Surgery - Pediatric Orthopedic",
+      "name_translated": {
+        "en": "Surgery - Pediatric Orthopedic",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    },
+    {
+      "id": 311000189,
+      "name": "Pediatric Transplant Hepatology",
+      "name_translated": {
+        "en": "Pediatric Transplant Hepatology",
+        "es": null
+      },
+      "resource_type_code": "P",
+      "description": {
+        "en": null,
+        "es": null
+      },
+      "suppress_display": null,
+      "search_provider_types": [{
+        "id": 10,
+        "name": "Professional",
+        "type_code": "P",
+        "resource_type_code": "P"
+      }]
+    }
+  ]
+}

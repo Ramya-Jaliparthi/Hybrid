@@ -1,0 +1,45 @@
+my-claims-card {
+    .content-cls {
+        padding: $padding-30 $padding-page-30;
+        font-family: $font-family-lable;
+    }
+    .countFont {
+        font-size: $card-content-number-highlight-font-size;
+        color: $card-content-font-color-highlighted;
+        padding-right: 5px;
+    }
+    .subTitleCls {
+        border-bottom: 1px solid $card-content-section-border-color;
+        color: $card-title-color;
+        font-size: 0.75em;
+        text-align: left;
+        padding-bottom: $padding-10;
+        padding-left: $padding-page-30;
+        padding-right: $padding-page-30;
+    }
+    .claimesSectionCls {
+        padding: 15px 10px;
+        text-align: left;
+    }
+    .companyNameCls {
+        color: $card-content-font-color-highlighted;
+        padding-right: 10px;
+        display: inline;
+        font-size: $card-content-title-size;
+        text-transform: capitalize;
+    }
+    .myClaimesGridCls {
+        .grid {
+            width: 100% !important;
+            padding: $padding-30 $padding-page-30;
+            margin-top: 0px;
+            font-family: $font-family-lable;
+        }
+        img {
+            max-height: 20px;
+        }
+    }
+    .statusColorGray {
+        color: #818181;
+    }
+}

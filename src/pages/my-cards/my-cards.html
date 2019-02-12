@@ -1,0 +1,48 @@
+<header [title]="'My Cards'" [activeTab]="'myCards'"></header>
+
+<ion-content no-padding>
+    <div *ngIf="HasActivePlan != 'false' && isDentalUser !='false'">
+    <ion-grid class="searchFilterContainer" no-padding no-margin>
+        <ion-row>
+
+            <ion-col align-self-center>
+                <div class="memberNameCls">{{subscriberName}}</div>
+                <div class="memberTypeCls">{{memberType}}</div>
+            </ion-col>
+            <ion-col align-self-center col-auto #filterOption (click)="presentDependentsPopover($event)">
+                <ion-icon *ngIf="config.showFeature('myCardsDependents')" name="ios-arrow-dropdown" class="icon-page"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div style="height:10px;">&nbsp;</div>
+
+    <div class="cardsContainerCls">
+        <div class="paddingRightCls" text-right>
+            <ion-icon *ngIf="config.showFeature('myCardsOverflowMenu')" name="ios-more" class="icon-page color-blue" (click)="presentMoreOptions($event)"></ion-icon>
+        </div>
+
+        <ion-slides (ionSlideDidChange)="slideChanged()" style="height:100%" zoom="true" scrollX="true" scrollY="true" maxZoom="10">
+
+            <ion-slide *ngFor="let card of cardFrontData;">
+                <div class="swiper-zoom-container">
+
+                    <canvas class="cardCanvasCls" (tap)="canvasClicked($event)"></canvas>
+                </div>
+            </ion-slide>
+        </ion-slides>
+
+    </div>
+    <img class="shadow-img" />
+
+</div>
+<!-- <alert-message-card *ngIf="HasActivePlan == 'false'" [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type"
+[alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card> -->
+<ng-container *ngIf="HasActivePlan == 'false' || isDentalUser == 'false'"> 
+<div *ngFor="let alert of alerts" class="alertMessageCard">
+        <alert-message-card [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type" [alert]="alert"
+            [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    </div>
+</ng-container>
+</ion-content>
+
+<footer [activeTab]="'myCards'"></footer>

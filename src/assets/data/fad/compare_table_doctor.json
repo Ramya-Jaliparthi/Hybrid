@@ -1,0 +1,4263 @@
+{
+    "_meta": {
+        "counts": {
+            "total": 6862
+        },
+        "pages": {
+            "total": 687,
+            "current": 1,
+            "next": 2,
+            "previous": null
+        },
+        "matches": {
+            "professionals": [
+                1000920772,
+                1000729903,
+                1000942390,
+                1000687047,
+                1002134953,
+                1000615419,
+                1001281833,
+                1001282170,
+                1002128165,
+                1000375656
+            ],
+            "locations": [
+                101736286,
+                101259927,
+                101259913,
+                101259901,
+                101780114,
+                101780104,
+                101780103,
+                101780081,
+                101780071,
+                101017356,
+                101017367,
+                101017348,
+                101017349,
+                101017374,
+                102861340,
+                100975263,
+                100975267,
+                102625063,
+                102625086,
+                103131150,
+                103131152,
+                103131149,
+                103131151,
+                100294915,
+                100294917
+            ],
+            "professional_specializations": [
+                100791133,
+                100574380,
+                100811432,
+                101339875,
+                100464008,
+                101302584,
+                100444910,
+                101194766,
+                101194782,
+                101279924,
+                100134519
+            ],
+            "field_specialties": [
+                10009,
+                10044,
+                10334,
+                10121,
+                10093,
+                10096,
+                10208,
+                10189
+            ]
+        },
+        "others": {
+            "professionals": [],
+            "locations": [],
+            "professional_specializations": [],
+            "field_specialties": []
+        }
+    },
+    "professionals": [
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000920772,
+            "provider_id": "p1000920772",
+            "name": "Smith S Ho",
+            "first_name": "Smith",
+            "middle_name": "S",
+            "last_name": "Ho",
+            "type": "P",
+            "gender": "M",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "5349843"
+                }
+            ],
+            "languages": [
+                {
+                    "type_code": null,
+                    "name": "Thai"
+                },
+                {
+                    "type_code": null,
+                    "name": "Chinese"
+                }
+            ],
+            "href": "/api/professionals/1000920772/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101736286,
+                    "name": "Medical Faculty Associates Inc",
+                    "address": {
+                        "addr_line1": "7610 Carroll Ave Ste 280",
+                        "addr_line2": "",
+                        "city": "Takoma Park",
+                        "state_code": "MD",
+                        "sub_national": null,
+                        "county": "Montgomery",
+                        "country_code": null,
+                        "postal_code": "20912",
+                        "latitude": 38.983871,
+                        "longitude": -76.999889
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "3018916100",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": 60.50,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1497165"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "25680924|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106390096,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Medical Faculty Associates Inc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000212927,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "George Wash Univ",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000193874,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Washington Adventist Hosp",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000201057,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "080|DCB1|25680924||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12918927,
+                                    "professional_location_contract_id": 106390096,
+                                    "professional_location_id": 101736286,
+                                    "professional_id": 1000920772,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100791133,
+                    "professional_id": 1000920772,
+                    "is_certified": "N",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10009,
+                        "name": "Internal Medicine",
+                        "title": null,
+                        "partner_code": "BCA11",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/reviews?reviews_canonical_id=080%7CDCSA%7C25680924%7C%7C01",
+                "ratings": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/ratings",
+                "summary": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/080%7CDCSA%7C25680924%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000729903,
+            "provider_id": "p1000729903",
+            "name": "Smith A Stroustrup",
+            "first_name": "Smith",
+            "middle_name": "A",
+            "last_name": "Stroustrup",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "22207692"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1000729903/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101259927,
+                    "name": "Faculty Practice Associates",
+                    "address": {
+                        "addr_line1": "5 E 98th St",
+                        "addr_line2": "",
+                        "city": "New York",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "New York",
+                        "country_code": null,
+                        "postal_code": "10029",
+                        "latitude": 40.788911,
+                        "longitude": -73.954122
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2122416186",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1401388"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "281ZS3|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 2,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 104640412,
+                            "awards": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "name": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "datum_attributes": {},
+                                        "awd_authority_code": null,
+                                        "recog_type_code": null,
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "type": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "raw_value": "Y",
+                                        "description": null
+                                    }
+                                ]
+                            },
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Mount Sinai Hospital Attn: Carolyn Albanese",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000045123,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|281ZS3||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 11664931,
+                                    "professional_location_contract_id": 104640412,
+                                    "professional_location_id": 101259927,
+                                    "professional_id": 1000729903,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10044,
+                                        "name": "Pediatrics",
+                                        "title": null,
+                                        "partner_code": "BCA37",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101259913,
+                    "name": "Faculty Practice Associates",
+                    "address": {
+                        "addr_line1": "1 Gustave L Levy Pl",
+                        "addr_line2": "",
+                        "city": "New York",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "New York",
+                        "country_code": null,
+                        "postal_code": "10029",
+                        "latitude": 40.790468,
+                        "longitude": -73.953886
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2122416186",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "2125345207",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1029127"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "281ZS1|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 2,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 104640357,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Mount Sinai Hospital Attn: Carolyn Albanese",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000045123,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|281ZS1||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 11664928,
+                                    "professional_location_contract_id": 104640357,
+                                    "professional_location_id": 101259913,
+                                    "professional_id": 1000729903,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10044,
+                                        "name": "Pediatrics",
+                                        "title": null,
+                                        "partner_code": "BCA37",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101259901,
+                    "name": "Faculty Practice Associates",
+                    "address": {
+                        "addr_line1": "1176 5th Ave",
+                        "addr_line2": "",
+                        "city": "New York",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "New York",
+                        "country_code": null,
+                        "postal_code": "10029",
+                        "latitude": 40.789699,
+                        "longitude": -73.954442
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2122416186",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "2125345207",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1084817"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "281ZS2|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 2,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 104640307,
+                            "awards": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "name": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "datum_attributes": {},
+                                        "awd_authority_code": null,
+                                        "recog_type_code": null,
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "type": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "raw_value": "Y",
+                                        "description": null
+                                    }
+                                ]
+                            },
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Mount Sinai Hospital Attn: Carolyn Albanese",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000045123,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|281ZS2||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 11664924,
+                                    "professional_location_contract_id": 104640307,
+                                    "professional_location_id": 101259901,
+                                    "professional_id": 1000729903,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10044,
+                                        "name": "Pediatrics",
+                                        "title": null,
+                                        "partner_code": "BCA37",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100574380,
+                    "professional_id": 1000729903,
+                    "is_certified": "Y",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10044,
+                        "name": "Pediatrics",
+                        "title": null,
+                        "partner_code": "BCA37",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/803%7CNYL6%7C281ZS3%7C%7C01/reviews?reviews_canonical_id=803%7CNYL6%7C281ZS3%7C%7C01",
+                "ratings": "/api/doctors/803%7CNYL6%7C281ZS3%7C%7C01/ratings",
+                "summary": "/api/doctors/803%7CNYL6%7C281ZS3%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/803%7CNYL6%7C281ZS3%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000942390,
+            "provider_id": "p1000942390",
+            "name": "Smith C Manion",
+            "first_name": "Smith",
+            "middle_name": "C",
+            "last_name": "Manion",
+            "type": "P",
+            "gender": "M",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "8730286"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1000942390/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101780114,
+                    "name": "Manion, Smith C.",
+                    "address": {
+                        "addr_line1": "7405 Renner Rd",
+                        "addr_line2": "",
+                        "city": "Shawnee",
+                        "state_code": "KS",
+                        "sub_national": null,
+                        "county": "Johnson",
+                        "country_code": null,
+                        "postal_code": "66217",
+                        "latitude": 38.994127,
+                        "longitude": -94.777913
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9135888468",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9135888526",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "45845017|05"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1491820"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106549847,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Kansas Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000364630,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "240|MOB1|45845017||05"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16259229,
+                                    "professional_location_contract_id": 106549847,
+                                    "professional_location_id": 101780114,
+                                    "professional_id": 1000942390,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10334,
+                                        "name": "Pain Medicine",
+                                        "title": null,
+                                        "partner_code": "BCAJZ",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101780104,
+                    "name": "Manion, Smith C.",
+                    "address": {
+                        "addr_line1": "7400 State Line Rd",
+                        "addr_line2": "",
+                        "city": "Prairie Village",
+                        "state_code": "KS",
+                        "sub_national": null,
+                        "county": "Johnson",
+                        "country_code": null,
+                        "postal_code": "66208",
+                        "latitude": 38.992949,
+                        "longitude": -94.607965
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9135886600",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9135886655",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "45845017|04"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1491678"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106549805,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Kansas Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000364630,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "240|MOB1|45845017||04"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16259225,
+                                    "professional_location_contract_id": 106549805,
+                                    "professional_location_id": 101780104,
+                                    "professional_id": 1000942390,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10334,
+                                        "name": "Pain Medicine",
+                                        "title": null,
+                                        "partner_code": "BCAJZ",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101780103,
+                    "name": "Manion, Smith C.",
+                    "address": {
+                        "addr_line1": "3901 Rainbow Blvd",
+                        "addr_line2": "",
+                        "city": "Kansas City",
+                        "state_code": "KS",
+                        "sub_national": null,
+                        "county": "Wyandotte",
+                        "country_code": null,
+                        "postal_code": "66160",
+                        "latitude": 39.057273,
+                        "longitude": -94.611746
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9135886670",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9135883365",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "45845017|03"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1349722"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106549775,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Kansas Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000364630,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "240|MOB1|45845017||03"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16259222,
+                                    "professional_location_contract_id": 106549775,
+                                    "professional_location_id": 101780103,
+                                    "professional_id": 1000942390,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10334,
+                                        "name": "Pain Medicine",
+                                        "title": null,
+                                        "partner_code": "BCAJZ",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101780081,
+                    "name": "Manion, Smith C.",
+                    "address": {
+                        "addr_line1": "10730 Nall Ave Ste 200",
+                        "addr_line2": "",
+                        "city": "Overland Park",
+                        "state_code": "KS",
+                        "sub_national": null,
+                        "county": "Johnson",
+                        "country_code": null,
+                        "postal_code": "66211",
+                        "latitude": 38.933354,
+                        "longitude": -94.649031
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9139459800",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9139459838",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "45845017|02"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1058616"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106549724,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Kansas Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000364630,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "240|MOB1|45845017||02"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16259219,
+                                    "professional_location_contract_id": 106549724,
+                                    "professional_location_id": 101780081,
+                                    "professional_id": 1000942390,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10334,
+                                        "name": "Pain Medicine",
+                                        "title": null,
+                                        "partner_code": "BCAJZ",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101780071,
+                    "name": "Manion, Smith C.",
+                    "address": {
+                        "addr_line1": "10720 Nall Ave",
+                        "addr_line2": "",
+                        "city": "Overland Park",
+                        "state_code": "KS",
+                        "sub_national": null,
+                        "county": "Johnson",
+                        "country_code": null,
+                        "postal_code": "66211",
+                        "latitude": 38.933451,
+                        "longitude": -94.649027
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9135882017",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9136893134",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "45845017|01"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1058511"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 106549689,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Kansas Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000364630,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "240|MOB1|45845017||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16259216,
+                                    "professional_location_contract_id": 106549689,
+                                    "professional_location_id": 101780071,
+                                    "professional_id": 1000942390,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10334,
+                                        "name": "Pain Medicine",
+                                        "title": null,
+                                        "partner_code": "BCAJZ",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100811432,
+                    "professional_id": 1000942390,
+                    "is_certified": "Y",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10334,
+                        "name": "Pain Medicine",
+                        "title": null,
+                        "partner_code": "BCAJZ",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                },
+                {
+                    "id": 101339875,
+                    "professional_id": 1000942390,
+                    "is_certified": "Y",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10130,
+                        "name": "Anesthesiology Pain Management",
+                        "title": null,
+                        "partner_code": "BCAEN",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/240%7CMOS1%7C45845017%7C%7C05/reviews?reviews_canonical_id=240%7CMOS1%7C45845017%7C%7C05",
+                "ratings": "/api/doctors/240%7CMOS1%7C45845017%7C%7C05/ratings",
+                "summary": "/api/doctors/240%7CMOS1%7C45845017%7C%7C05/summary",
+                "acceptable_reviewers": "/api/doctors/240%7CMOS1%7C45845017%7C%7C05/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000687047,
+            "provider_id": "p1000687047",
+            "name": "Smith Apisarnthanarax",
+            "first_name": "Smith",
+            "middle_name": null,
+            "last_name": "Apisarnthanarax",
+            "type": "P",
+            "gender": "M",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "6903064"
+                }
+            ],
+            "languages": [
+                {
+                    "type_code": null,
+                    "name": "Thai"
+                }
+            ],
+            "href": "/api/professionals/1000687047/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101017356,
+                    "name": "Liver Tumor Clinic at Uwmc",
+                    "address": {
+                        "addr_line1": "1959 NE Pacific St 3rd Fl",
+                        "addr_line2": "",
+                        "city": "Seattle",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98195",
+                        "latitude": 47.650506,
+                        "longitude": -122.307482
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2065205000",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "100122944"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "A04KFZA094ZR|03"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103742629,
+                            "awards": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "name": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "datum_attributes": {},
+                                        "awd_authority_code": null,
+                                        "recog_type_code": null,
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ],
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "type": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "raw_value": "Y",
+                                        "description": null
+                                    }
+                                ]
+                            },
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Liver Tumor Clinic at Uwmc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Washington Medical Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "430|WAB1|A04KFZA094ZR||03"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 21064695,
+                                    "professional_location_contract_id": 103742629,
+                                    "professional_location_id": 101017356,
+                                    "professional_id": 1000687047,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10121,
+                                        "name": "Radiation Oncology",
+                                        "title": null,
+                                        "partner_code": "BCADW",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101017367,
+                    "name": "University of Washington Physici",
+                    "address": {
+                        "addr_line1": "1570 N 115th St",
+                        "addr_line2": "",
+                        "city": "Seattle",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98133",
+                        "latitude": 47.712263,
+                        "longitude": -122.335688
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2065205000",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1152243"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "100000925550|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103742504,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "932|WAB2|100000925550||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 21064660,
+                                    "professional_location_contract_id": 103742504,
+                                    "professional_location_id": 101017367,
+                                    "professional_id": 1000687047,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10121,
+                                        "name": "Radiation Oncology",
+                                        "title": null,
+                                        "partner_code": "BCADW",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101017348,
+                    "name": "University of Washington Physici",
+                    "address": {
+                        "addr_line1": "1959 NE Pacific St",
+                        "addr_line2": "",
+                        "city": "Seattle",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98195",
+                        "latitude": 47.650506,
+                        "longitude": -122.307482
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2065205000",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "900470495002|01"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "100122944"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103742426,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "932|WAB2|900470495002||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 21064633,
+                                    "professional_location_contract_id": 103742426,
+                                    "professional_location_id": 101017348,
+                                    "professional_id": 1000687047,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10121,
+                                        "name": "Radiation Oncology",
+                                        "title": null,
+                                        "partner_code": "BCADW",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101017349,
+                    "name": "Seattle Cancer Care Alliance",
+                    "address": {
+                        "addr_line1": "1570 N 115th St",
+                        "addr_line2": "",
+                        "city": "Seattle",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98133",
+                        "latitude": 47.712263,
+                        "longitude": -122.335688
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2065205000",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1152243"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "A04KFZA03MMH|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103742417,
+                            "awards": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "name": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "datum_attributes": {},
+                                        "awd_authority_code": null,
+                                        "recog_type_code": null,
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ],
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "type": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "raw_value": "Y",
+                                        "description": null
+                                    }
+                                ]
+                            },
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Seattle Cancer Care Alliance Proton Therapy Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000228422,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Washington Medical Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "430|WAB1|A04KFZA03MMH||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 21064629,
+                                    "professional_location_contract_id": 103742417,
+                                    "professional_location_id": 101017349,
+                                    "professional_id": 1000687047,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10121,
+                                        "name": "Radiation Oncology",
+                                        "title": null,
+                                        "partner_code": "BCADW",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 101017374,
+                    "name": "Radiation Oncology Services at Uwmc",
+                    "address": {
+                        "addr_line1": "1959 NE Pacific St Fl 1 Ste NN 106",
+                        "addr_line2": "",
+                        "city": "Seattle",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98195",
+                        "latitude": 47.650506,
+                        "longitude": -122.307482
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2065205000",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "A04KFZA071EI|02"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "100122944"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 4,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103742513,
+                            "awards": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "name": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "datum_attributes": {},
+                                        "awd_authority_code": null,
+                                        "recog_type_code": null,
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ],
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {
+                                "bdtc": [
+                                    {
+                                        "type_code": "BDTC",
+                                        "type": "Blue Distinction Total Care",
+                                        "value": "Y",
+                                        "raw_value": "Y",
+                                        "description": null
+                                    }
+                                ]
+                            },
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Radiation Oncology Services at Uwmc",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "University of Washington Medical Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "430|WAB1|A04KFZA071EI||02"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 21064662,
+                                    "professional_location_contract_id": 103742513,
+                                    "professional_location_id": 101017374,
+                                    "professional_id": 1000687047,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10121,
+                                        "name": "Radiation Oncology",
+                                        "title": null,
+                                        "partner_code": "BCADW",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100464008,
+                    "professional_id": 1000687047,
+                    "is_certified": "Y",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10121,
+                        "name": "Radiation Oncology",
+                        "title": null,
+                        "partner_code": "BCADW",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/932%7CWAB2%7C900470495002%7C%7C01/reviews?reviews_canonical_id=932%7CWAB2%7C900470495002%7C%7C01",
+                "ratings": "/api/doctors/932%7CWAB2%7C900470495002%7C%7C01/ratings",
+                "summary": "/api/doctors/932%7CWAB2%7C900470495002%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/932%7CWAB2%7C900470495002%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1002134953,
+            "provider_id": "p1002134953",
+            "name": "Smith D Christenbury",
+            "first_name": "Smith",
+            "middle_name": "D",
+            "last_name": "Christenbury",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "LPT"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "32251409"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1002134953/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 102861340,
+                    "name": "Physical Therapy Center LLC",
+                    "address": {
+                        "addr_line1": "2400 South Blvd Ste 203",
+                        "addr_line2": "",
+                        "city": "Charlotte",
+                        "state_code": "NC",
+                        "sub_national": null,
+                        "county": "Mecklenburg",
+                        "country_code": null,
+                        "postal_code": "28203",
+                        "latitude": 35.204579,
+                        "longitude": -80.863364
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9808331293",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "9808331294",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "19GLF|03"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1642043"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "19GLF|05"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "N",
+                                "raw_value": "N",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 110623957,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Physical Therapy Center LLC",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000310152,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "310|NCB2|19GLF||03"
+                                },
+                                {
+                                    "type_code": "BCA",
+                                    "value": "310|NCB2|19GLF||05"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 15978049,
+                                    "professional_location_contract_id": 110623957,
+                                    "professional_location_id": 102861340,
+                                    "professional_id": 1002134953,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10093,
+                                        "name": "Physical Therapist",
+                                        "title": null,
+                                        "partner_code": "BCACF",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 101302584,
+                    "professional_id": 1002134953,
+                    "is_certified": "N",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10093,
+                        "name": "Physical Therapist",
+                        "title": null,
+                        "partner_code": "BCACF",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/310%7CNCB2%7C19GLF%7C%7C03/reviews?reviews_canonical_id=310%7CNCB2%7C19GLF%7C%7C03",
+                "ratings": "/api/doctors/310%7CNCB2%7C19GLF%7C%7C03/ratings",
+                "summary": "/api/doctors/310%7CNCB2%7C19GLF%7C%7C03/summary",
+                "acceptable_reviewers": "/api/doctors/310%7CNCB2%7C19GLF%7C%7C03/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000615419,
+            "provider_id": "p1000615419",
+            "name": "Smitha Daka",
+            "first_name": "Smitha",
+            "middle_name": null,
+            "last_name": "Daka",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "5154598"
+                }
+            ],
+            "languages": [
+                {
+                    "type_code": null,
+                    "name": "Hindi"
+                },
+                {
+                    "type_code": null,
+                    "name": "Telugu"
+                }
+            ],
+            "href": "/api/professionals/1000615419/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 100975263,
+                    "name": "Healthcare Partners Med Grp",
+                    "address": {
+                        "addr_line1": "3501 S Harbor Blvd",
+                        "addr_line2": "",
+                        "city": "Santa Ana",
+                        "state_code": "CA",
+                        "sub_national": null,
+                        "county": "Orange",
+                        "country_code": null,
+                        "postal_code": "92704",
+                        "latitude": 33.70065,
+                        "longitude": -117.919444
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {},
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [],
+                    "amenities": {},
+                    "other_locations_count": 1,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103585950,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Healthcare Partners Med Grp",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000347441,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Providence Holy Cross Med Ctr",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000068867,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Henry Mayo Newhall Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000086803,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "542|CAB2|100011961011||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 14967310,
+                                    "professional_location_contract_id": 103585950,
+                                    "professional_location_id": 100975263,
+                                    "professional_id": 1000615419,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 100975267,
+                    "name": "Loma Linda University Healthcare",
+                    "address": {
+                        "addr_line1": "11370 Anderson St Ste 3600",
+                        "addr_line2": "",
+                        "city": "Loma Linda",
+                        "state_code": "CA",
+                        "sub_national": null,
+                        "county": "San Bernardino",
+                        "country_code": null,
+                        "postal_code": "92354",
+                        "latitude": 34.047166,
+                        "longitude": -117.261109
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "9095582870",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "EL",
+                            "value": "A  00096708|01"
+                        },
+                        {
+                            "type_code": "LUK",
+                            "value": "1389168"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "N",
+                                "raw_value": "N",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 1,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 103585965,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Loma Linda University Medical Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Providence Holy Cross Medical Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000376436,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                },
+                                {
+                                    "name": "Henry Mayo Newhall Memorial Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000379320,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "040|CAB1|A  00096708||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 14967312,
+                                    "professional_location_contract_id": 103585965,
+                                    "professional_location_id": 100975267,
+                                    "professional_id": 1000615419,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10009,
+                                        "name": "Internal Medicine",
+                                        "title": null,
+                                        "partner_code": "BCA11",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100444910,
+                    "professional_id": 1000615419,
+                    "is_certified": "N",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10009,
+                        "name": "Internal Medicine",
+                        "title": null,
+                        "partner_code": "BCA11",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/542%7CCAB2%7C100011961011%7C%7C01/reviews?reviews_canonical_id=542%7CCAB2%7C100011961011%7C%7C01",
+                "ratings": "/api/doctors/542%7CCAB2%7C100011961011%7C%7C01/ratings",
+                "summary": "/api/doctors/542%7CCAB2%7C100011961011%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/542%7CCAB2%7C100011961011%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1001281833,
+            "provider_id": "p1001281833",
+            "name": "Smitha Bhat",
+            "first_name": "Smitha",
+            "middle_name": null,
+            "last_name": "Bhat",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "PsyD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "21250121"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1001281833/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 102625063,
+                    "name": "Smitha Bhat PsyD",
+                    "address": {
+                        "addr_line1": "300 E Roosevelt Rd Ste 105",
+                        "addr_line2": "",
+                        "city": "Wheaton",
+                        "state_code": "IL",
+                        "sub_national": null,
+                        "county": "Dupage",
+                        "country_code": null,
+                        "postal_code": "60187",
+                        "latitude": 41.858886,
+                        "longitude": -88.102507
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "6305343136",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1605535"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "0430540705|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 109634578,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [
+                                {
+                                    "name": "Nicholas and Noble Pysho Assoc PC",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000065463,
+                                    "facility_location_id": null
+                                }
+                            ],
+                            "hospital_affiliations": [],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "621|ILB1|0430540705||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 13208991,
+                                    "professional_location_contract_id": 109634578,
+                                    "professional_location_id": 102625063,
+                                    "professional_id": 1001281833,
+                                    "tier": null,
+                                    "is_certified": "A",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10096,
+                                        "name": "Psychologist",
+                                        "title": null,
+                                        "partner_code": "BCACK",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 101194766,
+                    "professional_id": 1001281833,
+                    "is_certified": "A",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10096,
+                        "name": "Psychologist",
+                        "title": null,
+                        "partner_code": "BCACK",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/621%7CILSA%7C0430540705%7C%7C01/reviews?reviews_canonical_id=621%7CILSA%7C0430540705%7C%7C01",
+                "ratings": "/api/doctors/621%7CILSA%7C0430540705%7C%7C01/ratings",
+                "summary": "/api/doctors/621%7CILSA%7C0430540705%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/621%7CILSA%7C0430540705%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1001282170,
+            "provider_id": "p1001282170",
+            "name": "Smitha Bhat",
+            "first_name": "Smitha",
+            "middle_name": null,
+            "last_name": "Bhat",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "PsyD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "21250121"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1001282170/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 102625086,
+                    "name": "Bhat, Smitha, PsyD",
+                    "address": {
+                        "addr_line1": "75 NW Dogwood St Ste B",
+                        "addr_line2": "",
+                        "city": "Issaquah",
+                        "state_code": "WA",
+                        "sub_national": null,
+                        "county": "King",
+                        "country_code": null,
+                        "postal_code": "98027",
+                        "latitude": 47.5338,
+                        "longitude": -122.037815
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "4252693277",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1493828"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "A05WA8100000|03"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 0,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 109634707,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "430|WAB1|A05WA8100000||03"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 19472510,
+                                    "professional_location_contract_id": 109634707,
+                                    "professional_location_id": 102625086,
+                                    "professional_id": 1001282170,
+                                    "tier": null,
+                                    "is_certified": "A",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10096,
+                                        "name": "Psychologist",
+                                        "title": null,
+                                        "partner_code": "BCACK",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 101194782,
+                    "professional_id": 1001282170,
+                    "is_certified": "A",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10096,
+                        "name": "Psychologist",
+                        "title": null,
+                        "partner_code": "BCACK",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/430%7CWAL7%7CA05WA8100000%7C%7C03/reviews?reviews_canonical_id=430%7CWAL7%7CA05WA8100000%7C%7C03",
+                "ratings": "/api/doctors/430%7CWAL7%7CA05WA8100000%7C%7C03/ratings",
+                "summary": "/api/doctors/430%7CWAL7%7CA05WA8100000%7C%7C03/summary",
+                "acceptable_reviewers": "/api/doctors/430%7CWAL7%7CA05WA8100000%7C%7C03/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1002128165,
+            "provider_id": "p1002128165",
+            "name": "Smitha John",
+            "first_name": "Smitha",
+            "middle_name": null,
+            "last_name": "John",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "NP"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "33082411"
+                }
+            ],
+            "languages": [
+                {
+                    "type_code": null,
+                    "name": "Malayalam"
+                }
+            ],
+            "href": "/api/professionals/1002128165/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 103131150,
+                    "name": "Northern Medical Group",
+                    "address": {
+                        "addr_line1": "49 Foster Rd",
+                        "addr_line2": "",
+                        "city": "Hopewell Junction",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "Dutchess",
+                        "country_code": null,
+                        "postal_code": "12533",
+                        "latitude": 41.591339,
+                        "longitude": -73.797224
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "8458960736",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ],
+                        "fax": [
+                            {
+                                "number": "8458965196",
+                                "type": "Fax",
+                                "type_code": "F",
+                                "is_primary": null
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1398292"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "971UT1|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "U",
+                                "raw_value": "U",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 3,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 111512591,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Putnam Hospital Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000272180,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|971UT1||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12543877,
+                                    "professional_location_contract_id": 111512591,
+                                    "professional_location_id": 103131150,
+                                    "professional_id": 1002128165,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10208,
+                                        "name": "Nurse Practitioner",
+                                        "title": null,
+                                        "partner_code": "BCARX",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 103131152,
+                    "name": "Northern Medical Group",
+                    "address": {
+                        "addr_line1": "400 Westage Business Ctr Dr Ste 205",
+                        "addr_line2": "",
+                        "city": "Fishkill",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "Dutchess",
+                        "country_code": null,
+                        "postal_code": "12524",
+                        "latitude": 41.524648,
+                        "longitude": -73.895524
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "8452795136",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1356197"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "907UJ2|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 3,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 111512594,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Putnam Hospital Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000272180,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|907UJ2||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12543880,
+                                    "professional_location_contract_id": 111512594,
+                                    "professional_location_id": 103131152,
+                                    "professional_id": 1002128165,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10208,
+                                        "name": "Nurse Practitioner",
+                                        "title": null,
+                                        "partner_code": "BCARX",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 103131149,
+                    "name": "Northern Medical Group",
+                    "address": {
+                        "addr_line1": "465 Columbus Ave",
+                        "addr_line2": "",
+                        "city": "Valhalla",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "Westchester",
+                        "country_code": null,
+                        "postal_code": "10595",
+                        "latitude": 41.106164,
+                        "longitude": -73.776554
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "8452795136",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1390977"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "907UJ3|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 3,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 111512586,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Putnam Hospital Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000272180,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|907UJ3||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12543872,
+                                    "professional_location_contract_id": 111512586,
+                                    "professional_location_id": 103131149,
+                                    "professional_id": 1002128165,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10208,
+                                        "name": "Nurse Practitioner",
+                                        "title": null,
+                                        "partner_code": "BCARX",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 103131151,
+                    "name": "Northern Medical Group",
+                    "address": {
+                        "addr_line1": "664 Stoneleigh Ave Ste 100",
+                        "addr_line2": "",
+                        "city": "Carmel",
+                        "state_code": "NY",
+                        "sub_national": null,
+                        "county": "Putnam",
+                        "country_code": null,
+                        "postal_code": "10512",
+                        "latitude": 41.384574,
+                        "longitude": -73.664537
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "8452795136",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1467194"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "907UJ1|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 3,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 111512598,
+                            "awards": {},
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Putnam Hospital Center",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": 1000272180,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "803|NYB3|907UJ1||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 12543884,
+                                    "professional_location_contract_id": 111512598,
+                                    "professional_location_id": 103131151,
+                                    "professional_id": 1002128165,
+                                    "tier": null,
+                                    "is_certified": "Y",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10208,
+                                        "name": "Nurse Practitioner",
+                                        "title": null,
+                                        "partner_code": "BCARX",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 101279924,
+                    "professional_id": 1002128165,
+                    "is_certified": "Y",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10208,
+                        "name": "Nurse Practitioner",
+                        "title": null,
+                        "partner_code": "BCARX",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/803%7CNYL6%7C907UJ3%7C%7C01/reviews?reviews_canonical_id=803%7CNYL6%7C907UJ3%7C%7C01",
+                "ratings": "/api/doctors/803%7CNYL6%7C907UJ3%7C%7C01/ratings",
+                "summary": "/api/doctors/803%7CNYL6%7C907UJ3%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/803%7CNYL6%7C907UJ3%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        },
+        {
+            "_meta": null,
+            "disclaimers": [],
+            "id": 1000375656,
+            "provider_id": "p1000375656",
+            "name": "Smitha P Menon",
+            "first_name": "Smitha",
+            "middle_name": "P",
+            "last_name": "Menon",
+            "type": "P",
+            "gender": "F",
+            "photos": [],
+            "degrees": [
+                "MD"
+            ],
+            "awards": {},
+            "bdc": {},
+            "identifiers": [
+                {
+                    "type_code": "MUK",
+                    "value": "9119187"
+                }
+            ],
+            "languages": [],
+            "href": "/api/professionals/1000375656/profile",
+            "locations": [
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 100294915,
+                    "name": "Medical College of Wisconsin Inc",
+                    "address": {
+                        "addr_line1": "4805 S Moorland Rd",
+                        "addr_line2": "",
+                        "city": "New Berlin",
+                        "state_code": "WI",
+                        "sub_national": null,
+                        "county": "Waukesha",
+                        "country_code": null,
+                        "postal_code": "53151",
+                        "latitude": 42.958213,
+                        "longitude": -88.109045
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "2627987200",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1396052"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "000000697916|01"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 1,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 101082574,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ],
+                                "abms_moc": [
+                                    {
+                                        "type_code": "ABMS_MOC",
+                                        "name": "American Board of Medical Specialties - Maintenance of Certification",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "99999999",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Froedtert Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "950|INB2|000000697916||01"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16888161,
+                                    "professional_location_contract_id": 101082574,
+                                    "professional_location_id": 100294915,
+                                    "professional_id": 1000375656,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10189,
+                                        "name": "Internal Medicine - Hematology & Oncology",
+                                        "title": null,
+                                        "partner_code": "BCAJE",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "_meta": {
+                        "distance": null
+                    },
+                    "id": 100294917,
+                    "name": "Medical College of Wisconsin Inc",
+                    "address": {
+                        "addr_line1": "9200 W Wisconsin Ave",
+                        "addr_line2": "",
+                        "city": "Milwaukee",
+                        "state_code": "WI",
+                        "sub_national": null,
+                        "county": "Milwaukee",
+                        "country_code": null,
+                        "postal_code": "53226",
+                        "latitude": 43.038407,
+                        "longitude": -88.027316
+                    },
+                    "awards": {},
+                    "bdc": {},
+                    "phones": {
+                        "voice": [
+                            {
+                                "number": "4148054600",
+                                "type": "Voice",
+                                "type_code": "V",
+                                "is_primary": "Y"
+                            }
+                        ]
+                    },
+                    "cost": null,
+                    "tiers": null,
+                    "identifiers": [
+                        {
+                            "type_code": "LUK",
+                            "value": "1539902"
+                        },
+                        {
+                            "type_code": "EL",
+                            "value": "000000697916|02"
+                        }
+                    ],
+                    "amenities": {
+                        "ha": [
+                            {
+                                "type_code": "HA",
+                                "type": "Handicap Accessible",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ],
+                        "apf": [
+                            {
+                                "type_code": "APF",
+                                "type": "e-Prescriber",
+                                "value": "Y",
+                                "raw_value": "Y",
+                                "description": null
+                            }
+                        ]
+                    },
+                    "other_locations_count": 1,
+                    "disclaimers": [],
+                    "contracts": [
+                        {
+                            "id": 101082550,
+                            "awards": {
+                                "ehr": [
+                                    {
+                                        "type_code": "EHR",
+                                        "name": "Medicare and Medicaid Electronic Health Records (EHR) Incentive Programs",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "00",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ],
+                                "abms_moc": [
+                                    {
+                                        "type_code": "ABMS_MOC",
+                                        "name": "American Board of Medical Specialties - Maintenance of Certification",
+                                        "value": null,
+                                        "datum_attributes": {},
+                                        "awd_authority_code": "BCA",
+                                        "recog_type_code": "99999999",
+                                        "institution": null,
+                                        "start_date": null,
+                                        "end_date": null,
+                                        "link": null
+                                    }
+                                ]
+                            },
+                            "bdc": {},
+                            "has_bdc_affiliated_facility": null,
+                            "group_affiliations": [],
+                            "hospital_affiliations": [
+                                {
+                                    "name": "Froedtert Hospital",
+                                    "description": null,
+                                    "information": null,
+                                    "facility_id": null,
+                                    "facility_location_id": null,
+                                    "address": {
+                                        "addr_line1": null,
+                                        "addr_line2": null,
+                                        "city": null,
+                                        "state_code": null,
+                                        "sub_national": null,
+                                        "county": null,
+                                        "country_code": null,
+                                        "postal_code": null,
+                                        "latitude": null,
+                                        "longitude": null
+                                    }
+                                }
+                            ],
+                            "disclaimers": [],
+                            "future_effective_date": null,
+                            "future_termination_date": null,
+                            "identifiers": [
+                                {
+                                    "type_code": "BCA",
+                                    "value": "950|INB2|000000697916||02"
+                                }
+                            ],
+                            "tiers": {},
+                            "is_pcp": null,
+                            "is_pcp_for_accounts": null,
+                            "specializations": [
+                                {
+                                    "id": 16888158,
+                                    "professional_location_contract_id": 101082550,
+                                    "professional_location_id": 100294917,
+                                    "professional_id": 1000375656,
+                                    "tier": null,
+                                    "is_certified": "N",
+                                    "is_primary": null,
+                                    "field_specialty": {
+                                        "_id": 10189,
+                                        "name": "Internal Medicine - Hematology & Oncology",
+                                        "title": null,
+                                        "partner_code": "BCAJE",
+                                        "field": {
+                                            "id": 1,
+                                            "name": null,
+                                            "partner_code": null
+                                        }
+                                    },
+                                    "locations": [],
+                                    "contracts": [],
+                                    "specializations": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "specializations": [
+                {
+                    "id": 100134519,
+                    "professional_id": 1000375656,
+                    "is_certified": "N",
+                    "is_primary": null,
+                    "field_specialty": {
+                        "_id": 10189,
+                        "name": "Internal Medicine - Hematology & Oncology",
+                        "title": null,
+                        "partner_code": "BCAJE",
+                        "field": null
+                    },
+                    "locations": [],
+                    "contracts": [],
+                    "specializations": []
+                }
+            ],
+            "reviews": {
+                "overall_rating": null,
+                "percent_recommended": null,
+                "total_ratings": 0
+            },
+            "links": {
+                "reviews": "/api/doctors/950%7CINB2%7C000000697916%7C%7C01/reviews?reviews_canonical_id=950%7CINB2%7C000000697916%7C%7C01",
+                "ratings": "/api/doctors/950%7CINB2%7C000000697916%7C%7C01/ratings",
+                "summary": "/api/doctors/950%7CINB2%7C000000697916%7C%7C01/summary",
+                "acceptable_reviewers": "/api/doctors/950%7CINB2%7C000000697916%7C%7C01/acceptable_reviewers",
+                "affiliated_professionals": null
+            }
+        }
+    ],
+    "disclaimers": [],
+    "cash_reward_reference_number": null
+}

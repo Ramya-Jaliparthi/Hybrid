@@ -1,0 +1,33 @@
+<ion-content>
+    <ion-grid class="background-blue">
+        <ion-row no-padding>
+            <ion-col text-right>
+                <ion-icon name="close" class="close-icon" (click)="close($event)"></ion-icon>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+                <img class="visit-icon" [src]="config.assets_url+'/images/icons-ios/Asset87@2x.png'" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-20 arial-bold">{{data.displayName}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center class="font-17">{{data.memberRelation}}</ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item no-padding aling-self-center>
+            <div text-center class="arial-bold word-wrap font-11">Prescription History for</div>
+            <div text-center class="padding-left-15">
+                <span class="arial-bold word-wrap font-11">{{data.medication.GenericName}}</span>
+            </div>
+        </ion-item>
+        <ion-item no-padding text-center class="dateDispCls" *ngFor="let history of data.recentRxHistory">{{history.DispDt}}</ion-item>
+    </ion-list>
+    <ion-footer>
+        <button full ion-button class="btnCls" (tap)="close($event)">Close</button>
+    </ion-footer>
+</ion-content>

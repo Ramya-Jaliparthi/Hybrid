@@ -1,0 +1,121 @@
+page-my-cards-detail {
+
+    ion-content{
+        background-color:#dddddd !important;
+    }
+     
+
+     .subname{
+        display: inline-block; width: 80%;
+    }	
+    .subicon {
+        float:right; width: 15%;
+    }
+
+
+    .modalContent{
+        background-color: #fff;
+        height: 100%;
+        color:#fff;
+        
+    }
+    .modalCloseCls{
+        height: 40px;
+        width: 40px;
+        
+        float: right;
+        background:none;
+    }
+    .informationSectionClas{
+        padding-top:40px;
+        text-align:center;
+        padding-bottom:10px;    
+        background-color:$background-color-highlighted
+    }
+      .leftRightPadding{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .titleTextCls{
+        font-size: $card-content-title-size;
+        font-family: $font-family-lable;
+    }
+   
+    .imageContainerCls{
+        padding-bottom: 10px;
+    }
+
+    .bottomBorder {
+        border-bottom: 1px solid #EEE;
+    }
+    .cardDetailContainerCls{
+        ion-row{
+            padding: $padding-page-20 $padding-page-30 !important;
+        }
+        .detailArrowCls {
+            font-size: 2em;
+            font-weight: bold;
+            color: #818181;
+        }
+    }
+    .modalContent .swiper-slide{
+        align-items: start;
+        font-size:1em;
+        overflow: scroll;
+    }
+
+    .cardDetailLabelCls{
+        color:$card-content-font-color-normal;
+        
+    }
+    .cardDetailTitleLabelCls{
+        font-family: arial-bold;
+        color:$card-content-font-color-normal;
+       
+    }
+    .iconLableCls{
+        
+        padding-left: 5px;
+    }
+    .imageCls{
+        height:35px;
+        margin-bottom:$padding-20;
+    }
+    .iconContainerCls{
+        color:$card-content-font-color-highlighted; 
+        padding-left:$padding-30; 
+        
+        text-align: left;
+        font-family: $font-family-lable;
+        float: right;
+    }
+
+    .cardDetailsContainerCls{
+        background-color: $background-color-highlighted;
+        
+    }
+    .paddng-bottom{
+        padding-bottom:5px;
+    }
+    .padding-top{
+        padding-top:20px;
+    }
+    
+    .boldCls{
+        font-family: arial-bold;
+    }
+    .smallFont{
+        font-size:$page-content-medium-font-size;
+    }
+
+    .scroll-content {
+        margin-top: 0px !important; 
+        margin-bottom: 0px !important; 
+    }
+    .disableCallCls{
+        opacity:0.5;
+    }
+    .enableCallCls{
+        opacity:1;
+    }
+}

@@ -1,0 +1,42 @@
+ learn-more {
+
+    .learn-more-title {
+        font-family: roboto-bold;
+        font-size: 18px;
+        line-height: 1.4em;
+        color: $card-content-font-color-normal;
+        font-weight: bold;
+    }
+
+    .learnMoreTxt{
+        padding-left: 0;
+        line-height: 1.4em;
+        font-size: 16px;
+        color: $card-content-font-color-normal;
+        font-family: roboto-light;
+        margin-top: 5px;
+    }
+
+    .learn-more-button-back{
+        margin: 10px 0px;
+        font-size: 18px;
+        padding: 25px;
+    }
+
+    .content-cls {
+        font-family: $font-family-lable;
+    }
+
+    .headerTitle {
+        background-color: white !important;
+        font-weight: normal;
+        text-transform: capitalize !important;
+    }
+
+    //  .boldContentCls {
+    //      font-family: arial-bold;
+    //      color: $card-content-font-color-normal;
+    //      font-size: $card-content-body-size;
+    //  }
+
+}

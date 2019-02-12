@@ -1,0 +1,211 @@
+@import "../common/financials.scss";
+
+page-make-payment-landing {
+  /*.item-ios,
+  .item-md {
+    padding-left: 0px !important;
+  }*/
+
+  .whom-to-pay {
+    margin-left: 10px !important;
+
+    .item-ios .radio-ios[item-left],
+    .item-ios .radio-ios[item-start] {
+      margin: 2px 6px 4px 3px;
+    }
+    .item-md .radio-md[item-left],
+    .item-md .radio-md[item-start] {
+      margin: 2px 6px 4px 3px;
+    }
+
+    /*.item-block {
+      background: transparent !important;
+    }*/
+
+    .item-radio-checked.item-ios ion-label {
+      @include Arial-bold(bold);
+      font-size: 0.9em;
+    }
+  }
+
+  .buttonFull {
+    width: 100%;
+    margin-left: 6px;
+  }
+
+  .ionBtncls {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    margin-left: -3px;
+  }
+  .ionbtnclear {
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 0 1em;
+    height: 35px;
+    margin-left: -4px;
+    color: #1866a3;
+  }
+
+  .labelCls {
+    background: #ffffff;
+    padding-bottom: 1.5rem;
+  }
+
+  .button-bg {
+    background: #ffffff;
+    margin-top: 17px;
+  }
+
+  .list-ios {
+    margin: 4px 0;
+  }
+
+  .question-container {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+  }
+
+  .question-container p {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 5px;
+    font-family: arial;
+  }
+  .question-container .ques {
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-weight: 300;
+  }
+  .question-container .quesTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  .question-container .ques_title {
+    margin-top: 5px;
+  }
+
+  .question-container .ques_item {
+    font-weight: bold;
+    color: black;
+  }
+
+  .box_transparent {
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=50);
+    background: rgb(235, 237, 239);
+    margin-top: 10px;
+  }
+
+  .question-container .options_box {
+    z-index: 2;
+    position: relative;
+    padding-top: 1.5rem;
+  }
+
+  .question-container .options_box .item-md {
+    background: rgb(235, 237, 239);
+    align-items: flex-start;
+    margin: 0px !important;
+  }
+
+  .question-container .options_box .item-ios .item-block {
+    min-height: 34px;
+  }
+  .item-block {
+    min-height: 34px;
+  }
+
+  .question-container .options_box .item-ios {
+    background: rgb(235, 237, 239);
+    align-items: flex-start;
+    margin: 0px !important;
+  }
+
+  .question-container .options_box .label-md {
+    margin: 0px 8px 5px 0;
+  }
+
+  .question-container .options_box .label-ios {
+    margin: 0px 8px 5px 0;
+  }
+
+  .list-md .item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .list-md > .item-block:last-child,
+  .list-md > .item-wrapper:last-child .item-block {
+    border-bottom: none !important;
+  }
+
+  .item-md .radio-md[item-left],
+  .item-md .radio-md[item-start] {
+    margin: 2px 6px 4px 3px;
+  }
+
+  .list-ios .item-block .item-inner {
+    border-bottom: none !important;
+  }
+
+  .list-ios > .item-block:last-child,
+  .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none !important;
+  }
+
+  .item-ios .radio-ios[item-left],
+  .item-ios .radio-ios[item-start] {
+    margin: 2px 6px 4px 3px;
+  }
+
+  .radio-ios .radio-checked .radio-inner {
+    left: 2px !important;
+    top: 2px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #000000;
+  }
+
+  .lable_padding {
+    white-space: unset !important;
+  }
+
+  .questionContainer {
+    padding-top: 30px;
+  }
+
+  .radio-md .radio-icon {
+    border-color: #000000;
+  }
+
+  .radio-md .radio-checked {
+    border-color: #000000;
+  }
+  .radio-md .radio-inner {
+    border-color: #000000;
+    background-color: #000000;
+  }
+
+  .radio-md .radio-checked .radio-inner {
+    left: 2px !important;
+    top: 2px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #000000;
+  }
+  .item-radio-checked.item-md ion-label {
+    color: #000000;
+  }
+}

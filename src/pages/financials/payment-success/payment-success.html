@@ -1,0 +1,58 @@
+<header [title]='"Payment Success"'></header>
+<!--Success alert message-->
+<!-- <alert-message-card [showAlert]="showAlert" [title]="title" [message]="message" [type]="type" [alert]="alert"></alert-message-card> -->
+
+<ion-content>
+  <div class="review-submit-success">
+      <span class="check-circle">
+        <i class="fal fa-check-circle"></i>
+      </span>&nbsp;
+      <span class="success-text">Success!</span>
+    </div>
+  <ion-item-group>
+    <div class="title">
+      <ng-container *ngIf="whomToPay==='Myself' ; else ProviderNow">
+        Your Payment was submitted
+      </ng-container>
+      <ng-template #ProviderNow>
+        <ng-container *ngIf="whomToPay==='Provider'">
+          Your request to a Pay a Provider was submitted
+        </ng-container>
+      </ng-template>
+    </div>
+
+    <ion-item no-lines class="payInfo">
+      <span class="trans-amt"><b>$10,000<sup>00</sup></b></span>
+      <span *ngIf="payType==='Check'">to be paid by check</span>
+      <span>to be paid by direct deposit to <br />
+        <div class="acc-info">[Account Name]</div>
+      </span>
+    </ion-item>
+
+    <ion-item no-lines class="payment-details">
+      <div class="payment-title"> Transactions Details </div>
+      <div class="payeename"><b>John Doe</b></div>
+      <div><b>Provider: </b>Jane Smith</div>
+      <div><b>Service Type: </b>Dental</div>
+      <div><b>Note: </b>Note all about</div>
+    </ion-item>
+
+    <ion-item no-lines>
+      <div class="date-info" *ngIf="whenTosubmit==='Now'">Date of Transaction: 12/02/2018</div>
+      <div class="date-info">Date of Service: 12/01/2018 - 12/02/2018</div>
+    </ion-item>
+
+    <ion-item>
+      <div class="buttonFull">
+        <button class="ionBtncls" ion-button (click)="navigateToTransactionSummary()">View All Transactions</button>
+      </div>
+    </ion-item>
+
+  </ion-item-group>
+
+  <img class="shadow-img" />
+  <br>
+
+</ion-content>
+
+<footer></footer>

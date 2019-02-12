@@ -1,0 +1,138 @@
+page-user-migration-success{
+    .content {
+        background-color: white !important;
+        padding: 0px $padding-page-30 !important;
+    
+        .scroll-content{
+            margin: 0px !important;
+        }
+    }    
+    .shadow-img{
+        content: url($assets-url+'/images/icons-ios/Asset38@2x.png');
+        position: relative; 
+        border: none;
+        height: 12px;
+        width: auto !important;
+    }
+    .promoSingInCls{
+        background-image: url($assets-url+'/images/icons-ios/Asset77@2x.png');
+                background-position: 70px 22px;
+                background-size: 28px;
+                background-repeat: no-repeat;vertical-align: text-bottom;
+    }
+    .shadowImgContainer{
+        background-color:white;
+        
+    }
+    ion-row{
+        padding: $padding-page-15 $padding-page-30;
+    }
+    
+    .promoHeader1Cls{
+        background-color: $auth-promo-header-color;
+        color: white;
+        font-size: $page-header-title-size;
+        border-top: 1px solid #818181;
+    }
+    .register-section {
+            width:70%;
+            float: left;
+            border-right: 0px;
+            padding: 0px $padding-page-30 0px 0px;
+            line-height: 1.5;
+            
+        }
+        .signin-section {
+            float:right; 
+            padding: 15px 40px 15px 10px;
+            font-family: arial-bold;
+            border-left: 1px solid white;
+        }
+        .titleCls {
+            padding:10px 0px; 
+            text-align: center;
+            font-size: 2.5em;
+            font-family: roboto-light;
+            color: #394478;
+        }
+    
+        .secLabelCls{
+           font-family:arial-bold;
+           font-size:$card-content-body-size;
+        }
+        .imgContentCls{
+    
+            padding-right:10px !important;
+        }
+    
+        .close-icon{
+            font-size: 2em;
+            color: #fff;
+        }
+        .textBtnCls, .textBtnCls.activated, .textBtnCls:hover{
+            background: white;
+            color: $background-color-highlighted;
+            border: 0px !important;
+            text-align: center;
+            font-family: arial-bold;
+            padding-top: 10px;
+            font-size: 1.1em;
+        }
+        .btnContainerCls{
+            position: absolute;
+            bottom: 55px;
+            width: 93%;
+            margin: 10px;
+            input {                
+            background-color: #197bb5;
+            text-transform: none;
+            }
+        }
+        .webAppTxt{
+            font-family: arial-bold;
+            padding: 26px 0;
+            padding-left: 44px;
+        }
+        .trophyImg{
+            color:white;
+            width:75%;
+            padding-top:10px;
+            height: 100%;
+        }
+        .subTitleCls{
+            padding-top: 0;
+        }
+        .umSuccesscloseIcon{
+            width: 100%;
+            text-align: right;
+            background-color: #197bb5;
+        }
+        .trophyContainer{
+            background-color: #197bb5;
+            text-align: center;
+        }
+        .ion-ios-trophy:before {
+            font-size: 5em;
+            color: #fff;
+        }  
+        .ion-ios-close:before {
+            color: #fff;
+        }
+        .iconHolder{
+            background-color: #197bb5;
+            text-align: center;
+            min-height: 160px;
+        }
+        .trophyIcon{
+            padding-left: 43px;
+            padding-top: 16px;
+        }
+        ion-img{
+            background: none;
+        }
+        .wrapContainer{
+            margin-top: 30px;
+        }
+    
+    }
+    

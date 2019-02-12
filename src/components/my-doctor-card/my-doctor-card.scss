@@ -1,0 +1,53 @@
+my-doctor-card {
+    .lastVisitCls {
+        padding-top: $padding-30 !important;
+        padding-bottom: $padding-10 !important;
+        font-size: $card-content-body-medium-font-size;
+        border-bottom: 1px solid $card-content-section-border-color;
+    }
+    .informationCls {
+        padding-top: $padding-30 !important;
+        padding-bottom: $padding-30 !important;
+        text-transform: capitalize;
+    }
+    .padding-left-right {
+        padding-left: $padding-page-30 !important;
+        padding-right: $padding-page-30 !important;
+    }
+    .subLableCls {
+        color: $card-title-color;
+        padding-bottom: $padding-10 !important;
+    }
+    .doctorNameCls {
+        color: $card-content-font-color-highlighted;
+        font-size: $card-content-title-size;
+        padding-bottom: $padding-20;
+        font-family: $font-family-lable;
+    }
+    .descriptionCls {
+        font-family: $font-family-lable;
+        font-size: $card-content-body-size;
+        padding-bottom: $padding-20;
+        ;
+    }
+    .addressCls {
+        font-size: $card-content-body-size;
+    }
+    .iconContainerCls {
+        color: $card-content-font-color-highlighted;
+        padding-left: $padding-30;
+        text-align: left;
+        font-weight: bold;
+        float: right;
+    }
+    .iconLableCls {
+        padding-left: 5px;
+    }
+    .imageCls {
+        height: 35px;
+        margin-bottom: $padding-20;
+    }
+    .color-map {
+        color: #92278f;
+    }
+}

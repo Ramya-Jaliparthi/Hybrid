@@ -1,0 +1,93 @@
+<header [title]="'My Medications'" [activeTab]="'myMedications'"></header>
+
+
+<ion-content>
+    <ion-grid class="searchFilterContainer" no-padding no-margin>
+        <ion-row>
+            <ion-col align-self-center *ngIf="!showSearch && config.showFeature('myMedicationSearch')" col-auto class="rightBorderCls">
+                <div (tap)="showSearchBox()">
+                    <img [src]="config.assets_url+'/images/icons-ios/search-white.png'" style="float:left;width: 1.8em; height: 1.8em" />
+                    <div class="searchLabelCls">Search</div>
+                </div>
+            </ion-col>
+            <ion-col align-self-center *ngIf="showSearch" class="rightBorderCls">
+                <ion-searchbar #searchInput [autocomplete]="true" [placeholder]="'Search medications'" (ionInput)="onSearchInput($event)"></ion-searchbar>
+                <ion-list class="autoComplete" [style.display]="showAutoComplete && (autoCompleteNames | visitTypeFilter:selectedGenericName:'name').length  > 0 ? 'block' : 'none'"
+                    style="max-height: 440px;">
+                    <ion-item *ngFor="let med of (autoCompleteNames | visitTypeFilter:selectedGenericName:'name')" (tap)="selectItem(med)">
+                        {{med.name}}
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+            <ion-col align-self-center *ngIf="!showSearch">
+                <div class="memberNameCls">{{displayName}}</div>
+                <div class="memberTypeCls" *ngIf="displayName != 'All'">{{memberRelation}}</div>
+            </ion-col>
+            <ion-col *ngIf="config.showFeature('myMedicationDependents')" align-self-center col-auto #filterOption (click)="presentPopoverOnContainer(medDropDownArrow)">
+                <ion-icon name="ios-arrow-dropdown" class="icon-page" #medDropDownArrow (click)="presentPopover($event)"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <alert-message-card *ngIf="alert" [showAlert]="alert.showAlert" [title]="alert.title" [message]="alert.message" [type]="alert.type"
+        [alert]="alert" [hideCloseButton]="alert.hideCloseButton"></alert-message-card>
+    <div class="background-white" margin-top *ngFor="let med of (medications |visitTypeFilter:selectedGenericName:'GenericName' | orderBy:sortDirection:'DispDt')">
+        <div *ngIf="!cardData || cardData.rxDrug && (cardData.rxDrug.toLowerCase().indexOf(med.GenericName.toLowerCase()) != -1 || cardData.rxDrug.toLowerCase().indexOf(med.GenericName.toLowerCase()) != -1)">
+            <div>
+                <ion-grid no-padding>
+                    <ion-row align-items-center class="border-bottom padding-left-right" style="padding-top:10px;">
+                        <ion-col col-8 class="font-11">
+                            <span class="lablecls">Last Date of Fill: </span>
+                            <span class="arial-bold">{{med.DispDt}}</span>
+                        </ion-col>
+                        <ion-col col-4 text-right>
+                            <ion-icon *ngIf="config.showFeature('myMedicationOverflowMenu')" (click)="showMoreOptions($event, med)"
+                                name="ios-more" class="icon-page color-blue"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row align-items-center class="rowPadding">
+                        <ion-col col-12>
+                            <div class="arial-bold font-16">{{med.GenericName}}</div>
+                            <div class="font-16">
+                                <span class="lablecls font-11">Dosage: </span>{{med.Strength}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <div class="border-bottom  font-11 lablecls padding-left-right">Pharmacy</div>
+                    <ion-row align-items-center class="rowPadding border-bottom" style="padding-bottom:2px;">
+                        <ion-col>
+                            <div class="arial-bold font-16">{{med.DispName}}</div>
+                            <div class="font-13" *ngIf="med.hasAddress">{{med.DispStreet}}</div>
+                            <div class="font-13" *ngIf="med.hasAddress">{{med.DispCity != undefined ? med.DispCity +',':''}} {{med.DispState}} {{med.DispZip.trim() !=
+                                'null' && med.DispZip.trim() != null ? authService.removeLeadingJunkChar(med.DispZip) : ""}}</div>
+
+                            <div class=" font-11 label-grey" style="padding-top:15px;">Prescriber</div>
+                        </ion-col>
+                        <ion-col align-self-center col-auto text-right *ngIf="med.hasAddress" (tap)="showMap(med.addressStr,med.PrescName, med.DispName)"
+                            [style.padding-right]="validatePhoneNum(med.DispPh) ? '10px' : '0px'">
+                            <img class="img-icon" [src]="config.assets_url+'/images/icons-ios/Asset32@2x.png'" />
+                            <div class="arial-bold color-map font-13">Map</div>
+                        </ion-col>
+                        <ion-col *ngIf="validatePhoneNum(med.DispPh)" align-self-center col-auto text-right (tap)="makeCall(med.DispPh,med.PrescName,med.DispName,'pharmacycall')">
+                            <img class="img-icon" [src]="config.assets_url+'/images/icons-ios/Asset31@2x.png'" />
+                            <div class="arial-bold color-blue font-13">Call</div>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row align-items-center class="rowPadding">
+                        <ion-col>
+                            <div class="color-blue arial-bold font-16">{{med.PrescName}}</div>
+                        </ion-col>
+                        <ion-col align-self-center col-auto text-right (tap)="makeCall(med.PrescPh,med.PrescName,med.DispName,'prescribercall')"
+                            *ngIf="validatePhoneNum(med.PrescPh)">
+                            <img class="img-icon" [src]="config.assets_url+'/images/icons-ios/Asset31@2x.png'" />
+                            <div class="arial-bold color-blue font-13">Call</div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <img class="shadow-img" />
+        </div>
+    </div>
+</ion-content>
+
+<footer [activeTab]="'myMedications'"></footer>

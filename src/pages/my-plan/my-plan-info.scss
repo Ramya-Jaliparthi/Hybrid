@@ -1,0 +1,81 @@
+page-my-plan-info{
+    .content{
+        background-color: white !important;
+    }
+    .option-icon{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .scroll-content{
+        margin-top: 0px !important;
+        background-color: white;
+    }
+    .background-blue{
+        background-color: #115890;
+        color: white;
+    }
+    .arial-bold{
+        font-family: arial-bold;
+    }
+    .font-20{
+        font-size: 1.6em;
+    }
+    .font-17{
+        font-size: 1.4em;
+    }
+    .font-11{
+        font-size: 16px;
+        font-weight:bold;
+        padding-left: 4px;
+        text-align: left !important;
+    }
+
+    .font-10{
+        font-size: 15px;
+        font-weight:bold;
+        padding-left: 4px;
+        text-align: left !important;
+    }
+    .visit-icon{
+        max-width: 4em;
+    }
+    .close-icon{
+        font-size: 3em;
+        padding:0px 15px;
+    }
+    .padding-bottom-10{
+        padding-bottom: 10px;
+    }
+    .width-80{
+        width: 80%;
+        border-radius: 5px;
+    }
+    .word-wrap {
+        width: 100%;  word-wrap: break-word;  white-space: normal;     
+    }
+  
+    ion-footer{
+        padding: $padding-page-30;
+        background-color: white;
+
+        .btnCls{
+            font-family: arial-bold;
+            font-weight: normal;
+
+        }
+    }
+    ion-footer::before{
+        background: white !important;
+    }
+
+    .list-ios .item-block .item-inner {
+        border-bottom: 0px solid #c8c7cc;
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 0px solid #c8c7cc;
+    }
+    .planInfoBodyCls{
+        padding: 0px $padding-page-30;
+    }
+}

@@ -1,0 +1,17 @@
+cards-page-dependents-popover{
+
+    width: 60%;
+    .background-blue{
+        background-color: #115890;
+        color: white;
+    }
+    .img-med{
+        max-width: 1.5em;
+    }
+   .ellipsis {
+        width: 280px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

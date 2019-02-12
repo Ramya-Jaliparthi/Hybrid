@@ -1,0 +1,16 @@
+<div id="card.id">
+	<div *ngIf="!card.hideHeader" class="card-header" tappable (click)="openCardApp(card.entryPage)">
+		<div *ngIf="card.title!==''">
+			<div class="dashboardCardMenuIcon">
+				<img [src]="card.icon" />
+			</div>
+			<div class="dashboardCardTitle">
+				{{card.title}}
+			</div>
+		</div>
+	</div>
+	<div [style.height]="card.height" class="card-content" id="{{card.id}}Content">
+		<ng-template card-host></ng-template>
+	</div>
+	<img class="shadow-img" />
+</div>

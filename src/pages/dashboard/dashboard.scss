@@ -1,0 +1,163 @@
+$font-color-normal:black;
+$font-color-on-highlighed-background:white;
+
+page-dashboard {
+    background: #DDDDDD !important;
+    .dashboard-grid-item{
+        background-color: white;
+        margin-bottom: 15px;
+    }
+    .dashboard-grid{
+        margin-top: 90px;
+    }
+    .register-section {
+        width:72%;
+        float: left;
+        border-right: 1px solid white;
+        height: 100%;
+    }
+    .signin-section {
+        width:28%;
+        float:right; 
+        padding: 20px 10px 15px 10px;
+        //font-weight: bold;
+        background-image:url($assets-url+'/images/icons-ios/Asset77@2x.png'); 
+        background-position: 70px 22px;
+        background-size: 24px;
+        background-repeat: no-repeat;vertical-align: text-bottom;
+        
+    }
+
+    .display-in-center{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .register-login-section ion-grid{
+    	padding:0px;
+    }
+    .register-login-section .sectionA{
+        border-right:1px solid white;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .register-login-section .sectionA ion-grid {
+    	padding:0px;
+    }
+    
+    .register-login-section .sectionA ion-grid ion-col {
+    	padding:0px;
+    }
+    .register-login-section .sectionB{
+        padding-top: 10px;
+        padding-bottom: 10px;       
+    }
+
+    .register-login-section .sectionB ion-grid {
+    	padding:0px;
+    }
+    
+    .register-login-section .sectionB ion-grid ion-col {
+    	padding:0px;
+    }
+
+    .register-login-section .sectionB .txt-section{
+    	//word-wrap: break-word;
+    	line-height:24px;
+    	white-space:nowrap;
+    }
+    .register-login-section .sectionB .img-section{
+		background-image:url($assets-url+'/images/icons-ios/Asset77@2x.png');
+		background-position: 50% 50%;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin:0;
+        height:100%;
+        line-height:24px;
+    }
+
+    .sub-header {
+        background-color: $background-color-sign-register-promo;
+        color: #fff;
+        padding: 0px $padding-page-20 0px 10px;
+        //height: 69px;
+        font-family: arial-bold;
+        width: 100%;
+        border-top: 1px solid white;
+        // top: 56px;
+    }
+    .smallTextCls{
+        font-family:roboto-light; 
+        margin-right: 3px;
+        font-size: $card-content-body-size;
+    }
+    
+    .sub-header-loggedIn{
+        .headerLabelCls{
+            background: white !important;
+            font-family: arial-bold;
+           // padding-top: 10px;
+            font-size: $card-content-body-size;
+            color: $card-content-font-color-normal;
+          }
+          
+        ion-row{
+            padding:$padding-30 $padding-page-30 0px $padding-page-30;
+
+            
+          ion-col div {
+              float: left;
+          }
+        }
+        ion-row:last-child{
+            padding-bottom: $padding-30;
+        }
+        .welcomeTitleCls{
+
+            color: $card-content-font-color-highlighted;
+            font-family: roboto-light;
+            font-size: 1.5em;
+        }
+    }
+    .iconImgCls{
+        width: 2em;
+        //height: 32px;
+        padding-right: 5px;
+    }
+    .info {
+        border-left: 7px solid #B82433;
+    }
+    .notSignedIn{
+        margin:0
+    }
+    .registerNowSection{
+        padding-top:5px
+    }
+    .needToCreateAccount{
+        margin:0px 5px 0px 0px;
+    }
+    .registerNowTxt{
+        margin:0px;text-align:left
+    }
+    .signInImgSection{
+        margin-left:5px;
+    }
+    .signInImgHolder{
+        width:22px;
+        height:22px;
+        background-color:#0068A8;
+        display:inline-block;
+        margin:0px;
+    }
+    .dashBoardHolder{
+        margin-bottom:15px;
+        background-color:white;
+        padding-top:5px;
+    }
+    .myCardsLink{
+        padding-right:10px;
+    }
+}
